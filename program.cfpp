@@ -1,0 +1,44 @@
+
+// Funciones con 1 o más parámetros
+function incrementar(numero) {
+  // Retorno de valores
+  return numero + 1;
+}
+
+function decirAdios() {
+  print "Adios";
+}
+
+function main() {
+  // Variables
+  a = 1;
+
+  // Ciclos while
+  while (a < 10) {
+    // Imprimir por pantalla
+    print a;
+    // Asignación
+    a = a + 1;
+  }
+
+  // Lectura por pantalla
+  read x;
+
+  if (x == 1) {
+    print "Seleccionó 1";
+  } else if (x == 2) {
+    print "Seleccionó 2";
+  }
+
+  // Operaciones aritméticas
+  y = x * 2 + 1 / (63-10);
+  
+  // Llamado a funciones dentro de otras expresiones
+  y = incrementar(y) - 8;
+
+  print incrementar(y);
+
+  // Llamado a funciones que no retornan datos
+  decirAdios();
+
+}
