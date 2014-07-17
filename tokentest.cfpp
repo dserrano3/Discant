@@ -1,7 +1,18 @@
 var i = 0;
 list a;
-while(i < 5) {
-    a.push(i);
+while(i < 10) {
+	a.push( i );
+	
+    
     i = i +1;
 }
-print a.get(0);
+i = 0;
+while(i < 10)
+{
+print a.get(i);
+i = i+1;
+}
+
+print a.get(i/2);
+a.push("algo");
+print a.get(10);

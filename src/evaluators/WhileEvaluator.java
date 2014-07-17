@@ -49,13 +49,18 @@ public class WhileEvaluator implements Evaluator {
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) {
 		//System.out.println(condicion);
-		Context1 auxcon = new Context1();
-		pila.add(auxcon);
-		
+		//Context1 auxcon = new Context1();
+		//pila.add(auxcon);
+
 		while((Boolean)condicion.evaluate(pila) == true)
 		{
-			
+			pila.add(new Context1());
 			for(Evaluator e: lista)
+			{
+				if(e != null)
+					e.evaluate(pila);
+			}
+			/*for(Evaluator e: lista)
 			{
 				//System.out.println(e);
 				if (e != null)
@@ -90,19 +95,14 @@ public class WhileEvaluator implements Evaluator {
 				{
 				//	System.out.println("Pila vacia");
 				}
-				
-							
-				
-			}
+			}*/
+			pila.remove(pila.size()-1);		
+			
 		}
 		
-		
-		pila.remove(pila.size()-1);
-		
 		return null;
-	}
-	
-	
-	
+		
 
+	}
 }
+

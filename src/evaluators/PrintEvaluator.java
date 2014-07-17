@@ -21,7 +21,6 @@ public class PrintEvaluator implements Evaluator {
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) {
 		
-		
 		System.out.println("imprimiendo.." +  ev.evaluate(pila));
 		return null;
 	}

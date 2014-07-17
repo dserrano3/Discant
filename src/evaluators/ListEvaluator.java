@@ -7,7 +7,7 @@ import conte.Context1;
 
 public class ListEvaluator implements Evaluator {
 
-	private List<Evaluator> lista;
+	private List<Object> lista;
 
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) {
@@ -16,6 +16,6 @@ public class ListEvaluator implements Evaluator {
 
 	public ListEvaluator()
 	{
-		lista = new ArrayList<Evaluator>();
+		lista = new ArrayList<Object>();
 	}
 }

@@ -17,16 +17,15 @@ public class PushEvaluator implements Evaluator {
 	public Object evaluate(ArrayList<Context1> pila) {
 		// TODO Auto-generated method stub
 		int i ;
-		//System.out.println("entreeeeeeeee");
+		//System.out.println("entreeeeeeeee a evaluar "+ e);
 		for(i = pila.size()-1; i >= 0; i--)
 		{		
-			
 			if(pila.get(i).get(nombre) != null)
 			 {
 
 				@SuppressWarnings("unchecked")
-				List<Evaluator> lis = (List<Evaluator>) pila.get(i).get(nombre).evaluate(pila);
-				lis.add(e);
+				List<Object> lis = (List<Object>) pila.get(i).get(nombre).evaluate(pila);
+				lis.add(e.evaluate(pila));
 				 return null;
 			 }
 		}

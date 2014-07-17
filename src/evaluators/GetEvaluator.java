@@ -7,10 +7,10 @@ import conte.Context1;
 
 public class GetEvaluator implements Evaluator {
 	String nombre;
-	int numero;
-	public GetEvaluator(String nombre, String numero) {
+	Evaluator exp;
+	public GetEvaluator(String nombre, Evaluator exp) {
 		this.nombre = nombre;
-		this.numero = Integer.valueOf(numero);
+		this.exp = exp;
 	}
 
 	@Override
@@ -25,7 +25,9 @@ public class GetEvaluator implements Evaluator {
 			 {
 				@SuppressWarnings("unchecked")
 				List<Evaluator> lis = (List<Evaluator>) pila.get(i).get(nombre).evaluate(pila);
-				return lis.get(numero).evaluate(pila);
+
+				double index =  (Double) exp.evaluate(pila);
+				return lis.get((int) index);
 			 }
 		}
 		

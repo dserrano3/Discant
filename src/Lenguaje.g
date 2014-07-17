@@ -156,20 +156,17 @@ declaracion returns [Evaluator e]
   
   push returns [Evaluator e] 
   :
-  nom=NOMBRE '.push(' ev = evaluator ')'
+  nom=NOMBRE '.push(' exp = expression ')'
                                  {
                                   if(bandera)
                                     {
                                         //System.out.println("intento salvar");
-                                        $e = new PushEvaluator($nom.text,$ev.e);   
-                                    
-                                        
+                                        $e = new PushEvaluator($nom.text,$exp.e);
                                     }
                                  }
                                  PC
   ; 
   
-
   
   
   asignacion returns [Evaluator e] 
@@ -263,13 +260,13 @@ term returns [Evaluator e]
           $e = new StringEvaluator(($TEXTO.text));
          }
   
-  | '(' expression ')' 
+  | '(' add ')' 
                       {
-                       $e = $expression.e;
+                       $e = $add.e;
                       }
-   | nom=NOMBRE '.get(' num = NUMERO ')' 
+   | nom=NOMBRE '.get(' num = add ')' 
          {
-                $e = new GetEvaluator($nom.text,$num.text);     
+                $e = new GetEvaluator($nom.text,$num.e);     
          }
   ;
 
@@ -312,7 +309,7 @@ mult returns [Evaluator e]
   )*
   ;
 
-expression returns [Evaluator e]
+add returns [Evaluator e]
   :
   op1=mult 
           {
@@ -332,33 +329,33 @@ expression returns [Evaluator e]
 
 relation returns [Evaluator e]  
   :
-  ex1=expression 
+  ex1=add 
                 {
                  $e = $ex1.e;
                 }
   (
     (
-      '==' ex2=expression 
+      '==' ex2=add 
                          {
                           $e = new IgualIgualEvaluator($e,$ex2.e);
                          }
-      | '>' ex2=expression 
+      | '>' ex2=add 
                           {
                            $e = new MayorEvaluator($e,$ex2.e);
                           }
-      | '<' ex2=expression 
+      | '<' ex2=add 
                           {
                            $e = new MenorEvaluator($e,$ex2.e);
                           }
-      | '!=' ex2=expression 
+      | '!=' ex2=add 
                            {
                             $e = new DiferenteEvaluator($e,$ex2.e);
                            }
-      | '<=' ex2=expression 
+      | '<=' ex2=add 
                            {
                             $e = new MenorIgualEvaluator($e,$ex2.e);
                            }
-      | '>=' ex2=expression 
+      | '>=' ex2=add 
                            {
                             $e = new MayorIgualEvaluator($e,$ex2.e);
                            }
@@ -384,6 +381,9 @@ logico returns [Evaluator e]
   )*
   ;
 
+  expression returns [Evaluator e]
+		  :   logico { $e = $logico.e; }
+		  ;
 
 
 llamadofuncion returns[Evaluator e]:
@@ -414,7 +414,7 @@ ifstatements returns [Evaluator e]:
   |declaracion{$e = $declaracion.e;}
   |declaracion2{$e = $declaracion2.e;}  
   |declaracion_lista{$declaracion_lista.e.evaluate(pila);}
-  |push{$push.e.evaluate(pila);}
+  |push{ $e = $push.e; }
  
    
 ;  
@@ -431,8 +431,8 @@ print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}
   | ifstatement{$e = $ifstatement.e;}  
   |declaracion{$e = $declaracion.e;}
   |declaracion2{$e = $declaracion2.e;}  
-  |declaracion_lista{$declaracion_lista.e.evaluate(pila);}
-  |push{$push.e.evaluate(pila);}
+  |declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
+  |push{ $e = $push.e; }
 
 
 ;
@@ -498,8 +498,8 @@ whilestatements returns [Evaluator e]:
   | ifstatement{$e = $ifstatement.e;}  
   |declaracion{$e = $declaracion.e;}  
   |declaracion2{$e = $declaracion2.e;}
-  |declaracion_lista{$declaracion_lista.e.evaluate(pila);}
-  |push{$push.e.evaluate(pila);}
+  |declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
+  |push{ $e = $push.e; }
 
 ;
        
