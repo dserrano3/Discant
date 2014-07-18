@@ -1,18 +1,5 @@
-var i = 0;
-list a;
-while(i < 10) {
-	a.push( i );
-	
-    
-    i = i +1;
-}
-i = 0;
-while(i < 10)
+var t = 2;
+for(var i = 0; i < 10; t)
 {
-print a.get(i);
-i = i+1;
+	print "hola3";
 }
-
-print a.get(i/2);
-a.push("algo");
-print a.get(10);

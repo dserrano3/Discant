@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g 2014-07-17 21:21:57
+// $ANTLR 3.4 J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-07-18 18:32:35
 
 package co.edu.javeriana.interpreter.antlr;
 
@@ -11,7 +11,6 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class LenguajeLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__27=27;
     public static final int T__28=28;
     public static final int T__29=29;
     public static final int T__30=30;
@@ -29,6 +28,7 @@ public class LenguajeLexer extends Lexer {
     public static final int T__42=42;
     public static final int T__43=43;
     public static final int T__44=44;
+    public static final int T__45=45;
     public static final int ASIGNACION=4;
     public static final int COMENTARIO=5;
     public static final int COMILLASD=6;
@@ -36,22 +36,23 @@ public class LenguajeLexer extends Lexer {
     public static final int DOBLE=8;
     public static final int ELSE=9;
     public static final int ELSEIF=10;
-    public static final int FUNCTION=11;
-    public static final int IF=12;
-    public static final int LLAVE_D=13;
-    public static final int LLAVE_I=14;
-    public static final int NEWLINE=15;
-    public static final int NOMBRE=16;
-    public static final int NUMERO=17;
-    public static final int PARENTESIS_D=18;
-    public static final int PARENTESIS_I=19;
-    public static final int PC=20;
-    public static final int PRINT=21;
-    public static final int READ=22;
-    public static final int TEXTO=23;
-    public static final int TOKEN=24;
-    public static final int WHILE=25;
-    public static final int WS=26;
+    public static final int FOR=11;
+    public static final int FUNCTION=12;
+    public static final int IF=13;
+    public static final int LLAVE_D=14;
+    public static final int LLAVE_I=15;
+    public static final int NEWLINE=16;
+    public static final int NOMBRE=17;
+    public static final int NUMERO=18;
+    public static final int PARENTESIS_D=19;
+    public static final int PARENTESIS_I=20;
+    public static final int PC=21;
+    public static final int PRINT=22;
+    public static final int READ=23;
+    public static final int TEXTO=24;
+    public static final int TOKEN=25;
+    public static final int WHILE=26;
+    public static final int WS=27;
 
     // delegates
     // delegators
@@ -66,40 +67,17 @@ public class LenguajeLexer extends Lexer {
     public LenguajeLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g"; }
-
-    // $ANTLR start "T__27"
-    public final void mT__27() throws RecognitionException {
-        try {
-            int _type = T__27;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:11:7: ( '!=' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:11:9: '!='
-            {
-            match("!="); 
-
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__27"
+    public String getGrammarFileName() { return "J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g"; }
 
     // $ANTLR start "T__28"
     public final void mT__28() throws RecognitionException {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:12:7: ( '&&' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:12:9: '&&'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:11:7: ( '!=' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:11:9: '!='
             {
-            match("&&"); 
+            match("!="); 
 
 
 
@@ -119,10 +97,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:13:7: ( '*' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:13:9: '*'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:12:7: ( '&&' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:12:9: '&&'
             {
-            match('*'); 
+            match("&&"); 
+
+
 
             }
 
@@ -140,10 +120,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:14:7: ( '+' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:14:9: '+'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:13:7: ( '*' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:13:9: '*'
             {
-            match('+'); 
+            match('*'); 
 
             }
 
@@ -161,10 +141,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:15:7: ( ',' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:15:9: ','
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:14:7: ( '+' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:14:9: '+'
             {
-            match(','); 
+            match('+'); 
 
             }
 
@@ -182,10 +162,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:16:7: ( '-' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:16:9: '-'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:15:7: ( ',' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:15:9: ','
             {
-            match('-'); 
+            match(','); 
 
             }
 
@@ -203,12 +183,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:17:7: ( '.get(' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:17:9: '.get('
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:16:7: ( '-' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:16:9: '-'
             {
-            match(".get("); 
-
-
+            match('-'); 
 
             }
 
@@ -226,10 +204,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:18:7: ( '.push(' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:18:9: '.push('
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:17:7: ( '.get(' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:17:9: '.get('
             {
-            match(".push("); 
+            match(".get("); 
 
 
 
@@ -249,10 +227,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:19:7: ( '/' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:19:9: '/'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:18:7: ( '.push(' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:18:9: '.push('
             {
-            match('/'); 
+            match(".push("); 
+
+
 
             }
 
@@ -270,10 +250,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:20:7: ( '<' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:20:9: '<'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:19:7: ( '/' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:19:9: '/'
             {
-            match('<'); 
+            match('/'); 
 
             }
 
@@ -291,12 +271,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:21:7: ( '<=' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:21:9: '<='
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:20:7: ( '<' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:20:9: '<'
             {
-            match("<="); 
-
-
+            match('<'); 
 
             }
 
@@ -314,10 +292,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:22:7: ( '==' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:22:9: '=='
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:21:7: ( '<=' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:21:9: '<='
             {
-            match("=="); 
+            match("<="); 
 
 
 
@@ -337,10 +315,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:23:7: ( '>' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:23:9: '>'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:22:7: ( '==' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:22:9: '=='
             {
-            match('>'); 
+            match("=="); 
+
+
 
             }
 
@@ -358,12 +338,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:24:7: ( '>=' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:24:9: '>='
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:23:7: ( '>' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:23:9: '>'
             {
-            match(">="); 
-
-
+            match('>'); 
 
             }
 
@@ -381,10 +359,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:25:7: ( 'list' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:25:9: 'list'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:24:7: ( '>=' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:24:9: '>='
             {
-            match("list"); 
+            match(">="); 
 
 
 
@@ -404,10 +382,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:26:7: ( 'return' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:26:9: 'return'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:25:7: ( 'list' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:25:9: 'list'
             {
-            match("return"); 
+            match("list"); 
 
 
 
@@ -427,10 +405,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:27:7: ( 'var' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:27:9: 'var'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:26:7: ( 'return' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:26:9: 'return'
             {
-            match("var"); 
+            match("return"); 
 
 
 
@@ -450,10 +428,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:28:7: ( '||' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:28:9: '||'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:27:7: ( 'var' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:27:9: 'var'
             {
-            match("||"); 
+            match("var"); 
 
 
 
@@ -468,13 +446,36 @@ public class LenguajeLexer extends Lexer {
     }
     // $ANTLR end "T__44"
 
+    // $ANTLR start "T__45"
+    public final void mT__45() throws RecognitionException {
+        try {
+            int _type = T__45;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:28:7: ( '||' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:28:9: '||'
+            {
+            match("||"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__45"
+
     // $ANTLR start "TOKEN"
     public final void mTOKEN() throws RecognitionException {
         try {
             int _type = TOKEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:533:3: ( 'hola' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:534:3: 'hola'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:561:3: ( 'hola' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:562:3: 'hola'
             {
             match("hola"); 
 
@@ -496,8 +497,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:538:3: ( 'if' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:539:3: 'if'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:566:3: ( 'if' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:567:3: 'if'
             {
             match("if"); 
 
@@ -519,8 +520,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:543:3: ( ';' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:544:3: ';'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:571:3: ( ';' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:572:3: ';'
             {
             match(';'); 
 
@@ -540,8 +541,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ASIGNACION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:564:3: ( '=' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:565:3: '='
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:592:3: ( '=' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:593:3: '='
             {
             match('='); 
 
@@ -561,8 +562,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:569:3: ( 'while' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:570:3: 'while'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:597:3: ( 'while' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:598:3: 'while'
             {
             match("while"); 
 
@@ -579,13 +580,36 @@ public class LenguajeLexer extends Lexer {
     }
     // $ANTLR end "WHILE"
 
+    // $ANTLR start "FOR"
+    public final void mFOR() throws RecognitionException {
+        try {
+            int _type = FOR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:602:3: ( 'for' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:603:3: 'for'
+            {
+            match("for"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "FOR"
+
     // $ANTLR start "ELSE"
     public final void mELSE() throws RecognitionException {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:574:3: ( 'else' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:575:3: 'else'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:607:3: ( 'else' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:608:3: 'else'
             {
             match("else"); 
 
@@ -607,8 +631,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = FUNCTION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:579:3: ( 'function' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:580:3: 'function'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:612:3: ( 'function' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:613:3: 'function'
             {
             match("function"); 
 
@@ -630,8 +654,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ELSEIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:584:3: ( 'else if' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:585:3: 'else if'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:617:3: ( 'else if' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:618:3: 'else if'
             {
             match("else if"); 
 
@@ -653,13 +677,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = DOBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:589:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:590:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:622:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:623:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:590:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:590:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:623:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:623:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:590:5: ( '0' .. '9' )+
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:623:5: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -673,7 +697,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:
+            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -698,15 +722,15 @@ public class LenguajeLexer extends Lexer {
             } while (true);
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:590:16: ( '.' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:590:17: '.'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:623:16: ( '.' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:623:17: '.'
             {
             match('.'); 
 
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:590:22: ( '0' .. '9' )+
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:623:22: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -720,7 +744,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:
+            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -764,13 +788,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NUMERO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:596:3: ( ( ( '0' .. '9' )+ ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:597:3: ( ( '0' .. '9' )+ )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:629:3: ( ( ( '0' .. '9' )+ ) )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:630:3: ( ( '0' .. '9' )+ )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:597:3: ( ( '0' .. '9' )+ )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:597:5: ( '0' .. '9' )+
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:630:3: ( ( '0' .. '9' )+ )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:630:5: ( '0' .. '9' )+
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:597:5: ( '0' .. '9' )+
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:630:5: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -784,7 +808,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:
+            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -828,8 +852,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:603:3: ( ')' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:604:3: ')'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:636:3: ( ')' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:637:3: ')'
             {
             match(')'); 
 
@@ -849,8 +873,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:608:3: ( '(' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:609:3: '('
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:641:3: ( '(' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:642:3: '('
             {
             match('('); 
 
@@ -870,8 +894,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:613:3: ( '}' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:614:3: '}'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:646:3: ( '}' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:647:3: '}'
             {
             match('}'); 
 
@@ -891,8 +915,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:618:3: ( '{' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:619:3: '{'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:651:3: ( '{' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:652:3: '{'
             {
             match('{'); 
 
@@ -912,8 +936,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:623:3: ( '\\\"' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:624:3: '\\\"'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:656:3: ( '\\\"' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:657:3: '\\\"'
             {
             match('\"'); 
 
@@ -933,8 +957,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:628:3: ( '\\'' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:629:3: '\\''
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:661:3: ( '\\'' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:662:3: '\\''
             {
             match('\''); 
 
@@ -954,11 +978,11 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PRINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:633:3: ( ( 'print' ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:634:3: ( 'print' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:666:3: ( ( 'print' ) )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:667:3: ( 'print' )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:634:3: ( 'print' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:634:4: 'print'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:667:3: ( 'print' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:667:4: 'print'
             {
             match("print"); 
 
@@ -983,11 +1007,11 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:638:3: ( ( 'read' ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:639:3: ( 'read' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:671:3: ( ( 'read' ) )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:672:3: ( 'read' )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:639:3: ( 'read' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:639:4: 'read'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:672:3: ( 'read' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:672:4: 'read'
             {
             match("read"); 
 
@@ -1012,11 +1036,11 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NOMBRE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:643:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:644:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:676:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* ) )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:677:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:644:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:645:5: ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:677:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:678:5: ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1028,7 +1052,7 @@ public class LenguajeLexer extends Lexer {
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:649:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:682:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
             loop4:
             do {
                 int alt4=2;
@@ -1041,7 +1065,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:
+            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( (input.LA(1) >= '1' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -1081,13 +1105,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = TEXTO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:661:3: ( COMILLASD ( . )* COMILLASD )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:662:3: COMILLASD ( . )* COMILLASD
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:694:3: ( COMILLASD ( . )* COMILLASD )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:695:3: COMILLASD ( . )* COMILLASD
             {
             mCOMILLASD(); 
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:662:13: ( . )*
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:695:13: ( . )*
             loop5:
             do {
                 int alt5=2;
@@ -1103,7 +1127,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:662:14: .
+            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:695:14: .
             	    {
             	    matchAny(); 
 
@@ -1135,14 +1159,14 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMENTARIO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:667:3: ( '/*' ( . )+ '*/' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:668:3: '/*' ( . )+ '*/'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:700:3: ( '/*' ( . )+ '*/' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:701:3: '/*' ( . )+ '*/'
             {
             match("/*"); 
 
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:668:8: ( . )+
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:701:8: ( . )+
             int cnt6=0;
             loop6:
             do {
@@ -1168,7 +1192,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:668:9: .
+            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:701:9: .
             	    {
             	    matchAny(); 
 
@@ -1205,10 +1229,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:676:4: ( ( ' ' | '\\t' )+ )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:676:6: ( ' ' | '\\t' )+
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:709:4: ( ( ' ' | '\\t' )+ )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:709:6: ( ' ' | '\\t' )+
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:676:6: ( ' ' | '\\t' )+
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:709:6: ( ' ' | '\\t' )+
             int cnt7=0;
             loop7:
             do {
@@ -1222,7 +1246,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:
+            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -1265,10 +1289,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:679:8: ( ( '\\r' )? '\\n' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:679:10: ( '\\r' )? '\\n'
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:712:8: ( ( '\\r' )? '\\n' )
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:712:10: ( '\\r' )? '\\n'
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:679:10: ( '\\r' )?
+            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:712:10: ( '\\r' )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1277,7 +1301,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:679:10: '\\r'
+                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:712:10: '\\r'
                     {
                     match('\r'); 
 
@@ -1303,156 +1327,156 @@ public class LenguajeLexer extends Lexer {
     // $ANTLR end "NEWLINE"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:8: ( T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | TOKEN | IF | PC | ASIGNACION | WHILE | ELSE | FUNCTION | ELSEIF | DOBLE | NUMERO | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | READ | NOMBRE | TEXTO | COMENTARIO | WS | NEWLINE )
-        int alt9=41;
+        // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:8: ( T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | TOKEN | IF | PC | ASIGNACION | WHILE | FOR | ELSE | FUNCTION | ELSEIF | DOBLE | NUMERO | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | READ | NOMBRE | TEXTO | COMENTARIO | WS | NEWLINE )
+        int alt9=42;
         alt9 = dfa9.predict(input);
         switch (alt9) {
             case 1 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:10: T__27
-                {
-                mT__27(); 
-
-
-                }
-                break;
-            case 2 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:16: T__28
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:10: T__28
                 {
                 mT__28(); 
 
 
                 }
                 break;
-            case 3 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:22: T__29
+            case 2 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:16: T__29
                 {
                 mT__29(); 
 
 
                 }
                 break;
-            case 4 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:28: T__30
+            case 3 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:22: T__30
                 {
                 mT__30(); 
 
 
                 }
                 break;
-            case 5 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:34: T__31
+            case 4 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:28: T__31
                 {
                 mT__31(); 
 
 
                 }
                 break;
-            case 6 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:40: T__32
+            case 5 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:34: T__32
                 {
                 mT__32(); 
 
 
                 }
                 break;
-            case 7 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:46: T__33
+            case 6 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:40: T__33
                 {
                 mT__33(); 
 
 
                 }
                 break;
-            case 8 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:52: T__34
+            case 7 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:46: T__34
                 {
                 mT__34(); 
 
 
                 }
                 break;
-            case 9 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:58: T__35
+            case 8 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:52: T__35
                 {
                 mT__35(); 
 
 
                 }
                 break;
-            case 10 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:64: T__36
+            case 9 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:58: T__36
                 {
                 mT__36(); 
 
 
                 }
                 break;
-            case 11 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:70: T__37
+            case 10 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:64: T__37
                 {
                 mT__37(); 
 
 
                 }
                 break;
-            case 12 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:76: T__38
+            case 11 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:70: T__38
                 {
                 mT__38(); 
 
 
                 }
                 break;
-            case 13 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:82: T__39
+            case 12 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:76: T__39
                 {
                 mT__39(); 
 
 
                 }
                 break;
-            case 14 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:88: T__40
+            case 13 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:82: T__40
                 {
                 mT__40(); 
 
 
                 }
                 break;
-            case 15 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:94: T__41
+            case 14 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:88: T__41
                 {
                 mT__41(); 
 
 
                 }
                 break;
-            case 16 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:100: T__42
+            case 15 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:94: T__42
                 {
                 mT__42(); 
 
 
                 }
                 break;
-            case 17 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:106: T__43
+            case 16 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:100: T__43
                 {
                 mT__43(); 
 
 
                 }
                 break;
-            case 18 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:112: T__44
+            case 17 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:106: T__44
                 {
                 mT__44(); 
 
 
                 }
                 break;
+            case 18 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:112: T__45
+                {
+                mT__45(); 
+
+
+                }
+                break;
             case 19 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:118: TOKEN
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:118: TOKEN
                 {
                 mTOKEN(); 
 
@@ -1460,7 +1484,7 @@ public class LenguajeLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:124: IF
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:124: IF
                 {
                 mIF(); 
 
@@ -1468,7 +1492,7 @@ public class LenguajeLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:127: PC
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:127: PC
                 {
                 mPC(); 
 
@@ -1476,7 +1500,7 @@ public class LenguajeLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:130: ASIGNACION
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:130: ASIGNACION
                 {
                 mASIGNACION(); 
 
@@ -1484,7 +1508,7 @@ public class LenguajeLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:141: WHILE
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:141: WHILE
                 {
                 mWHILE(); 
 
@@ -1492,143 +1516,151 @@ public class LenguajeLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:147: ELSE
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:147: FOR
+                {
+                mFOR(); 
+
+
+                }
+                break;
+            case 25 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:151: ELSE
                 {
                 mELSE(); 
 
 
                 }
                 break;
-            case 25 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:152: FUNCTION
+            case 26 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:156: FUNCTION
                 {
                 mFUNCTION(); 
 
 
                 }
                 break;
-            case 26 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:161: ELSEIF
+            case 27 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:165: ELSEIF
                 {
                 mELSEIF(); 
 
 
                 }
                 break;
-            case 27 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:168: DOBLE
+            case 28 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:172: DOBLE
                 {
                 mDOBLE(); 
 
 
                 }
                 break;
-            case 28 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:174: NUMERO
+            case 29 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:178: NUMERO
                 {
                 mNUMERO(); 
 
 
                 }
                 break;
-            case 29 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:181: PARENTESIS_D
+            case 30 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:185: PARENTESIS_D
                 {
                 mPARENTESIS_D(); 
 
 
                 }
                 break;
-            case 30 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:194: PARENTESIS_I
+            case 31 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:198: PARENTESIS_I
                 {
                 mPARENTESIS_I(); 
 
 
                 }
                 break;
-            case 31 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:207: LLAVE_D
+            case 32 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:211: LLAVE_D
                 {
                 mLLAVE_D(); 
 
 
                 }
                 break;
-            case 32 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:215: LLAVE_I
+            case 33 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:219: LLAVE_I
                 {
                 mLLAVE_I(); 
 
 
                 }
                 break;
-            case 33 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:223: COMILLASD
+            case 34 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:227: COMILLASD
                 {
                 mCOMILLASD(); 
 
 
                 }
                 break;
-            case 34 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:233: COMILLASS
+            case 35 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:237: COMILLASS
                 {
                 mCOMILLASS(); 
 
 
                 }
                 break;
-            case 35 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:243: PRINT
+            case 36 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:247: PRINT
                 {
                 mPRINT(); 
 
 
                 }
                 break;
-            case 36 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:249: READ
+            case 37 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:253: READ
                 {
                 mREAD(); 
 
 
                 }
                 break;
-            case 37 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:254: NOMBRE
+            case 38 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:258: NOMBRE
                 {
                 mNOMBRE(); 
 
 
                 }
                 break;
-            case 38 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:261: TEXTO
+            case 39 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:265: TEXTO
                 {
                 mTEXTO(); 
 
 
                 }
                 break;
-            case 39 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:267: COMENTARIO
+            case 40 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:271: COMENTARIO
                 {
                 mCOMENTARIO(); 
 
 
                 }
                 break;
-            case 40 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:278: WS
+            case 41 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:282: WS
                 {
                 mWS(); 
 
 
                 }
                 break;
-            case 41 :
-                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\src\\Lenguaje.g:1:281: NEWLINE
+            case 42 :
+                // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:285: NEWLINE
                 {
                 mNEWLINE(); 
 
@@ -1643,40 +1675,42 @@ public class LenguajeLexer extends Lexer {
 
     protected DFA9 dfa9 = new DFA9(this);
     static final String DFA9_eotS =
-        "\10\uffff\1\44\1\46\1\50\1\52\3\36\1\uffff\2\36\1\uffff\3\36\1\64"+
-        "\4\uffff\1\65\1\uffff\1\36\15\uffff\4\36\1\75\3\36\4\uffff\4\36"+
-        "\1\105\1\36\1\uffff\4\36\1\113\1\36\1\115\1\uffff\1\116\1\36\1\121"+
-        "\2\36\1\uffff\1\36\2\uffff\1\125\2\uffff\1\36\1\127\1\130\1\uffff"+
-        "\1\36\2\uffff\1\36\1\133\1\uffff";
+        "\10\uffff\1\44\1\46\1\50\1\52\3\36\1\uffff\2\36\1\uffff\3\36\1\65"+
+        "\4\uffff\1\66\1\uffff\1\36\15\uffff\4\36\1\76\4\36\4\uffff\4\36"+
+        "\1\107\1\36\1\uffff\1\36\1\112\3\36\1\116\1\36\1\120\1\uffff\1\121"+
+        "\1\36\1\uffff\1\36\1\125\1\36\1\uffff\1\36\2\uffff\1\130\1\36\2"+
+        "\uffff\1\132\1\133\1\uffff\1\36\2\uffff\1\36\1\136\1\uffff";
     static final String DFA9_eofS =
-        "\134\uffff";
+        "\137\uffff";
     static final String DFA9_minS =
         "\1\11\6\uffff\1\147\1\52\3\75\1\151\1\145\1\141\1\uffff\1\157\1"+
-        "\146\1\uffff\1\150\1\154\1\165\1\56\4\uffff\1\0\1\uffff\1\162\15"+
-        "\uffff\1\163\1\141\1\162\1\154\1\61\1\151\1\163\1\156\4\uffff\1"+
-        "\151\1\164\1\165\1\144\1\61\1\141\1\uffff\1\154\1\145\1\143\1\156"+
-        "\1\61\1\162\1\61\1\uffff\1\61\1\145\1\40\2\164\1\uffff\1\156\2\uffff"+
-        "\1\61\2\uffff\1\151\2\61\1\uffff\1\157\2\uffff\1\156\1\61\1\uffff";
+        "\146\1\uffff\1\150\1\157\1\154\1\56\4\uffff\1\0\1\uffff\1\162\15"+
+        "\uffff\1\163\1\141\1\162\1\154\1\61\1\151\1\162\1\156\1\163\4\uffff"+
+        "\1\151\1\164\1\165\1\144\1\61\1\141\1\uffff\1\154\1\61\1\143\1\145"+
+        "\1\156\1\61\1\162\1\61\1\uffff\1\61\1\145\1\uffff\1\164\1\40\1\164"+
+        "\1\uffff\1\156\2\uffff\1\61\1\151\2\uffff\2\61\1\uffff\1\157\2\uffff"+
+        "\1\156\1\61\1\uffff";
     static final String DFA9_maxS =
         "\1\175\6\uffff\1\160\1\52\3\75\1\151\1\145\1\141\1\uffff\1\157\1"+
-        "\146\1\uffff\1\150\1\154\1\165\1\71\4\uffff\1\uffff\1\uffff\1\162"+
-        "\15\uffff\1\163\1\164\1\162\1\154\1\172\1\151\1\163\1\156\4\uffff"+
-        "\1\151\1\164\1\165\1\144\1\172\1\141\1\uffff\1\154\1\145\1\143\1"+
-        "\156\1\172\1\162\1\172\1\uffff\1\172\1\145\1\172\2\164\1\uffff\1"+
-        "\156\2\uffff\1\172\2\uffff\1\151\2\172\1\uffff\1\157\2\uffff\1\156"+
-        "\1\172\1\uffff";
+        "\146\1\uffff\1\150\1\165\1\154\1\71\4\uffff\1\uffff\1\uffff\1\162"+
+        "\15\uffff\1\163\1\164\1\162\1\154\1\172\1\151\1\162\1\156\1\163"+
+        "\4\uffff\1\151\1\164\1\165\1\144\1\172\1\141\1\uffff\1\154\1\172"+
+        "\1\143\1\145\1\156\1\172\1\162\1\172\1\uffff\1\172\1\145\1\uffff"+
+        "\1\164\1\172\1\164\1\uffff\1\156\2\uffff\1\172\1\151\2\uffff\2\172"+
+        "\1\uffff\1\157\2\uffff\1\156\1\172\1\uffff";
     static final String DFA9_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\10\uffff\1\22\2\uffff\1\25\4\uffff"+
-        "\1\35\1\36\1\37\1\40\1\uffff\1\42\1\uffff\1\45\1\50\1\51\1\7\1\10"+
-        "\1\47\1\11\1\13\1\12\1\14\1\26\1\16\1\15\10\uffff\1\33\1\34\1\41"+
-        "\1\46\6\uffff\1\24\7\uffff\1\21\5\uffff\1\17\1\uffff\1\44\1\23\1"+
-        "\uffff\1\32\1\30\3\uffff\1\27\1\uffff\1\43\1\20\2\uffff\1\31";
+        "\1\36\1\37\1\40\1\41\1\uffff\1\43\1\uffff\1\46\1\51\1\52\1\7\1\10"+
+        "\1\50\1\11\1\13\1\12\1\14\1\26\1\16\1\15\11\uffff\1\34\1\35\1\42"+
+        "\1\47\6\uffff\1\24\10\uffff\1\21\2\uffff\1\30\3\uffff\1\17\1\uffff"+
+        "\1\45\1\23\2\uffff\1\33\1\31\2\uffff\1\27\1\uffff\1\44\1\20\2\uffff"+
+        "\1\32";
     static final String DFA9_specialS =
-        "\33\uffff\1\0\100\uffff}>";
+        "\33\uffff\1\0\103\uffff}>";
     static final String[] DFA9_transitionS = {
             "\1\37\1\40\2\uffff\1\40\22\uffff\1\37\1\1\1\33\3\uffff\1\2\1"+
             "\34\1\30\1\27\1\3\1\4\1\5\1\6\1\7\1\10\12\26\1\uffff\1\22\1"+
-            "\11\1\12\1\13\2\uffff\32\36\6\uffff\4\36\1\24\1\25\1\36\1\20"+
+            "\11\1\12\1\13\2\uffff\32\36\6\uffff\4\36\1\25\1\24\1\36\1\20"+
             "\1\21\2\36\1\14\3\36\1\35\1\36\1\15\3\36\1\16\1\23\3\36\1\32"+
             "\1\17\1\31",
             "",
@@ -1698,76 +1732,79 @@ public class LenguajeLexer extends Lexer {
             "\1\57",
             "",
             "\1\60",
-            "\1\61",
-            "\1\62",
-            "\1\63\1\uffff\12\26",
+            "\1\61\5\uffff\1\62",
+            "\1\63",
+            "\1\64\1\uffff\12\26",
             "",
             "",
             "",
             "",
-            "\0\66",
-            "",
-            "\1\67",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\0\67",
             "",
             "\1\70",
-            "\1\72\22\uffff\1\71",
-            "\1\73",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\71",
+            "\1\73\22\uffff\1\72",
             "\1\74",
+            "\1\75",
             "\11\36\7\uffff\32\36\6\uffff\32\36",
-            "\1\76",
             "\1\77",
             "\1\100",
-            "",
-            "",
-            "",
-            "",
             "\1\101",
             "\1\102",
+            "",
+            "",
+            "",
+            "",
             "\1\103",
             "\1\104",
-            "\11\36\7\uffff\32\36\6\uffff\32\36",
+            "\1\105",
             "\1\106",
-            "",
-            "\1\107",
+            "\11\36\7\uffff\32\36\6\uffff\32\36",
             "\1\110",
-            "\1\111",
-            "\1\112",
-            "\11\36\7\uffff\32\36\6\uffff\32\36",
-            "\1\114",
-            "\11\36\7\uffff\32\36\6\uffff\32\36",
             "",
+            "\1\111",
+            "\11\36\7\uffff\32\36\6\uffff\32\36",
+            "\1\113",
+            "\1\114",
+            "\1\115",
             "\11\36\7\uffff\32\36\6\uffff\32\36",
             "\1\117",
-            "\1\120\20\uffff\11\36\7\uffff\32\36\6\uffff\32\36",
+            "\11\36\7\uffff\32\36\6\uffff\32\36",
+            "",
+            "\11\36\7\uffff\32\36\6\uffff\32\36",
             "\1\122",
+            "",
             "\1\123",
-            "",
-            "\1\124",
-            "",
-            "",
-            "\11\36\7\uffff\32\36\6\uffff\32\36",
-            "",
-            "",
+            "\1\124\20\uffff\11\36\7\uffff\32\36\6\uffff\32\36",
             "\1\126",
-            "\11\36\7\uffff\32\36\6\uffff\32\36",
-            "\11\36\7\uffff\32\36\6\uffff\32\36",
             "",
+            "\1\127",
+            "",
+            "",
+            "\11\36\7\uffff\32\36\6\uffff\32\36",
             "\1\131",
             "",
             "",
-            "\1\132",
+            "\11\36\7\uffff\32\36\6\uffff\32\36",
+            "\11\36\7\uffff\32\36\6\uffff\32\36",
+            "",
+            "\1\134",
+            "",
+            "",
+            "\1\135",
             "\11\36\7\uffff\32\36\6\uffff\32\36",
             ""
     };
@@ -1802,7 +1839,7 @@ public class LenguajeLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | TOKEN | IF | PC | ASIGNACION | WHILE | ELSE | FUNCTION | ELSEIF | DOBLE | NUMERO | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | READ | NOMBRE | TEXTO | COMENTARIO | WS | NEWLINE );";
+            return "1:1: Tokens : ( T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | TOKEN | IF | PC | ASIGNACION | WHILE | FOR | ELSE | FUNCTION | ELSEIF | DOBLE | NUMERO | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | READ | NOMBRE | TEXTO | COMENTARIO | WS | NEWLINE );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -1812,9 +1849,9 @@ public class LenguajeLexer extends Lexer {
                         int LA9_27 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA9_27 >= '\u0000' && LA9_27 <= '\uFFFF')) ) {s = 54;}
+                        if ( ((LA9_27 >= '\u0000' && LA9_27 <= '\uFFFF')) ) {s = 55;}
 
-                        else s = 53;
+                        else s = 54;
 
                         if ( s>=0 ) return s;
                         break;

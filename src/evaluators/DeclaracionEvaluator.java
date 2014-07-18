@@ -6,8 +6,8 @@ import conte.Context1;
 
 public class DeclaracionEvaluator implements Evaluator {
 
-	String nombre;
-	Evaluator e;
+	private String nombre;
+	private Evaluator e;
 
 	public DeclaracionEvaluator(String nombre, Evaluator e) {
 		this.nombre = nombre;
@@ -23,5 +23,16 @@ public class DeclaracionEvaluator implements Evaluator {
 		// System.out.println((Integer)pila.peek().get(nombre).evaluate(null));
 		return null;
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
+	
 
 }

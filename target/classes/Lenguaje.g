@@ -50,10 +50,10 @@ programa
     | funcion
     | llamadofuncion{$llamadofuncion.e.evaluate(pila);} PC
     |declaracion{$declaracion.e.evaluate(pila);}
-     |declaracion2{$declaracion2.e.evaluate(pila);}
-     |declaracion_lista{$declaracion_lista.e.evaluate(pila);}
-      |push{$push.e.evaluate(pila);}
- 
+    |declaracion2{$declaracion2.e.evaluate(pila);}
+    |declaracion_lista{$declaracion_lista.e.evaluate(pila);}
+    |push{$push.e.evaluate(pila);}
+    |forstatemet{$forstatemet.e.evaluate(pila);} 
 
     
   )+ 
@@ -415,6 +415,7 @@ ifstatements returns [Evaluator e]:
   |declaracion2{$e = $declaracion2.e;}  
   |declaracion_lista{$declaracion_lista.e.evaluate(pila);}
   |push{ $e = $push.e; }
+  |forstatemet{$forstatemet.e.evaluate(pila);}
  
    
 ;  
@@ -433,6 +434,7 @@ print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}
   |declaracion2{$e = $declaracion2.e;}  
   |declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
   |push{ $e = $push.e; }
+  |forstatemet{$forstatemet.e.evaluate(pila);}
 
 
 ;
@@ -500,6 +502,7 @@ whilestatements returns [Evaluator e]:
   |declaracion2{$e = $declaracion2.e;}
   |declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
   |push{ $e = $push.e; }
+  |forstatemet{$forstatemet.e.evaluate(pila);}
 
 ;
        
@@ -523,6 +526,31 @@ WHILE PARENTESIS_I rel=logico{
  
 LLAVE_D
 ;
+
+
+forstatemet returns [Evaluator e]:
+
+ 
+FOR PARENTESIS_I decl=declaracion logi=logico PC aumento=add  {
+  
+  //((WhileEvaluator) $e).setCondicion((Boolean)$rel.e.evaluate(pila));  
+   $e = new ForEvaluator($decl.e, $logi.e, $aumento.e);  
+  
+ } PARENTESIS_D LLAVE_I
+ (wh = whilestatements{
+ 
+     ((ForEvaluator) $e).add($wh.e);   
+     //System.out.println("coso evaluador while: "+$wh.e);
+ }
+ 
+ )*
+ 
+LLAVE_D
+;
+
+
+
+
 
 
 /*todo lo del if*************************************************/
@@ -568,6 +596,11 @@ ASIGNACION
 WHILE
   :
   'while'
+  ;
+  
+FOR
+  :
+  'for'
   ;
 
 ELSE

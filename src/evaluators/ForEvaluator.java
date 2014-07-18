@@ -6,9 +6,11 @@ import conte.Context1;
 
 
 
-public class WhileEvaluator implements Evaluator {
+public class ForEvaluator implements Evaluator {
 
+	private Evaluator inicio;
 	private Evaluator condicion;
+	private Evaluator incremento;
 	ArrayList <Evaluator> lista;
 	Object objeto;
 	private boolean bandera;
@@ -24,8 +26,11 @@ public class WhileEvaluator implements Evaluator {
     
 	
 	
-	public WhileEvaluator(Evaluator condicion) {
+	public ForEvaluator(Evaluator inicio, Evaluator condicion, 
+			            Evaluator incremento) {
+		this.inicio = inicio;
 		this.condicion = condicion;
+		this.incremento = incremento;
 		lista  =  new ArrayList<Evaluator>(); ;
 		bandera = false;
 	}
@@ -41,17 +46,17 @@ public class WhileEvaluator implements Evaluator {
 	public void add(Evaluator a)
 	{
 		lista.add(a);
-		
 	}
 	
 
-	
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) {
 		//System.out.println(condicion);
 		//Context1 auxcon = new Context1();
 		//pila.add(auxcon);
-
+        inicio.evaluate(pila);
+        String variable = ((DeclaracionEvaluator)(inicio)).getNombre();
+        TermEvaluator termino = new TermEvaluator(variable);
 		while((Boolean)condicion.evaluate(pila) == true)
 		{
 			pila.add(new Context1());
@@ -60,9 +65,10 @@ public class WhileEvaluator implements Evaluator {
 				if(e != null)
 					e.evaluate(pila);
 			}
-			
-			pila.remove(pila.size()-1);		
-			
+			pila.remove(pila.size()-1);
+			AsignacionEvaluator asignacion = new AsignacionEvaluator(
+					                             variable, new DoubleEvaluator((Double) termino.evaluate(pila) + (Double)incremento.evaluate(pila)));
+			asignacion.evaluate(pila);
 		}
 		
 		return null;
