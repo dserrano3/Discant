@@ -51,21 +51,32 @@ public class WhileEvaluator implements Evaluator {
 		//System.out.println(condicion);
 		//Context1 auxcon = new Context1();
 		//pila.add(auxcon);
-
+		
+		StringBuilder output = new StringBuilder();
 		while((Boolean)condicion.evaluate(pila) == true)
 		{
 			pila.add(new Context1());
 			for(Evaluator e: lista)
 			{
-				if(e != null)
-					e.evaluate(pila);
+				if(e != null){
+					Object retorno = e.evaluate(pila);
+					
+					if(retorno != null)
+					{
+						if(retorno instanceof Double)
+							output.append(((Double)retorno).toString());
+						else
+							output.append(retorno.toString());
+					}
+						
+				}
 			}
 			
 			pila.remove(pila.size()-1);		
 			
 		}
 		
-		return null;
+		return output.toString();
 		
 
 	}

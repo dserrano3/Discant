@@ -16,7 +16,8 @@ public class Main {
 
 	public static void main(String args[]) throws IOException {
 
-		LenguajeLexer lexer = new LenguajeLexer(new ANTLRFileStream("tokentest.cfpp"));// tokentest.cfpp
+		TextEditor.main(null);
+		/*LenguajeLexer lexer = new LenguajeLexer(new ANTLRFileStream("tokentest.cfpp"));// tokentest.cfpp
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
 
 		LenguajeParser parser = new LenguajeParser(tokens);
@@ -25,10 +26,10 @@ public class Main {
 			parser.programa();
 		} catch (RecognitionException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 
-	public static void GUI(String data) throws IOException {
+	public static String GUI(String data) throws IOException {
 
 		// con data crear archivo de tokens
 		File outFile = new File("tokentest.cfpp");
@@ -47,10 +48,13 @@ public class Main {
 		LenguajeParser parser = new LenguajeParser(tokens);
 
 		try {
-			parser.programa();
+			String output = parser.programa().toString();
+			System.out.println("output "+output);
+			return output;
 		} catch (RecognitionException e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
 
 }

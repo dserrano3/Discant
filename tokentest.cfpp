@@ -1,5 +1,7 @@
-var t = 2;
-for(var i = 0; i < 10; t)
+print "nosadfasd";
+for(var i = 0; i < 4; 1)
 {
-	print "hola3";
+	var a;
+	read a;
+	print a;
 }

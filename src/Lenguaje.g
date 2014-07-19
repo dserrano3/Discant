@@ -32,28 +32,29 @@ public HashMap<String, Evaluator> funciones = new HashMap<String, Evaluator>();
 
 }
 
-// Esta es una regla gramatical. No la utilizaremos todavía, sino hasta haber visto la materia de gramáticas
+// Esta es una regla gramatical. No la utilizaremos todavï¿½a, sino hasta haber visto la materia de gramï¿½ticas
   
-programa
+programa returns [StringBuilder output]
   :
   
   {
    pila.add(new Context1()); 
+   output = new StringBuilder();
   }
   ( 
-    print1 {$print1.e.evaluate(pila);}
-    | asignacion{$asignacion.e.evaluate(pila);}
-    | ifstatement{$ifstatement.e.evaluate(pila);}
-    | lectura{$lectura.e.evaluate(pila);}
+    print1             {$output.append((String)$print1.e.evaluate(pila));}
+    | asignacion       {$asignacion.e.evaluate(pila);}
+    | ifstatement      {$ifstatement.e.evaluate(pila);}
+    | lectura          {$lectura.e.evaluate(pila);}
     | comentario
-    | whilestatemet{$whilestatemet.e.evaluate(pila);}
+    | whilestatemet    {$output.append((String)$whilestatemet.e.evaluate(pila));}
     | funcion
-    | llamadofuncion{$llamadofuncion.e.evaluate(pila);} PC
-    |declaracion{$declaracion.e.evaluate(pila);}
-    |declaracion2{$declaracion2.e.evaluate(pila);}
-    |declaracion_lista{$declaracion_lista.e.evaluate(pila);}
-    |push{$push.e.evaluate(pila);}
-    |forstatemet{$forstatemet.e.evaluate(pila);} 
+    | llamadofuncion   {$llamadofuncion.e.evaluate(pila);} PC
+    | declaracion      {$declaracion.e.evaluate(pila);}
+    | declaracion2     {$declaracion2.e.evaluate(pila);}
+    | declaracion_lista{$declaracion_lista.e.evaluate(pila);}
+    | push             {$push.e.evaluate(pila);}
+    | forstatemet      {$output.append((String)$forstatemet.e.evaluate(pila));} 
 
     
   )+ 
@@ -708,5 +709,5 @@ COMENTARIO
 // Este token sirve para omitir todos los espacios y tabulaciones en el texto
 WS : (' '|'\t')+ {$channel = HIDDEN;};
 
-// Este token sirve para omitir todos los saltos de línea en el texto
+// Este token sirve para omitir todos los saltos de lï¿½nea en el texto
 NEWLINE: '\r'? '\n' {$channel = HIDDEN;};

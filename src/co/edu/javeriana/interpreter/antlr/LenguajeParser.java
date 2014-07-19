@@ -1,4 +1,4 @@
-// $ANTLR 3.4 J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-07-18 18:32:35
+// $ANTLR 3.4 /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g 2014-07-19 23:33:24
 
 package co.edu.javeriana.interpreter.antlr;
 import co.edu.javeriana.interpreter.*;
@@ -86,7 +86,7 @@ public class LenguajeParser extends Parser {
     }
 
     public String[] getTokenNames() { return LenguajeParser.tokenNames; }
-    public String getGrammarFileName() { return "J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g"; }
+    public String getGrammarFileName() { return "/home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g"; }
 
 
     Context1 contexto = new Context1(); 
@@ -98,8 +98,11 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "programa"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:37:1: programa : ( print1 | asignacion | ifstatement | lectura | comentario | whilestatemet | funcion | llamadofuncion PC | declaracion | declaracion2 | declaracion_lista | push | forstatemet )+ ;
-    public final void programa() throws RecognitionException {
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:37:1: programa returns [StringBuilder output] : ( print1 | asignacion | ifstatement | lectura | comentario | whilestatemet | funcion | llamadofuncion PC | declaracion | declaracion2 | declaracion_lista | push | forstatemet )+ ;
+    public final StringBuilder programa() throws RecognitionException {
+        StringBuilder output = null;
+
+
         Evaluator print11 =null;
 
         Evaluator asignacion2 =null;
@@ -124,14 +127,15 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:38:3: ( ( print1 | asignacion | ifstatement | lectura | comentario | whilestatemet | funcion | llamadofuncion PC | declaracion | declaracion2 | declaracion_lista | push | forstatemet )+ )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:40:3: ( print1 | asignacion | ifstatement | lectura | comentario | whilestatemet | funcion | llamadofuncion PC | declaracion | declaracion2 | declaracion_lista | push | forstatemet )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:38:3: ( ( print1 | asignacion | ifstatement | lectura | comentario | whilestatemet | funcion | llamadofuncion PC | declaracion | declaracion2 | declaracion_lista | push | forstatemet )+ )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:40:3: ( print1 | asignacion | ifstatement | lectura | comentario | whilestatemet | funcion | llamadofuncion PC | declaracion | declaracion2 | declaracion_lista | push | forstatemet )+
             {
 
                pila.add(new Context1()); 
+               output = new StringBuilder();
               
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:43:3: ( print1 | asignacion | ifstatement | lectura | comentario | whilestatemet | funcion | llamadofuncion PC | declaracion | declaracion2 | declaracion_lista | push | forstatemet )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:44:3: ( print1 | asignacion | ifstatement | lectura | comentario | whilestatemet | funcion | llamadofuncion PC | declaracion | declaracion2 | declaracion_lista | push | forstatemet )+
             int cnt1=0;
             loop1:
             do {
@@ -225,22 +229,22 @@ public class LenguajeParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:44:5: print1
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:45:5: print1
             	    {
-            	    pushFollow(FOLLOW_print1_in_programa67);
+            	    pushFollow(FOLLOW_print1_in_programa71);
             	    print11=print1();
 
             	    state._fsp--;
 
 
-            	    print11.evaluate(pila);
+            	    output.append((String)print11.evaluate(pila));
 
             	    }
             	    break;
             	case 2 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:45:7: asignacion
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:46:7: asignacion
             	    {
-            	    pushFollow(FOLLOW_asignacion_in_programa77);
+            	    pushFollow(FOLLOW_asignacion_in_programa93);
             	    asignacion2=asignacion();
 
             	    state._fsp--;
@@ -251,9 +255,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:46:7: ifstatement
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:47:7: ifstatement
             	    {
-            	    pushFollow(FOLLOW_ifstatement_in_programa86);
+            	    pushFollow(FOLLOW_ifstatement_in_programa109);
             	    ifstatement3=ifstatement();
 
             	    state._fsp--;
@@ -264,9 +268,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:47:7: lectura
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:48:7: lectura
             	    {
-            	    pushFollow(FOLLOW_lectura_in_programa95);
+            	    pushFollow(FOLLOW_lectura_in_programa124);
             	    lectura4=lectura();
 
             	    state._fsp--;
@@ -277,9 +281,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 5 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:48:7: comentario
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:49:7: comentario
             	    {
-            	    pushFollow(FOLLOW_comentario_in_programa104);
+            	    pushFollow(FOLLOW_comentario_in_programa143);
             	    comentario();
 
             	    state._fsp--;
@@ -288,22 +292,22 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 6 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:49:7: whilestatemet
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:50:7: whilestatemet
             	    {
-            	    pushFollow(FOLLOW_whilestatemet_in_programa112);
+            	    pushFollow(FOLLOW_whilestatemet_in_programa151);
             	    whilestatemet5=whilestatemet();
 
             	    state._fsp--;
 
 
-            	    whilestatemet5.evaluate(pila);
+            	    output.append((String)whilestatemet5.evaluate(pila));
 
             	    }
             	    break;
             	case 7 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:50:7: funcion
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:51:7: funcion
             	    {
-            	    pushFollow(FOLLOW_funcion_in_programa121);
+            	    pushFollow(FOLLOW_funcion_in_programa164);
             	    funcion();
 
             	    state._fsp--;
@@ -312,9 +316,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 8 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:51:7: llamadofuncion PC
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:52:7: llamadofuncion PC
             	    {
-            	    pushFollow(FOLLOW_llamadofuncion_in_programa129);
+            	    pushFollow(FOLLOW_llamadofuncion_in_programa172);
             	    llamadofuncion6=llamadofuncion();
 
             	    state._fsp--;
@@ -322,14 +326,14 @@ public class LenguajeParser extends Parser {
 
             	    llamadofuncion6.evaluate(pila);
 
-            	    match(input,PC,FOLLOW_PC_in_programa132); 
+            	    match(input,PC,FOLLOW_PC_in_programa178); 
 
             	    }
             	    break;
             	case 9 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:52:6: declaracion
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:53:7: declaracion
             	    {
-            	    pushFollow(FOLLOW_declaracion_in_programa139);
+            	    pushFollow(FOLLOW_declaracion_in_programa186);
             	    declaracion7=declaracion();
 
             	    state._fsp--;
@@ -340,9 +344,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 10 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:53:6: declaracion2
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:54:7: declaracion2
             	    {
-            	    pushFollow(FOLLOW_declaracion2_in_programa147);
+            	    pushFollow(FOLLOW_declaracion2_in_programa201);
             	    declaracion28=declaracion2();
 
             	    state._fsp--;
@@ -353,9 +357,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 11 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:54:6: declaracion_lista
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:55:7: declaracion_lista
             	    {
-            	    pushFollow(FOLLOW_declaracion_lista_in_programa155);
+            	    pushFollow(FOLLOW_declaracion_lista_in_programa215);
             	    declaracion_lista9=declaracion_lista();
 
             	    state._fsp--;
@@ -366,9 +370,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 12 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:55:6: push
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:56:7: push
             	    {
-            	    pushFollow(FOLLOW_push_in_programa163);
+            	    pushFollow(FOLLOW_push_in_programa224);
             	    push10=push();
 
             	    state._fsp--;
@@ -379,15 +383,15 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 13 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:56:6: forstatemet
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:57:7: forstatemet
             	    {
-            	    pushFollow(FOLLOW_forstatemet_in_programa171);
+            	    pushFollow(FOLLOW_forstatemet_in_programa246);
             	    forstatemet11=forstatemet();
 
             	    state._fsp--;
 
 
-            	    forstatemet11.evaluate(pila);
+            	    output.append((String)forstatemet11.evaluate(pila));
 
             	    }
             	    break;
@@ -413,14 +417,14 @@ public class LenguajeParser extends Parser {
         finally {
         	// do for sure before leaving
         }
-        return ;
+        return output;
     }
     // $ANTLR end "programa"
 
 
 
     // $ANTLR start "return1"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:65:3: return1 returns [Evaluator e] : 'return' te= evaluator PC ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:66:3: return1 returns [Evaluator e] : 'return' te= evaluator PC ;
     public final Evaluator return1() throws RecognitionException {
         Evaluator e = null;
 
@@ -429,12 +433,12 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:66:3: ( 'return' te= evaluator PC )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:67:5: 'return' te= evaluator PC
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:67:3: ( 'return' te= evaluator PC )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:68:5: 'return' te= evaluator PC
             {
-            match(input,43,FOLLOW_43_in_return1220); 
+            match(input,43,FOLLOW_43_in_return1301); 
 
-            pushFollow(FOLLOW_evaluator_in_return1226);
+            pushFollow(FOLLOW_evaluator_in_return1307);
             te=evaluator();
 
             state._fsp--;
@@ -444,7 +448,7 @@ public class LenguajeParser extends Parser {
                   e = new ReturnEvaluator(te); 
                 
 
-            match(input,PC,FOLLOW_PC_in_return1233); 
+            match(input,PC,FOLLOW_PC_in_return1314); 
 
             }
 
@@ -464,7 +468,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "funcion"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:75:3: funcion returns [Evaluator e] : FUNCTION nom= NOMBRE '(' ( ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )* )? ')' '{' (wh= whilestatements )* '}' ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:76:3: funcion returns [Evaluator e] : FUNCTION nom= NOMBRE '(' ( ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )* )? ')' '{' (wh= whilestatements )* '}' ;
     public final Evaluator funcion() throws RecognitionException {
         Evaluator e = null;
 
@@ -475,18 +479,18 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:76:3: ( FUNCTION nom= NOMBRE '(' ( ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )* )? ')' '{' (wh= whilestatements )* '}' )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:77:3: FUNCTION nom= NOMBRE '(' ( ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )* )? ')' '{' (wh= whilestatements )* '}'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:77:3: ( FUNCTION nom= NOMBRE '(' ( ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )* )? ')' '{' (wh= whilestatements )* '}' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:78:3: FUNCTION nom= NOMBRE '(' ( ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )* )? ')' '{' (wh= whilestatements )* '}'
             {
             e = new FuncionEvaluator();
 
-            match(input,FUNCTION,FOLLOW_FUNCTION_in_funcion267); 
+            match(input,FUNCTION,FOLLOW_FUNCTION_in_funcion348); 
 
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_funcion273); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_funcion354); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_funcion275); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_funcion356); 
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:80:2: ( ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )* )?
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:81:2: ( ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )* )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -495,14 +499,14 @@ public class LenguajeParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:80:3: ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )*
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:81:3: ( 'var' nom1= NOMBRE ) ( ',' 'var' nom1= NOMBRE )*
                     {
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:80:3: ( 'var' nom1= NOMBRE )
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:81:4: 'var' nom1= NOMBRE
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:81:3: ( 'var' nom1= NOMBRE )
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:82:4: 'var' nom1= NOMBRE
                     {
-                    match(input,44,FOLLOW_44_in_funcion287); 
+                    match(input,44,FOLLOW_44_in_funcion368); 
 
-                    nom1=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_funcion293); 
+                    nom1=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_funcion374); 
 
 
                     	     ((FuncionEvaluator) e).aregarParametro((nom1!=null?nom1.getText():null));   
@@ -511,7 +515,7 @@ public class LenguajeParser extends Parser {
                     }
 
 
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:86:2: ( ',' 'var' nom1= NOMBRE )*
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:87:2: ( ',' 'var' nom1= NOMBRE )*
                     loop2:
                     do {
                         int alt2=2;
@@ -524,13 +528,13 @@ public class LenguajeParser extends Parser {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:87:5: ',' 'var' nom1= NOMBRE
+                    	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:88:5: ',' 'var' nom1= NOMBRE
                     	    {
-                    	    match(input,32,FOLLOW_32_in_funcion310); 
+                    	    match(input,32,FOLLOW_32_in_funcion391); 
 
-                    	    match(input,44,FOLLOW_44_in_funcion312); 
+                    	    match(input,44,FOLLOW_44_in_funcion393); 
 
-                    	    nom1=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_funcion318); 
+                    	    nom1=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_funcion399); 
 
 
                     	           ((FuncionEvaluator) e).aregarParametro((nom1!=null?nom1.getText():null));   
@@ -551,11 +555,11 @@ public class LenguajeParser extends Parser {
             }
 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_funcion336); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_funcion417); 
 
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_funcion339); 
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_funcion420); 
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:96:4: (wh= whilestatements )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:97:4: (wh= whilestatements )*
             loop4:
             do {
                 int alt4=2;
@@ -568,9 +572,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt4) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:96:5: wh= whilestatements
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:97:5: wh= whilestatements
             	    {
-            	    pushFollow(FOLLOW_whilestatements_in_funcion353);
+            	    pushFollow(FOLLOW_whilestatements_in_funcion434);
             	    wh=whilestatements();
 
             	    state._fsp--;
@@ -590,7 +594,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_funcion365); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_funcion446); 
 
             funciones.put((nom!=null?nom.getText():null), e);
 
@@ -612,7 +616,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "declaracion"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:110:1: declaracion returns [Evaluator e] : 'var' nom= NOMBRE ASIGNACION ev= evaluator PC ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:111:1: declaracion returns [Evaluator e] : 'var' nom= NOMBRE ASIGNACION ev= evaluator PC ;
     public final Evaluator declaracion() throws RecognitionException {
         Evaluator e = null;
 
@@ -622,16 +626,16 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:111:3: ( 'var' nom= NOMBRE ASIGNACION ev= evaluator PC )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:112:3: 'var' nom= NOMBRE ASIGNACION ev= evaluator PC
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:112:3: ( 'var' nom= NOMBRE ASIGNACION ev= evaluator PC )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:113:3: 'var' nom= NOMBRE ASIGNACION ev= evaluator PC
             {
-            match(input,44,FOLLOW_44_in_declaracion397); 
+            match(input,44,FOLLOW_44_in_declaracion478); 
 
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion401); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion482); 
 
-            match(input,ASIGNACION,FOLLOW_ASIGNACION_in_declaracion403); 
+            match(input,ASIGNACION,FOLLOW_ASIGNACION_in_declaracion484); 
 
-            pushFollow(FOLLOW_evaluator_in_declaracion409);
+            pushFollow(FOLLOW_evaluator_in_declaracion490);
             ev=evaluator();
 
             state._fsp--;
@@ -647,7 +651,7 @@ public class LenguajeParser extends Parser {
                                               	}
                                              
 
-            match(input,PC,FOLLOW_PC_in_declaracion480); 
+            match(input,PC,FOLLOW_PC_in_declaracion561); 
 
             }
 
@@ -667,7 +671,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "declaracion2"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:125:3: declaracion2 returns [Evaluator e] : 'var' nom= NOMBRE PC ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:126:3: declaracion2 returns [Evaluator e] : 'var' nom= NOMBRE PC ;
     public final Evaluator declaracion2() throws RecognitionException {
         Evaluator e = null;
 
@@ -675,12 +679,12 @@ public class LenguajeParser extends Parser {
         Token nom=null;
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:126:3: ( 'var' nom= NOMBRE PC )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:127:3: 'var' nom= NOMBRE PC
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:127:3: ( 'var' nom= NOMBRE PC )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:128:3: 'var' nom= NOMBRE PC
             {
-            match(input,44,FOLLOW_44_in_declaracion2504); 
+            match(input,44,FOLLOW_44_in_declaracion2585); 
 
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion2508); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion2589); 
 
 
                                               if(bandera)
@@ -692,7 +696,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_declaracion2581); 
+            match(input,PC,FOLLOW_PC_in_declaracion2662); 
 
             }
 
@@ -712,7 +716,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "declaracion_lista"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:142:3: declaracion_lista returns [Evaluator e] : 'list' nom= NOMBRE PC ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:143:3: declaracion_lista returns [Evaluator e] : 'list' nom= NOMBRE PC ;
     public final Evaluator declaracion_lista() throws RecognitionException {
         Evaluator e = null;
 
@@ -720,12 +724,12 @@ public class LenguajeParser extends Parser {
         Token nom=null;
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:143:3: ( 'list' nom= NOMBRE PC )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:145:3: 'list' nom= NOMBRE PC
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:144:3: ( 'list' nom= NOMBRE PC )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:146:3: 'list' nom= NOMBRE PC
             {
-            match(input,42,FOLLOW_42_in_declaracion_lista607); 
+            match(input,42,FOLLOW_42_in_declaracion_lista688); 
 
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion_lista611); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion_lista692); 
 
 
                                               if(bandera)
@@ -735,7 +739,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_declaracion_lista684); 
+            match(input,PC,FOLLOW_PC_in_declaracion_lista765); 
 
             }
 
@@ -755,7 +759,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "push"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:157:3: push returns [Evaluator e] : nom= NOMBRE '.push(' exp= expression ')' PC ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:158:3: push returns [Evaluator e] : nom= NOMBRE '.push(' exp= expression ')' PC ;
     public final Evaluator push() throws RecognitionException {
         Evaluator e = null;
 
@@ -765,20 +769,20 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:158:3: (nom= NOMBRE '.push(' exp= expression ')' PC )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:159:3: nom= NOMBRE '.push(' exp= expression ')' PC
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:159:3: (nom= NOMBRE '.push(' exp= expression ')' PC )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:160:3: nom= NOMBRE '.push(' exp= expression ')' PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_push711); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_push792); 
 
-            match(input,35,FOLLOW_35_in_push713); 
+            match(input,35,FOLLOW_35_in_push794); 
 
-            pushFollow(FOLLOW_expression_in_push719);
+            pushFollow(FOLLOW_expression_in_push800);
             exp=expression();
 
             state._fsp--;
 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_push721); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_push802); 
 
 
                                               if(bandera)
@@ -788,7 +792,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_push791); 
+            match(input,PC,FOLLOW_PC_in_push872); 
 
             }
 
@@ -808,7 +812,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "asignacion"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:172:3: asignacion returns [Evaluator e] : nom= NOMBRE ASIGNACION ev= evaluator PC ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:173:3: asignacion returns [Evaluator e] : nom= NOMBRE ASIGNACION ev= evaluator PC ;
     public final Evaluator asignacion() throws RecognitionException {
         Evaluator e = null;
 
@@ -818,14 +822,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:173:3: (nom= NOMBRE ASIGNACION ev= evaluator PC )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:174:4: nom= NOMBRE ASIGNACION ev= evaluator PC
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:174:3: (nom= NOMBRE ASIGNACION ev= evaluator PC )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:175:4: nom= NOMBRE ASIGNACION ev= evaluator PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_asignacion825); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_asignacion906); 
 
-            match(input,ASIGNACION,FOLLOW_ASIGNACION_in_asignacion827); 
+            match(input,ASIGNACION,FOLLOW_ASIGNACION_in_asignacion908); 
 
-            pushFollow(FOLLOW_evaluator_in_asignacion833);
+            pushFollow(FOLLOW_evaluator_in_asignacion914);
             ev=evaluator();
 
             state._fsp--;
@@ -841,7 +845,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_asignacion873); 
+            match(input,PC,FOLLOW_PC_in_asignacion954); 
 
             }
 
@@ -861,13 +865,13 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "comentario"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:187:1: comentario : COMENTARIO ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:188:1: comentario : COMENTARIO ;
     public final void comentario() throws RecognitionException {
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:188:3: ( COMENTARIO )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:189:3: COMENTARIO
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:189:3: ( COMENTARIO )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:190:3: COMENTARIO
             {
-            match(input,COMENTARIO,FOLLOW_COMENTARIO_in_comentario889); 
+            match(input,COMENTARIO,FOLLOW_COMENTARIO_in_comentario970); 
 
             }
 
@@ -887,7 +891,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "lectura"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:192:1: lectura returns [Evaluator e] : r= READ n= NOMBRE PC ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:193:1: lectura returns [Evaluator e] : r= READ n= NOMBRE PC ;
     public final Evaluator lectura() throws RecognitionException {
         Evaluator e = null;
 
@@ -896,12 +900,12 @@ public class LenguajeParser extends Parser {
         Token n=null;
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:193:3: (r= READ n= NOMBRE PC )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:194:3: r= READ n= NOMBRE PC
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:194:3: (r= READ n= NOMBRE PC )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:195:3: r= READ n= NOMBRE PC
             {
-            r=(Token)match(input,READ,FOLLOW_READ_in_lectura910); 
+            r=(Token)match(input,READ,FOLLOW_READ_in_lectura991); 
 
-            n=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_lectura914); 
+            n=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_lectura995); 
 
 
                               if(bandera)
@@ -911,7 +915,7 @@ public class LenguajeParser extends Parser {
                                 }
                               
 
-            match(input,PC,FOLLOW_PC_in_lectura961); 
+            match(input,PC,FOLLOW_PC_in_lectura1042); 
 
             }
 
@@ -931,7 +935,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "print1"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:206:1: print1 returns [Evaluator e] : PRINT evaluator PC ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:207:1: print1 returns [Evaluator e] : PRINT evaluator PC ;
     public final Evaluator print1() throws RecognitionException {
         Evaluator e = null;
 
@@ -940,12 +944,12 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:207:3: ( PRINT evaluator PC )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:208:3: PRINT evaluator PC
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:208:3: ( PRINT evaluator PC )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:209:3: PRINT evaluator PC
             {
-            match(input,PRINT,FOLLOW_PRINT_in_print1980); 
+            match(input,PRINT,FOLLOW_PRINT_in_print11061); 
 
-            pushFollow(FOLLOW_evaluator_in_print1982);
+            pushFollow(FOLLOW_evaluator_in_print11063);
             evaluator12=evaluator();
 
             state._fsp--;
@@ -961,7 +965,7 @@ public class LenguajeParser extends Parser {
                               	}
                              
 
-            match(input,PC,FOLLOW_PC_in_print11010); 
+            match(input,PC,FOLLOW_PC_in_print11091); 
 
             }
 
@@ -981,7 +985,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "evaluator"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:222:1: evaluator returns [Evaluator e] : logico ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:223:1: evaluator returns [Evaluator e] : logico ;
     public final Evaluator evaluator() throws RecognitionException {
         Evaluator e = null;
 
@@ -990,10 +994,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:223:3: ( logico )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:224:3: logico
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:224:3: ( logico )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:225:3: logico
             {
-            pushFollow(FOLLOW_logico_in_evaluator1029);
+            pushFollow(FOLLOW_logico_in_evaluator1110);
             logico13=logico();
 
             state._fsp--;
@@ -1021,7 +1025,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "term"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:230:1: term returns [Evaluator e] : (lla= llamadofuncion | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE '.get(' num= add ')' );
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:231:1: term returns [Evaluator e] : (lla= llamadofuncion | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE '.get(' num= add ')' );
     public final Evaluator term() throws RecognitionException {
         Evaluator e = null;
 
@@ -1039,7 +1043,7 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:231:3: (lla= llamadofuncion | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE '.get(' num= add ')' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:232:3: (lla= llamadofuncion | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE '.get(' num= add ')' )
             int alt5=7;
             switch ( input.LA(1) ) {
             case NOMBRE:
@@ -1114,13 +1118,13 @@ public class LenguajeParser extends Parser {
 
             switch (alt5) {
                 case 1 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:233:3: lla= llamadofuncion
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:234:3: lla= llamadofuncion
                     {
 
                        e = new IntEvaluator(0);
                       
 
-                    pushFollow(FOLLOW_llamadofuncion_in_term1071);
+                    pushFollow(FOLLOW_llamadofuncion_in_term1152);
                     lla=llamadofuncion();
 
                     state._fsp--;
@@ -1135,9 +1139,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:242:5: NOMBRE
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:243:5: NOMBRE
                     {
-                    NOMBRE14=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term1087); 
+                    NOMBRE14=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term1168); 
 
                       
                            // System.out.println("entiendo que es un llamado");
@@ -1149,9 +1153,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:249:5: NUMERO
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:250:5: NUMERO
                     {
-                    NUMERO15=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_term1105); 
+                    NUMERO15=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_term1186); 
 
 
                                e = new DoubleEvaluator(Double.parseDouble((NUMERO15!=null?NUMERO15.getText():null)));
@@ -1160,9 +1164,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:253:6: DOBLE
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:254:6: DOBLE
                     {
-                    DOBLE16=(Token)match(input,DOBLE,FOLLOW_DOBLE_in_term1125); 
+                    DOBLE16=(Token)match(input,DOBLE,FOLLOW_DOBLE_in_term1206); 
 
 
                                e = new DoubleEvaluator(Double.parseDouble((DOBLE16!=null?DOBLE16.getText():null)));
@@ -1171,9 +1175,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:258:5: TEXTO
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:259:5: TEXTO
                     {
-                    TEXTO17=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_term1159); 
+                    TEXTO17=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_term1240); 
 
 
                               e = new StringEvaluator(((TEXTO17!=null?TEXTO17.getText():null)));
@@ -1182,17 +1186,17 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:263:5: '(' add ')'
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:264:5: '(' add ')'
                     {
-                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_term1180); 
+                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_term1261); 
 
-                    pushFollow(FOLLOW_add_in_term1182);
+                    pushFollow(FOLLOW_add_in_term1263);
                     add18=add();
 
                     state._fsp--;
 
 
-                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term1184); 
+                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term1265); 
 
 
                                            e = add18;
@@ -1201,19 +1205,19 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:267:6: nom= NOMBRE '.get(' num= add ')'
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:268:6: nom= NOMBRE '.get(' num= add ')'
                     {
-                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term1218); 
+                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term1299); 
 
-                    match(input,34,FOLLOW_34_in_term1220); 
+                    match(input,34,FOLLOW_34_in_term1301); 
 
-                    pushFollow(FOLLOW_add_in_term1226);
+                    pushFollow(FOLLOW_add_in_term1307);
                     num=add();
 
                     state._fsp--;
 
 
-                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term1228); 
+                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term1309); 
 
 
                                     e = new GetEvaluator((nom!=null?nom.getText():null),num);     
@@ -1239,7 +1243,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "unary"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:273:1: unary returns [Evaluator e] : ( '+' | '-' )* term ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:274:1: unary returns [Evaluator e] : ( '+' | '-' )* term ;
     public final Evaluator unary() throws RecognitionException {
         Evaluator e = null;
 
@@ -1248,14 +1252,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:274:3: ( ( '+' | '-' )* term )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:276:3: ( '+' | '-' )* term
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:275:3: ( ( '+' | '-' )* term )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:277:3: ( '+' | '-' )* term
             {
 
                boolean positive = true;
               
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:279:3: ( '+' | '-' )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:280:3: ( '+' | '-' )*
             loop6:
             do {
                 int alt6=3;
@@ -1271,16 +1275,16 @@ public class LenguajeParser extends Parser {
 
                 switch (alt6) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:280:5: '+'
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:281:5: '+'
             	    {
-            	    match(input,31,FOLLOW_31_in_unary1272); 
+            	    match(input,31,FOLLOW_31_in_unary1353); 
 
             	    }
             	    break;
             	case 2 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:281:7: '-'
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:282:7: '-'
             	    {
-            	    match(input,33,FOLLOW_33_in_unary1280); 
+            	    match(input,33,FOLLOW_33_in_unary1361); 
 
 
             	              positive = !positive;
@@ -1295,7 +1299,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            pushFollow(FOLLOW_term_in_unary1301);
+            pushFollow(FOLLOW_term_in_unary1382);
             term19=term();
 
             state._fsp--;
@@ -1325,7 +1329,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "mult"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:294:1: mult returns [Evaluator e] : op1= unary ( '*' op2= unary | '/' op2= unary )* ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:295:1: mult returns [Evaluator e] : op1= unary ( '*' op2= unary | '/' op2= unary )* ;
     public final Evaluator mult() throws RecognitionException {
         Evaluator e = null;
 
@@ -1336,10 +1340,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:295:3: (op1= unary ( '*' op2= unary | '/' op2= unary )* )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:296:3: op1= unary ( '*' op2= unary | '/' op2= unary )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:296:3: (op1= unary ( '*' op2= unary | '/' op2= unary )* )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:297:3: op1= unary ( '*' op2= unary | '/' op2= unary )*
             {
-            pushFollow(FOLLOW_unary_in_mult1331);
+            pushFollow(FOLLOW_unary_in_mult1412);
             op1=unary();
 
             state._fsp--;
@@ -1349,7 +1353,7 @@ public class LenguajeParser extends Parser {
                         e = op1;
                        
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:300:3: ( '*' op2= unary | '/' op2= unary )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:301:3: ( '*' op2= unary | '/' op2= unary )*
             loop7:
             do {
                 int alt7=3;
@@ -1365,11 +1369,11 @@ public class LenguajeParser extends Parser {
 
                 switch (alt7) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:301:5: '*' op2= unary
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:302:5: '*' op2= unary
             	    {
-            	    match(input,30,FOLLOW_30_in_mult1355); 
+            	    match(input,30,FOLLOW_30_in_mult1436); 
 
-            	    pushFollow(FOLLOW_unary_in_mult1359);
+            	    pushFollow(FOLLOW_unary_in_mult1440);
             	    op2=unary();
 
             	    state._fsp--;
@@ -1382,11 +1386,11 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:305:7: '/' op2= unary
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:306:7: '/' op2= unary
             	    {
-            	    match(input,36,FOLLOW_36_in_mult1387); 
+            	    match(input,36,FOLLOW_36_in_mult1468); 
 
-            	    pushFollow(FOLLOW_unary_in_mult1391);
+            	    pushFollow(FOLLOW_unary_in_mult1472);
             	    op2=unary();
 
             	    state._fsp--;
@@ -1423,7 +1427,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "add"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:312:1: add returns [Evaluator e] : op1= mult ( '+' op2= mult | '-' op2= mult )* ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:313:1: add returns [Evaluator e] : op1= mult ( '+' op2= mult | '-' op2= mult )* ;
     public final Evaluator add() throws RecognitionException {
         Evaluator e = null;
 
@@ -1434,10 +1438,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:313:3: (op1= mult ( '+' op2= mult | '-' op2= mult )* )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:314:3: op1= mult ( '+' op2= mult | '-' op2= mult )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:314:3: (op1= mult ( '+' op2= mult | '-' op2= mult )* )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:315:3: op1= mult ( '+' op2= mult | '-' op2= mult )*
             {
-            pushFollow(FOLLOW_mult_in_add1439);
+            pushFollow(FOLLOW_mult_in_add1520);
             op1=mult();
 
             state._fsp--;
@@ -1447,7 +1451,7 @@ public class LenguajeParser extends Parser {
                        e = op1;
                       
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:318:3: ( '+' op2= mult | '-' op2= mult )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:319:3: ( '+' op2= mult | '-' op2= mult )*
             loop8:
             do {
                 int alt8=3;
@@ -1463,11 +1467,11 @@ public class LenguajeParser extends Parser {
 
                 switch (alt8) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:319:5: '+' op2= mult
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:320:5: '+' op2= mult
             	    {
-            	    match(input,31,FOLLOW_31_in_add1462); 
+            	    match(input,31,FOLLOW_31_in_add1543); 
 
-            	    pushFollow(FOLLOW_mult_in_add1466);
+            	    pushFollow(FOLLOW_mult_in_add1547);
             	    op2=mult();
 
             	    state._fsp--;
@@ -1480,11 +1484,11 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:323:7: '-' op2= mult
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:324:7: '-' op2= mult
             	    {
-            	    match(input,33,FOLLOW_33_in_add1493); 
+            	    match(input,33,FOLLOW_33_in_add1574); 
 
-            	    pushFollow(FOLLOW_mult_in_add1497);
+            	    pushFollow(FOLLOW_mult_in_add1578);
             	    op2=mult();
 
             	    state._fsp--;
@@ -1521,7 +1525,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "relation"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:330:1: relation returns [Evaluator e] : ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:331:1: relation returns [Evaluator e] : ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* ;
     public final Evaluator relation() throws RecognitionException {
         Evaluator e = null;
 
@@ -1532,10 +1536,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:331:3: (ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:332:3: ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:332:3: (ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:333:3: ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
             {
-            pushFollow(FOLLOW_add_in_relation1546);
+            pushFollow(FOLLOW_add_in_relation1627);
             ex1=add();
 
             state._fsp--;
@@ -1545,7 +1549,7 @@ public class LenguajeParser extends Parser {
                              e = ex1;
                             
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:336:3: ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:337:3: ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1558,9 +1562,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt10) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:337:5: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:338:5: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
             	    {
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:337:5: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:338:5: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
             	    int alt9=6;
             	    switch ( input.LA(1) ) {
             	    case 39:
@@ -1603,11 +1607,11 @@ public class LenguajeParser extends Parser {
 
             	    switch (alt9) {
             	        case 1 :
-            	            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:338:7: '==' ex2= add
+            	            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:339:7: '==' ex2= add
             	            {
-            	            match(input,39,FOLLOW_39_in_relation1583); 
+            	            match(input,39,FOLLOW_39_in_relation1664); 
 
-            	            pushFollow(FOLLOW_add_in_relation1587);
+            	            pushFollow(FOLLOW_add_in_relation1668);
             	            ex2=add();
 
             	            state._fsp--;
@@ -1620,11 +1624,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:342:9: '>' ex2= add
+            	            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:343:9: '>' ex2= add
             	            {
-            	            match(input,40,FOLLOW_40_in_relation1625); 
+            	            match(input,40,FOLLOW_40_in_relation1706); 
 
-            	            pushFollow(FOLLOW_add_in_relation1629);
+            	            pushFollow(FOLLOW_add_in_relation1710);
             	            ex2=add();
 
             	            state._fsp--;
@@ -1637,11 +1641,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:346:9: '<' ex2= add
+            	            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:347:9: '<' ex2= add
             	            {
-            	            match(input,37,FOLLOW_37_in_relation1668); 
+            	            match(input,37,FOLLOW_37_in_relation1749); 
 
-            	            pushFollow(FOLLOW_add_in_relation1672);
+            	            pushFollow(FOLLOW_add_in_relation1753);
             	            ex2=add();
 
             	            state._fsp--;
@@ -1654,11 +1658,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 4 :
-            	            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:350:9: '!=' ex2= add
+            	            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:351:9: '!=' ex2= add
             	            {
-            	            match(input,28,FOLLOW_28_in_relation1711); 
+            	            match(input,28,FOLLOW_28_in_relation1792); 
 
-            	            pushFollow(FOLLOW_add_in_relation1715);
+            	            pushFollow(FOLLOW_add_in_relation1796);
             	            ex2=add();
 
             	            state._fsp--;
@@ -1671,11 +1675,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 5 :
-            	            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:354:9: '<=' ex2= add
+            	            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:355:9: '<=' ex2= add
             	            {
-            	            match(input,38,FOLLOW_38_in_relation1755); 
+            	            match(input,38,FOLLOW_38_in_relation1836); 
 
-            	            pushFollow(FOLLOW_add_in_relation1759);
+            	            pushFollow(FOLLOW_add_in_relation1840);
             	            ex2=add();
 
             	            state._fsp--;
@@ -1688,11 +1692,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 6 :
-            	            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:358:9: '>=' ex2= add
+            	            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:359:9: '>=' ex2= add
             	            {
-            	            match(input,41,FOLLOW_41_in_relation1799); 
+            	            match(input,41,FOLLOW_41_in_relation1880); 
 
-            	            pushFollow(FOLLOW_add_in_relation1803);
+            	            pushFollow(FOLLOW_add_in_relation1884);
             	            ex2=add();
 
             	            state._fsp--;
@@ -1735,7 +1739,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "logico"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:366:1: logico returns [Evaluator e] : rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:367:1: logico returns [Evaluator e] : rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* ;
     public final Evaluator logico() throws RecognitionException {
         Evaluator e = null;
 
@@ -1746,10 +1750,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:367:3: (rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:368:3: rel1= relation ( '&&' rel2= relation | '||' rel2= relation )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:368:3: (rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:369:3: rel1= relation ( '&&' rel2= relation | '||' rel2= relation )*
             {
-            pushFollow(FOLLOW_relation_in_logico1866);
+            pushFollow(FOLLOW_relation_in_logico1947);
             rel1=relation();
 
             state._fsp--;
@@ -1759,7 +1763,7 @@ public class LenguajeParser extends Parser {
                             e = rel1;
                            
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:372:3: ( '&&' rel2= relation | '||' rel2= relation )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:373:3: ( '&&' rel2= relation | '||' rel2= relation )*
             loop11:
             do {
                 int alt11=3;
@@ -1775,11 +1779,11 @@ public class LenguajeParser extends Parser {
 
                 switch (alt11) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:373:5: '&&' rel2= relation
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:374:5: '&&' rel2= relation
             	    {
-            	    match(input,29,FOLLOW_29_in_logico1894); 
+            	    match(input,29,FOLLOW_29_in_logico1975); 
 
-            	    pushFollow(FOLLOW_relation_in_logico1898);
+            	    pushFollow(FOLLOW_relation_in_logico1979);
             	    rel2=relation();
 
             	    state._fsp--;
@@ -1792,11 +1796,11 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:377:7: '||' rel2= relation
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:378:7: '||' rel2= relation
             	    {
-            	    match(input,45,FOLLOW_45_in_logico1931); 
+            	    match(input,45,FOLLOW_45_in_logico2012); 
 
-            	    pushFollow(FOLLOW_relation_in_logico1935);
+            	    pushFollow(FOLLOW_relation_in_logico2016);
             	    rel2=relation();
 
             	    state._fsp--;
@@ -1833,7 +1837,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "expression"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:384:3: expression returns [Evaluator e] : logico ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:385:3: expression returns [Evaluator e] : logico ;
     public final Evaluator expression() throws RecognitionException {
         Evaluator e = null;
 
@@ -1842,10 +1846,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:385:5: ( logico )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:385:9: logico
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:386:5: ( logico )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:386:9: logico
             {
-            pushFollow(FOLLOW_logico_in_expression1990);
+            pushFollow(FOLLOW_logico_in_expression2071);
             logico20=logico();
 
             state._fsp--;
@@ -1871,7 +1875,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "llamadofuncion"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:389:1: llamadofuncion returns [Evaluator e] : nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:390:1: llamadofuncion returns [Evaluator e] : nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' ;
     public final Evaluator llamadofuncion() throws RecognitionException {
         Evaluator e = null;
 
@@ -1881,16 +1885,16 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:389:36: (nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:390:3: nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:390:36: (nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:391:3: nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')'
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_llamadofuncion2014); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_llamadofuncion2095); 
 
             e = funciones.get((nom!=null?nom.getText():null));
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_llamadofuncion2019); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_llamadofuncion2100); 
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:392:4: ( (ev= term ) ( ',' ev= term )* )?
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:393:4: ( (ev= term ) ( ',' ev= term )* )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1899,12 +1903,12 @@ public class LenguajeParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:392:6: (ev= term ) ( ',' ev= term )*
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:393:6: (ev= term ) ( ',' ev= term )*
                     {
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:392:6: (ev= term )
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:392:7: ev= term
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:393:6: (ev= term )
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:393:7: ev= term
                     {
-                    pushFollow(FOLLOW_term_in_llamadofuncion2031);
+                    pushFollow(FOLLOW_term_in_llamadofuncion2112);
                     ev=term();
 
                     state._fsp--;
@@ -1915,7 +1919,7 @@ public class LenguajeParser extends Parser {
                     }
 
 
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:394:6: ( ',' ev= term )*
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:395:6: ( ',' ev= term )*
                     loop12:
                     do {
                         int alt12=2;
@@ -1928,11 +1932,11 @@ public class LenguajeParser extends Parser {
 
                         switch (alt12) {
                     	case 1 :
-                    	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:394:7: ',' ev= term
+                    	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:395:7: ',' ev= term
                     	    {
-                    	    match(input,32,FOLLOW_32_in_llamadofuncion2046); 
+                    	    match(input,32,FOLLOW_32_in_llamadofuncion2127); 
 
-                    	    pushFollow(FOLLOW_term_in_llamadofuncion2051);
+                    	    pushFollow(FOLLOW_term_in_llamadofuncion2132);
                     	    ev=term();
 
                     	    state._fsp--;
@@ -1955,7 +1959,7 @@ public class LenguajeParser extends Parser {
             }
 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_llamadofuncion2065); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_llamadofuncion2146); 
 
             }
 
@@ -1975,7 +1979,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "ifstatements"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:405:1: ifstatements returns [Evaluator e] : ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet );
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:406:1: ifstatements returns [Evaluator e] : ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet );
     public final Evaluator ifstatements() throws RecognitionException {
         Evaluator e = null;
 
@@ -2004,7 +2008,7 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:405:35: ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:406:35: ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet )
             int alt14=12;
             switch ( input.LA(1) ) {
             case PRINT:
@@ -2106,9 +2110,9 @@ public class LenguajeParser extends Parser {
 
             switch (alt14) {
                 case 1 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:407:3: print1
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:408:3: print1
                     {
-                    pushFollow(FOLLOW_print1_in_ifstatements2089);
+                    pushFollow(FOLLOW_print1_in_ifstatements2170);
                     print121=print1();
 
                     state._fsp--;
@@ -2119,9 +2123,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:408:5: asignacion
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:409:5: asignacion
                     {
-                    pushFollow(FOLLOW_asignacion_in_ifstatements2097);
+                    pushFollow(FOLLOW_asignacion_in_ifstatements2178);
                     asignacion22=asignacion();
 
                     state._fsp--;
@@ -2132,9 +2136,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:409:5: lectura
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:410:5: lectura
                     {
-                    pushFollow(FOLLOW_lectura_in_ifstatements2104);
+                    pushFollow(FOLLOW_lectura_in_ifstatements2185);
                     lectura23=lectura();
 
                     state._fsp--;
@@ -2145,9 +2149,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:410:5: comentario
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:411:5: comentario
                     {
-                    pushFollow(FOLLOW_comentario_in_ifstatements2112);
+                    pushFollow(FOLLOW_comentario_in_ifstatements2193);
                     comentario();
 
                     state._fsp--;
@@ -2158,9 +2162,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:411:5: return1
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:412:5: return1
                     {
-                    pushFollow(FOLLOW_return1_in_ifstatements2120);
+                    pushFollow(FOLLOW_return1_in_ifstatements2201);
                     return124=return1();
 
                     state._fsp--;
@@ -2171,9 +2175,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:412:5: whilestatemet
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:413:5: whilestatemet
                     {
-                    pushFollow(FOLLOW_whilestatemet_in_ifstatements2128);
+                    pushFollow(FOLLOW_whilestatemet_in_ifstatements2209);
                     whilestatemet25=whilestatemet();
 
                     state._fsp--;
@@ -2184,9 +2188,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:413:5: ifstatement
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:414:5: ifstatement
                     {
-                    pushFollow(FOLLOW_ifstatement_in_ifstatements2136);
+                    pushFollow(FOLLOW_ifstatement_in_ifstatements2217);
                     ifstatement26=ifstatement();
 
                     state._fsp--;
@@ -2197,9 +2201,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:414:4: declaracion
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:415:4: declaracion
                     {
-                    pushFollow(FOLLOW_declaracion_in_ifstatements2144);
+                    pushFollow(FOLLOW_declaracion_in_ifstatements2225);
                     declaracion27=declaracion();
 
                     state._fsp--;
@@ -2210,9 +2214,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:415:4: declaracion2
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:416:4: declaracion2
                     {
-                    pushFollow(FOLLOW_declaracion2_in_ifstatements2150);
+                    pushFollow(FOLLOW_declaracion2_in_ifstatements2231);
                     declaracion228=declaracion2();
 
                     state._fsp--;
@@ -2223,9 +2227,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:416:4: declaracion_lista
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:417:4: declaracion_lista
                     {
-                    pushFollow(FOLLOW_declaracion_lista_in_ifstatements2158);
+                    pushFollow(FOLLOW_declaracion_lista_in_ifstatements2239);
                     declaracion_lista29=declaracion_lista();
 
                     state._fsp--;
@@ -2236,9 +2240,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:417:4: push
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:418:4: push
                     {
-                    pushFollow(FOLLOW_push_in_ifstatements2164);
+                    pushFollow(FOLLOW_push_in_ifstatements2245);
                     push30=push();
 
                     state._fsp--;
@@ -2249,9 +2253,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:418:4: forstatemet
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:419:4: forstatemet
                     {
-                    pushFollow(FOLLOW_forstatemet_in_ifstatements2170);
+                    pushFollow(FOLLOW_forstatemet_in_ifstatements2251);
                     forstatemet31=forstatemet();
 
                     state._fsp--;
@@ -2279,7 +2283,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "elsestataments"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:424:1: elsestataments returns [Evaluator e] : ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet );
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:425:1: elsestataments returns [Evaluator e] : ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet );
     public final Evaluator elsestataments() throws RecognitionException {
         Evaluator e = null;
 
@@ -2308,7 +2312,7 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:424:37: ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:425:37: ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet )
             int alt15=12;
             switch ( input.LA(1) ) {
             case PRINT:
@@ -2410,9 +2414,9 @@ public class LenguajeParser extends Parser {
 
             switch (alt15) {
                 case 1 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:426:1: print1
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:427:1: print1
                     {
-                    pushFollow(FOLLOW_print1_in_elsestataments2196);
+                    pushFollow(FOLLOW_print1_in_elsestataments2277);
                     print132=print1();
 
                     state._fsp--;
@@ -2423,9 +2427,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:427:5: asignacion
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:428:5: asignacion
                     {
-                    pushFollow(FOLLOW_asignacion_in_elsestataments2204);
+                    pushFollow(FOLLOW_asignacion_in_elsestataments2285);
                     asignacion33=asignacion();
 
                     state._fsp--;
@@ -2436,9 +2440,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:428:5: lectura
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:429:5: lectura
                     {
-                    pushFollow(FOLLOW_lectura_in_elsestataments2211);
+                    pushFollow(FOLLOW_lectura_in_elsestataments2292);
                     lectura34=lectura();
 
                     state._fsp--;
@@ -2449,9 +2453,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:429:5: comentario
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:430:5: comentario
                     {
-                    pushFollow(FOLLOW_comentario_in_elsestataments2219);
+                    pushFollow(FOLLOW_comentario_in_elsestataments2300);
                     comentario();
 
                     state._fsp--;
@@ -2462,9 +2466,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:430:5: return1
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:431:5: return1
                     {
-                    pushFollow(FOLLOW_return1_in_elsestataments2227);
+                    pushFollow(FOLLOW_return1_in_elsestataments2308);
                     return135=return1();
 
                     state._fsp--;
@@ -2475,9 +2479,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:431:5: whilestatemet
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:432:5: whilestatemet
                     {
-                    pushFollow(FOLLOW_whilestatemet_in_elsestataments2235);
+                    pushFollow(FOLLOW_whilestatemet_in_elsestataments2316);
                     whilestatemet36=whilestatemet();
 
                     state._fsp--;
@@ -2488,9 +2492,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:432:5: ifstatement
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:433:5: ifstatement
                     {
-                    pushFollow(FOLLOW_ifstatement_in_elsestataments2243);
+                    pushFollow(FOLLOW_ifstatement_in_elsestataments2324);
                     ifstatement37=ifstatement();
 
                     state._fsp--;
@@ -2501,9 +2505,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:433:4: declaracion
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:434:4: declaracion
                     {
-                    pushFollow(FOLLOW_declaracion_in_elsestataments2251);
+                    pushFollow(FOLLOW_declaracion_in_elsestataments2332);
                     declaracion38=declaracion();
 
                     state._fsp--;
@@ -2514,9 +2518,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:434:4: declaracion2
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:435:4: declaracion2
                     {
-                    pushFollow(FOLLOW_declaracion2_in_elsestataments2257);
+                    pushFollow(FOLLOW_declaracion2_in_elsestataments2338);
                     declaracion239=declaracion2();
 
                     state._fsp--;
@@ -2527,9 +2531,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:435:4: declaracion_lista
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:436:4: declaracion_lista
                     {
-                    pushFollow(FOLLOW_declaracion_lista_in_elsestataments2265);
+                    pushFollow(FOLLOW_declaracion_lista_in_elsestataments2346);
                     declaracion_lista40=declaracion_lista();
 
                     state._fsp--;
@@ -2540,9 +2544,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:436:4: push
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:437:4: push
                     {
-                    pushFollow(FOLLOW_push_in_elsestataments2271);
+                    pushFollow(FOLLOW_push_in_elsestataments2352);
                     push41=push();
 
                     state._fsp--;
@@ -2553,9 +2557,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:437:4: forstatemet
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:438:4: forstatemet
                     {
-                    pushFollow(FOLLOW_forstatemet_in_elsestataments2277);
+                    pushFollow(FOLLOW_forstatemet_in_elsestataments2358);
                     forstatemet42=forstatemet();
 
                     state._fsp--;
@@ -2583,7 +2587,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "ifstatement"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:443:1: ifstatement returns [Evaluator e] : IF PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D )* ( ELSE LLAVE_I (elses= elsestataments )* LLAVE_D )* ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:444:1: ifstatement returns [Evaluator e] : IF PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D )* ( ELSE LLAVE_I (elses= elsestataments )* LLAVE_D )* ;
     public final Evaluator ifstatement() throws RecognitionException {
         Evaluator e = null;
 
@@ -2598,14 +2602,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:443:34: ( IF PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D )* ( ELSE LLAVE_I (elses= elsestataments )* LLAVE_D )* )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:445:1: IF PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D )* ( ELSE LLAVE_I (elses= elsestataments )* LLAVE_D )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:444:34: ( IF PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D )* ( ELSE LLAVE_I (elses= elsestataments )* LLAVE_D )* )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:446:1: IF PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D )* ( ELSE LLAVE_I (elses= elsestataments )* LLAVE_D )*
             {
-            match(input,IF,FOLLOW_IF_in_ifstatement2295); 
+            match(input,IF,FOLLOW_IF_in_ifstatement2376); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement2297); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement2378); 
 
-            pushFollow(FOLLOW_logico_in_ifstatement2303);
+            pushFollow(FOLLOW_logico_in_ifstatement2384);
             rel=logico();
 
             state._fsp--;
@@ -2616,11 +2620,11 @@ public class LenguajeParser extends Parser {
               ((IfEvaluator) e).agregarCondicion(rel);
 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement2309); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement2390); 
 
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement2311); 
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement2392); 
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:451:2: (ifs= ifstatements )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:452:2: (ifs= ifstatements )*
             loop16:
             do {
                 int alt16=2;
@@ -2633,9 +2637,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt16) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:451:3: ifs= ifstatements
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:452:3: ifs= ifstatements
             	    {
-            	    pushFollow(FOLLOW_ifstatements_in_ifstatement2319);
+            	    pushFollow(FOLLOW_ifstatements_in_ifstatement2400);
             	    ifs=ifstatements();
 
             	    state._fsp--;
@@ -2655,9 +2659,9 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement2329); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement2410); 
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:459:2: ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:460:2: ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D )*
             loop18:
             do {
                 int alt18=2;
@@ -2670,13 +2674,13 @@ public class LenguajeParser extends Parser {
 
                 switch (alt18) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:459:3: ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:460:3: ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D LLAVE_I (ifs= ifstatements )* LLAVE_D
             	    {
-            	    match(input,ELSEIF,FOLLOW_ELSEIF_in_ifstatement2338); 
+            	    match(input,ELSEIF,FOLLOW_ELSEIF_in_ifstatement2419); 
 
-            	    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement2340); 
+            	    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement2421); 
 
-            	    pushFollow(FOLLOW_logico_in_ifstatement2344);
+            	    pushFollow(FOLLOW_logico_in_ifstatement2425);
             	    rel1=logico();
 
             	    state._fsp--;
@@ -2687,11 +2691,11 @@ public class LenguajeParser extends Parser {
             	     ((IfEvaluator) e).agregarCondicion(rel1); 
 
 
-            	    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement2350); 
+            	    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement2431); 
 
-            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement2352); 
+            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement2433); 
 
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:465:2: (ifs= ifstatements )*
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:466:2: (ifs= ifstatements )*
             	    loop17:
             	    do {
             	        int alt17=2;
@@ -2704,9 +2708,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt17) {
             	    	case 1 :
-            	    	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:465:3: ifs= ifstatements
+            	    	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:466:3: ifs= ifstatements
             	    	    {
-            	    	    pushFollow(FOLLOW_ifstatements_in_ifstatement2359);
+            	    	    pushFollow(FOLLOW_ifstatements_in_ifstatement2440);
             	    	    ifs=ifstatements();
 
             	    	    state._fsp--;
@@ -2725,7 +2729,7 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement2369); 
+            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement2450); 
 
             	    }
             	    break;
@@ -2736,7 +2740,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:475:3: ( ELSE LLAVE_I (elses= elsestataments )* LLAVE_D )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:476:3: ( ELSE LLAVE_I (elses= elsestataments )* LLAVE_D )*
             loop20:
             do {
                 int alt20=2;
@@ -2749,13 +2753,13 @@ public class LenguajeParser extends Parser {
 
                 switch (alt20) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:475:3: ELSE LLAVE_I (elses= elsestataments )* LLAVE_D
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:476:3: ELSE LLAVE_I (elses= elsestataments )* LLAVE_D
             	    {
-            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement2386); 
+            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement2467); 
 
-            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement2389); 
+            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement2470); 
 
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:476:9: (elses= elsestataments )*
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:477:9: (elses= elsestataments )*
             	    loop19:
             	    do {
             	        int alt19=2;
@@ -2768,9 +2772,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt19) {
             	    	case 1 :
-            	    	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:477:5: elses= elsestataments
+            	    	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:478:5: elses= elsestataments
             	    	    {
-            	    	    pushFollow(FOLLOW_elsestataments_in_ifstatement2400);
+            	    	    pushFollow(FOLLOW_elsestataments_in_ifstatement2481);
             	    	    elses=elsestataments();
 
             	    	    state._fsp--;
@@ -2790,7 +2794,7 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement2408); 
+            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement2489); 
 
             	    }
             	    break;
@@ -2819,7 +2823,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "whilestatements"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:491:1: whilestatements returns [Evaluator e] : ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet );
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:492:1: whilestatements returns [Evaluator e] : ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet );
     public final Evaluator whilestatements() throws RecognitionException {
         Evaluator e = null;
 
@@ -2848,7 +2852,7 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:491:38: ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:492:38: ( print1 | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion2 | declaracion_lista | push | forstatemet )
             int alt21=12;
             switch ( input.LA(1) ) {
             case PRINT:
@@ -2950,9 +2954,9 @@ public class LenguajeParser extends Parser {
 
             switch (alt21) {
                 case 1 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:494:3: print1
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:495:3: print1
                     {
-                    pushFollow(FOLLOW_print1_in_whilestatements2438);
+                    pushFollow(FOLLOW_print1_in_whilestatements2519);
                     print143=print1();
 
                     state._fsp--;
@@ -2963,9 +2967,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:495:5: asignacion
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:496:5: asignacion
                     {
-                    pushFollow(FOLLOW_asignacion_in_whilestatements2446);
+                    pushFollow(FOLLOW_asignacion_in_whilestatements2527);
                     asignacion44=asignacion();
 
                     state._fsp--;
@@ -2976,9 +2980,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:496:5: lectura
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:497:5: lectura
                     {
-                    pushFollow(FOLLOW_lectura_in_whilestatements2453);
+                    pushFollow(FOLLOW_lectura_in_whilestatements2534);
                     lectura45=lectura();
 
                     state._fsp--;
@@ -2989,9 +2993,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:497:5: comentario
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:498:5: comentario
                     {
-                    pushFollow(FOLLOW_comentario_in_whilestatements2461);
+                    pushFollow(FOLLOW_comentario_in_whilestatements2542);
                     comentario();
 
                     state._fsp--;
@@ -3002,9 +3006,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:498:5: return1
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:499:5: return1
                     {
-                    pushFollow(FOLLOW_return1_in_whilestatements2469);
+                    pushFollow(FOLLOW_return1_in_whilestatements2550);
                     return146=return1();
 
                     state._fsp--;
@@ -3015,9 +3019,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:499:5: whilestatemet
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:500:5: whilestatemet
                     {
-                    pushFollow(FOLLOW_whilestatemet_in_whilestatements2477);
+                    pushFollow(FOLLOW_whilestatemet_in_whilestatements2558);
                     whilestatemet47=whilestatemet();
 
                     state._fsp--;
@@ -3028,9 +3032,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:500:5: ifstatement
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:501:5: ifstatement
                     {
-                    pushFollow(FOLLOW_ifstatement_in_whilestatements2485);
+                    pushFollow(FOLLOW_ifstatement_in_whilestatements2566);
                     ifstatement48=ifstatement();
 
                     state._fsp--;
@@ -3041,9 +3045,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:501:4: declaracion
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:502:4: declaracion
                     {
-                    pushFollow(FOLLOW_declaracion_in_whilestatements2493);
+                    pushFollow(FOLLOW_declaracion_in_whilestatements2574);
                     declaracion49=declaracion();
 
                     state._fsp--;
@@ -3054,9 +3058,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:502:4: declaracion2
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:503:4: declaracion2
                     {
-                    pushFollow(FOLLOW_declaracion2_in_whilestatements2501);
+                    pushFollow(FOLLOW_declaracion2_in_whilestatements2582);
                     declaracion250=declaracion2();
 
                     state._fsp--;
@@ -3067,9 +3071,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:503:4: declaracion_lista
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:504:4: declaracion_lista
                     {
-                    pushFollow(FOLLOW_declaracion_lista_in_whilestatements2507);
+                    pushFollow(FOLLOW_declaracion_lista_in_whilestatements2588);
                     declaracion_lista51=declaracion_lista();
 
                     state._fsp--;
@@ -3080,9 +3084,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:504:4: push
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:505:4: push
                     {
-                    pushFollow(FOLLOW_push_in_whilestatements2513);
+                    pushFollow(FOLLOW_push_in_whilestatements2594);
                     push52=push();
 
                     state._fsp--;
@@ -3093,9 +3097,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:505:4: forstatemet
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:506:4: forstatemet
                     {
-                    pushFollow(FOLLOW_forstatemet_in_whilestatements2519);
+                    pushFollow(FOLLOW_forstatemet_in_whilestatements2600);
                     forstatemet53=forstatemet();
 
                     state._fsp--;
@@ -3123,7 +3127,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "whilestatemet"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:510:1: whilestatemet returns [Evaluator e] : WHILE PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:511:1: whilestatemet returns [Evaluator e] : WHILE PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D ;
     public final Evaluator whilestatemet() throws RecognitionException {
         Evaluator e = null;
 
@@ -3134,14 +3138,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:510:36: ( WHILE PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:513:1: WHILE PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:511:36: ( WHILE PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:514:1: WHILE PARENTESIS_I rel= logico PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D
             {
-            match(input,WHILE,FOLLOW_WHILE_in_whilestatemet2544); 
+            match(input,WHILE,FOLLOW_WHILE_in_whilestatemet2625); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_whilestatemet2546); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_whilestatemet2627); 
 
-            pushFollow(FOLLOW_logico_in_whilestatemet2550);
+            pushFollow(FOLLOW_logico_in_whilestatemet2631);
             rel=logico();
 
             state._fsp--;
@@ -3154,11 +3158,11 @@ public class LenguajeParser extends Parser {
               
              
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_whilestatemet2553); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_whilestatemet2634); 
 
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_whilestatemet2555); 
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_whilestatemet2636); 
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:519:2: (wh= whilestatements )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:520:2: (wh= whilestatements )*
             loop22:
             do {
                 int alt22=2;
@@ -3171,9 +3175,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt22) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:519:3: wh= whilestatements
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:520:3: wh= whilestatements
             	    {
-            	    pushFollow(FOLLOW_whilestatements_in_whilestatemet2563);
+            	    pushFollow(FOLLOW_whilestatements_in_whilestatemet2644);
             	    wh=whilestatements();
 
             	    state._fsp--;
@@ -3194,7 +3198,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_whilestatemet2574); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_whilestatemet2655); 
 
             }
 
@@ -3214,7 +3218,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "forstatemet"
-    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:531:1: forstatemet returns [Evaluator e] : FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D ;
+    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:532:1: forstatemet returns [Evaluator e] : FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D ;
     public final Evaluator forstatemet() throws RecognitionException {
         Evaluator e = null;
 
@@ -3229,28 +3233,28 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:531:34: ( FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D )
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:534:1: FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:532:34: ( FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:535:1: FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D LLAVE_I (wh= whilestatements )* LLAVE_D
             {
-            match(input,FOR,FOLLOW_FOR_in_forstatemet2590); 
+            match(input,FOR,FOLLOW_FOR_in_forstatemet2671); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_forstatemet2592); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_forstatemet2673); 
 
-            pushFollow(FOLLOW_declaracion_in_forstatemet2596);
+            pushFollow(FOLLOW_declaracion_in_forstatemet2677);
             decl=declaracion();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_logico_in_forstatemet2600);
+            pushFollow(FOLLOW_logico_in_forstatemet2681);
             logi=logico();
 
             state._fsp--;
 
 
-            match(input,PC,FOLLOW_PC_in_forstatemet2602); 
+            match(input,PC,FOLLOW_PC_in_forstatemet2683); 
 
-            pushFollow(FOLLOW_add_in_forstatemet2606);
+            pushFollow(FOLLOW_add_in_forstatemet2687);
             aumento=add();
 
             state._fsp--;
@@ -3263,11 +3267,11 @@ public class LenguajeParser extends Parser {
               
              
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_forstatemet2611); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_forstatemet2692); 
 
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_forstatemet2613); 
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_forstatemet2694); 
 
-            // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:540:2: (wh= whilestatements )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:541:2: (wh= whilestatements )*
             loop23:
             do {
                 int alt23=2;
@@ -3280,9 +3284,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt23) {
             	case 1 :
-            	    // J:\\Documents and Settings\\User\\Mis documentos\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:540:3: wh= whilestatements
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:541:3: wh= whilestatements
             	    {
-            	    pushFollow(FOLLOW_whilestatements_in_forstatemet2621);
+            	    pushFollow(FOLLOW_whilestatements_in_forstatemet2702);
             	    wh=whilestatements();
 
             	    state._fsp--;
@@ -3303,7 +3307,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_forstatemet2632); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_forstatemet2713); 
 
             }
 
@@ -3325,183 +3329,183 @@ public class LenguajeParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_print1_in_programa67 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_asignacion_in_programa77 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_ifstatement_in_programa86 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_lectura_in_programa95 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_comentario_in_programa104 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_whilestatemet_in_programa112 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_funcion_in_programa121 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_llamadofuncion_in_programa129 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_programa132 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_declaracion_in_programa139 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_declaracion2_in_programa147 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_declaracion_lista_in_programa155 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_push_in_programa163 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_forstatemet_in_programa171 = new BitSet(new long[]{0x0000140004C23822L});
-    public static final BitSet FOLLOW_43_in_return1220 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_evaluator_in_return1226 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_return1233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FUNCTION_in_funcion267 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_NOMBRE_in_funcion273 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_funcion275 = new BitSet(new long[]{0x0000100000080000L});
-    public static final BitSet FOLLOW_44_in_funcion287 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_NOMBRE_in_funcion293 = new BitSet(new long[]{0x0000000100080000L});
-    public static final BitSet FOLLOW_32_in_funcion310 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_funcion312 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_NOMBRE_in_funcion318 = new BitSet(new long[]{0x0000000100080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_funcion336 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_funcion339 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_whilestatements_in_funcion353 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_LLAVE_D_in_funcion365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_declaracion397 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_NOMBRE_in_declaracion401 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ASIGNACION_in_declaracion403 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_evaluator_in_declaracion409 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_declaracion480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_declaracion2504 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_NOMBRE_in_declaracion2508 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_declaracion2581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_declaracion_lista607 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_NOMBRE_in_declaracion_lista611 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_declaracion_lista684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_push711 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_push713 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_expression_in_push719 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_push721 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_push791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_asignacion825 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ASIGNACION_in_asignacion827 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_evaluator_in_asignacion833 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_asignacion873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMENTARIO_in_comentario889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_READ_in_lectura910 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_NOMBRE_in_lectura914 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_lectura961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PRINT_in_print1980 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_evaluator_in_print1982 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_print11010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logico_in_evaluator1029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_llamadofuncion_in_term1071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term1087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NUMERO_in_term1105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DOBLE_in_term1125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TEXTO_in_term1159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_term1180 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_add_in_term1182 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_term1184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term1218 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_term1220 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_add_in_term1226 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_term1228 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_unary1272 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_33_in_unary1280 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_term_in_unary1301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_in_mult1331 = new BitSet(new long[]{0x0000001040000002L});
-    public static final BitSet FOLLOW_30_in_mult1355 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_unary_in_mult1359 = new BitSet(new long[]{0x0000001040000002L});
-    public static final BitSet FOLLOW_36_in_mult1387 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_unary_in_mult1391 = new BitSet(new long[]{0x0000001040000002L});
-    public static final BitSet FOLLOW_mult_in_add1439 = new BitSet(new long[]{0x0000000280000002L});
-    public static final BitSet FOLLOW_31_in_add1462 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_mult_in_add1466 = new BitSet(new long[]{0x0000000280000002L});
-    public static final BitSet FOLLOW_33_in_add1493 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_mult_in_add1497 = new BitSet(new long[]{0x0000000280000002L});
-    public static final BitSet FOLLOW_add_in_relation1546 = new BitSet(new long[]{0x000003E010000002L});
-    public static final BitSet FOLLOW_39_in_relation1583 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_add_in_relation1587 = new BitSet(new long[]{0x000003E010000002L});
-    public static final BitSet FOLLOW_40_in_relation1625 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_add_in_relation1629 = new BitSet(new long[]{0x000003E010000002L});
-    public static final BitSet FOLLOW_37_in_relation1668 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_add_in_relation1672 = new BitSet(new long[]{0x000003E010000002L});
-    public static final BitSet FOLLOW_28_in_relation1711 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_add_in_relation1715 = new BitSet(new long[]{0x000003E010000002L});
-    public static final BitSet FOLLOW_38_in_relation1755 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_add_in_relation1759 = new BitSet(new long[]{0x000003E010000002L});
-    public static final BitSet FOLLOW_41_in_relation1799 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_add_in_relation1803 = new BitSet(new long[]{0x000003E010000002L});
-    public static final BitSet FOLLOW_relation_in_logico1866 = new BitSet(new long[]{0x0000200020000002L});
-    public static final BitSet FOLLOW_29_in_logico1894 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_relation_in_logico1898 = new BitSet(new long[]{0x0000200020000002L});
-    public static final BitSet FOLLOW_45_in_logico1931 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_relation_in_logico1935 = new BitSet(new long[]{0x0000200020000002L});
-    public static final BitSet FOLLOW_logico_in_expression1990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_llamadofuncion2014 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_llamadofuncion2019 = new BitSet(new long[]{0x00000000011E0100L});
-    public static final BitSet FOLLOW_term_in_llamadofuncion2031 = new BitSet(new long[]{0x0000000100080000L});
-    public static final BitSet FOLLOW_32_in_llamadofuncion2046 = new BitSet(new long[]{0x0000000001160100L});
-    public static final BitSet FOLLOW_term_in_llamadofuncion2051 = new BitSet(new long[]{0x0000000100080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_llamadofuncion2065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_print1_in_ifstatements2089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_in_ifstatements2097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lectura_in_ifstatements2104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_comentario_in_ifstatements2112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_return1_in_ifstatements2120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_whilestatemet_in_ifstatements2128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifstatement_in_ifstatements2136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_in_ifstatements2144 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion2_in_ifstatements2150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_lista_in_ifstatements2158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_push_in_ifstatements2164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forstatemet_in_ifstatements2170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_print1_in_elsestataments2196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_in_elsestataments2204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lectura_in_elsestataments2211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_comentario_in_elsestataments2219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_return1_in_elsestataments2227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_whilestatemet_in_elsestataments2235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifstatement_in_elsestataments2243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_in_elsestataments2251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion2_in_elsestataments2257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_lista_in_elsestataments2265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_push_in_elsestataments2271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forstatemet_in_elsestataments2277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_ifstatement2295 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement2297 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_logico_in_ifstatement2303 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement2309 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement2311 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_ifstatements_in_ifstatement2319 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement2329 = new BitSet(new long[]{0x0000000000000602L});
-    public static final BitSet FOLLOW_ELSEIF_in_ifstatement2338 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement2340 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_logico_in_ifstatement2344 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement2350 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement2352 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_ifstatements_in_ifstatement2359 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement2369 = new BitSet(new long[]{0x0000000000000602L});
-    public static final BitSet FOLLOW_ELSE_in_ifstatement2386 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement2389 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_elsestataments_in_ifstatement2400 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement2408 = new BitSet(new long[]{0x0000000000000202L});
-    public static final BitSet FOLLOW_print1_in_whilestatements2438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_in_whilestatements2446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lectura_in_whilestatements2453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_comentario_in_whilestatements2461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_return1_in_whilestatements2469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_whilestatemet_in_whilestatements2477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifstatement_in_whilestatements2485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_in_whilestatements2493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion2_in_whilestatements2501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_lista_in_whilestatements2507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_push_in_whilestatements2513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forstatemet_in_whilestatements2519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WHILE_in_whilestatemet2544 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_whilestatemet2546 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_logico_in_whilestatemet2550 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_whilestatemet2553 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_whilestatemet2555 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_whilestatements_in_whilestatemet2563 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_LLAVE_D_in_whilestatemet2574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FOR_in_forstatemet2590 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_forstatemet2592 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_declaracion_in_forstatemet2596 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_logico_in_forstatemet2600 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_forstatemet2602 = new BitSet(new long[]{0x0000000281160100L});
-    public static final BitSet FOLLOW_add_in_forstatemet2606 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_forstatemet2611 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_forstatemet2613 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_whilestatements_in_forstatemet2621 = new BitSet(new long[]{0x00001C0004C26820L});
-    public static final BitSet FOLLOW_LLAVE_D_in_forstatemet2632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_print1_in_programa71 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_asignacion_in_programa93 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_ifstatement_in_programa109 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_lectura_in_programa124 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_comentario_in_programa143 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_whilestatemet_in_programa151 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_funcion_in_programa164 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_llamadofuncion_in_programa172 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_programa178 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_declaracion_in_programa186 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_declaracion2_in_programa201 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_declaracion_lista_in_programa215 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_push_in_programa224 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_forstatemet_in_programa246 = new BitSet(new long[]{0x0000140004C23822L});
+    public static final BitSet FOLLOW_43_in_return1301 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_evaluator_in_return1307 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_return1314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FUNCTION_in_funcion348 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_NOMBRE_in_funcion354 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_funcion356 = new BitSet(new long[]{0x0000100000080000L});
+    public static final BitSet FOLLOW_44_in_funcion368 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_NOMBRE_in_funcion374 = new BitSet(new long[]{0x0000000100080000L});
+    public static final BitSet FOLLOW_32_in_funcion391 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_funcion393 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_NOMBRE_in_funcion399 = new BitSet(new long[]{0x0000000100080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_funcion417 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_funcion420 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_whilestatements_in_funcion434 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_LLAVE_D_in_funcion446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_declaracion478 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_NOMBRE_in_declaracion482 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ASIGNACION_in_declaracion484 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_evaluator_in_declaracion490 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_declaracion561 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_declaracion2585 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_NOMBRE_in_declaracion2589 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_declaracion2662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_declaracion_lista688 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_NOMBRE_in_declaracion_lista692 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_declaracion_lista765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_push792 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_push794 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_expression_in_push800 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_push802 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_push872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_asignacion906 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ASIGNACION_in_asignacion908 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_evaluator_in_asignacion914 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_asignacion954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMENTARIO_in_comentario970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_READ_in_lectura991 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_NOMBRE_in_lectura995 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_lectura1042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRINT_in_print11061 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_evaluator_in_print11063 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_print11091 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logico_in_evaluator1110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_llamadofuncion_in_term1152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term1168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NUMERO_in_term1186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOBLE_in_term1206 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TEXTO_in_term1240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_term1261 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_add_in_term1263 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_term1265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term1299 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_term1301 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_add_in_term1307 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_term1309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_unary1353 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_33_in_unary1361 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_term_in_unary1382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_in_mult1412 = new BitSet(new long[]{0x0000001040000002L});
+    public static final BitSet FOLLOW_30_in_mult1436 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_unary_in_mult1440 = new BitSet(new long[]{0x0000001040000002L});
+    public static final BitSet FOLLOW_36_in_mult1468 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_unary_in_mult1472 = new BitSet(new long[]{0x0000001040000002L});
+    public static final BitSet FOLLOW_mult_in_add1520 = new BitSet(new long[]{0x0000000280000002L});
+    public static final BitSet FOLLOW_31_in_add1543 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_mult_in_add1547 = new BitSet(new long[]{0x0000000280000002L});
+    public static final BitSet FOLLOW_33_in_add1574 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_mult_in_add1578 = new BitSet(new long[]{0x0000000280000002L});
+    public static final BitSet FOLLOW_add_in_relation1627 = new BitSet(new long[]{0x000003E010000002L});
+    public static final BitSet FOLLOW_39_in_relation1664 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_add_in_relation1668 = new BitSet(new long[]{0x000003E010000002L});
+    public static final BitSet FOLLOW_40_in_relation1706 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_add_in_relation1710 = new BitSet(new long[]{0x000003E010000002L});
+    public static final BitSet FOLLOW_37_in_relation1749 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_add_in_relation1753 = new BitSet(new long[]{0x000003E010000002L});
+    public static final BitSet FOLLOW_28_in_relation1792 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_add_in_relation1796 = new BitSet(new long[]{0x000003E010000002L});
+    public static final BitSet FOLLOW_38_in_relation1836 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_add_in_relation1840 = new BitSet(new long[]{0x000003E010000002L});
+    public static final BitSet FOLLOW_41_in_relation1880 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_add_in_relation1884 = new BitSet(new long[]{0x000003E010000002L});
+    public static final BitSet FOLLOW_relation_in_logico1947 = new BitSet(new long[]{0x0000200020000002L});
+    public static final BitSet FOLLOW_29_in_logico1975 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_relation_in_logico1979 = new BitSet(new long[]{0x0000200020000002L});
+    public static final BitSet FOLLOW_45_in_logico2012 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_relation_in_logico2016 = new BitSet(new long[]{0x0000200020000002L});
+    public static final BitSet FOLLOW_logico_in_expression2071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_llamadofuncion2095 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_llamadofuncion2100 = new BitSet(new long[]{0x00000000011E0100L});
+    public static final BitSet FOLLOW_term_in_llamadofuncion2112 = new BitSet(new long[]{0x0000000100080000L});
+    public static final BitSet FOLLOW_32_in_llamadofuncion2127 = new BitSet(new long[]{0x0000000001160100L});
+    public static final BitSet FOLLOW_term_in_llamadofuncion2132 = new BitSet(new long[]{0x0000000100080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_llamadofuncion2146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_print1_in_ifstatements2170 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_in_ifstatements2178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lectura_in_ifstatements2185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comentario_in_ifstatements2193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_return1_in_ifstatements2201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whilestatemet_in_ifstatements2209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifstatement_in_ifstatements2217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_in_ifstatements2225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion2_in_ifstatements2231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_lista_in_ifstatements2239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_push_in_ifstatements2245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forstatemet_in_ifstatements2251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_print1_in_elsestataments2277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_in_elsestataments2285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lectura_in_elsestataments2292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comentario_in_elsestataments2300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_return1_in_elsestataments2308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whilestatemet_in_elsestataments2316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifstatement_in_elsestataments2324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_in_elsestataments2332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion2_in_elsestataments2338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_lista_in_elsestataments2346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_push_in_elsestataments2352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forstatemet_in_elsestataments2358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_ifstatement2376 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement2378 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_logico_in_ifstatement2384 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement2390 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement2392 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_ifstatements_in_ifstatement2400 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement2410 = new BitSet(new long[]{0x0000000000000602L});
+    public static final BitSet FOLLOW_ELSEIF_in_ifstatement2419 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement2421 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_logico_in_ifstatement2425 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement2431 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement2433 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_ifstatements_in_ifstatement2440 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement2450 = new BitSet(new long[]{0x0000000000000602L});
+    public static final BitSet FOLLOW_ELSE_in_ifstatement2467 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement2470 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_elsestataments_in_ifstatement2481 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement2489 = new BitSet(new long[]{0x0000000000000202L});
+    public static final BitSet FOLLOW_print1_in_whilestatements2519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_in_whilestatements2527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lectura_in_whilestatements2534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comentario_in_whilestatements2542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_return1_in_whilestatements2550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whilestatemet_in_whilestatements2558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifstatement_in_whilestatements2566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_in_whilestatements2574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion2_in_whilestatements2582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_lista_in_whilestatements2588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_push_in_whilestatements2594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forstatemet_in_whilestatements2600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WHILE_in_whilestatemet2625 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_whilestatemet2627 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_logico_in_whilestatemet2631 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_whilestatemet2634 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_whilestatemet2636 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_whilestatements_in_whilestatemet2644 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_LLAVE_D_in_whilestatemet2655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FOR_in_forstatemet2671 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_forstatemet2673 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_declaracion_in_forstatemet2677 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_logico_in_forstatemet2681 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_forstatemet2683 = new BitSet(new long[]{0x0000000281160100L});
+    public static final BitSet FOLLOW_add_in_forstatemet2687 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_forstatemet2692 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_forstatemet2694 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_whilestatements_in_forstatemet2702 = new BitSet(new long[]{0x00001C0004C26820L});
+    public static final BitSet FOLLOW_LLAVE_D_in_forstatemet2713 = new BitSet(new long[]{0x0000000000000002L});
 
 }

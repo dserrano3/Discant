@@ -57,13 +57,23 @@ public class ForEvaluator implements Evaluator {
         inicio.evaluate(pila);
         String variable = ((DeclaracionEvaluator)(inicio)).getNombre();
         TermEvaluator termino = new TermEvaluator(variable);
+        StringBuilder output = new StringBuilder();
 		while((Boolean)condicion.evaluate(pila) == true)
 		{
 			pila.add(new Context1());
 			for(Evaluator e: lista)
 			{
-				if(e != null)
-					e.evaluate(pila);
+				if(e != null){
+					Object retorno = e.evaluate(pila);
+					
+					if(retorno != null)
+					{
+						if(retorno instanceof Double)
+							output.append(((Double)retorno).toString());
+						else
+							output.append(retorno.toString());
+					}
+				}
 			}
 			pila.remove(pila.size()-1);
 			AsignacionEvaluator asignacion = new AsignacionEvaluator(
@@ -71,7 +81,7 @@ public class ForEvaluator implements Evaluator {
 			asignacion.evaluate(pila);
 		}
 		
-		return null;
+		return output.toString();
 		
 
 	}
