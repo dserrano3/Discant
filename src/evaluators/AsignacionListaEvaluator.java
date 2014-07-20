@@ -32,7 +32,7 @@ public class AsignacionListaEvaluator implements Evaluator {
 			 {
 				@SuppressWarnings("unchecked")
 				List<Object> lis = (List<Object>) pila.get(i).get(nombre).evaluate(pila);
-				lis.add(indice, e.evaluate(pila));
+				lis.set(indice, e.evaluate(pila));
 				return null;
 			 }
 		}

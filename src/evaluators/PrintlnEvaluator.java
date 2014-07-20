@@ -4,14 +4,12 @@ import java.util.ArrayList;
 
 import conte.Context1;
 
-public class PrintEvaluator implements Evaluator { 
 
-	
-	public ArrayList<Evaluator> evaluators;
-	
-	
-	
-	public PrintEvaluator() {
+public class PrintlnEvaluator implements Evaluator {
+
+	private ArrayList<Evaluator> evaluators;
+
+	public PrintlnEvaluator() {
 		this.evaluators = new ArrayList<Evaluator>();
 	}
 
@@ -26,6 +24,7 @@ public class PrintEvaluator implements Evaluator {
 		StringBuilder s = new StringBuilder();
 		for(int i = 0; i < evaluators.size(); i++)
 			s.append(evaluators.get(i).evaluate(pila).toString());
+		s.append("\n");
 		System.out.println("imprimiendo.." +  s);
 		
 		return s.toString();

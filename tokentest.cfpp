@@ -1,6 +1,6 @@
-function a() {
-	if(3==3){
-   print "hola";
+var a = "adfa";
+
+for(var i = 0; i < 10; 1)
+{
+	println a, a, "     ", i;
 }
-}
-a();

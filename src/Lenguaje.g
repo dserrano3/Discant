@@ -42,14 +42,15 @@ programa returns [StringBuilder output]
    output = new StringBuilder();
   }
   ( 
-    print1             {$output.append((String)$print1.e.evaluate(pila));}
+      print1           {$output.append((String)$print1.e.evaluate(pila));}
+    | println          {$output.append((String)$println.e.evaluate(pila));}
     | asignacion       {$asignacion.e.evaluate(pila);}
     | ifstatement      {$output.append((String)$ifstatement.e.evaluate(pila));}
     | lectura          {$lectura.e.evaluate(pila);}
     | comentario
     | whilestatemet    {$output.append((String)$whilestatemet.e.evaluate(pila));}
     | funcion
-    | llamadofuncion   {$output.append((String)$llamadofuncion.e.evaluate(pila));} PC
+    | llamadofuncion   {$output.append((String)$llamadofuncion.e.evaluate(pila));}
     | declaracion      {$declaracion.e.evaluate(pila);}
     | declaracion2     {$declaracion2.e.evaluate(pila);}
     | declaracion_lista{$declaracion_lista.e.evaluate(pila);}
@@ -57,7 +58,6 @@ programa returns [StringBuilder output]
     | forstatemet      {$output.append((String)$forstatemet.e.evaluate(pila));}
     | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
 
-    
   )+ 
   ;
   
@@ -189,14 +189,15 @@ declaracion returns [Evaluator e]
 
   asignacion_lista returns [Evaluator e] 
   :
-   nom=NOMBRE '[' num=NUMERO ']' ASIGNACION ev = evaluator 
+   nom=NOMBRE 
+   (  '[' num=NUMERO ']' ASIGNACION ev = evaluator
+   |  '.set(' num=NUMERO ',' ev = evaluator ')'
+   )  
                                  {
                                   if(bandera)
                                     {
                                         //System.out.println("intento salvar erradamente");
-                                        $e = new AsignacionListaEvaluator($nom.text,$ev.e, $num.text);    
-                                    
-                                        
+                                        $e = new AsignacionListaEvaluator($nom.text,$ev.e, $num.text);
                                     }
                                  }
   PC
@@ -225,20 +226,28 @@ lectura returns [Evaluator e]
 
 print1 returns [Evaluator e]
   :
-  PRINT evaluator 
-                 {
-                  if(bandera)
-                  	{
-                  	  
-                  	  //aca esta el problema del while pasa el evaluator cuando no existe en el mapa todabia
-                  		$e = new PrintEvaluator($evaluator.e); 
-                  		//System.out.println("Paso "+e);
-                  	}
-                 }
-  /*TEXTO{$e = new StringEvaluator($TEXTO.text);} */
+  { $e = new PrintEvaluator(); }
+    PRINT 
+  ( exp = expression { ((PrintEvaluator)$e).addEvaluator($exp.e); }
+  )
+  ( ','
+    exp = expression { ((PrintEvaluator)$e).addEvaluator($exp.e); }
+  )*
   PC
   ;
 
+println returns [Evaluator e]
+  :
+  { $e = new PrintlnEvaluator(); }
+    PRINTLN
+  ( exp = expression { ((PrintlnEvaluator)$e).addEvaluator($exp.e); }
+  )
+  ( ','
+    exp = expression { ((PrintlnEvaluator)$e).addEvaluator($exp.e); }
+  )*
+  PC
+  ;
+  
 evaluator returns [Evaluator e]
   :
   logico 
@@ -253,7 +262,7 @@ term returns [Evaluator e]
   {
    $e = new IntEvaluator(0);
   }
-   lla = llamadofuncion
+    lla = llamadofuncion
         {
          //System.out.println("entiendo que es un llamado"); 
           //$e = $lla.e;
@@ -270,7 +279,7 @@ term returns [Evaluator e]
           {
            $e = new DoubleEvaluator(Double.parseDouble($NUMERO.text));
           }
-   | DOBLE 
+  | DOBLE 
           {
            $e = new DoubleEvaluator(Double.parseDouble($DOBLE.text));
           }    
@@ -284,7 +293,10 @@ term returns [Evaluator e]
                       {
                        $e = $add.e;
                       }
-   | nom=NOMBRE '.get(' num = add ')' 
+  | nom=NOMBRE 
+    ( '.get(' num = add ')'
+    | '['     num = add ']'
+    )
          {
                 $e = new GetEvaluator($nom.text,$num.e);     
          }
@@ -297,7 +309,7 @@ unary returns [Evaluator e]
    boolean positive = true;
   }
   (
-    '+'
+      '+'
     | '-' 
          {
           positive = !positive;
@@ -406,17 +418,17 @@ logico returns [Evaluator e]
 		  ;
 
 
-llamadofuncion returns[Evaluator e]:
-  nom = NOMBRE{$e = funciones.get($nom.text);}
+llamadofuncion returns[Evaluator e]
+   :
+        nom = NOMBRE{$e = funciones.get($nom.text);}
   '('
-   ( (ev = term{((FuncionEvaluator) $e).llenarParametro($ev.e);  }
-    )
-     (','ev = term{((FuncionEvaluator) $e).llenarParametro($ev.e);  }
-    )*)?
+   (    (ev = term{((FuncionEvaluator) $e).llenarParametro($ev.e); }
+   )
+   (','  ev = term{((FuncionEvaluator) $e).llenarParametro($ev.e); }
+   )*)?
   ')'
- 
-
-; 
+         PC
+   ; 
 
 
 
@@ -424,38 +436,40 @@ llamadofuncion returns[Evaluator e]:
 
 ifstatements returns [Evaluator e]:  
 
-  print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}     
+    print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}  
+  | println {$e = $println.e;}   
   | asignacion{$e = $asignacion.e;}//{$asignacion.e.evaluate(pila);}
   | lectura{$e = $lectura.e;} 
   | comentario {$e =null;}
   | return1 {$e = $return1.e;}
   | whilestatemet{$e = $whilestatemet.e;} 
   | ifstatement{$e = $ifstatement.e;}  
-  |declaracion{$e = $declaracion.e;}
-  |declaracion2{$e = $declaracion2.e;}  
-  |declaracion_lista{$declaracion_lista.e.evaluate(pila);}
-  |push{ $e = $push.e; }
-  |forstatemet{$forstatemet.e.evaluate(pila);}
-  |asignacion_lista {$asignacion_lista.e.evaluate(pila);}
+  | declaracion{$e = $declaracion.e;}
+  | declaracion2{$e = $declaracion2.e;}  
+  | declaracion_lista{$declaracion_lista.e.evaluate(pila);}
+  | push{ $e = $push.e; }
+  | forstatemet{$forstatemet.e.evaluate(pila);}
+  | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
    
 ;  
 
   
 elsestataments returns [Evaluator e]: 
 
-print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}     
+    print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}    
+  | println {$e = $println.e;} 
   | asignacion{$e = $asignacion.e;}//{$asignacion.e.evaluate(pila);}
   | lectura{$e = $lectura.e;} 
   | comentario {$e =null;}
   | return1 {$e = $return1.e;}
   | whilestatemet{$e = $whilestatemet.e;} 
   | ifstatement{$e = $ifstatement.e;}  
-  |declaracion{$e = $declaracion.e;}
-  |declaracion2{$e = $declaracion2.e;}  
-  |declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
-  |push{ $e = $push.e; }
-  |forstatemet{$forstatemet.e.evaluate(pila);}
-  |asignacion_lista {$asignacion_lista.e.evaluate(pila);}
+  | declaracion{$e = $declaracion.e;}
+  | declaracion2{$e = $declaracion2.e;}  
+  | declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
+  | push{ $e = $push.e; }
+  | forstatemet{$forstatemet.e.evaluate(pila);}
+  | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
 
 
 ;
@@ -512,18 +526,19 @@ IF PARENTESIS_I rel = logico
 whilestatements returns [Evaluator e]:
 
   
-  print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}     
+    print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}    
+  | println {$e = $println.e;} 
   | asignacion{$e = $asignacion.e;}//{$asignacion.e.evaluate(pila);}
   | lectura{$e = $lectura.e;} 
   | comentario {$e =null;}
   | return1 {$e = $return1.e;}
   | whilestatemet{$e = $whilestatemet.e;} 
   | ifstatement{$e = $ifstatement.e;}  
-  |declaracion{$e = $declaracion.e;}  
-  |declaracion2{$e = $declaracion2.e;}
-  |declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
-  |push{ $e = $push.e; }
-  |forstatemet{$forstatemet.e.evaluate(pila);}
+  | declaracion{$e = $declaracion.e;}  
+  | declaracion2{$e = $declaracion2.e;}
+  | declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
+  | push{ $e = $push.e; }
+  | forstatemet{$forstatemet.e.evaluate(pila);}
 
 ;
        
@@ -686,6 +701,11 @@ COMILLASS
 PRINT
   :
   ('print')
+  ;
+
+PRINTLN
+  :
+  ('println')
   ;
 
 READ
