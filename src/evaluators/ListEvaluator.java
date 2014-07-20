@@ -17,5 +17,6 @@ public class ListEvaluator implements Evaluator {
 	public ListEvaluator()
 	{
 		lista = new ArrayList<Object>();
+		System.out.println("entre a lista");
 	}
 }

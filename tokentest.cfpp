@@ -1,7 +1,6 @@
-print "nosadfasd";
-for(var i = 0; i < 4; 1)
-{
-	var a;
-	read a;
-	print a;
+function a() {
+	if(3==3){
+   print "hola";
 }
+}
+a();

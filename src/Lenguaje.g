@@ -44,17 +44,18 @@ programa returns [StringBuilder output]
   ( 
     print1             {$output.append((String)$print1.e.evaluate(pila));}
     | asignacion       {$asignacion.e.evaluate(pila);}
-    | ifstatement      {$ifstatement.e.evaluate(pila);}
+    | ifstatement      {$output.append((String)$ifstatement.e.evaluate(pila));}
     | lectura          {$lectura.e.evaluate(pila);}
     | comentario
     | whilestatemet    {$output.append((String)$whilestatemet.e.evaluate(pila));}
     | funcion
-    | llamadofuncion   {$llamadofuncion.e.evaluate(pila);} PC
+    | llamadofuncion   {$output.append((String)$llamadofuncion.e.evaluate(pila));} PC
     | declaracion      {$declaracion.e.evaluate(pila);}
     | declaracion2     {$declaracion2.e.evaluate(pila);}
     | declaracion_lista{$declaracion_lista.e.evaluate(pila);}
     | push             {$push.e.evaluate(pila);}
-    | forstatemet      {$output.append((String)$forstatemet.e.evaluate(pila));} 
+    | forstatemet      {$output.append((String)$forstatemet.e.evaluate(pila));}
+    | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
 
     
   )+ 
@@ -184,6 +185,24 @@ declaracion returns [Evaluator e]
                                  }
   PC
   ; 
+
+
+  asignacion_lista returns [Evaluator e] 
+  :
+   nom=NOMBRE '[' num=NUMERO ']' ASIGNACION ev = evaluator 
+                                 {
+                                  if(bandera)
+                                    {
+                                        //System.out.println("intento salvar erradamente");
+                                        $e = new AsignacionListaEvaluator($nom.text,$ev.e, $num.text);    
+                                    
+                                        
+                                    }
+                                 }
+  PC
+  ; 
+
+
 
 comentario
   :
@@ -403,7 +422,7 @@ llamadofuncion returns[Evaluator e]:
 
 
 
-ifstatements returns [Evaluator e]: 
+ifstatements returns [Evaluator e]:  
 
   print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}     
   | asignacion{$e = $asignacion.e;}//{$asignacion.e.evaluate(pila);}
@@ -417,7 +436,7 @@ ifstatements returns [Evaluator e]:
   |declaracion_lista{$declaracion_lista.e.evaluate(pila);}
   |push{ $e = $push.e; }
   |forstatemet{$forstatemet.e.evaluate(pila);}
- 
+  |asignacion_lista {$asignacion_lista.e.evaluate(pila);}
    
 ;  
 
@@ -436,6 +455,7 @@ print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}
   |declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
   |push{ $e = $push.e; }
   |forstatemet{$forstatemet.e.evaluate(pila);}
+  |asignacion_lista {$asignacion_lista.e.evaluate(pila);}
 
 
 ;

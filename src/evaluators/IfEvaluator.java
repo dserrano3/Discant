@@ -48,6 +48,7 @@ public class IfEvaluator implements Evaluator {
 	
 	public Object evaluate(ArrayList<Context1> pila) {
 		
+		StringBuilder output = new StringBuilder();
 		Context1 auxcon = new Context1();
 		
 		pila.add(auxcon);
@@ -97,10 +98,18 @@ public class IfEvaluator implements Evaluator {
 					Object ob;
 					//System.out.println("tam es "+pila.size());
 					ob = e.evaluate(pila);	
+					//This is for printing the answer in the nice view not the terminal.
+					if(ob != null)
+					{
+						if(ob instanceof Double)
+							output.append(((Double)ob).toString());
+						else
+							output.append(ob.toString());
+					}
+					
+					
 					if(e instanceof IfEvaluator)
 					{
-						
-						
 						if(((IfEvaluator)e).getBandera())
 						{
 							bandera = true;
@@ -126,7 +135,7 @@ public class IfEvaluator implements Evaluator {
 		pila.remove(pila.size()-1);
 		
 		
-		return null;
+		return output.toString();
 	}
 	
 	

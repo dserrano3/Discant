@@ -51,19 +51,20 @@ public class FuncionEvaluator implements Evaluator {
 	
 	@Override
 	public Object evaluate(ArrayList<Context1> pila_basura) {
+		StringBuilder output = new StringBuilder();
 		ArrayList<Context1> pila2;
-		System.out.println("entre a evaluar funcion");
+		//System.out.println("entre a evaluar funcion");
 		//System.out.println(condicion);
-			//System.out.println("entre al if"+lista.size());
+			//System.out.println("entre al if y la lista tiene "+lista.size());
 			for(Evaluator e: lista)
 			{
 				pila2 = pila;
 				//System.out.println(e);
 				if (e != null)
 				{
-					//System.out.println(e);
-					if(e.evaluate(pila) == null)
-						System.out.println("es null");
+					//Sospecho problema con esto comentariado abajo.
+					/*if(e.evaluate(pila) == null)
+						System.out.println("es null");*/
 					
 					
 					if(e instanceof ReturnEvaluator)
@@ -72,6 +73,14 @@ public class FuncionEvaluator implements Evaluator {
 					}
 					Object ob;
 					ob = e.evaluate(pila);	
+					if(ob != null)
+					{
+						if(ob instanceof Double)
+							output.append(((Double)ob).toString());
+						else
+							output.append(ob.toString());
+					}
+					
 					if(e instanceof WhileEvaluator)
 					{
 						if(((WhileEvaluator)e).getBandera())
@@ -91,7 +100,7 @@ public class FuncionEvaluator implements Evaluator {
 				
 			}
 			
-		return null;
+			return output.toString();
 	}
 	
 	
