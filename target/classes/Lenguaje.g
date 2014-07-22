@@ -338,6 +338,10 @@ mult returns [Evaluator e]
                    {
                     $e = new DivideEvaluator($e,$op2.e);
                    }
+    | '%' op2=unary 
+                   {
+                    $e = new ModEvaluator($e,$op2.e);
+                   }
   )*
   ;
 

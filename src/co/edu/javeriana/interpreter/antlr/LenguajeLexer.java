@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g 2014-07-20 11:28:57
+// $ANTLR 3.4 /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g 2014-07-22 21:53:08
 
 package co.edu.javeriana.interpreter.antlr;
 
@@ -32,6 +32,7 @@ public class LenguajeLexer extends Lexer {
     public static final int T__47=47;
     public static final int T__48=48;
     public static final int T__49=49;
+    public static final int T__50=50;
     public static final int ASIGNACION=4;
     public static final int COMENTARIO=5;
     public static final int COMILLASD=6;
@@ -101,12 +102,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:12:7: ( '&&' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:12:9: '&&'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:12:7: ( '%' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:12:9: '%'
             {
-            match("&&"); 
-
-
+            match('%'); 
 
             }
 
@@ -124,10 +123,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:13:7: ( '*' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:13:9: '*'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:13:7: ( '&&' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:13:9: '&&'
             {
-            match('*'); 
+            match("&&"); 
+
+
 
             }
 
@@ -145,10 +146,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:14:7: ( '+' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:14:9: '+'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:14:7: ( '*' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:14:9: '*'
             {
-            match('+'); 
+            match('*'); 
 
             }
 
@@ -166,10 +167,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:15:7: ( ',' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:15:9: ','
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:15:7: ( '+' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:15:9: '+'
             {
-            match(','); 
+            match('+'); 
 
             }
 
@@ -187,10 +188,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:16:7: ( '-' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:16:9: '-'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:16:7: ( ',' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:16:9: ','
             {
-            match('-'); 
+            match(','); 
 
             }
 
@@ -208,12 +209,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:17:7: ( '.get(' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:17:9: '.get('
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:17:7: ( '-' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:17:9: '-'
             {
-            match(".get("); 
-
-
+            match('-'); 
 
             }
 
@@ -231,10 +230,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:18:7: ( '.push(' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:18:9: '.push('
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:18:7: ( '.get(' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:18:9: '.get('
             {
-            match(".push("); 
+            match(".get("); 
 
 
 
@@ -254,10 +253,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:19:7: ( '.set(' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:19:9: '.set('
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:19:7: ( '.push(' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:19:9: '.push('
             {
-            match(".set("); 
+            match(".push("); 
 
 
 
@@ -277,10 +276,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:20:7: ( '/' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:20:9: '/'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:20:7: ( '.set(' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:20:9: '.set('
             {
-            match('/'); 
+            match(".set("); 
+
+
 
             }
 
@@ -298,10 +299,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:21:7: ( '<' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:21:9: '<'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:21:7: ( '/' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:21:9: '/'
             {
-            match('<'); 
+            match('/'); 
 
             }
 
@@ -319,12 +320,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:22:7: ( '<=' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:22:9: '<='
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:22:7: ( '<' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:22:9: '<'
             {
-            match("<="); 
-
-
+            match('<'); 
 
             }
 
@@ -342,10 +341,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:23:7: ( '==' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:23:9: '=='
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:23:7: ( '<=' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:23:9: '<='
             {
-            match("=="); 
+            match("<="); 
 
 
 
@@ -365,10 +364,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:24:7: ( '>' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:24:9: '>'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:24:7: ( '==' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:24:9: '=='
             {
-            match('>'); 
+            match("=="); 
+
+
 
             }
 
@@ -386,12 +387,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:25:7: ( '>=' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:25:9: '>='
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:25:7: ( '>' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:25:9: '>'
             {
-            match(">="); 
-
-
+            match('>'); 
 
             }
 
@@ -409,10 +408,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:26:7: ( '[' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:26:9: '['
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:26:7: ( '>=' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:26:9: '>='
             {
-            match('['); 
+            match(">="); 
+
+
 
             }
 
@@ -430,10 +431,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:27:7: ( ']' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:27:9: ']'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:27:7: ( '[' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:27:9: '['
             {
-            match(']'); 
+            match('['); 
 
             }
 
@@ -451,12 +452,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:28:7: ( 'list' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:28:9: 'list'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:28:7: ( ']' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:28:9: ']'
             {
-            match("list"); 
-
-
+            match(']'); 
 
             }
 
@@ -474,10 +473,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:29:7: ( 'return' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:29:9: 'return'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:29:7: ( 'list' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:29:9: 'list'
             {
-            match("return"); 
+            match("list"); 
 
 
 
@@ -497,10 +496,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:30:7: ( 'var' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:30:9: 'var'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:30:7: ( 'return' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:30:9: 'return'
             {
-            match("var"); 
+            match("return"); 
 
 
 
@@ -520,10 +519,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:31:7: ( '||' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:31:9: '||'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:31:7: ( 'var' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:31:9: 'var'
             {
-            match("||"); 
+            match("var"); 
 
 
 
@@ -538,13 +537,36 @@ public class LenguajeLexer extends Lexer {
     }
     // $ANTLR end "T__49"
 
+    // $ANTLR start "T__50"
+    public final void mT__50() throws RecognitionException {
+        try {
+            int _type = T__50;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:32:7: ( '||' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:32:9: '||'
+            {
+            match("||"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__50"
+
     // $ANTLR start "TOKEN"
     public final void mTOKEN() throws RecognitionException {
         try {
             int _type = TOKEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:597:3: ( 'hola' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:598:3: 'hola'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:601:3: ( 'hola' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:602:3: 'hola'
             {
             match("hola"); 
 
@@ -566,8 +588,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:602:3: ( 'if' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:603:3: 'if'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:606:3: ( 'if' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:607:3: 'if'
             {
             match("if"); 
 
@@ -589,8 +611,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:607:3: ( ';' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:608:3: ';'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:611:3: ( ';' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:612:3: ';'
             {
             match(';'); 
 
@@ -610,8 +632,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ASIGNACION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:628:3: ( '=' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:629:3: '='
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:632:3: ( '=' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:633:3: '='
             {
             match('='); 
 
@@ -631,8 +653,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:633:3: ( 'while' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:634:3: 'while'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:637:3: ( 'while' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:638:3: 'while'
             {
             match("while"); 
 
@@ -654,8 +676,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = FOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:638:3: ( 'for' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:639:3: 'for'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:642:3: ( 'for' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:643:3: 'for'
             {
             match("for"); 
 
@@ -677,8 +699,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:643:3: ( 'else' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:644:3: 'else'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:647:3: ( 'else' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:648:3: 'else'
             {
             match("else"); 
 
@@ -700,8 +722,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = FUNCTION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:648:3: ( 'function' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:649:3: 'function'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:652:3: ( 'function' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:653:3: 'function'
             {
             match("function"); 
 
@@ -723,8 +745,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ELSEIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:653:3: ( 'else if' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:654:3: 'else if'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:657:3: ( 'else if' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:658:3: 'else if'
             {
             match("else if"); 
 
@@ -746,13 +768,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = DOBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:658:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:659:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:662:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:663:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:659:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:659:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:663:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:663:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:659:5: ( '0' .. '9' )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:663:5: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -791,15 +813,15 @@ public class LenguajeLexer extends Lexer {
             } while (true);
 
 
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:659:16: ( '.' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:659:17: '.'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:663:16: ( '.' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:663:17: '.'
             {
             match('.'); 
 
             }
 
 
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:659:22: ( '0' .. '9' )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:663:22: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -857,13 +879,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NUMERO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:665:3: ( ( ( '0' .. '9' )+ ) )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:666:3: ( ( '0' .. '9' )+ )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:669:3: ( ( ( '0' .. '9' )+ ) )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:670:3: ( ( '0' .. '9' )+ )
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:666:3: ( ( '0' .. '9' )+ )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:666:5: ( '0' .. '9' )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:670:3: ( ( '0' .. '9' )+ )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:670:5: ( '0' .. '9' )+
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:666:5: ( '0' .. '9' )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:670:5: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -921,8 +943,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:672:3: ( ')' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:673:3: ')'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:676:3: ( ')' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:677:3: ')'
             {
             match(')'); 
 
@@ -942,8 +964,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:677:3: ( '(' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:678:3: '('
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:681:3: ( '(' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:682:3: '('
             {
             match('('); 
 
@@ -963,8 +985,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:682:3: ( '}' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:683:3: '}'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:686:3: ( '}' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:687:3: '}'
             {
             match('}'); 
 
@@ -984,8 +1006,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:687:3: ( '{' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:688:3: '{'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:691:3: ( '{' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:692:3: '{'
             {
             match('{'); 
 
@@ -1005,8 +1027,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:692:3: ( '\\\"' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:693:3: '\\\"'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:696:3: ( '\\\"' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:697:3: '\\\"'
             {
             match('\"'); 
 
@@ -1026,8 +1048,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:697:3: ( '\\'' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:698:3: '\\''
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:701:3: ( '\\'' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:702:3: '\\''
             {
             match('\''); 
 
@@ -1047,11 +1069,11 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PRINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:702:3: ( ( 'print' ) )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:703:3: ( 'print' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:706:3: ( ( 'print' ) )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:707:3: ( 'print' )
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:703:3: ( 'print' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:703:4: 'print'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:707:3: ( 'print' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:707:4: 'print'
             {
             match("print"); 
 
@@ -1076,11 +1098,11 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PRINTLN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:707:3: ( ( 'println' ) )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:708:3: ( 'println' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:711:3: ( ( 'println' ) )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:712:3: ( 'println' )
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:708:3: ( 'println' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:708:4: 'println'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:712:3: ( 'println' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:712:4: 'println'
             {
             match("println"); 
 
@@ -1105,11 +1127,11 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:712:3: ( ( 'read' ) )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:713:3: ( 'read' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:716:3: ( ( 'read' ) )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:717:3: ( 'read' )
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:713:3: ( 'read' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:713:4: 'read'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:717:3: ( 'read' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:717:4: 'read'
             {
             match("read"); 
 
@@ -1134,11 +1156,11 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NOMBRE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:717:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* ) )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:718:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:721:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* ) )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:722:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:718:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:719:5: ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:722:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:723:5: ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1150,7 +1172,7 @@ public class LenguajeLexer extends Lexer {
             }
 
 
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:723:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:727:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
             loop4:
             do {
                 int alt4=2;
@@ -1203,13 +1225,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = TEXTO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:735:3: ( COMILLASD ( . )* COMILLASD )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:736:3: COMILLASD ( . )* COMILLASD
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:739:3: ( COMILLASD ( . )* COMILLASD )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:740:3: COMILLASD ( . )* COMILLASD
             {
             mCOMILLASD(); 
 
 
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:736:13: ( . )*
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:740:13: ( . )*
             loop5:
             do {
                 int alt5=2;
@@ -1225,7 +1247,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:736:14: .
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:740:14: .
             	    {
             	    matchAny(); 
 
@@ -1257,14 +1279,14 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMENTARIO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:741:3: ( '/*' ( . )+ '*/' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:742:3: '/*' ( . )+ '*/'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:745:3: ( '/*' ( . )+ '*/' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:746:3: '/*' ( . )+ '*/'
             {
             match("/*"); 
 
 
 
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:742:8: ( . )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:746:8: ( . )+
             int cnt6=0;
             loop6:
             do {
@@ -1290,7 +1312,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:742:9: .
+            	    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:746:9: .
             	    {
             	    matchAny(); 
 
@@ -1327,10 +1349,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:750:4: ( ( ' ' | '\\t' )+ )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:750:6: ( ' ' | '\\t' )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:754:4: ( ( ' ' | '\\t' )+ )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:754:6: ( ' ' | '\\t' )+
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:750:6: ( ' ' | '\\t' )+
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:754:6: ( ' ' | '\\t' )+
             int cnt7=0;
             loop7:
             do {
@@ -1387,10 +1409,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:753:8: ( ( '\\r' )? '\\n' )
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:753:10: ( '\\r' )? '\\n'
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:757:8: ( ( '\\r' )? '\\n' )
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:757:10: ( '\\r' )? '\\n'
             {
-            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:753:10: ( '\\r' )?
+            // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:757:10: ( '\\r' )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1399,7 +1421,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:753:10: '\\r'
+                    // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:757:10: '\\r'
                     {
                     match('\r'); 
 
@@ -1425,8 +1447,8 @@ public class LenguajeLexer extends Lexer {
     // $ANTLR end "NEWLINE"
 
     public void mTokens() throws RecognitionException {
-        // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:8: ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | TOKEN | IF | PC | ASIGNACION | WHILE | FOR | ELSE | FUNCTION | ELSEIF | DOBLE | NUMERO | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | NOMBRE | TEXTO | COMENTARIO | WS | NEWLINE )
-        int alt9=46;
+        // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:8: ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | TOKEN | IF | PC | ASIGNACION | WHILE | FOR | ELSE | FUNCTION | ELSEIF | DOBLE | NUMERO | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | NOMBRE | TEXTO | COMENTARIO | WS | NEWLINE )
+        int alt9=47;
         alt9 = dfa9.predict(input);
         switch (alt9) {
             case 1 :
@@ -1598,199 +1620,207 @@ public class LenguajeLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:136: TOKEN
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:136: T__50
+                {
+                mT__50(); 
+
+
+                }
+                break;
+            case 23 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:142: TOKEN
                 {
                 mTOKEN(); 
 
 
                 }
                 break;
-            case 23 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:142: IF
+            case 24 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:148: IF
                 {
                 mIF(); 
 
 
                 }
                 break;
-            case 24 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:145: PC
+            case 25 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:151: PC
                 {
                 mPC(); 
 
 
                 }
                 break;
-            case 25 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:148: ASIGNACION
+            case 26 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:154: ASIGNACION
                 {
                 mASIGNACION(); 
 
 
                 }
                 break;
-            case 26 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:159: WHILE
+            case 27 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:165: WHILE
                 {
                 mWHILE(); 
 
 
                 }
                 break;
-            case 27 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:165: FOR
+            case 28 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:171: FOR
                 {
                 mFOR(); 
 
 
                 }
                 break;
-            case 28 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:169: ELSE
+            case 29 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:175: ELSE
                 {
                 mELSE(); 
 
 
                 }
                 break;
-            case 29 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:174: FUNCTION
+            case 30 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:180: FUNCTION
                 {
                 mFUNCTION(); 
 
 
                 }
                 break;
-            case 30 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:183: ELSEIF
+            case 31 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:189: ELSEIF
                 {
                 mELSEIF(); 
 
 
                 }
                 break;
-            case 31 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:190: DOBLE
+            case 32 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:196: DOBLE
                 {
                 mDOBLE(); 
 
 
                 }
                 break;
-            case 32 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:196: NUMERO
+            case 33 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:202: NUMERO
                 {
                 mNUMERO(); 
 
 
                 }
                 break;
-            case 33 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:203: PARENTESIS_D
+            case 34 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:209: PARENTESIS_D
                 {
                 mPARENTESIS_D(); 
 
 
                 }
                 break;
-            case 34 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:216: PARENTESIS_I
+            case 35 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:222: PARENTESIS_I
                 {
                 mPARENTESIS_I(); 
 
 
                 }
                 break;
-            case 35 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:229: LLAVE_D
+            case 36 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:235: LLAVE_D
                 {
                 mLLAVE_D(); 
 
 
                 }
                 break;
-            case 36 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:237: LLAVE_I
+            case 37 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:243: LLAVE_I
                 {
                 mLLAVE_I(); 
 
 
                 }
                 break;
-            case 37 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:245: COMILLASD
+            case 38 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:251: COMILLASD
                 {
                 mCOMILLASD(); 
 
 
                 }
                 break;
-            case 38 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:255: COMILLASS
+            case 39 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:261: COMILLASS
                 {
                 mCOMILLASS(); 
 
 
                 }
                 break;
-            case 39 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:265: PRINT
+            case 40 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:271: PRINT
                 {
                 mPRINT(); 
 
 
                 }
                 break;
-            case 40 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:271: PRINTLN
+            case 41 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:277: PRINTLN
                 {
                 mPRINTLN(); 
 
 
                 }
                 break;
-            case 41 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:279: READ
+            case 42 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:285: READ
                 {
                 mREAD(); 
 
 
                 }
                 break;
-            case 42 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:284: NOMBRE
+            case 43 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:290: NOMBRE
                 {
                 mNOMBRE(); 
 
 
                 }
                 break;
-            case 43 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:291: TEXTO
+            case 44 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:297: TEXTO
                 {
                 mTEXTO(); 
 
 
                 }
                 break;
-            case 44 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:297: COMENTARIO
+            case 45 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:303: COMENTARIO
                 {
                 mCOMENTARIO(); 
 
 
                 }
                 break;
-            case 45 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:308: WS
+            case 46 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:314: WS
                 {
                 mWS(); 
 
 
                 }
                 break;
-            case 46 :
-                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:311: NEWLINE
+            case 47 :
+                // /home/alfredo/Documents/github/spanish_programming_language/src/Lenguaje.g:1:317: NEWLINE
                 {
                 mNEWLINE(); 
 
@@ -1805,16 +1835,16 @@ public class LenguajeLexer extends Lexer {
 
     protected DFA9 dfa9 = new DFA9(this);
     static final String DFA9_eotS =
-        "\10\uffff\1\47\1\51\1\53\1\55\2\uffff\3\40\1\uffff\2\40\1\uffff"+
-        "\3\40\1\70\4\uffff\1\71\1\uffff\1\40\16\uffff\4\40\1\101\4\40\4"+
-        "\uffff\4\40\1\112\1\40\1\uffff\1\40\1\115\3\40\1\121\1\40\1\123"+
-        "\1\uffff\1\124\1\40\1\uffff\1\40\1\130\1\40\1\uffff\1\40\2\uffff"+
-        "\1\133\1\40\2\uffff\1\136\1\137\1\uffff\2\40\2\uffff\1\40\1\143"+
-        "\1\144\2\uffff";
+        "\11\uffff\1\50\1\52\1\54\1\56\2\uffff\3\41\1\uffff\2\41\1\uffff"+
+        "\3\41\1\71\4\uffff\1\72\1\uffff\1\41\16\uffff\4\41\1\102\4\41\4"+
+        "\uffff\4\41\1\113\1\41\1\uffff\1\41\1\116\3\41\1\122\1\41\1\124"+
+        "\1\uffff\1\125\1\41\1\uffff\1\41\1\131\1\41\1\uffff\1\41\2\uffff"+
+        "\1\134\1\41\2\uffff\1\137\1\140\1\uffff\2\41\2\uffff\1\41\1\144"+
+        "\1\145\2\uffff";
     static final String DFA9_eofS =
-        "\145\uffff";
+        "\146\uffff";
     static final String DFA9_minS =
-        "\1\11\6\uffff\1\147\1\52\3\75\2\uffff\1\151\1\145\1\141\1\uffff"+
+        "\1\11\7\uffff\1\147\1\52\3\75\2\uffff\1\151\1\145\1\141\1\uffff"+
         "\1\157\1\146\1\uffff\1\150\1\157\1\154\1\56\4\uffff\1\0\1\uffff"+
         "\1\162\16\uffff\1\163\1\141\1\162\1\154\1\61\1\151\1\162\1\156\1"+
         "\163\4\uffff\1\151\1\164\1\165\1\144\1\61\1\141\1\uffff\1\154\1"+
@@ -1822,7 +1852,7 @@ public class LenguajeLexer extends Lexer {
         "\1\164\1\40\1\164\1\uffff\1\156\2\uffff\1\61\1\151\2\uffff\2\61"+
         "\1\uffff\1\157\1\156\2\uffff\1\156\2\61\2\uffff";
     static final String DFA9_maxS =
-        "\1\175\6\uffff\1\163\1\52\3\75\2\uffff\1\151\1\145\1\141\1\uffff"+
+        "\1\175\7\uffff\1\163\1\52\3\75\2\uffff\1\151\1\145\1\141\1\uffff"+
         "\1\157\1\146\1\uffff\1\150\1\165\1\154\1\71\4\uffff\1\uffff\1\uffff"+
         "\1\162\16\uffff\1\163\1\164\1\162\1\154\1\172\1\151\1\162\1\156"+
         "\1\163\4\uffff\1\151\1\164\1\165\1\144\1\172\1\141\1\uffff\1\154"+
@@ -1830,118 +1860,119 @@ public class LenguajeLexer extends Lexer {
         "\uffff\1\164\1\172\1\164\1\uffff\1\156\2\uffff\1\172\1\151\2\uffff"+
         "\2\172\1\uffff\1\157\1\156\2\uffff\1\156\2\172\2\uffff";
     static final String DFA9_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\5\uffff\1\20\1\21\3\uffff\1\25"+
-        "\2\uffff\1\30\4\uffff\1\41\1\42\1\43\1\44\1\uffff\1\46\1\uffff\1"+
-        "\52\1\55\1\56\1\7\1\10\1\11\1\54\1\12\1\14\1\13\1\15\1\31\1\17\1"+
-        "\16\11\uffff\1\37\1\40\1\45\1\53\6\uffff\1\27\10\uffff\1\24\2\uffff"+
-        "\1\33\3\uffff\1\22\1\uffff\1\51\1\26\2\uffff\1\36\1\34\2\uffff\1"+
-        "\32\2\uffff\1\47\1\23\3\uffff\1\50\1\35";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\5\uffff\1\21\1\22\3\uffff\1"+
+        "\26\2\uffff\1\31\4\uffff\1\42\1\43\1\44\1\45\1\uffff\1\47\1\uffff"+
+        "\1\53\1\56\1\57\1\10\1\11\1\12\1\55\1\13\1\15\1\14\1\16\1\32\1\20"+
+        "\1\17\11\uffff\1\40\1\41\1\46\1\54\6\uffff\1\30\10\uffff\1\25\2"+
+        "\uffff\1\34\3\uffff\1\23\1\uffff\1\52\1\27\2\uffff\1\37\1\35\2\uffff"+
+        "\1\33\2\uffff\1\50\1\24\3\uffff\1\51\1\36";
     static final String DFA9_specialS =
-        "\35\uffff\1\0\107\uffff}>";
+        "\36\uffff\1\0\107\uffff}>";
     static final String[] DFA9_transitionS = {
-            "\1\41\1\42\2\uffff\1\42\22\uffff\1\41\1\1\1\35\3\uffff\1\2\1"+
-            "\36\1\32\1\31\1\3\1\4\1\5\1\6\1\7\1\10\12\30\1\uffff\1\24\1"+
-            "\11\1\12\1\13\2\uffff\32\40\1\14\1\uffff\1\15\3\uffff\4\40\1"+
-            "\27\1\26\1\40\1\22\1\23\2\40\1\16\3\40\1\37\1\40\1\17\3\40\1"+
-            "\20\1\25\3\40\1\34\1\21\1\33",
+            "\1\42\1\43\2\uffff\1\43\22\uffff\1\42\1\1\1\36\2\uffff\1\2\1"+
+            "\3\1\37\1\33\1\32\1\4\1\5\1\6\1\7\1\10\1\11\12\31\1\uffff\1"+
+            "\25\1\12\1\13\1\14\2\uffff\32\41\1\15\1\uffff\1\16\3\uffff\4"+
+            "\41\1\30\1\27\1\41\1\23\1\24\2\41\1\17\3\41\1\40\1\41\1\20\3"+
+            "\41\1\21\1\26\3\41\1\35\1\22\1\34",
             "",
             "",
             "",
             "",
             "",
             "",
-            "\1\43\10\uffff\1\44\2\uffff\1\45",
-            "\1\46",
-            "\1\50",
-            "\1\52",
-            "\1\54",
+            "",
+            "\1\44\10\uffff\1\45\2\uffff\1\46",
+            "\1\47",
+            "\1\51",
+            "\1\53",
+            "\1\55",
             "",
             "",
-            "\1\56",
             "\1\57",
             "\1\60",
-            "",
             "\1\61",
+            "",
             "\1\62",
-            "",
             "\1\63",
-            "\1\64\5\uffff\1\65",
-            "\1\66",
-            "\1\67\1\uffff\12\30",
+            "",
+            "\1\64",
+            "\1\65\5\uffff\1\66",
+            "\1\67",
+            "\1\70\1\uffff\12\31",
             "",
             "",
             "",
             "",
-            "\0\72",
-            "",
-            "\1\73",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\0\73",
             "",
             "\1\74",
-            "\1\76\22\uffff\1\75",
-            "\1\77",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\75",
+            "\1\77\22\uffff\1\76",
             "\1\100",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
-            "\1\102",
+            "\1\101",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
             "\1\103",
             "\1\104",
             "\1\105",
-            "",
-            "",
-            "",
-            "",
             "\1\106",
+            "",
+            "",
+            "",
+            "",
             "\1\107",
             "\1\110",
             "\1\111",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
-            "\1\113",
-            "",
+            "\1\112",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
             "\1\114",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
-            "\1\116",
+            "",
+            "\1\115",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
             "\1\117",
             "\1\120",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
-            "\1\122",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
+            "\1\121",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
+            "\1\123",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
             "",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
-            "\1\125",
-            "",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
             "\1\126",
-            "\1\127\20\uffff\11\40\7\uffff\32\40\6\uffff\32\40",
-            "\1\131",
             "",
+            "\1\127",
+            "\1\130\20\uffff\11\41\7\uffff\32\41\6\uffff\32\41",
             "\1\132",
             "",
-            "",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
-            "\1\134",
+            "\1\133",
             "",
             "",
-            "\11\40\7\uffff\32\40\6\uffff\13\40\1\135\16\40",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
+            "\1\135",
             "",
-            "\1\140",
+            "",
+            "\11\41\7\uffff\32\41\6\uffff\13\41\1\136\16\41",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
+            "",
             "\1\141",
-            "",
-            "",
             "\1\142",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
-            "\11\40\7\uffff\32\40\6\uffff\32\40",
+            "",
+            "",
+            "\1\143",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
+            "\11\41\7\uffff\32\41\6\uffff\32\41",
             "",
             ""
     };
@@ -1976,19 +2007,19 @@ public class LenguajeLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | TOKEN | IF | PC | ASIGNACION | WHILE | FOR | ELSE | FUNCTION | ELSEIF | DOBLE | NUMERO | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | NOMBRE | TEXTO | COMENTARIO | WS | NEWLINE );";
+            return "1:1: Tokens : ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | TOKEN | IF | PC | ASIGNACION | WHILE | FOR | ELSE | FUNCTION | ELSEIF | DOBLE | NUMERO | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | NOMBRE | TEXTO | COMENTARIO | WS | NEWLINE );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA9_29 = input.LA(1);
+                        int LA9_30 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA9_29 >= '\u0000' && LA9_29 <= '\uFFFF')) ) {s = 58;}
+                        if ( ((LA9_30 >= '\u0000' && LA9_30 <= '\uFFFF')) ) {s = 59;}
 
-                        else s = 57;
+                        else s = 58;
 
                         if ( s>=0 ) return s;
                         break;
