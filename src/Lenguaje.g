@@ -5,8 +5,8 @@ options {
 }
 
 @header {
-package co.edu.javeriana.interpreter.antlr;
-import co.edu.javeriana.interpreter.*;
+package interpreter.antlr; 
+import interpreter.*;
 import evaluators.*;  
 
 
@@ -15,13 +15,21 @@ import conte.IntegerStatement;
 import conte.Statement1;
 import java.util.Stack;
 import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.IOException; 
 import java.io.InputStreamReader;
 import java.util.HashMap; 
 }
 
+@rulecatch {
+
+catch (RecognitionException er) {
+    throw er; 
+} 
+
+}
+
 @lexer::header {
-package co.edu.javeriana.interpreter.antlr;
+package interpreter.antlr;
 }
 
 @members {
@@ -30,11 +38,12 @@ boolean bandera = true;
 ArrayList<Context1> pila = new ArrayList<Context1>();
 public HashMap<String, Evaluator> funciones = new HashMap<String, Evaluator>();
 
-}
+} 
 
-// Esta es una regla gramatical. No la utilizaremos todav�a, sino hasta haber visto la materia de gram�ticas
-  
-programa returns [StringBuilder output]
+
+
+
+programa returns [StringBuilder output] throws Exception 
   :
   
   {
@@ -64,7 +73,7 @@ programa returns [StringBuilder output]
   
 
   
-  return1 returns[Evaluator e]    
+  return1 returns[Evaluator e] throws Exception
   :
     'return' te = evaluator {
       $e = new ReturnEvaluator($te.e); 
@@ -74,7 +83,7 @@ programa returns [StringBuilder output]
   ;
   
   
-  funcion returns[Evaluator e]
+  funcion returns[Evaluator e] throws Exception
   :
   {$e = new FuncionEvaluator();}  
   FUNCTION nom = NOMBRE '(' 
@@ -109,7 +118,7 @@ programa returns [StringBuilder output]
 
 
 
-declaracion returns [Evaluator e] 
+declaracion returns [Evaluator e] throws Exception
   :
   'var' nom=NOMBRE ASIGNACION ev = evaluator 
                                  {
@@ -124,7 +133,7 @@ declaracion returns [Evaluator e]
                                  PC
   ; 
   
-  declaracion2 returns [Evaluator e]
+  declaracion2 returns [Evaluator e] throws Exception
   :
   'var' nom=NOMBRE
                                  {
@@ -141,7 +150,7 @@ declaracion returns [Evaluator e]
   ; 
 
 
-  declaracion_lista returns [Evaluator e]
+  declaracion_lista returns [Evaluator e] throws Exception
   :
   //TODO:(danielserrano) change the list constant for a regex variable.
   'list' nom=NOMBRE
@@ -156,7 +165,7 @@ declaracion returns [Evaluator e]
   PC
   ; 
   
-  push returns [Evaluator e] 
+  push returns [Evaluator e] throws Exception
   :
   nom=NOMBRE '.push(' exp = expression ')'
                                  {
@@ -171,7 +180,7 @@ declaracion returns [Evaluator e]
   
   
   
-  asignacion returns [Evaluator e] 
+  asignacion returns [Evaluator e] throws Exception
   :
    nom=NOMBRE ASIGNACION ev = evaluator 
                                  {
@@ -187,7 +196,7 @@ declaracion returns [Evaluator e]
   ; 
 
 
-  asignacion_lista returns [Evaluator e] 
+  asignacion_lista returns [Evaluator e] throws Exception
   :
    nom=NOMBRE 
    (  '[' num=NUMERO ']' ASIGNACION ev = evaluator
@@ -210,7 +219,7 @@ comentario
   COMENTARIO
   ;
 
-lectura returns [Evaluator e]
+lectura returns [Evaluator e] throws Exception
   :
   r=READ n=NOMBRE 
                  {
@@ -224,7 +233,7 @@ lectura returns [Evaluator e]
   PC
   ;
 
-print1 returns [Evaluator e]
+print1 returns [Evaluator e] throws Exception
   :
   { $e = new PrintEvaluator(); }
     PRINT 
@@ -236,7 +245,7 @@ print1 returns [Evaluator e]
   PC
   ;
 
-println returns [Evaluator e]
+println returns [Evaluator e] throws Exception
   :
   { $e = new PrintlnEvaluator(); }
     PRINTLN
@@ -248,7 +257,7 @@ println returns [Evaluator e]
   PC
   ;
   
-evaluator returns [Evaluator e]
+evaluator returns [Evaluator e] throws Exception
   :
   logico 
         {
@@ -256,7 +265,7 @@ evaluator returns [Evaluator e]
         }
   ;
 
-term returns [Evaluator e]
+term returns [Evaluator e] throws Exception 
   :
   
   {
@@ -264,8 +273,6 @@ term returns [Evaluator e]
   }
     lla = llamadofuncion
         {
-         //System.out.println("entiendo que es un llamado"); 
-          //$e = $lla.e;
           $e = new RetornoFuncionEvaluator($lla.e);
         }
   | NOMBRE  
@@ -302,7 +309,7 @@ term returns [Evaluator e]
          }
   ;
 
-unary returns [Evaluator e]
+unary returns [Evaluator e] throws Exception
   :
   
   {
@@ -323,7 +330,7 @@ unary returns [Evaluator e]
       }
   ;
 
-mult returns [Evaluator e]
+mult returns [Evaluator e] throws Exception
   :
   op1=unary 
            {
@@ -345,7 +352,7 @@ mult returns [Evaluator e]
   )*
   ;
 
-add returns [Evaluator e]
+add returns [Evaluator e] throws Exception
   :
   op1=mult 
           {
@@ -363,7 +370,7 @@ add returns [Evaluator e]
   )*
   ;
 
-relation returns [Evaluator e]  
+relation returns [Evaluator e] throws Exception
   :
   ex1=add 
                 {
@@ -399,7 +406,7 @@ relation returns [Evaluator e]
   )*
   ;
 
-logico returns [Evaluator e] 
+logico returns [Evaluator e] throws Exception
   :
   rel1=relation 
                {
@@ -417,12 +424,12 @@ logico returns [Evaluator e]
   )*
   ;
 
-  expression returns [Evaluator e]
+  expression returns [Evaluator e] throws Exception
 		  :   logico { $e = $logico.e; }
 		  ;
 
 
-llamadofuncion returns[Evaluator e]
+llamadofuncion returns[Evaluator e] throws Exception
    :
         nom = NOMBRE{$e = funciones.get($nom.text);}
   '('
@@ -438,7 +445,7 @@ llamadofuncion returns[Evaluator e]
 
 
 
-ifstatements returns [Evaluator e]:  
+ifstatements returns [Evaluator e] throws Exception:  
 
     print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}  
   | println {$e = $println.e;}   
@@ -458,7 +465,7 @@ ifstatements returns [Evaluator e]:
 ;  
 
   
-elsestataments returns [Evaluator e]: 
+elsestataments returns [Evaluator e] throws Exception: 
 
     print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}    
   | println {$e = $println.e;} 
@@ -479,7 +486,7 @@ elsestataments returns [Evaluator e]:
 ;
 
  
-ifstatement returns [Evaluator e]:
+ifstatement returns [Evaluator e] throws Exception:
 
 IF PARENTESIS_I rel = logico
 {
@@ -527,7 +534,7 @@ IF PARENTESIS_I rel = logico
 
 
 
-whilestatements returns [Evaluator e]:
+whilestatements returns [Evaluator e] throws Exception:
 
   
     print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}    
@@ -547,7 +554,7 @@ whilestatements returns [Evaluator e]:
 ;
        
 
-whilestatemet returns [Evaluator e]:
+whilestatemet returns [Evaluator e] throws Exception:
 
  
 WHILE PARENTESIS_I rel=logico{
@@ -568,7 +575,7 @@ LLAVE_D
 ;
 
 
-forstatemet returns [Evaluator e]:
+forstatemet returns [Evaluator e] throws Exception:
 
  
 FOR PARENTESIS_I decl=declaracion logi=logico PC aumento=add  {

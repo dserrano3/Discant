@@ -32,7 +32,7 @@ public class ListaIfEvaluator implements Evaluator {
 	}
 	
 	
-	public Object evaluate(ArrayList<Context1> pila) {
+	public Object evaluate(ArrayList<Context1> pila) throws Exception{
 		
 		
 		

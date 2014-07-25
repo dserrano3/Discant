@@ -4,30 +4,31 @@ import java.util.ArrayList;
 
 import conte.Context1;
 
-public class PrintEvaluator implements Evaluator { 
+/**
+ * This class prints to the user what is after the clause print, for example:
+ * print a.
+ * 
+ */
+public class PrintEvaluator implements Evaluator {
 
-	
 	public ArrayList<Evaluator> evaluators;
-	
-	
-	
+
 	public PrintEvaluator() {
 		this.evaluators = new ArrayList<Evaluator>();
 	}
 
-	public void addEvaluator(Evaluator ev)
-	{
+	public void addEvaluator(Evaluator ev) {
 		evaluators.add(ev);
 	}
 
 	@Override
-	public Object evaluate(ArrayList<Context1> pila) {
+	public Object evaluate(ArrayList<Context1> pila) throws Exception {
 
 		StringBuilder s = new StringBuilder();
-		for(int i = 0; i < evaluators.size(); i++)
+		for (int i = 0; i < evaluators.size(); i++)
 			s.append(evaluators.get(i).evaluate(pila).toString());
-		System.out.println("imprimiendo.." +  s);
-		
+		System.out.println("imprimiendo.." + s);
+
 		return s.toString();
 	}
 

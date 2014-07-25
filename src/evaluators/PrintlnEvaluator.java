@@ -4,7 +4,11 @@ import java.util.ArrayList;
 
 import conte.Context1;
 
-
+/**
+ * This class prints to the user what is after the clause println followed by an enter, for example:
+ * print a.
+ * 
+ */
 public class PrintlnEvaluator implements Evaluator {
 
 	private ArrayList<Evaluator> evaluators;
@@ -19,7 +23,7 @@ public class PrintlnEvaluator implements Evaluator {
 	}
 
 	@Override
-	public Object evaluate(ArrayList<Context1> pila) {
+	public Object evaluate(ArrayList<Context1> pila) throws Exception{
 
 		StringBuilder s = new StringBuilder();
 		for(int i = 0; i < evaluators.size(); i++)

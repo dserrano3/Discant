@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 import conte.Context1;
 
+/**
+ * This class is used to declare a new variable, for example: var a = 3;
+ * 
+ */
 public class DeclaracionEvaluator implements Evaluator {
 
 	private String nombre;
@@ -17,10 +21,7 @@ public class DeclaracionEvaluator implements Evaluator {
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) {
 
-	    System.out.println("me llamaron con pila "+pila.size());
 		pila.get(pila.size() - 1).put(nombre, e);
-
-		// System.out.println((Integer)pila.peek().get(nombre).evaluate(null));
 		return null;
 	}
 
@@ -31,8 +32,5 @@ public class DeclaracionEvaluator implements Evaluator {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	
-	
 
 }

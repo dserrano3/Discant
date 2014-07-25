@@ -5,6 +5,10 @@ import java.util.List;
 
 import conte.Context1;
 
+/**
+ * This class creates a new list, for examle: list a;
+ * 
+ */
 public class ListEvaluator implements Evaluator {
 
 	private List<Object> lista;
@@ -14,9 +18,7 @@ public class ListEvaluator implements Evaluator {
 		return lista;
 	}
 
-	public ListEvaluator()
-	{
+	public ListEvaluator() {
 		lista = new ArrayList<Object>();
-		System.out.println("entre a lista");
 	}
 }

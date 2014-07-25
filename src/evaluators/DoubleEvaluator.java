@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 import conte.Context1;
 
+/**
+ * This class evaluate all the numbers, for example: 3 or 2.3.
+ * 
+ */
 public class DoubleEvaluator implements Evaluator {
 
 	double numero;
@@ -13,8 +17,7 @@ public class DoubleEvaluator implements Evaluator {
 		return numero;
 	}
 
-	public DoubleEvaluator(double a)
-	{
-		numero = a;	
+	public DoubleEvaluator(double a) {
+		numero = a;
 	}
 }
