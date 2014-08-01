@@ -43,10 +43,8 @@ public class FuncionEvaluator implements Evaluator {
 	@Override
 	public Object evaluate(ArrayList<Context1> pila_basura) throws Exception {
 		StringBuilder output = new StringBuilder();
-		ArrayList<Context1> pila2 ;
 
 		for (Evaluator e : lista) {
-			pila2 = pila;
 			if (e != null) {
 				if (e instanceof ReturnEvaluator) {
 					return e.evaluate(pila);
