@@ -66,7 +66,8 @@ programa returns [StringBuilder output] throws Exception
     | push             {$push.e.evaluate(pila);}
     | forstatemet      {$output.append((String)$forstatemet.e.evaluate(pila));}
     | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
-
+    | lista_texto      {$lista_texto.e.evaluate(pila);}
+    | size      {$size.e.evaluate(pila);}
   )+ 
   ;
   
@@ -110,7 +111,7 @@ programa returns [StringBuilder output] throws Exception
      } 
     )*
 	'}'
-	{funciones.put($nom.text, $e);}   
+	{funciones.put($nom.text, $e);}    
 ;
  
  
@@ -130,7 +131,7 @@ declaracion returns [Evaluator e] throws Exception
                                   			
                                   	}
                                  }
-                                 PC
+  PC 
   ; 
   
   declaracion2 returns [Evaluator e] throws Exception
@@ -157,8 +158,21 @@ declaracion returns [Evaluator e] throws Exception
                                  {
                                   if(bandera)
                                     {
-                                       // System.out.println("intento salvar");
                                         $e = new DeclaracionEvaluator($nom.text,new ListEvaluator());   
+                                    }
+                                 }
+                                 
+  PC
+  ; 
+  
+    lista_texto returns [Evaluator e] throws Exception
+  :
+  //TODO:(danielserrano) change the list constant for a regex variable.
+  'list' nom=NOMBRE ASIGNACION 'read(' tex=TEXTO ')'
+                                 {
+                                  if(bandera)
+                                    {
+                                        $e = new DeclaracionEvaluator($nom.text,(new ListFromTextEvaluator($tex.text)).evaluate(pila));   
                                     }
                                  }
                                  
@@ -171,8 +185,19 @@ declaracion returns [Evaluator e] throws Exception
                                  {
                                   if(bandera)
                                     {
-                                        //System.out.println("intento salvar");
                                         $e = new PushEvaluator($nom.text,$exp.e);
+                                    }
+                                 }
+                                 PC
+  ; 
+  
+  size returns [Evaluator e] throws Exception
+  :
+  nom=NOMBRE '.size' ('()')*
+                                 {
+                                  if(bandera)
+                                    {
+                                        $e = new SizeEvaluator($nom.text);
                                     }
                                  }
                                  PC
@@ -307,6 +332,10 @@ term returns [Evaluator e] throws Exception
          {
                 $e = new GetEvaluator($nom.text,$num.e);     
          }
+  | nom=NOMBRE '.size' ('()')*
+            {
+                  $e = new SizeEvaluator($nom.text);
+            }
   ;
 
 unary returns [Evaluator e] throws Exception
@@ -461,6 +490,8 @@ ifstatements returns [Evaluator e] throws Exception:
   | push{ $e = $push.e; }
   | forstatemet{$forstatemet.e.evaluate(pila);}
   | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
+  | lista_texto      {$lista_texto.e.evaluate(pila);}
+  | size      {$size.e.evaluate(pila);}
    
 ;  
 
@@ -481,6 +512,8 @@ elsestataments returns [Evaluator e] throws Exception:
   | push{ $e = $push.e; }
   | forstatemet{$forstatemet.e.evaluate(pila);}
   | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
+  | lista_texto      {$lista_texto.e.evaluate(pila);}
+  | size      {$size.e.evaluate(pila);}
 
 
 ;
@@ -550,6 +583,9 @@ whilestatements returns [Evaluator e] throws Exception:
   | declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
   | push{ $e = $push.e; }
   | forstatemet{$forstatemet.e.evaluate(pila);}
+  | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
+  | lista_texto      {$lista_texto.e.evaluate(pila);}
+  | size      {$size.e.evaluate(pila);}
 
 ;
        

@@ -37,7 +37,11 @@ public class AsignacionEvaluator implements Evaluator {
 				return null;
 			}
 		}
-		System.out.println("error variable no declarada anteriormente");
-		throw new Exception("The variable was not declared before");
+        try {
+        	pila.get(pila.size() - 1).put(nombre, e);
+        }catch (Exception e) {
+        	throw new Exception("There was a problem declaring the variable");
+        }
+        return null;
 	}
 }

@@ -21,4 +21,14 @@ public class ListEvaluator implements Evaluator {
 	public ListEvaluator() {
 		lista = new ArrayList<Object>();
 	}
+
+	public List<Object> getLista() {
+		return lista;
+	}
+
+	public void setLista(List<Object> lista) {
+		this.lista = lista;
+	}
+	
+	
 }
