@@ -1,7 +1,6 @@
 package interpreter;
 
 import java.awt.BorderLayout;
-import java.awt.ComponentOrientation;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,9 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 import javax.swing.JFileChooser;
-import javax.swing.JScrollPane;
 import javax.swing.JMenuBar;
-import javax.swing.JTextArea;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -28,13 +25,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.swing.JSplitPane;
+import org.fife.ui.rsyntaxtextarea.*;
+import org.fife.ui.rtextarea.*;
 
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-
-import javax.swing.ScrollPaneConstants;
-import java.awt.Color;
 
 
 /**
@@ -48,14 +41,11 @@ public class TextEditor extends JFrame {
 	private JMenuBar menuBar;
 	private JButton btnBorrar;
 	private JButton btnEjecutar;
-	private JScrollPane scrollPane;
+	private RTextScrollPane rtScrollPane;
 	private JButton btnOpen;
 	private JFileChooser fc;
 	private JButton btnSave;
-	private JSplitPane splitPane;
-	private JTextArea codigo;
-	private JTextArea numLineas;
-	private int contLineas;
+	private RSyntaxTextArea codigo;
 	
 	/**
 	 * Launch the application.
@@ -89,7 +79,6 @@ public class TextEditor extends JFrame {
 		setJMenuBar(getMenuBar_1());
 		setContentPane(getContentPane());
 		fc = new JFileChooser();
-		contLineas = 1;
 	}
 
 	public JPanel getContentPane() {
@@ -98,7 +87,7 @@ public class TextEditor extends JFrame {
 			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 			contentPane.setLayout(new BorderLayout(0, 0));
 			contentPane.add(getBtnEjecutar(), BorderLayout.SOUTH);
-			contentPane.add(getScrollPane(), BorderLayout.CENTER);
+			contentPane.add(getRTextScrollPane(), BorderLayout.CENTER);
 		}
 		return contentPane;
 	}
@@ -123,8 +112,6 @@ public class TextEditor extends JFrame {
 				@Override
 				public void mouseReleased(MouseEvent e) {
 					codigo.setText("");
-					numLineas.setText("1\n");
-					contLineas = 1;
 				}
 			});
 		}
@@ -146,13 +133,14 @@ public class TextEditor extends JFrame {
 		}
 		return btnEjecutar;
 	}
-	private JScrollPane getScrollPane() {
-		if (scrollPane == null) {
-			scrollPane = new JScrollPane();
-			scrollPane.setViewportView(getSplitPane());
+	private RTextScrollPane getRTextScrollPane() {
+		if (rtScrollPane == null) {
+			rtScrollPane = new RTextScrollPane(getRSyntaxTextArea());
+			rtScrollPane.setViewportView(getRSyntaxTextArea());
 		}
-		return scrollPane;
+		return rtScrollPane;
 	}
+	
 	private JButton getBtnOpen() {
 		if (btnOpen == null) {
 			btnOpen = new JButton("Abrir");
@@ -173,9 +161,6 @@ public class TextEditor extends JFrame {
 								codigo.append(line);
 								codigo.append("\n");
 							}
-							numLineas.setText("1\n");
-							contLineas = 1;
-							setContLineas();
 						} catch (FileNotFoundException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -218,29 +203,11 @@ public class TextEditor extends JFrame {
 		}
 		return btnSave;
 	}
-	private JSplitPane getSplitPane() {
-		if (splitPane == null) {
-			splitPane = new JSplitPane();
-			splitPane.setRightComponent(getCodigo());
-			splitPane.setLeftComponent(getNumLineas());
-			splitPane.setDividerLocation(30);
-			splitPane.setEnabled(false);
-		}
-		return splitPane;
-	}
-	private JTextArea getCodigo() {
+	private RSyntaxTextArea getRSyntaxTextArea() {
 		if (codigo == null) {
-			codigo = new JTextArea();
+			codigo = new RSyntaxTextArea();
+			codigo.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
 			codigo.setWrapStyleWord(true);
-			codigo.addKeyListener(new KeyAdapter() {
-				@Override
-				public void keyTyped(KeyEvent e) {
-					if(e.getKeyChar() == '\n' || e.getKeyChar() == 8)
-					{
-						setContLineas();
-					}
-				}
-			});
 			codigo.setFont(new Font("DialogInput", Font.PLAIN, 16));
 			//codigo.setLineWrap(true);
 			codigo.setTabSize(4);
@@ -248,37 +215,4 @@ public class TextEditor extends JFrame {
 		return codigo;
 	}
 	
-	private void setContLineas()
-	{
-		int currNumLineas = codigo.getLineCount();
-		if(currNumLineas > contLineas)
-		{
-			do{
-				numLineas.append(++contLineas +"\n");
-			}while(contLineas < currNumLineas);
-		}
-		if(currNumLineas < contLineas)
-		{
-			int lineasBorrar = contLineas - currNumLineas;
-			String lineas = numLineas.getText();
-			int index = lineas.length();
-			while(index >= 0 && lineasBorrar >= 0)
-			{
-				if(lineas.charAt(--index) == '\n')
-					lineasBorrar--;
-			}
-			numLineas.setText(lineas.substring(0, index+1));
-			contLineas = currNumLineas;
-		}
-	}
-	private JTextArea getNumLineas() {
-		if (numLineas == null) {
-			numLineas = new JTextArea();
-			numLineas.setForeground(Color.LIGHT_GRAY);
-			numLineas.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
-			numLineas.setFont(new Font("DialogInput", Font.PLAIN, 17));
-			numLineas.append("1\n");
-		}
-		return numLineas;
-	}
 }
