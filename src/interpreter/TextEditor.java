@@ -206,7 +206,10 @@ public class TextEditor extends JFrame {
 	private RSyntaxTextArea getRSyntaxTextArea() {
 		if (codigo == null) {
 			codigo = new RSyntaxTextArea();
-			codigo.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
+			AbstractTokenMakerFactory atmf = (AbstractTokenMakerFactory)TokenMakerFactory.getDefaultInstance();
+			atmf.putMapping("text/myLanguage", "parcer.EditorTokenMaker");
+			codigo.setSyntaxEditingStyle("text/myLanguage");
+			//codigo.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
 			codigo.setWrapStyleWord(true);
 			codigo.setFont(new Font("DialogInput", Font.PLAIN, 16));
 			//codigo.setLineWrap(true);

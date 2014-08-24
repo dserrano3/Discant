@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URL;
 
 import javax.swing.JOptionPane;
 
@@ -14,6 +15,7 @@ import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 
+import jflex.*;
 
 public class Main {
 
@@ -26,8 +28,18 @@ public class Main {
     }
 	
 	public static void main(String args[]) throws IOException {
+
+		//test 
+		//generateTalkenMaker();
 		TextEditor.main(null);
 	}
+	
+	private static void generateTalkenMaker() {
+		File f = new File("src/parcer/EditorTokenMaker.flex");
+		jflex.Main.generate(f);
+
+	}
+
 	/**
 	 * Runs the program using the code in tokentest.cfpp
 	 * 
