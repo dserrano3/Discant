@@ -28,12 +28,18 @@ import java.io.PrintWriter;
 import org.fife.ui.rsyntaxtextarea.*;
 import org.fife.ui.rtextarea.*;
 
-
-
 /**
  * 
  * This is the class that runs the text editor with the option to run the code.
- *
+ * 
+ * In order to make work the flex file, you must generate it in the web page: ,
+ * and then with the generated file, you have to erase the 3 duplicated
+ * methods(erase the second one always), change the constructor to: public
+ * EditorTokenMaker() { } and finally there are 2 conditionals you have to
+ * change, in the if(zzCurrentPosL < zzEndReadL) change the lines inside the if
+ * to: zzInput = zzBufferL[zzCurrentPosL++]; Also inside the else of that if
+ * there is a condition. if (eof), change the lines inside the else to. zzInput
+ * = zzBufferL[zzCurrentPosL++];
  */
 public class TextEditor extends JFrame {
 
@@ -46,7 +52,7 @@ public class TextEditor extends JFrame {
 	private JFileChooser fc;
 	private JButton btnSave;
 	private RSyntaxTextArea codigo;
-	
+
 	/**
 	 * Launch the application.
 	 */
@@ -58,7 +64,7 @@ public class TextEditor extends JFrame {
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
-					
+
 				}
 			}
 		});
@@ -70,9 +76,8 @@ public class TextEditor extends JFrame {
 	public TextEditor() {
 		initialize();
 	}
-	
-	
-	private void initialize(){
+
+	private void initialize() {
 		setTitle("spanish_PL_textEditor");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 624, 472);
@@ -82,7 +87,7 @@ public class TextEditor extends JFrame {
 	}
 
 	public JPanel getContentPane() {
-		if( contentPane == null){
+		if (contentPane == null) {
 			contentPane = new JPanel();
 			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 			contentPane.setLayout(new BorderLayout(0, 0));
@@ -91,6 +96,7 @@ public class TextEditor extends JFrame {
 		}
 		return contentPane;
 	}
+
 	private JMenuBar getMenuBar_1() {
 		if (menuBar == null) {
 			menuBar = new JMenuBar();
@@ -101,6 +107,7 @@ public class TextEditor extends JFrame {
 		}
 		return menuBar;
 	}
+
 	private JButton getBtnBorrar() {
 		if (btnBorrar == null) {
 			btnBorrar = new JButton("Borrar");
@@ -117,6 +124,7 @@ public class TextEditor extends JFrame {
 		}
 		return btnBorrar;
 	}
+
 	private JButton getBtnEjecutar() {
 		if (btnEjecutar == null) {
 			btnEjecutar = new JButton("Ejecutar");
@@ -127,12 +135,17 @@ public class TextEditor extends JFrame {
 			btnEjecutar.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					OutputConsole.main(codigo.getText());
+					// El ; adicional es por que antlr no puede reconocer muy
+					// bien el EOF, entonces se le agrega un ; al final de todo
+					// el codigo por si al usuario se le olvido poner ; en la
+					// ultima linea.
+					OutputConsole.main(codigo.getText() + ";");
 				}
 			});
 		}
 		return btnEjecutar;
 	}
+
 	private RTextScrollPane getRTextScrollPane() {
 		if (rtScrollPane == null) {
 			rtScrollPane = new RTextScrollPane(getRSyntaxTextArea());
@@ -140,24 +153,25 @@ public class TextEditor extends JFrame {
 		}
 		return rtScrollPane;
 	}
-	
+
 	private JButton getBtnOpen() {
 		if (btnOpen == null) {
 			btnOpen = new JButton("Abrir");
 			btnOpen.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					
+
 					int returnVal = fc.showDialog(TextEditor.this, "Abrir");
 					if (returnVal == JFileChooser.APPROVE_OPTION) {
-			            File file = fc.getSelectedFile();
-			            BufferedReader br;
+						File file = fc.getSelectedFile();
+						BufferedReader br;
 						try {
 							System.out.println(file.getAbsolutePath());
-							br = new BufferedReader(new FileReader(file.getAbsoluteFile()));
+							br = new BufferedReader(new FileReader(file
+									.getAbsoluteFile()));
 							String line;
 							codigo.setText("");
-							while((line = br.readLine()) != null){
+							while ((line = br.readLine()) != null) {
 								codigo.append(line);
 								codigo.append("\n");
 							}
@@ -169,12 +183,13 @@ public class TextEditor extends JFrame {
 							e1.printStackTrace();
 						}
 					}
-					
+
 				}
 			});
 		}
 		return btnOpen;
 	}
+
 	private JButton getBtnGuardar() {
 		if (btnSave == null) {
 			btnSave = new JButton("Guardar");
@@ -196,26 +211,28 @@ public class TextEditor extends JFrame {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
-						
+
 					}
 				}
 			});
 		}
 		return btnSave;
 	}
+
 	private RSyntaxTextArea getRSyntaxTextArea() {
 		if (codigo == null) {
 			codigo = new RSyntaxTextArea();
-			AbstractTokenMakerFactory atmf = (AbstractTokenMakerFactory)TokenMakerFactory.getDefaultInstance();
+			AbstractTokenMakerFactory atmf = (AbstractTokenMakerFactory) TokenMakerFactory
+					.getDefaultInstance();
 			atmf.putMapping("text/myLanguage", "parcer.EditorTokenMaker");
 			codigo.setSyntaxEditingStyle("text/myLanguage");
-			//codigo.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
+			// codigo.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
 			codigo.setWrapStyleWord(true);
 			codigo.setFont(new Font("DialogInput", Font.PLAIN, 16));
-			//codigo.setLineWrap(true);
+			// codigo.setLineWrap(true);
 			codigo.setTabSize(4);
 		}
 		return codigo;
 	}
-	
+
 }

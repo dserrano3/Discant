@@ -46,7 +46,7 @@ public HashMap<String, Evaluator> funciones = new HashMap<String, Evaluator>();
 programa returns [StringBuilder output] throws Exception 
   :
   
-  {
+  { 
    pila.add(new Context1()); 
    output = new StringBuilder();
   }
@@ -61,13 +61,17 @@ programa returns [StringBuilder output] throws Exception
     | funcion
     | llamadofuncion   {$output.append((String)$llamadofuncion.e.evaluate(pila));}
     | declaracion      {$declaracion.e.evaluate(pila);}
-    | declaracion2     {$declaracion2.e.evaluate(pila);}
+    //| declaracion2     {$declaracion2.e.evaluate(pila);}
     | declaracion_lista{$declaracion_lista.e.evaluate(pila);}
     | push             {$push.e.evaluate(pila);}
     | forstatemet      {$output.append((String)$forstatemet.e.evaluate(pila));}
     | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
     | lista_texto      {$lista_texto.e.evaluate(pila);}
     | size      {$size.e.evaluate(pila);}
+    | unincremento      {$unincremento.e.evaluate(pila);}
+    | menosunincremento      {$menosunincremento.e.evaluate(pila);}
+    | incremento      {$incremento.e.evaluate(pila);}
+    | decremento      {$decremento.e.evaluate(pila);}
   )+ 
   ;
   
@@ -76,7 +80,7 @@ programa returns [StringBuilder output] throws Exception
   
   return1 returns[Evaluator e] throws Exception
   :
-    'return' te = evaluator {
+    RETURN te = evaluator {
       $e = new ReturnEvaluator($te.e); 
     }
    PC
@@ -90,13 +94,13 @@ programa returns [StringBuilder output] throws Exception
   FUNCTION nom = NOMBRE '(' 
 	
 	((
-	  'var' nom1 = NOMBRE
+	  VARIABLE nom1 = NOMBRE
 	  {
 	     ((FuncionEvaluator) $e).aregarParametro($nom1.text);   
 	  }
 	)
 	(
-    ',' 'var' nom1 = NOMBRE
+    ',' VARIABLE nom1 = NOMBRE
     {
        ((FuncionEvaluator) $e).aregarParametro($nom1.text);   
     }
@@ -121,40 +125,67 @@ programa returns [StringBuilder output] throws Exception
 
 declaracion returns [Evaluator e] throws Exception
   :
-  'var' nom=NOMBRE ASIGNACION ev = evaluator 
-                                 {
-                                  if(bandera)
-                                    {
-                                  		  //System.out.println("intento salvar");
-                                  		  $e = new DeclaracionEvaluator($nom.text,$ev.e);   
-                              			
-                                  			
-                                  	}
-                                 }
+  VARIABLE nom=NOMBRE { 
+     if(bandera)
+      $e = new DeclaracionEvaluator($nom.text,new DoubleEvaluator(0));   
+  }
+  (ASIGNACION ev = evaluator     
+	    {
+	     if(bandera)
+	      {
+	     		  $e = new AsignacionEvaluator($nom.text,$ev.e);    	
+	     	}
+	 })?
+	 
   PC 
   ; 
   
-  declaracion2 returns [Evaluator e] throws Exception
+  unincremento returns [Evaluator e] throws Exception
   :
-  'var' nom=NOMBRE
-                                 {
-                                  if(bandera)
-                                    {
-                                       // System.out.println("intento salvar");
-                                        $e = new DeclaracionEvaluator($nom.text,new IntEvaluator(0));   
-                                    
-                                        
-                                    }
-                                 }
-                                 
-  PC
+  nom=NOMBRE '++'{ 
+     if(bandera)
+      $e = new IncrementoEvaluator($nom.text,new DoubleEvaluator(1));   
+  }
+   
+  PC 
   ; 
+  
+   menosunincremento returns [Evaluator e] throws Exception
+  :
+  nom=NOMBRE '--'{ 
+     if(bandera)
+      $e = new IncrementoEvaluator($nom.text,new DoubleEvaluator(-1));   
+  }
+   
+  PC 
+  ; 
+  
+  incremento returns [Evaluator e] throws Exception
+  :
+  nom=NOMBRE '+='ev = evaluator  { 
+     if(bandera)
+      $e = new IncrementoEvaluator($nom.text,$ev.e);   
+  }
+   
+  PC 
+  ;
+  
+  decremento returns [Evaluator e] throws Exception
+  :
+  nom=NOMBRE '-='ev = evaluator  { 
+     if(bandera)
+      $e = new IncrementoEvaluator($nom.text,$ev.e, true);   
+  }
+   
+  PC 
+  ; 
+  
 
 
   declaracion_lista returns [Evaluator e] throws Exception
   :
   //TODO:(danielserrano) change the list constant for a regex variable.
-  'list' nom=NOMBRE
+  LIST nom=NOMBRE
                                  {
                                   if(bandera)
                                     {
@@ -167,8 +198,7 @@ declaracion returns [Evaluator e] throws Exception
   
     lista_texto returns [Evaluator e] throws Exception
   :
-  //TODO:(danielserrano) change the list constant for a regex variable.
-  'list' nom=NOMBRE ASIGNACION 'read(' tex=TEXTO ')'
+  LIST nom=NOMBRE ASIGNACION READ '(' tex=TEXTO ')'
                                  {
                                   if(bandera)
                                     {
@@ -181,7 +211,7 @@ declaracion returns [Evaluator e] throws Exception
   
   push returns [Evaluator e] throws Exception
   :
-  nom=NOMBRE '.push(' exp = expression ')'
+  nom=NOMBRE '.' PUSH '(' exp = expression ')'
                                  {
                                   if(bandera)
                                     {
@@ -193,7 +223,7 @@ declaracion returns [Evaluator e] throws Exception
   
   size returns [Evaluator e] throws Exception
   :
-  nom=NOMBRE '.size' ('()')*
+  nom=NOMBRE '.' SIZE ('()')*
                                  {
                                   if(bandera)
                                     {
@@ -225,7 +255,7 @@ declaracion returns [Evaluator e] throws Exception
   :
    nom=NOMBRE 
    (  '[' num=NUMERO ']' ASIGNACION ev = evaluator
-   |  '.set(' num=NUMERO ',' ev = evaluator ')'
+   |  '.' SET '(' num=NUMERO ',' ev = evaluator ')'
    )  
                                  {
                                   if(bandera)
@@ -292,7 +322,7 @@ evaluator returns [Evaluator e] throws Exception
 
 term returns [Evaluator e] throws Exception 
   :
-  
+
   {
    $e = new IntEvaluator(0);
   }
@@ -300,9 +330,14 @@ term returns [Evaluator e] throws Exception
         {
           $e = new RetornoFuncionEvaluator($lla.e);
         }
+  | BOOLEAN 
+          {
+           System.out.println("entiendo que es un boolean");
+           $e = new BooleanEvaluator(($BOOLEAN.text)); 
+          }
   | NOMBRE  
-        {  
-       // System.out.println("entiendo que es un llamado");
+        {   
+        System.out.println("entiendo que es un llamado");
          if(bandera){  
          	  $e = new TermEvaluator(($NOMBRE.text));//((pila.peek().get($NOMBRE.text))); 
          	}
@@ -485,13 +520,17 @@ ifstatements returns [Evaluator e] throws Exception:
   | whilestatemet{$e = $whilestatemet.e;} 
   | ifstatement{$e = $ifstatement.e;}  
   | declaracion{$e = $declaracion.e;}
-  | declaracion2{$e = $declaracion2.e;}  
+  //| declaracion2{$e = $declaracion2.e;}  
   | declaracion_lista{$declaracion_lista.e.evaluate(pila);}
   | push{ $e = $push.e; }
   | forstatemet{$forstatemet.e.evaluate(pila);}
   | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
   | lista_texto      {$lista_texto.e.evaluate(pila);}
   | size      {$size.e.evaluate(pila);}
+  | unincremento      {$unincremento.e.evaluate(pila);}
+  | menosunincremento      {$menosunincremento.e.evaluate(pila);}
+  | incremento      {$incremento.e.evaluate(pila);}
+  | decremento      {$decremento.e.evaluate(pila);}
    
 ;  
 
@@ -507,13 +546,17 @@ elsestataments returns [Evaluator e] throws Exception:
   | whilestatemet{$e = $whilestatemet.e;} 
   | ifstatement{$e = $ifstatement.e;}  
   | declaracion{$e = $declaracion.e;}
-  | declaracion2{$e = $declaracion2.e;}  
+  //| declaracion2{$e = $declaracion2.e;}  
   | declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
   | push{ $e = $push.e; }
   | forstatemet{$forstatemet.e.evaluate(pila);}
   | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
   | lista_texto      {$lista_texto.e.evaluate(pila);}
   | size      {$size.e.evaluate(pila);}
+  | unincremento      {$unincremento.e.evaluate(pila);}
+  | menosunincremento      {$menosunincremento.e.evaluate(pila);}
+  | incremento      {$incremento.e.evaluate(pila);}
+  | decremento      {$decremento.e.evaluate(pila);}
 
 
 ;
@@ -579,13 +622,17 @@ whilestatements returns [Evaluator e] throws Exception:
   | whilestatemet{$e = $whilestatemet.e;} 
   | ifstatement{$e = $ifstatement.e;}  
   | declaracion{$e = $declaracion.e;}  
-  | declaracion2{$e = $declaracion2.e;}
+  //| declaracion2{$e = $declaracion2.e;} 
   | declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
   | push{ $e = $push.e; }
   | forstatemet{$forstatemet.e.evaluate(pila);}
   | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
   | lista_texto      {$lista_texto.e.evaluate(pila);}
   | size      {$size.e.evaluate(pila);}
+  | unincremento      {$unincremento.e.evaluate(pila);}
+  | menosunincremento      {$menosunincremento.e.evaluate(pila);}
+  | incremento      {$incremento.e.evaluate(pila);}
+  | decremento      {$decremento.e.evaluate(pila);}
 
 ;
        
@@ -652,7 +699,7 @@ IF
 
 PC
   :
-  ';'
+  ';' /*| '\r'? '\n' | '\r' | EOF*/ 
   ;
 //COMPARACION: ('==' | '>'|'<'|'!='|'<='|'>=');
 
@@ -678,27 +725,32 @@ ASIGNACION
 
 WHILE
   :
-  'while'
+  'while' | 'mientras'
   ;
   
 FOR
   :
-  'for'
+  'for' | 'para'
   ;
 
 ELSE
   :
-  'else'
+  'else' | 'si_no'
   ;
-
+VARIABLE:
+  'var'
+  ;
+LIST:
+   'list' | 'lista'
+   ;
 FUNCTION
   :
-  'function'
+  'function' | 'funcion'
   ;
 
 ELSEIF
   :
-  'else if'
+  'else if' | 'si_no si'
   ;
 
 DOBLE
@@ -711,6 +763,12 @@ DOBLE
 NUMERO
   :
   ( ('0'..'9')+)
+  ;
+  
+BOOLEAN
+  :
+   'true' | 'false' | 'FALSE' | 'TRUE' | 'True' | 'False' |
+   'verdadero' | 'falso' | 'FALSO' | 'VERDADERO' | 'Verdadero' | 'Falso' 
   ;
 
 
@@ -747,18 +805,31 @@ COMILLASS
 
 PRINT
   :
-  ('print')
+  ('print' | 'imprimir')
   ;
 
 PRINTLN
   :
-  ('println')
+  ('println' | 'imprimirln')
   ;
 
 READ
   :
-  ('read')
+  ('read' | 'leer')
   ;
+PUSH:
+  ('push' | 'insertar')
+  ;
+  
+SIZE:
+  ('size' | 'tamano');
+  
+SET:
+  ('set' | 'fijar');
+
+RETURN:
+  ('return' | 'devolver');
+
 
 NOMBRE
   :

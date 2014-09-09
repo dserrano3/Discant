@@ -1,3 +1,9 @@
-for(var i = 0; i < 10; 1){
-	println i;
-}
+var a = 4;
+a ++;
+println a;
+a --;
+println a;
+a += 5;
+println a;
+a -= 6;
+println a;;

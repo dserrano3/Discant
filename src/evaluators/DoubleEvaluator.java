@@ -18,6 +18,7 @@ public class DoubleEvaluator implements Evaluator {
 	}
 
 	public DoubleEvaluator(double a) {
+		System.out.println("entre a doble");
 		numero = a;
 	}
 }

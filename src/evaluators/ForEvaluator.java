@@ -47,7 +47,7 @@ public class ForEvaluator implements Evaluator {
 
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
-
+		pila.add(new Context1());
 		inicio.evaluate(pila);
 		String variable = ((DeclaracionEvaluator) (inicio)).getNombre();
 		TermEvaluator termino = new TermEvaluator(variable);
@@ -72,7 +72,7 @@ public class ForEvaluator implements Evaluator {
 							+ (Double) incremento.evaluate(pila)));
 			asignacion.evaluate(pila);
 		}
-
+		pila.remove(pila.size() - 1);
 		return output.toString();
 
 

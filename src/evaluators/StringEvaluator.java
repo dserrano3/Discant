@@ -17,6 +17,9 @@ public class StringEvaluator implements Evaluator {
 	}
 
 	public StringEvaluator(String a) {
-		value = a;
+		if(a.charAt(0) == ('"'))
+			value = a.substring(1, a.length() - 1);
+		else
+			value = a;
 	}
 }
