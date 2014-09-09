@@ -68,7 +68,7 @@ programa returns [StringBuilder output] throws Exception
     | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
     | lista_texto      {$lista_texto.e.evaluate(pila);}
     | size      {$size.e.evaluate(pila);}
-   // | unincremento      {$unincremento.e.evaluate(pila);}
+    | unincremento      {$unincremento.e.evaluate(pila);}
     | menosunincremento      {$menosunincremento.e.evaluate(pila);}
     | incremento      {$incremento.e.evaluate(pila);}
     | decremento      {$decremento.e.evaluate(pila);}
