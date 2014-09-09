@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import conte.Context1;
 
 /**
- * This class is called if the user wants to assign a variable to a value, for
- * example a = 3; or a = b.
+ * This class is called if the user wants to increment a variable to a value, for
+ * example a++ or a+= 3.
  * 
  */
 public class IncrementoEvaluator implements Evaluator {
@@ -39,10 +39,7 @@ public class IncrementoEvaluator implements Evaluator {
 
 			if (pila.get(i).get(nombre) != null) {
 				Object asd = e.evaluate(pila);
-
-				Evaluator coso = null;
 				if (asd instanceof Double) {
-					coso = new DoubleEvaluator((Double) asd);
 					double antiguo = (Double)pila.get(i).get(nombre).evaluate(pila);
 					if(decremento) valor *= -1;
 					Evaluator nuevo = new DoubleEvaluator(antiguo
@@ -50,8 +47,7 @@ public class IncrementoEvaluator implements Evaluator {
 
 					pila.get(i).put(nombre, nuevo);
 				} else
-					System.out
-							.println("In the increment the object is not double");
+					System.out.println("In the increment the object is not double");
 				return null;
 			}
 		}

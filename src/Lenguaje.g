@@ -68,7 +68,7 @@ programa returns [StringBuilder output] throws Exception
     | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
     | lista_texto      {$lista_texto.e.evaluate(pila);}
     | size      {$size.e.evaluate(pila);}
-    | unincremento      {$unincremento.e.evaluate(pila);}
+   // | unincremento      {$unincremento.e.evaluate(pila);}
     | menosunincremento      {$menosunincremento.e.evaluate(pila);}
     | incremento      {$incremento.e.evaluate(pila);}
     | decremento      {$decremento.e.evaluate(pila);}
@@ -133,7 +133,7 @@ declaracion returns [Evaluator e] throws Exception
 	    {
 	     if(bandera)
 	      {
-	     		  $e = new AsignacionEvaluator($nom.text,$ev.e);    	
+	     		  $e = new DeclaracionEvaluator($nom.text,$ev.e);    	
 	     	}
 	 })?
 	 
@@ -143,10 +143,10 @@ declaracion returns [Evaluator e] throws Exception
   unincremento returns [Evaluator e] throws Exception
   :
   nom=NOMBRE '++'{ 
-     if(bandera)
-      $e = new IncrementoEvaluator($nom.text,new DoubleEvaluator(1));   
+     if(bandera){
+        $e = new IncrementoEvaluator($nom.text,new DoubleEvaluator(1));
+      }   
   }
-   
   PC 
   ; 
   
@@ -242,9 +242,7 @@ declaracion returns [Evaluator e] throws Exception
                                   if(bandera)
                                     {
                                         //System.out.println("intento salvar erradamente");
-                                        $e = new AsignacionEvaluator($nom.text,$ev.e);    
-                                    
-                                        
+                                        $e = new AsignacionEvaluator($nom.text,$ev.e);       
                                     }
                                  }
   PC
@@ -255,7 +253,7 @@ declaracion returns [Evaluator e] throws Exception
   :
    nom=NOMBRE 
    (  '[' num=NUMERO ']' ASIGNACION ev = evaluator
-   |  '.' SET '(' num=NUMERO ',' ev = evaluator ')'
+   |  SET '(' num=NUMERO ',' ev = evaluator ')'
    )  
                                  {
                                   if(bandera)
@@ -521,16 +519,16 @@ ifstatements returns [Evaluator e] throws Exception:
   | ifstatement{$e = $ifstatement.e;}  
   | declaracion{$e = $declaracion.e;}
   //| declaracion2{$e = $declaracion2.e;}  
-  | declaracion_lista{$declaracion_lista.e.evaluate(pila);}
+  | declaracion_lista{$e = $declaracion_lista.e;}
   | push{ $e = $push.e; }
-  | forstatemet{$forstatemet.e.evaluate(pila);}
-  | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
-  | lista_texto      {$lista_texto.e.evaluate(pila);}
-  | size      {$size.e.evaluate(pila);}
-  | unincremento      {$unincremento.e.evaluate(pila);}
-  | menosunincremento      {$menosunincremento.e.evaluate(pila);}
-  | incremento      {$incremento.e.evaluate(pila);}
-  | decremento      {$decremento.e.evaluate(pila);}
+  | forstatemet{$e = $forstatemet.e;}
+  | asignacion_lista {$e = $asignacion_lista.e;}
+  | lista_texto      {$e  = $lista_texto.e;}
+  | size      {$e = $size.e;}
+  | unincremento      {$e = $unincremento.e;}
+  | menosunincremento {$e = $menosunincremento.e;}
+  | incremento      {$e = $incremento.e;}
+  | decremento      {$e = $decremento.e;}
    
 ;  
 
@@ -547,16 +545,16 @@ elsestataments returns [Evaluator e] throws Exception:
   | ifstatement{$e = $ifstatement.e;}  
   | declaracion{$e = $declaracion.e;}
   //| declaracion2{$e = $declaracion2.e;}  
-  | declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
+  | declaracion_lista{$e = $declaracion_lista.e;}
   | push{ $e = $push.e; }
-  | forstatemet{$forstatemet.e.evaluate(pila);}
-  | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
-  | lista_texto      {$lista_texto.e.evaluate(pila);}
-  | size      {$size.e.evaluate(pila);}
-  | unincremento      {$unincremento.e.evaluate(pila);}
-  | menosunincremento      {$menosunincremento.e.evaluate(pila);}
-  | incremento      {$incremento.e.evaluate(pila);}
-  | decremento      {$decremento.e.evaluate(pila);}
+  | forstatemet{$e = $forstatemet.e;}
+  | asignacion_lista {$e = $asignacion_lista.e;}
+  | lista_texto      {$e  = $lista_texto.e;}
+  | size      {$e = $size.e;}
+  | unincremento      {$e = $unincremento.e;}
+  | menosunincremento {$e = $menosunincremento.e;}
+  | incremento      {$e = $incremento.e;}
+  | decremento      {$e = $decremento.e;}
 
 
 ;
@@ -605,7 +603,7 @@ IF PARENTESIS_I rel = logico
 )*  
  
 
-; 
+;  
 
 
 
@@ -619,20 +617,20 @@ whilestatements returns [Evaluator e] throws Exception:
   | lectura{$e = $lectura.e;} 
   | comentario {$e =null;}
   | return1 {$e = $return1.e;}
-  | whilestatemet{$e = $whilestatemet.e;} 
+  | whilestatemet{$e = $whilestatemet.e;}  
   | ifstatement{$e = $ifstatement.e;}  
   | declaracion{$e = $declaracion.e;}  
   //| declaracion2{$e = $declaracion2.e;} 
-  | declaracion_lista{$e = $declaracion_lista.e; /*$declaracion_lista.e.evaluate(pila);*/}
+  | declaracion_lista{$e = $declaracion_lista.e;}
   | push{ $e = $push.e; }
-  | forstatemet{$forstatemet.e.evaluate(pila);}
-  | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
-  | lista_texto      {$lista_texto.e.evaluate(pila);}
-  | size      {$size.e.evaluate(pila);}
-  | unincremento      {$unincremento.e.evaluate(pila);}
-  | menosunincremento      {$menosunincremento.e.evaluate(pila);}
-  | incremento      {$incremento.e.evaluate(pila);}
-  | decremento      {$decremento.e.evaluate(pila);}
+  | forstatemet{$e = $forstatemet.e;}
+  | asignacion_lista {$e = $asignacion_lista.e;}
+  | lista_texto      {$e  = $lista_texto.e;}
+  | size      {$e = $size.e;}
+  | unincremento      {$e = $unincremento.e;}
+  | menosunincremento {$e = $menosunincremento.e;}
+  | incremento      {$e = $incremento.e;}
+  | decremento      {$e = $decremento.e;}
 
 ;
        
@@ -825,7 +823,7 @@ SIZE:
   ('size' | 'tamano');
   
 SET:
-  ('set' | 'fijar');
+  ('.set' | '.fijar');
 
 RETURN:
   ('return' | 'devolver');
@@ -836,12 +834,12 @@ NOMBRE
   (
     (
       'a'..'z'
-      | 'A'..'Z'
+      | 'A'..'Z' | '_' | '-'
     )
     (
       (
         'a'..'z'
-        | 'A'..'Z'
+      | 'A'..'Z' | '_' | '-'
       )
       | ('1'..'9')
     )*
@@ -857,7 +855,7 @@ TEXTO
 
 COMENTARIO
   :
-  '/*' (.)+ '*/'
+  ('/*' (.)* '*/') 
   ;
   
 

@@ -1,9 +1,30 @@
-var a = 4;
-a ++;
-println a;
-a --;
-println a;
-a += 5;
-println a;
-a -= 6;
-println a;;
+function not_main(var a, var b){
+	var c = a + b;
+	return c;
+}
+
+/*Don't need to create a main functino*/
+var test1 = 5;
+var test2 = "5";
+if(test1 == test2) {
+	println "It auto casts values";
+}
+list lis;
+lis.push(1);
+lis.push(2);
+lis.push("three");
+println lis.get(0); /*First item of the list*/
+lis[0] = 11;
+lis.set(1, 12);/*Position 1 becomes 12*/
+for(var i = 0; i < lis.size(); 1) {/*Increments by 1*/
+	println lis.get(i);
+}
+list lis2 = read("codigo.cfpp");/*reads a file puts each line into a field of the list*/
+print lis2;/*Prints the entire list*/
+r = 44;/*You van not use the 'var' word*/
+read r;/*It can read booleans, doubles, integers or strings*/
+var t = not_main(3,5);/*It will print 8*/
+print t;
+/*It has many more features like, && and || operators, <, > , <=, >= != comparasons.
+ * ++,--, -=, += operators, while statements, and many more.
+ */;

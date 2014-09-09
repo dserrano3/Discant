@@ -38,7 +38,6 @@ public class WhileEvaluator implements Evaluator {
 
 	public void add(Evaluator a) {
 		lista.add(a);
-
 	}
 
 	@Override

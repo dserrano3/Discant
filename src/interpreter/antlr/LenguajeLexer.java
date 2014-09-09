@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-09-08 19:31:12
+// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-09-08 22:34:56
 
 package interpreter.antlr;
 
@@ -618,8 +618,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = TOKEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:691:3: ( 'hola' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:692:3: 'hola'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:689:3: ( 'hola' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:690:3: 'hola'
             {
             match("hola"); 
 
@@ -641,8 +641,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:696:3: ( 'if' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:697:3: 'if'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:694:3: ( 'if' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:695:3: 'if'
             {
             match("if"); 
 
@@ -664,8 +664,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:701:3: ( ';' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:702:3: ';'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:699:3: ( ';' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:700:3: ';'
             {
             match(';'); 
 
@@ -685,8 +685,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ASIGNACION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:722:3: ( '=' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:723:3: '='
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:720:3: ( '=' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:721:3: '='
             {
             match('='); 
 
@@ -706,7 +706,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:727:3: ( 'while' | 'mientras' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:725:3: ( 'while' | 'mientras' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -725,7 +725,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:728:3: 'while'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:726:3: 'while'
                     {
                     match("while"); 
 
@@ -734,7 +734,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:728:13: 'mientras'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:726:13: 'mientras'
                     {
                     match("mientras"); 
 
@@ -758,7 +758,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = FOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:732:3: ( 'for' | 'para' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:730:3: ( 'for' | 'para' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -777,7 +777,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:733:3: 'for'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:731:3: 'for'
                     {
                     match("for"); 
 
@@ -786,7 +786,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:733:11: 'para'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:731:11: 'para'
                     {
                     match("para"); 
 
@@ -810,7 +810,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:737:3: ( 'else' | 'si_no' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:735:3: ( 'else' | 'si_no' )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -829,7 +829,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:738:3: 'else'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:736:3: 'else'
                     {
                     match("else"); 
 
@@ -838,7 +838,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:738:12: 'si_no'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:736:12: 'si_no'
                     {
                     match("si_no"); 
 
@@ -862,8 +862,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = VARIABLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:740:9: ( 'var' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:741:3: 'var'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:738:9: ( 'var' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:739:3: 'var'
             {
             match("var"); 
 
@@ -885,7 +885,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LIST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:743:5: ( 'list' | 'lista' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:741:5: ( 'list' | 'lista' )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -941,7 +941,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:744:4: 'list'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:742:4: 'list'
                     {
                     match("list"); 
 
@@ -950,7 +950,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:744:13: 'lista'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:742:13: 'lista'
                     {
                     match("lista"); 
 
@@ -974,7 +974,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = FUNCTION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:747:3: ( 'function' | 'funcion' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:745:3: ( 'function' | 'funcion' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1037,7 +1037,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:748:3: 'function'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:746:3: 'function'
                     {
                     match("function"); 
 
@@ -1046,7 +1046,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:748:16: 'funcion'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:746:16: 'funcion'
                     {
                     match("funcion"); 
 
@@ -1070,7 +1070,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ELSEIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:752:3: ( 'else if' | 'si_no si' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:750:3: ( 'else if' | 'si_no si' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1089,7 +1089,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:753:3: 'else if'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:751:3: 'else if'
                     {
                     match("else if"); 
 
@@ -1098,7 +1098,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:753:15: 'si_no si'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:751:15: 'si_no si'
                     {
                     match("si_no si"); 
 
@@ -1122,13 +1122,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = DOBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:757:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:758:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:755:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:756:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:758:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:758:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:756:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:756:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:758:5: ( '0' .. '9' )+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:756:5: ( '0' .. '9' )+
             int cnt7=0;
             loop7:
             do {
@@ -1167,15 +1167,15 @@ public class LenguajeLexer extends Lexer {
             } while (true);
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:758:16: ( '.' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:758:17: '.'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:756:16: ( '.' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:756:17: '.'
             {
             match('.'); 
 
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:758:22: ( '0' .. '9' )+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:756:22: ( '0' .. '9' )+
             int cnt8=0;
             loop8:
             do {
@@ -1233,13 +1233,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NUMERO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:764:3: ( ( ( '0' .. '9' )+ ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:765:3: ( ( '0' .. '9' )+ )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:762:3: ( ( ( '0' .. '9' )+ ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:763:3: ( ( '0' .. '9' )+ )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:765:3: ( ( '0' .. '9' )+ )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:765:5: ( '0' .. '9' )+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:763:3: ( ( '0' .. '9' )+ )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:763:5: ( '0' .. '9' )+
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:765:5: ( '0' .. '9' )+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:763:5: ( '0' .. '9' )+
             int cnt9=0;
             loop9:
             do {
@@ -1297,7 +1297,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:769:3: ( 'true' | 'false' | 'FALSE' | 'TRUE' | 'True' | 'False' | 'verdadero' | 'falso' | 'FALSO' | 'VERDADERO' | 'Verdadero' | 'Falso' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:767:3: ( 'true' | 'false' | 'FALSE' | 'TRUE' | 'True' | 'False' | 'verdadero' | 'falso' | 'FALSO' | 'VERDADERO' | 'Verdadero' | 'Falso' )
             int alt10=12;
             switch ( input.LA(1) ) {
             case 't':
@@ -1501,7 +1501,7 @@ public class LenguajeLexer extends Lexer {
 
             switch (alt10) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:770:4: 'true'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:768:4: 'true'
                     {
                     match("true"); 
 
@@ -1510,7 +1510,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:770:13: 'false'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:768:13: 'false'
                     {
                     match("false"); 
 
@@ -1519,7 +1519,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:770:23: 'FALSE'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:768:23: 'FALSE'
                     {
                     match("FALSE"); 
 
@@ -1528,7 +1528,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:770:33: 'TRUE'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:768:33: 'TRUE'
                     {
                     match("TRUE"); 
 
@@ -1537,7 +1537,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:770:42: 'True'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:768:42: 'True'
                     {
                     match("True"); 
 
@@ -1546,7 +1546,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:770:51: 'False'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:768:51: 'False'
                     {
                     match("False"); 
 
@@ -1555,7 +1555,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:771:4: 'verdadero'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:769:4: 'verdadero'
                     {
                     match("verdadero"); 
 
@@ -1564,7 +1564,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:771:18: 'falso'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:769:18: 'falso'
                     {
                     match("falso"); 
 
@@ -1573,7 +1573,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:771:28: 'FALSO'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:769:28: 'FALSO'
                     {
                     match("FALSO"); 
 
@@ -1582,7 +1582,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:771:38: 'VERDADERO'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:769:38: 'VERDADERO'
                     {
                     match("VERDADERO"); 
 
@@ -1591,7 +1591,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:771:52: 'Verdadero'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:769:52: 'Verdadero'
                     {
                     match("Verdadero"); 
 
@@ -1600,7 +1600,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:771:66: 'Falso'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:769:66: 'Falso'
                     {
                     match("Falso"); 
 
@@ -1624,8 +1624,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:777:3: ( ')' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:778:3: ')'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:775:3: ( ')' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:776:3: ')'
             {
             match(')'); 
 
@@ -1645,8 +1645,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:782:3: ( '(' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:783:3: '('
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:780:3: ( '(' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:781:3: '('
             {
             match('('); 
 
@@ -1666,8 +1666,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:787:3: ( '}' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:788:3: '}'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:785:3: ( '}' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:786:3: '}'
             {
             match('}'); 
 
@@ -1687,8 +1687,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:792:3: ( '{' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:793:3: '{'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:790:3: ( '{' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:791:3: '{'
             {
             match('{'); 
 
@@ -1708,8 +1708,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:797:3: ( '\\\"' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:798:3: '\\\"'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:795:3: ( '\\\"' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:796:3: '\\\"'
             {
             match('\"'); 
 
@@ -1729,8 +1729,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:802:3: ( '\\'' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:803:3: '\\''
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:800:3: ( '\\'' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:801:3: '\\''
             {
             match('\''); 
 
@@ -1750,10 +1750,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PRINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:807:3: ( ( 'print' | 'imprimir' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:808:3: ( 'print' | 'imprimir' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:805:3: ( ( 'print' | 'imprimir' ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:806:3: ( 'print' | 'imprimir' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:808:3: ( 'print' | 'imprimir' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:806:3: ( 'print' | 'imprimir' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1772,7 +1772,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:808:4: 'print'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:806:4: 'print'
                     {
                     match("print"); 
 
@@ -1781,7 +1781,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:808:14: 'imprimir'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:806:14: 'imprimir'
                     {
                     match("imprimir"); 
 
@@ -1809,10 +1809,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PRINTLN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:812:3: ( ( 'println' | 'imprimirln' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:813:3: ( 'println' | 'imprimirln' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:810:3: ( ( 'println' | 'imprimirln' ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:811:3: ( 'println' | 'imprimirln' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:813:3: ( 'println' | 'imprimirln' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:811:3: ( 'println' | 'imprimirln' )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1831,7 +1831,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:813:4: 'println'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:811:4: 'println'
                     {
                     match("println"); 
 
@@ -1840,7 +1840,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:813:16: 'imprimirln'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:811:16: 'imprimirln'
                     {
                     match("imprimirln"); 
 
@@ -1868,10 +1868,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:817:3: ( ( 'read' | 'leer' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:818:3: ( 'read' | 'leer' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:815:3: ( ( 'read' | 'leer' ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:816:3: ( 'read' | 'leer' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:818:3: ( 'read' | 'leer' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:816:3: ( 'read' | 'leer' )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1890,7 +1890,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:818:4: 'read'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:816:4: 'read'
                     {
                     match("read"); 
 
@@ -1899,7 +1899,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:818:13: 'leer'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:816:13: 'leer'
                     {
                     match("leer"); 
 
@@ -1927,10 +1927,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PUSH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:820:5: ( ( 'push' | 'insertar' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:821:3: ( 'push' | 'insertar' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:818:5: ( ( 'push' | 'insertar' ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:819:3: ( 'push' | 'insertar' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:821:3: ( 'push' | 'insertar' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:819:3: ( 'push' | 'insertar' )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1949,7 +1949,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt14) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:821:4: 'push'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:819:4: 'push'
                     {
                     match("push"); 
 
@@ -1958,7 +1958,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:821:13: 'insertar'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:819:13: 'insertar'
                     {
                     match("insertar"); 
 
@@ -1986,10 +1986,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = SIZE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:824:5: ( ( 'size' | 'tamano' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:825:3: ( 'size' | 'tamano' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:822:5: ( ( 'size' | 'tamano' ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:823:3: ( 'size' | 'tamano' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:825:3: ( 'size' | 'tamano' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:823:3: ( 'size' | 'tamano' )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -2008,7 +2008,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:825:4: 'size'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:823:4: 'size'
                     {
                     match("size"); 
 
@@ -2017,7 +2017,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:825:13: 'tamano'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:823:13: 'tamano'
                     {
                     match("tamano"); 
 
@@ -2045,18 +2045,29 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = SET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:827:4: ( ( 'set' | 'fijar' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:828:3: ( 'set' | 'fijar' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:825:4: ( ( '.set' | '.fijar' ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:826:3: ( '.set' | '.fijar' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:828:3: ( 'set' | 'fijar' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:826:3: ( '.set' | '.fijar' )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0=='s') ) {
-                alt16=1;
-            }
-            else if ( (LA16_0=='f') ) {
-                alt16=2;
+            if ( (LA16_0=='.') ) {
+                int LA16_1 = input.LA(2);
+
+                if ( (LA16_1=='s') ) {
+                    alt16=1;
+                }
+                else if ( (LA16_1=='f') ) {
+                    alt16=2;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 16, 1, input);
+
+                    throw nvae;
+
+                }
             }
             else {
                 NoViableAltException nvae =
@@ -2067,18 +2078,18 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt16) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:828:4: 'set'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:826:4: '.set'
                     {
-                    match("set"); 
+                    match(".set"); 
 
 
 
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:828:12: 'fijar'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:826:13: '.fijar'
                     {
-                    match("fijar"); 
+                    match(".fijar"); 
 
 
 
@@ -2104,10 +2115,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:830:7: ( ( 'return' | 'devolver' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:831:3: ( 'return' | 'devolver' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:828:7: ( ( 'return' | 'devolver' ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:829:3: ( 'return' | 'devolver' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:831:3: ( 'return' | 'devolver' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:829:3: ( 'return' | 'devolver' )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -2126,7 +2137,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:831:4: 'return'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:829:4: 'return'
                     {
                     match("return"); 
 
@@ -2135,7 +2146,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:831:15: 'devolver'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:829:15: 'devolver'
                     {
                     match("devolver"); 
 
@@ -2163,13 +2174,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NOMBRE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:835:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:836:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:833:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) | ( '1' .. '9' ) )* ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:834:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) | ( '1' .. '9' ) )* )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:836:3: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:837:5: ( 'a' .. 'z' | 'A' .. 'Z' ) ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:834:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) | ( '1' .. '9' ) )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:835:5: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) | ( '1' .. '9' ) )*
             {
-            if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+            if ( input.LA(1)=='-'||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
             }
             else {
@@ -2179,13 +2190,13 @@ public class LenguajeLexer extends Lexer {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:841:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) | ( '1' .. '9' ) )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:839:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) | ( '1' .. '9' ) )*
             loop18:
             do {
                 int alt18=2;
                 int LA18_0 = input.LA(1);
 
-                if ( ((LA18_0 >= '1' && LA18_0 <= '9')||(LA18_0 >= 'A' && LA18_0 <= 'Z')||(LA18_0 >= 'a' && LA18_0 <= 'z')) ) {
+                if ( (LA18_0=='-'||(LA18_0 >= '1' && LA18_0 <= '9')||(LA18_0 >= 'A' && LA18_0 <= 'Z')||LA18_0=='_'||(LA18_0 >= 'a' && LA18_0 <= 'z')) ) {
                     alt18=1;
                 }
 
@@ -2194,7 +2205,7 @@ public class LenguajeLexer extends Lexer {
             	case 1 :
             	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
             	    {
-            	    if ( (input.LA(1) >= '1' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+            	    if ( input.LA(1)=='-'||(input.LA(1) >= '1' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
             	    }
             	    else {
@@ -2232,13 +2243,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = TEXTO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:853:3: ( COMILLASD ( . )* COMILLASD )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:854:3: COMILLASD ( . )* COMILLASD
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:851:3: ( COMILLASD ( . )* COMILLASD )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:852:3: COMILLASD ( . )* COMILLASD
             {
             mCOMILLASD(); 
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:854:13: ( . )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:852:13: ( . )*
             loop19:
             do {
                 int alt19=2;
@@ -2254,7 +2265,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt19) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:854:14: .
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:852:14: .
             	    {
             	    matchAny(); 
 
@@ -2286,15 +2297,17 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMENTARIO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:859:3: ( '/*' ( . )+ '*/' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:860:3: '/*' ( . )+ '*/'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:857:3: ( ( '/*' ( . )* '*/' ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:858:3: ( '/*' ( . )* '*/' )
+            {
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:858:3: ( '/*' ( . )* '*/' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:858:4: '/*' ( . )* '*/'
             {
             match("/*"); 
 
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:860:8: ( . )+
-            int cnt20=0;
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:858:9: ( . )*
             loop20:
             do {
                 int alt20=2;
@@ -2319,7 +2332,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt20) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:860:9: .
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:858:10: .
             	    {
             	    matchAny(); 
 
@@ -2327,17 +2340,16 @@ public class LenguajeLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt20 >= 1 ) break loop20;
-                        EarlyExitException eee =
-                            new EarlyExitException(20, input);
-                        throw eee;
+            	    break loop20;
                 }
-                cnt20++;
             } while (true);
 
 
             match("*/"); 
 
+
+
+            }
 
 
             }
@@ -2356,10 +2368,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:868:4: ( ( ' ' | '\\t' )+ )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:868:6: ( ' ' | '\\t' )+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:866:4: ( ( ' ' | '\\t' )+ )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:866:6: ( ' ' | '\\t' )+
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:868:6: ( ' ' | '\\t' )+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:866:6: ( ' ' | '\\t' )+
             int cnt21=0;
             loop21:
             do {
@@ -2416,10 +2428,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:871:8: ( ( '\\r' )? '\\n' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:871:10: ( '\\r' )? '\\n'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:869:8: ( ( '\\r' )? '\\n' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:869:10: ( '\\r' )? '\\n'
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:871:10: ( '\\r' )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:869:10: ( '\\r' )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -2428,7 +2440,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt22) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:871:10: '\\r'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:869:10: '\\r'
                     {
                     match('\r'); 
 
@@ -2914,71 +2926,72 @@ public class LenguajeLexer extends Lexer {
 
     protected DFA23 dfa23 = new DFA23(this);
     static final String DFA23_eotS =
-        "\4\uffff\1\54\1\uffff\1\57\1\uffff\1\62\1\65\1\67\1\71\1\73\1\75"+
-        "\3\uffff\2\50\1\uffff\10\50\1\123\4\50\3\uffff\1\134\1\uffff\2\50"+
-        "\26\uffff\1\50\1\141\22\50\2\uffff\10\50\2\uffff\3\50\1\uffff\4"+
-        "\50\1\u0085\7\50\1\uffff\1\50\1\u008f\1\u0090\16\50\1\u009f\4\50"+
-        "\1\uffff\3\50\1\u0085\1\50\1\u00aa\1\u00ac\1\uffff\1\u00ae\2\uffff"+
-        "\1\50\1\u00b1\1\u00b2\1\u00b3\3\50\2\u00b3\2\50\1\u00b2\2\50\1\uffff"+
-        "\2\50\1\u00bf\3\50\2\u00b3\1\u008f\1\u00c4\3\uffff\1\u00ac\1\uffff"+
-        "\1\50\1\u00b1\3\uffff\1\50\4\u00b3\6\50\1\uffff\4\50\1\uffff\1\50"+
-        "\1\u00ae\2\50\1\u00d4\5\50\1\u00da\1\u00db\3\50\1\uffff\1\50\1\u00c4"+
-        "\1\u00aa\1\u00bf\1\u00da\2\uffff\3\50\1\u00d4\1\50\3\u00b3\1\u00db";
+        "\4\uffff\1\54\1\uffff\1\57\1\uffff\1\62\1\66\1\70\1\72\1\74\1\76"+
+        "\3\uffff\2\50\1\uffff\10\50\1\122\4\50\3\uffff\1\133\1\uffff\2\50"+
+        "\10\uffff\1\137\16\uffff\1\50\1\142\20\50\2\uffff\10\50\2\uffff"+
+        "\2\50\2\uffff\1\50\1\uffff\4\50\1\u0084\10\50\1\u008d\16\50\1\u009c"+
+        "\4\50\1\uffff\2\50\1\u0084\1\50\1\u00a6\1\u00a8\1\50\1\u00aa\1\uffff"+
+        "\1\50\1\u00ad\1\u00ae\1\u00af\3\50\2\u00af\2\50\1\u00ae\2\50\1\uffff"+
+        "\2\50\1\u00bb\3\50\2\u00af\1\u00c0\3\uffff\1\u00a8\1\uffff\1\50"+
+        "\1\u00ad\3\uffff\1\50\4\u00af\6\50\1\uffff\4\50\1\uffff\1\50\1\u00aa"+
+        "\2\50\1\u00d0\5\50\1\u00d6\1\u00d7\3\50\1\uffff\1\50\1\u00c0\1\u00a6"+
+        "\1\u00bb\1\u00d6\2\uffff\3\50\1\u00d0\1\50\3\u00af\1\u00d7";
     static final String DFA23_eofS =
-        "\u00e5\uffff";
+        "\u00e1\uffff";
     static final String DFA23_minS =
-        "\1\11\3\uffff\1\51\1\uffff\1\53\1\uffff\1\55\1\147\1\52\3\75\3\uffff"+
-        "\1\157\1\146\1\uffff\1\150\1\151\2\141\1\154\1\145\1\141\1\145\1"+
-        "\56\1\141\1\101\1\122\1\105\3\uffff\1\0\1\uffff\2\145\26\uffff\1"+
-        "\154\1\61\1\160\1\163\1\151\1\145\1\162\1\156\1\154\1\152\1\162"+
-        "\1\151\2\163\1\137\1\164\2\162\1\163\1\145\2\uffff\1\165\1\155\1"+
-        "\114\1\154\1\125\1\165\1\122\1\162\2\uffff\1\141\1\166\1\141\1\uffff"+
-        "\1\162\1\145\1\154\1\156\1\61\1\143\1\163\2\141\1\156\1\150\1\145"+
-        "\1\156\1\145\2\61\1\144\1\164\1\162\1\145\1\141\1\123\1\163\1\105"+
-        "\1\145\1\104\2\144\1\165\1\157\1\61\1\151\1\162\1\145\1\164\1\uffff"+
-        "\1\151\1\145\1\162\1\61\1\164\1\61\1\40\1\157\1\61\2\uffff\1\141"+
-        "\3\61\1\156\1\105\1\145\2\61\1\101\1\141\1\61\1\162\1\154\1\uffff"+
-        "\1\155\1\164\1\61\1\162\1\151\1\157\4\61\3\uffff\1\40\1\uffff\1"+
-        "\144\1\61\3\uffff\1\157\4\61\1\104\1\144\1\156\1\166\1\151\1\141"+
-        "\1\uffff\1\141\1\157\2\156\1\uffff\1\145\1\61\1\105\1\145\1\61\1"+
-        "\145\2\162\1\163\1\156\2\61\1\162\1\122\1\162\1\uffff\1\162\4\61"+
-        "\2\uffff\1\157\1\117\1\157\1\61\1\156\4\61";
+        "\1\11\3\uffff\1\51\1\uffff\1\53\1\uffff\1\55\1\146\1\52\3\75\3\uffff"+
+        "\1\157\1\146\1\uffff\1\150\1\151\2\141\1\154\1\151\1\141\1\145\1"+
+        "\56\1\141\1\101\1\122\1\105\3\uffff\1\0\1\uffff\2\145\10\uffff\1"+
+        "\55\3\uffff\1\145\12\uffff\1\154\1\55\1\160\1\163\1\151\1\145\1"+
+        "\162\1\156\1\154\1\162\1\151\2\163\1\137\2\162\1\163\1\145\2\uffff"+
+        "\1\165\1\155\1\114\1\154\1\125\1\165\1\122\1\162\2\uffff\1\141\1"+
+        "\166\2\uffff\1\141\1\uffff\1\162\1\145\1\154\1\156\1\55\1\143\1"+
+        "\163\1\141\1\156\1\150\1\145\1\156\1\145\1\55\1\144\1\164\1\162"+
+        "\1\145\1\141\1\123\1\163\1\105\1\145\1\104\2\144\1\165\1\157\1\55"+
+        "\1\151\1\162\1\145\1\164\1\uffff\1\151\1\145\1\55\1\164\1\55\1\40"+
+        "\1\157\1\55\1\uffff\1\141\3\55\1\156\1\105\1\145\2\55\1\101\1\141"+
+        "\1\55\1\162\1\154\1\uffff\1\155\1\164\1\55\1\162\1\151\1\157\3\55"+
+        "\3\uffff\1\40\1\uffff\1\144\1\55\3\uffff\1\157\4\55\1\104\1\144"+
+        "\1\156\1\166\1\151\1\141\1\uffff\1\141\1\157\2\156\1\uffff\1\145"+
+        "\1\55\1\105\1\145\1\55\1\145\2\162\1\163\1\156\2\55\1\162\1\122"+
+        "\1\162\1\uffff\1\162\4\55\2\uffff\1\157\1\117\1\157\1\55\1\156\4"+
+        "\55";
     static final String DFA23_maxS =
-        "\1\175\3\uffff\1\51\1\uffff\1\75\1\uffff\1\75\1\163\1\52\3\75\3"+
+        "\1\175\3\uffff\1\51\1\uffff\1\75\1\uffff\1\172\1\163\1\52\3\75\3"+
         "\uffff\1\157\1\156\1\uffff\1\150\1\151\2\165\1\154\1\151\1\145\1"+
         "\151\1\71\1\162\1\141\1\162\1\145\3\uffff\1\uffff\1\uffff\2\145"+
-        "\26\uffff\1\154\1\172\1\160\1\163\1\151\1\145\1\162\1\156\1\154"+
-        "\1\152\1\162\1\151\2\163\1\172\1\164\2\162\1\163\1\145\2\uffff\1"+
-        "\165\1\155\1\114\1\154\1\125\1\165\1\122\1\162\2\uffff\1\164\1\166"+
-        "\1\141\1\uffff\1\162\1\145\1\154\1\156\1\172\1\143\1\163\2\141\1"+
-        "\156\1\150\1\145\1\156\1\145\2\172\1\144\1\164\1\162\1\145\1\141"+
-        "\1\123\1\163\1\105\1\145\1\104\2\144\1\165\1\157\1\172\1\151\1\162"+
-        "\1\145\1\164\1\uffff\1\164\1\157\1\162\1\172\1\164\2\172\1\157\1"+
-        "\172\2\uffff\1\141\3\172\1\156\1\117\1\157\2\172\1\101\1\141\1\172"+
-        "\1\162\1\154\1\uffff\1\155\1\164\1\172\1\162\1\151\1\157\4\172\3"+
-        "\uffff\1\40\1\uffff\1\144\1\172\3\uffff\1\157\4\172\1\104\1\144"+
-        "\1\156\1\166\1\151\1\141\1\uffff\1\141\1\157\2\156\1\uffff\1\145"+
-        "\1\172\1\105\1\145\1\172\1\145\2\162\1\163\1\156\2\172\1\162\1\122"+
-        "\1\162\1\uffff\1\162\4\172\2\uffff\1\157\1\117\1\157\1\172\1\156"+
-        "\4\172";
+        "\10\uffff\1\172\3\uffff\1\151\12\uffff\1\154\1\172\1\160\1\163\1"+
+        "\151\1\145\1\162\1\156\1\154\1\162\1\151\2\163\1\172\2\162\1\163"+
+        "\1\145\2\uffff\1\165\1\155\1\114\1\154\1\125\1\165\1\122\1\162\2"+
+        "\uffff\1\164\1\166\2\uffff\1\141\1\uffff\1\162\1\145\1\154\1\156"+
+        "\1\172\1\143\1\163\1\141\1\156\1\150\1\145\1\156\1\145\1\172\1\144"+
+        "\1\164\1\162\1\145\1\141\1\123\1\163\1\105\1\145\1\104\2\144\1\165"+
+        "\1\157\1\172\1\151\1\162\1\145\1\164\1\uffff\1\164\1\157\1\172\1"+
+        "\164\2\172\1\157\1\172\1\uffff\1\141\3\172\1\156\1\117\1\157\2\172"+
+        "\1\101\1\141\1\172\1\162\1\154\1\uffff\1\155\1\164\1\172\1\162\1"+
+        "\151\1\157\3\172\3\uffff\1\172\1\uffff\1\144\1\172\3\uffff\1\157"+
+        "\4\172\1\104\1\144\1\156\1\166\1\151\1\141\1\uffff\1\141\1\157\2"+
+        "\156\1\uffff\1\145\1\172\1\105\1\145\1\172\1\145\2\162\1\163\1\156"+
+        "\2\172\1\162\1\122\1\162\1\uffff\1\162\4\172\2\uffff\1\157\1\117"+
+        "\1\157\1\172\1\156\4\172";
     static final String DFA23_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\uffff\1\11\6\uffff\1\26\1\27"+
         "\1\30\2\uffff\1\33\15\uffff\1\47\1\51\1\52\1\uffff\1\54\2\uffff"+
-        "\1\64\1\67\1\70\1\4\1\50\1\7\1\10\1\6\1\13\1\14\1\12\1\16\1\17\1"+
-        "\15\1\66\1\20\1\22\1\21\1\23\1\34\1\25\1\24\24\uffff\1\44\1\45\10"+
-        "\uffff\1\53\1\65\3\uffff\1\32\43\uffff\1\36\11\uffff\1\62\1\40\16"+
-        "\uffff\1\31\12\uffff\1\60\1\43\1\37\1\uffff\1\61\2\uffff\1\41\1"+
-        "\57\1\46\13\uffff\1\35\4\uffff\1\55\17\uffff\1\63\5\uffff\1\42\1"+
-        "\56\11\uffff";
+        "\1\64\1\67\1\70\1\4\1\50\1\7\1\10\1\6\1\uffff\1\14\1\12\1\16\1\uffff"+
+        "\1\62\1\15\1\66\1\20\1\22\1\21\1\23\1\34\1\25\1\24\22\uffff\1\44"+
+        "\1\45\10\uffff\1\53\1\65\2\uffff\1\13\1\17\1\uffff\1\32\41\uffff"+
+        "\1\36\10\uffff\1\40\16\uffff\1\31\11\uffff\1\60\1\43\1\37\1\uffff"+
+        "\1\61\2\uffff\1\41\1\57\1\46\13\uffff\1\35\4\uffff\1\55\17\uffff"+
+        "\1\63\5\uffff\1\42\1\56\11\uffff";
     static final String DFA23_specialS =
-        "\44\uffff\1\0\u00c0\uffff}>";
+        "\44\uffff\1\0\u00bc\uffff}>";
     static final String[] DFA23_transitionS = {
             "\1\51\1\52\2\uffff\1\52\22\uffff\1\51\1\1\1\44\2\uffff\1\2\1"+
             "\3\1\45\1\4\1\41\1\5\1\6\1\7\1\10\1\11\1\12\12\34\1\uffff\1"+
             "\23\1\13\1\14\1\15\2\uffff\5\50\1\36\15\50\1\37\1\50\1\40\4"+
-            "\50\1\16\1\uffff\1\17\3\uffff\3\50\1\47\1\30\1\26\1\50\1\21"+
-            "\1\22\2\50\1\33\1\25\2\50\1\27\1\50\1\46\1\31\1\35\1\50\1\32"+
-            "\1\24\3\50\1\43\1\20\1\42",
+            "\50\1\16\1\uffff\1\17\1\uffff\1\50\1\uffff\3\50\1\47\1\30\1"+
+            "\26\1\50\1\21\1\22\2\50\1\33\1\25\2\50\1\27\1\50\1\46\1\31\1"+
+            "\35\1\50\1\32\1\24\3\50\1\43\1\20\1\42",
             "",
             "",
             "",
@@ -2986,38 +2999,52 @@ public class LenguajeLexer extends Lexer {
             "",
             "\1\55\21\uffff\1\56",
             "",
-            "\1\60\17\uffff\1\61",
-            "\1\63\13\uffff\1\64",
-            "\1\66",
-            "\1\70",
-            "\1\72",
-            "\1\74",
+            "\1\60\3\uffff\11\50\3\uffff\1\61\3\uffff\32\50\4\uffff\1\50"+
+            "\1\uffff\32\50",
+            "\1\65\1\63\13\uffff\1\64",
+            "\1\67",
+            "\1\71",
+            "\1\73",
+            "\1\75",
             "",
             "",
             "",
-            "\1\76",
-            "\1\77\6\uffff\1\100\1\101",
+            "\1\77",
+            "\1\100\6\uffff\1\101\1\102",
             "",
-            "\1\102",
             "\1\103",
-            "\1\106\7\uffff\1\107\5\uffff\1\104\5\uffff\1\105",
+            "\1\104",
+            "\1\107\15\uffff\1\105\5\uffff\1\106",
             "\1\110\20\uffff\1\111\2\uffff\1\112",
             "\1\113",
-            "\1\115\3\uffff\1\114",
-            "\1\116\3\uffff\1\117",
-            "\1\121\3\uffff\1\120",
-            "\1\122\1\uffff\12\34",
-            "\1\125\20\uffff\1\124",
-            "\1\126\37\uffff\1\127",
-            "\1\130\37\uffff\1\131",
-            "\1\132\37\uffff\1\133",
+            "\1\114",
+            "\1\115\3\uffff\1\116",
+            "\1\120\3\uffff\1\117",
+            "\1\121\1\uffff\12\34",
+            "\1\124\20\uffff\1\123",
+            "\1\125\37\uffff\1\126",
+            "\1\127\37\uffff\1\130",
+            "\1\131\37\uffff\1\132",
             "",
             "",
             "",
-            "\0\135",
+            "\0\134",
             "",
+            "\1\135",
             "\1\136",
-            "\1\137",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "",
+            "",
+            "",
+            "\1\65\3\uffff\1\140",
             "",
             "",
             "",
@@ -3028,21 +3055,8 @@ public class LenguajeLexer extends Lexer {
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\140",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\1\142",
+            "\1\141",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\143",
             "\1\144",
             "\1\145",
@@ -3059,9 +3073,9 @@ public class LenguajeLexer extends Lexer {
             "\1\161",
             "\1\162",
             "\1\163",
+            "",
+            "",
             "\1\164",
-            "",
-            "",
             "\1\165",
             "\1\166",
             "\1\167",
@@ -3069,18 +3083,20 @@ public class LenguajeLexer extends Lexer {
             "\1\171",
             "\1\172",
             "\1\173",
-            "\1\174",
             "",
             "",
-            "\1\175\22\uffff\1\176",
+            "\1\174\22\uffff\1\175",
+            "\1\176",
+            "",
+            "",
             "\1\177",
-            "\1\u0080",
             "",
+            "\1\u0080",
             "\1\u0081",
             "\1\u0082",
             "\1\u0083",
-            "\1\u0084",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u0085",
             "\1\u0086",
             "\1\u0087",
             "\1\u0088",
@@ -3088,10 +3104,10 @@ public class LenguajeLexer extends Lexer {
             "\1\u008a",
             "\1\u008b",
             "\1\u008c",
-            "\1\u008d",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u008e",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
+            "\1\u008f",
+            "\1\u0090",
             "\1\u0091",
             "\1\u0092",
             "\1\u0093",
@@ -3103,110 +3119,109 @@ public class LenguajeLexer extends Lexer {
             "\1\u0099",
             "\1\u009a",
             "\1\u009b",
-            "\1\u009c",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u009d",
             "\1\u009e",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
+            "\1\u009f",
             "\1\u00a0",
-            "\1\u00a1",
-            "\1\u00a2",
-            "\1\u00a3",
             "",
-            "\1\u00a5\12\uffff\1\u00a4",
-            "\1\u00a6\11\uffff\1\u00a7",
-            "\1\u00a8",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
+            "\1\u00a2\12\uffff\1\u00a1",
+            "\1\u00a3\11\uffff\1\u00a4",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00a5",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00a7\14\uffff\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff"+
+            "\1\50\1\uffff\32\50",
             "\1\u00a9",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\1\u00ab\20\uffff\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\1\u00ad",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "",
-            "",
-            "\1\u00af",
-            "\11\50\7\uffff\32\50\6\uffff\1\u00b0\31\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\1\u00b4",
-            "\1\u00b5\11\uffff\1\u00b6",
-            "\1\u00b7\11\uffff\1\u00b8",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\1\u00b9",
-            "\1\u00ba",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\1\u00bb",
-            "\1\u00bc",
-            "",
-            "\1\u00bd",
-            "\1\u00be",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\1\u00c0",
-            "\1\u00c1",
-            "\1\u00c2",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\13\50\1\u00c3\16\50",
-            "",
-            "",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "",
             "\1\u00ab",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\1\u00ac"+
+            "\31\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00b0",
+            "\1\u00b1\11\uffff\1\u00b2",
+            "\1\u00b3\11\uffff\1\u00b4",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00b5",
+            "\1\u00b6",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00b7",
+            "\1\u00b8",
             "",
+            "\1\u00b9",
+            "\1\u00ba",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00bc",
+            "\1\u00bd",
+            "\1\u00be",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\13\50"+
+            "\1\u00bf\16\50",
+            "",
+            "",
+            "",
+            "\1\u00a7\14\uffff\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff"+
+            "\1\50\1\uffff\32\50",
+            "",
+            "\1\u00c1",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "",
+            "",
+            "",
+            "\1\u00c2",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00c3",
+            "\1\u00c4",
             "\1\u00c5",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "",
-            "",
-            "",
             "\1\u00c6",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
             "\1\u00c7",
             "\1\u00c8",
+            "",
             "\1\u00c9",
             "\1\u00ca",
             "\1\u00cb",
             "\1\u00cc",
             "",
             "\1\u00cd",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u00ce",
             "\1\u00cf",
-            "\1\u00d0",
-            "",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u00d1",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
             "\1\u00d2",
             "\1\u00d3",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
+            "\1\u00d4",
             "\1\u00d5",
-            "\1\u00d6",
-            "\1\u00d7",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u00d8",
             "\1\u00d9",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\1\u00dc",
+            "\1\u00da",
+            "",
+            "\1\u00db",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\13\50"+
+            "\1\u00dc\16\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "",
+            "",
             "\1\u00dd",
             "\1\u00de",
-            "",
             "\1\u00df",
-            "\11\50\7\uffff\32\50\6\uffff\13\50\1\u00e0\16\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "",
-            "",
-            "\1\u00e1",
-            "\1\u00e2",
-            "\1\u00e3",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\1\u00e4",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50",
-            "\11\50\7\uffff\32\50\6\uffff\32\50"
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00e0",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\50\3\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50"
     };
 
     static final short[] DFA23_eot = DFA.unpackEncodedString(DFA23_eotS);
@@ -3249,9 +3264,9 @@ public class LenguajeLexer extends Lexer {
                         int LA23_36 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA23_36 >= '\u0000' && LA23_36 <= '\uFFFF')) ) {s = 93;}
+                        if ( ((LA23_36 >= '\u0000' && LA23_36 <= '\uFFFF')) ) {s = 92;}
 
-                        else s = 92;
+                        else s = 91;
 
                         if ( s>=0 ) return s;
                         break;

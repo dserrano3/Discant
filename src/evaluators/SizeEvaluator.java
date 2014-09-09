@@ -25,7 +25,7 @@ public class SizeEvaluator implements Evaluator {
 				List<Evaluator> lis = (List<Evaluator>) pila.get(i).get(nombre)
 						.evaluate(pila);
 
-				return lis.size();
+				return Double.valueOf(lis.size());
 			}
 		}
 
