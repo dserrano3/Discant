@@ -1,0 +1,16 @@
+function not_main(var a, var b){
+	var c = a+ b;
+	return c;
+}
+
+var a;
+read a; //You can read strings, ints, doubles or bools.
+print a;
+var teset1 = 5;
+var test2 = "5";
+if(test1 == test2) {
+	print "It auto casts the variables";
+}
+
+
+print a;;
