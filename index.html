@@ -40,17 +40,19 @@ If you find an issue or want us to add a feauture <a href="https://github.com/ds
 </p>
 
 <p>Example of code:<br><br>
+<div style="border: solid 1px blue; font-size: 1.3 em; color: blue; margin: 10px; padding:10px; background: #FFFFB3"><tt>
+
 <code>
 function not_main(var a, var b){<br>
-	var c = a + b;<br>
-	return c;<br>
+	&nbsp;&nbsp;&nbsp;var c = a + b;<br>
+	&nbsp;&nbsp;&nbsp;return c;<br>
 }<br>
 <br>
 /*Don't need to create a main functino*/<br>
 var test1 = 5;<br>
-var test2 = "5";<br>
+var test2 = "5";<br><br>
 if(test1 == test2) {<br>
-	println "It auto casts values";<br>
+	&nbsp;&nbsp;&nbsp;println "It auto casts values";<br>
 }<br>
 list lis;<br>
 lis.push(1);<br>
@@ -58,21 +60,23 @@ lis.push(2);<br>
 lis.push("three");<br>
 println lis.get(0); /*First item of the list*/<br>
 lis[0] = 11;<br>
-lis.set(1, 12);/*Position 1 becomes 12*/<br>
+lis.set(1, 12);/*Position 1 becomes 12*/<br><br>
 for(var i = 0; i < lis.size(); 1) {/*Increments by 1*/<br>
-	println lis.get(i);<br>
-}<br>
+	&nbsp;&nbsp;&nbsp;println lis.get(i);<br>
+}<br><br>
 list lis2 = read("codigo.cfpp");/*reads a file puts each line into a field of the list*/<br>
 print lis2;/*Prints the entire list*/<br>
 r = 44;/*You van not use the 'var' word*/<br>
-read r;/*It can read booleans, doubles, integers or strings*/<br>
+read r;/*It can read booleans, doubles, integers or strings*/<br><br>
 var t = not_main(3,5);/*It will print 8*/<br>
-print t;<br>
+print t;<br><br><br>
 /*It has many more features like, && and || operators, <, > , <=, >= != comparasons.<br>
  * ++,--, -=, += operators, while statements, and many more.<br>
  */<br>
 <br>
-</code></p>
+</code>
+</div>
+</p>
 <p> This is an example of the editor used. <p>
 <img src = "images/codeExample.png">
 
