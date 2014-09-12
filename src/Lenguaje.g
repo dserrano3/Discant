@@ -50,7 +50,9 @@ programa returns [StringBuilder output] throws Exception
    pila.add(new Context1()); 
    output = new StringBuilder();
   }
+  PC*
   ( 
+     
       print1           {$output.append((String)$print1.e.evaluate(pila));}
     | println          {$output.append((String)$println.e.evaluate(pila));}
     | asignacion       {$asignacion.e.evaluate(pila);}
@@ -93,7 +95,7 @@ programa returns [StringBuilder output] throws Exception
   {$e = new FuncionEvaluator();}  
   FUNCTION nom = NOMBRE '(' 
 	
-	((
+	( (
 	  VARIABLE nom1 = NOMBRE
 	  {
 	     ((FuncionEvaluator) $e).aregarParametro($nom1.text);   
@@ -105,16 +107,16 @@ programa returns [StringBuilder output] throws Exception
        ((FuncionEvaluator) $e).aregarParametro($nom1.text);   
     }
   )*)?
-	
-	')'
-	'{'
+	 
+	')' PC?
+	'{' PC?
 	  
 	  (wh = whilestatements{
  
      ((FuncionEvaluator) $e).add($wh.e);   
      } 
     )*
-	'}'
+	'}' PC?
 	{funciones.put($nom.text, $e);}    
 ;
  
@@ -269,7 +271,7 @@ declaracion returns [Evaluator e] throws Exception
 
 comentario
   :
-  COMENTARIO
+  COMENTARIO 
   ;
 
 lectura returns [Evaluator e] throws Exception
@@ -567,13 +569,13 @@ IF PARENTESIS_I rel = logico
   $e = new IfEvaluator ();   
   ((IfEvaluator) $e).agregarCondicion($rel.e);
 }
-  PARENTESIS_D LLAVE_I
+  PARENTESIS_D PC? LLAVE_I PC? //El PC es para admitir espacios, si ponen ; lo admitiria.
  (ifs = ifstatements  
  {
    ((IfEvaluator) $e).agregarCoso($ifs.e);   
   
  })*
- LLAVE_D 
+ LLAVE_D PC?
  //--------------empieza el elseif----------------------------------
  
  (ELSEIF PARENTESIS_I rel1=logico
@@ -581,25 +583,25 @@ IF PARENTESIS_I rel = logico
  ((IfEvaluator) $e).nuevoSegmento();
  ((IfEvaluator) $e).agregarCondicion($rel1.e); 
 }
-  PARENTESIS_D LLAVE_I
+  PARENTESIS_D PC? LLAVE_I PC?
  (ifs= ifstatements  
  {
    ((IfEvaluator) $e).agregarCoso($ifs.e);   
  })*
- LLAVE_D)* 
+ LLAVE_D PC?)* 
  
   
  
  
 //-----------------Empieza el else----------------------------------------------- 
-( ELSE
- LLAVE_I(
+( ELSE PC?
+ LLAVE_I PC?(
     elses = elsestataments
  {    
    ((IfEvaluator)$e).agregarCosoElse($elses.e);
  
  })*
- LLAVE_D
+ LLAVE_D PC?
 )*  
  
 
@@ -643,7 +645,7 @@ WHILE PARENTESIS_I rel=logico{
   //((WhileEvaluator) $e).setCondicion((Boolean)$rel.e.evaluate(pila));  
    $e = new WhileEvaluator($rel.e); 
   
- } PARENTESIS_D LLAVE_I
+ } PARENTESIS_D PC? LLAVE_I PC?
  (wh = whilestatements{
  
      ((WhileEvaluator) $e).add($wh.e);   
@@ -652,7 +654,7 @@ WHILE PARENTESIS_I rel=logico{
  
  )*
  
-LLAVE_D
+LLAVE_D PC?
 ;
 
 
@@ -664,7 +666,7 @@ FOR PARENTESIS_I decl=declaracion logi=logico PC aumento=add  {
   //((WhileEvaluator) $e).setCondicion((Boolean)$rel.e.evaluate(pila));  
    $e = new ForEvaluator($decl.e, $logi.e, $aumento.e);  
   
- } PARENTESIS_D LLAVE_I
+ } PARENTESIS_D PC? LLAVE_I PC? 
  (wh = whilestatements{
  
      ((ForEvaluator) $e).add($wh.e);   
@@ -673,7 +675,7 @@ FOR PARENTESIS_I decl=declaracion logi=logico PC aumento=add  {
  
  )*
  
-LLAVE_D
+LLAVE_D PC?
 ;
 
 
@@ -694,10 +696,10 @@ IF
   :
   'if'
   ;
-
+//NEWLINE: '\r'? '\n' ;
 PC
   :
-  ';' /*| '\r'? '\n' | '\r' | EOF*/ 
+  (';'? '\r'? ('\n')+) | ';' /*| '\r'? '\n' | '\r' | EOF*/ 
   ;
 //COMPARACION: ('==' | '>'|'<'|'!='|'<='|'>=');
 
@@ -855,15 +857,15 @@ TEXTO
 
 COMENTARIO
   :
-  ('/*' (.)* '*/') 
+  (('/*' (.)* '*/') PC?) | (('//' (.)*) PC)  
   ;
+ 
   
 
-//operaciones
+//operaciones 
 // Este token sirve para omitir todos los espacios y tabulaciones en el texto
 
 // Este token sirve para omitir todos los espacios y tabulaciones en el texto
 WS : (' '|'\t')+ {$channel = HIDDEN;};
 
 // Este token sirve para omitir todos los saltos de l�nea en el texto
-NEWLINE: '\r'? '\n' {$channel = HIDDEN;};
