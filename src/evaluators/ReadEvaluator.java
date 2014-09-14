@@ -11,6 +11,8 @@ public class ReadEvaluator implements Evaluator {
 
 	ArrayList<Context1> pila; // = new Stack<Context1>();
 	String nombre;
+	boolean texto = false;
+	String text;
 
 	public ReadEvaluator(ArrayList<Context1> pila, String nombre) {
 		this.pila = pila;
@@ -31,12 +33,26 @@ public class ReadEvaluator implements Evaluator {
 			pila.get(pila.size() - 1).put(nombre, new DoubleEvaluator(0));
 	}
 	
+	public void addText(Evaluator ev){
+		try {
+			text = String.valueOf(ev.evaluate(pila));
+			texto = true;
+		} catch (Exception e) {
+			System.out.println("Problem in the reading " + e);
+		}
+	}
+	
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
 		Evaluator e = null;
 		System.out.println("entre a la lectura!!!!!!");
-
-		String line = JOptionPane
+		String line;
+		if(!texto){
+		line = JOptionPane
 				.showInputDialog("input dato " + nombre + ": ");
+		}else{
+			line = JOptionPane
+					.showInputDialog(text);
+		}
 		System.out.println("lei " + line);
 		comprobarVariable();
 		int i;

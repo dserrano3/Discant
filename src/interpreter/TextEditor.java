@@ -28,6 +28,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URL;
 
 import org.fife.ui.rsyntaxtextarea.*;
 import org.fife.ui.rtextarea.*;
@@ -76,12 +77,13 @@ public class TextEditor extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws IOException 
 	 */
-	public TextEditor() {
+	public TextEditor() throws IOException {
 		initialize();
 	}
 
-	private void initialize() {
+	private void initialize() throws IOException {
 		setTitle("Discant");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 624, 472);
@@ -104,7 +106,7 @@ public class TextEditor extends JFrame {
 		return contentPane;
 	}
 
-	private JMenuBar getMenuBar_1() {
+	private JMenuBar getMenuBar_1() throws IOException {
 		if (menuBar == null) {
 			menuBar = new JMenuBar();
 			menuBar.setToolTipText("");
@@ -119,7 +121,8 @@ public class TextEditor extends JFrame {
 	private JButton getBtnEjecutar() {
 		if (btnEjecutar == null) {
 			btnEjecutar = new JButton("Run");
-			ImageIcon img = new ImageIcon("images/play.png");
+			URL url = TextEditor.class.getResource("/play.png");
+			ImageIcon img = new ImageIcon(url);
 			btnEjecutar.setIcon((img));
 			btnEjecutar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
@@ -147,10 +150,11 @@ public class TextEditor extends JFrame {
 		return rtScrollPane;
 	}
 
-	private JButton getBtnOpen() {
+	private JButton getBtnOpen() throws IOException {
 		if (btnOpen == null) {
 			btnOpen = new JButton("Open");
-			ImageIcon img = new ImageIcon("images/open.png");
+			URL url = TextEditor.class.getResource("/open.png");
+			ImageIcon img = new ImageIcon(url);
 			btnOpen.setIcon((img));
 			btnOpen.addMouseListener(new MouseAdapter() {
 				@Override
@@ -188,7 +192,8 @@ public class TextEditor extends JFrame {
 	private JButton getBtnGuardar() {
 		if (btnSave == null) {
 			btnSave = new JButton("Save");
-			ImageIcon img = new ImageIcon("images/save.png");
+			URL url = TextEditor.class.getResource("/save.png");
+			ImageIcon img = new ImageIcon(url);
 			btnSave.setIcon((img));
 			btnSave.addMouseListener(new MouseAdapter() {
 				@Override

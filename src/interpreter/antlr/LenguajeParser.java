@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-09-12 20:12:06
+// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-09-14 17:06:26
 
 package interpreter.antlr; 
 import interpreter.*;
@@ -23,7 +23,7 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class LenguajeParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ASIGNACION", "BOOLEAN", "COMENTARIO", "COMILLASD", "COMILLASS", "DOBLE", "ELSE", "ELSEIF", "FOR", "FUNCTION", "IF", "LIST", "LLAVE_D", "LLAVE_I", "NOMBRE", "NUMERO", "PARENTESIS_D", "PARENTESIS_I", "PC", "PRINT", "PRINTLN", "PUSH", "READ", "RETURN", "SET", "SIZE", "TEXTO", "TOKEN", "VARIABLE", "WHILE", "WS", "'!='", "'%'", "'&&'", "'()'", "'*'", "'+'", "'++'", "'+='", "','", "'-'", "'--'", "'-='", "'.'", "'.get('", "'.size'", "'/'", "'<'", "'<='", "'=='", "'>'", "'>='", "'['", "']'", "'||'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ASIGNACION", "BOOLEAN", "COMENTARIO", "COMILLASD", "COMILLASS", "DOBLE", "ELSE", "ELSEIF", "FOR", "FUNCTION", "IF", "LIST", "LLAVE_D", "LLAVE_I", "NOMBRE", "NUMERO", "PARENTESIS_D", "PARENTESIS_I", "PC", "PRINT", "PRINTLN", "PUSH", "READ", "RETURN", "SET", "SIZE", "TEXTO", "TOKEN", "VARIABLE", "WHILE", "WS", "'!='", "'%'", "'&&'", "'()'", "'*'", "'+'", "'++'", "'+='", "','", "'-'", "'--'", "'-='", "'.'", "'.get('", "'/'", "'<'", "'<='", "'=='", "'>'", "'>='", "'['", "']'", "'||'"
     };
 
     public static final int EOF=-1;
@@ -50,7 +50,6 @@ public class LenguajeParser extends Parser {
     public static final int T__55=55;
     public static final int T__56=56;
     public static final int T__57=57;
-    public static final int T__58=58;
     public static final int ASIGNACION=4;
     public static final int BOOLEAN=5;
     public static final int COMENTARIO=6;
@@ -252,7 +251,7 @@ public class LenguajeParser extends Parser {
                         }
                         break;
                     case SET:
-                    case 56:
+                    case 55:
                         {
                         alt2=14;
                         }
@@ -1424,7 +1423,7 @@ public class LenguajeParser extends Parser {
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==56) ) {
+            if ( (LA11_0==55) ) {
                 alt11=1;
             }
             else if ( (LA11_0==SET) ) {
@@ -1441,11 +1440,11 @@ public class LenguajeParser extends Parser {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:257:7: '[' num= NUMERO ']' ASIGNACION ev= evaluator
                     {
-                    match(input,56,FOLLOW_56_in_asignacion_lista1413); 
+                    match(input,55,FOLLOW_55_in_asignacion_lista1413); 
 
                     num=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_asignacion_lista1417); 
 
-                    match(input,57,FOLLOW_57_in_asignacion_lista1419); 
+                    match(input,56,FOLLOW_56_in_asignacion_lista1419); 
 
                     match(input,ASIGNACION,FOLLOW_ASIGNACION_in_asignacion_lista1421); 
 
@@ -1540,17 +1539,19 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "lectura"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:277:1: lectura returns [Evaluator e] : r= READ n= NOMBRE PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:277:1: lectura returns [Evaluator e] : r= READ n= NOMBRE ( ',' exp= expression )? PC ;
     public final Evaluator lectura() throws Exception, RecognitionException {
         Evaluator e = null;
 
 
         Token r=null;
         Token n=null;
+        Evaluator exp =null;
+
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:278:3: (r= READ n= NOMBRE PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:279:3: r= READ n= NOMBRE PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:278:3: (r= READ n= NOMBRE ( ',' exp= expression )? PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:279:3: r= READ n= NOMBRE ( ',' exp= expression )? PC
             {
             r=(Token)match(input,READ,FOLLOW_READ_in_lectura1541); 
 
@@ -1564,7 +1565,40 @@ public class LenguajeParser extends Parser {
                                 }
                               
 
-            match(input,PC,FOLLOW_PC_in_lectura1592); 
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:287:3: ( ',' exp= expression )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
+
+            if ( (LA12_0==43) ) {
+                alt12=1;
+            }
+            switch (alt12) {
+                case 1 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:288:7: ',' exp= expression
+                    {
+                    match(input,43,FOLLOW_43_in_lectura1577); 
+
+                    pushFollow(FOLLOW_expression_in_lectura1583);
+                    exp=expression();
+
+                    state._fsp--;
+
+
+                     
+                                  if(bandera)
+                                        { 
+                                            ((ReadEvaluator)e).addText(exp);
+                                        }
+                                 
+                                 
+
+                    }
+                    break;
+
+            }
+
+
+            match(input,PC,FOLLOW_PC_in_lectura1617); 
 
             }
 
@@ -1586,7 +1620,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "print1"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:291:1: print1 returns [Evaluator e] : PRINT (exp= expression ) ( ',' exp= expression )* PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:300:1: print1 returns [Evaluator e] : PRINT (exp= expression ) ( ',' exp= expression )* PC ;
     public final Evaluator print1() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1595,17 +1629,17 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:292:3: ( PRINT (exp= expression ) ( ',' exp= expression )* PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:293:3: PRINT (exp= expression ) ( ',' exp= expression )* PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:301:3: ( PRINT (exp= expression ) ( ',' exp= expression )* PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:302:3: PRINT (exp= expression ) ( ',' exp= expression )* PC
             {
              e = new PrintEvaluator(); 
 
-            match(input,PRINT,FOLLOW_PRINT_in_print11621); 
+            match(input,PRINT,FOLLOW_PRINT_in_print11646); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:295:3: (exp= expression )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:295:5: exp= expression
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:304:3: (exp= expression )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:304:5: exp= expression
             {
-            pushFollow(FOLLOW_expression_in_print11632);
+            pushFollow(FOLLOW_expression_in_print11657);
             exp=expression();
 
             state._fsp--;
@@ -1616,24 +1650,24 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:297:3: ( ',' exp= expression )*
-            loop12:
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:306:3: ( ',' exp= expression )*
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==43) ) {
-                    alt12=1;
+                if ( (LA13_0==43) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:297:5: ',' exp= expression
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:306:5: ',' exp= expression
             	    {
-            	    match(input,43,FOLLOW_43_in_print11644); 
+            	    match(input,43,FOLLOW_43_in_print11669); 
 
-            	    pushFollow(FOLLOW_expression_in_print11654);
+            	    pushFollow(FOLLOW_expression_in_print11679);
             	    exp=expression();
 
             	    state._fsp--;
@@ -1645,12 +1679,12 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
 
-            match(input,PC,FOLLOW_PC_in_print11665); 
+            match(input,PC,FOLLOW_PC_in_print11690); 
 
             }
 
@@ -1672,7 +1706,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "println"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:303:1: println returns [Evaluator e] : PRINTLN (exp= expression ) ( ',' exp= expression )* PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:312:1: println returns [Evaluator e] : PRINTLN (exp= expression ) ( ',' exp= expression )* PC ;
     public final Evaluator println() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1681,17 +1715,17 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:304:3: ( PRINTLN (exp= expression ) ( ',' exp= expression )* PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:305:3: PRINTLN (exp= expression ) ( ',' exp= expression )* PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:313:3: ( PRINTLN (exp= expression ) ( ',' exp= expression )* PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:314:3: PRINTLN (exp= expression ) ( ',' exp= expression )* PC
             {
              e = new PrintlnEvaluator(); 
 
-            match(input,PRINTLN,FOLLOW_PRINTLN_in_println1694); 
+            match(input,PRINTLN,FOLLOW_PRINTLN_in_println1719); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:307:3: (exp= expression )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:307:5: exp= expression
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:316:3: (exp= expression )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:316:5: exp= expression
             {
-            pushFollow(FOLLOW_expression_in_println1704);
+            pushFollow(FOLLOW_expression_in_println1729);
             exp=expression();
 
             state._fsp--;
@@ -1702,24 +1736,24 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:309:3: ( ',' exp= expression )*
-            loop13:
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:318:3: ( ',' exp= expression )*
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==43) ) {
-                    alt13=1;
+                if ( (LA14_0==43) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:309:5: ',' exp= expression
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:318:5: ',' exp= expression
             	    {
-            	    match(input,43,FOLLOW_43_in_println1716); 
+            	    match(input,43,FOLLOW_43_in_println1741); 
 
-            	    pushFollow(FOLLOW_expression_in_println1726);
+            	    pushFollow(FOLLOW_expression_in_println1751);
             	    exp=expression();
 
             	    state._fsp--;
@@ -1731,12 +1765,12 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
 
-            match(input,PC,FOLLOW_PC_in_println1737); 
+            match(input,PC,FOLLOW_PC_in_println1762); 
 
             }
 
@@ -1758,7 +1792,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "evaluator"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:315:1: evaluator returns [Evaluator e] : logico ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:324:1: evaluator returns [Evaluator e] : logico ;
     public final Evaluator evaluator() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1767,10 +1801,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:316:3: ( logico )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:317:3: logico
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:325:3: ( logico )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:326:3: logico
             {
-            pushFollow(FOLLOW_logico_in_evaluator1762);
+            pushFollow(FOLLOW_logico_in_evaluator1787);
             logico19=logico();
 
             state._fsp--;
@@ -1800,7 +1834,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "term"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:323:1: term returns [Evaluator e] : (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE '.size' ( '()' )* );
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:332:1: term returns [Evaluator e] : (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE '.' SIZE ( '()' )* );
     public final Evaluator term() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1819,20 +1853,20 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:324:3: (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE '.size' ( '()' )* )
-            int alt16=9;
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:333:3: (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE '.' SIZE ( '()' )* )
+            int alt17=9;
             switch ( input.LA(1) ) {
             case NOMBRE:
                 {
                 switch ( input.LA(2) ) {
-                case 49:
+                case 47:
                     {
-                    alt16=9;
+                    alt17=9;
                     }
                     break;
                 case PARENTESIS_I:
                     {
-                    alt16=1;
+                    alt17=1;
                     }
                     break;
                 case PARENTESIS_D:
@@ -1844,27 +1878,27 @@ public class LenguajeParser extends Parser {
                 case 40:
                 case 43:
                 case 44:
+                case 49:
                 case 50:
                 case 51:
                 case 52:
                 case 53:
                 case 54:
-                case 55:
+                case 56:
                 case 57:
-                case 58:
                     {
-                    alt16=3;
+                    alt17=3;
                     }
                     break;
                 case 48:
-                case 56:
+                case 55:
                     {
-                    alt16=8;
+                    alt17=8;
                     }
                     break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 16, 1, input);
+                        new NoViableAltException("", 17, 1, input);
 
                     throw nvae;
 
@@ -1874,46 +1908,46 @@ public class LenguajeParser extends Parser {
                 break;
             case BOOLEAN:
                 {
-                alt16=2;
+                alt17=2;
                 }
                 break;
             case NUMERO:
                 {
-                alt16=4;
+                alt17=4;
                 }
                 break;
             case DOBLE:
                 {
-                alt16=5;
+                alt17=5;
                 }
                 break;
             case TEXTO:
                 {
-                alt16=6;
+                alt17=6;
                 }
                 break;
             case PARENTESIS_I:
                 {
-                alt16=7;
+                alt17=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 17, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:326:3: lla= llamadofuncion
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:335:3: lla= llamadofuncion
                     {
 
                        e = new IntEvaluator(0);
                       
 
-                    pushFollow(FOLLOW_llamadofuncion_in_term1808);
+                    pushFollow(FOLLOW_llamadofuncion_in_term1833);
                     lla=llamadofuncion();
 
                     state._fsp--;
@@ -1926,9 +1960,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:333:5: BOOLEAN
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:342:5: BOOLEAN
                     {
-                    BOOLEAN20=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_term1824); 
+                    BOOLEAN20=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_term1849); 
 
 
                                System.out.println("entiendo que es un boolean");
@@ -1938,9 +1972,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:338:5: NOMBRE
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:347:5: NOMBRE
                     {
-                    NOMBRE21=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term1843); 
+                    NOMBRE21=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term1868); 
 
                        
                             System.out.println("entiendo que es un llamado");
@@ -1952,9 +1986,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:345:5: NUMERO
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:354:5: NUMERO
                     {
-                    NUMERO22=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_term1861); 
+                    NUMERO22=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_term1886); 
 
 
                                e = new DoubleEvaluator(Double.parseDouble((NUMERO22!=null?NUMERO22.getText():null)));
@@ -1963,9 +1997,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:349:5: DOBLE
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:358:5: DOBLE
                     {
-                    DOBLE23=(Token)match(input,DOBLE,FOLLOW_DOBLE_in_term1880); 
+                    DOBLE23=(Token)match(input,DOBLE,FOLLOW_DOBLE_in_term1905); 
 
 
                                e = new DoubleEvaluator(Double.parseDouble((DOBLE23!=null?DOBLE23.getText():null)));
@@ -1974,9 +2008,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:354:5: TEXTO
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:363:5: TEXTO
                     {
-                    TEXTO24=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_term1914); 
+                    TEXTO24=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_term1939); 
 
 
                               e = new StringEvaluator(((TEXTO24!=null?TEXTO24.getText():null)));
@@ -1985,17 +2019,17 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:359:5: '(' add ')'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:368:5: '(' add ')'
                     {
-                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_term1935); 
+                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_term1960); 
 
-                    pushFollow(FOLLOW_add_in_term1937);
+                    pushFollow(FOLLOW_add_in_term1962);
                     add25=add();
 
                     state._fsp--;
 
 
-                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term1939); 
+                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term1964); 
 
 
                                            e = add25;
@@ -2004,55 +2038,55 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:363:5: nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' )
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:372:5: nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' )
                     {
-                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term1972); 
+                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term1997); 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:364:5: ( '.get(' num= add ')' | '[' num= add ']' )
-                    int alt14=2;
-                    int LA14_0 = input.LA(1);
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:373:5: ( '.get(' num= add ')' | '[' num= add ']' )
+                    int alt15=2;
+                    int LA15_0 = input.LA(1);
 
-                    if ( (LA14_0==48) ) {
-                        alt14=1;
+                    if ( (LA15_0==48) ) {
+                        alt15=1;
                     }
-                    else if ( (LA14_0==56) ) {
-                        alt14=2;
+                    else if ( (LA15_0==55) ) {
+                        alt15=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 14, 0, input);
+                            new NoViableAltException("", 15, 0, input);
 
                         throw nvae;
 
                     }
-                    switch (alt14) {
+                    switch (alt15) {
                         case 1 :
-                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:364:7: '.get(' num= add ')'
+                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:373:7: '.get(' num= add ')'
                             {
-                            match(input,48,FOLLOW_48_in_term1981); 
+                            match(input,48,FOLLOW_48_in_term2006); 
 
-                            pushFollow(FOLLOW_add_in_term1987);
+                            pushFollow(FOLLOW_add_in_term2012);
                             num=add();
 
                             state._fsp--;
 
 
-                            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term1989); 
+                            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term2014); 
 
                             }
                             break;
                         case 2 :
-                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:365:7: '[' num= add ']'
+                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:374:7: '[' num= add ']'
                             {
-                            match(input,56,FOLLOW_56_in_term1997); 
+                            match(input,55,FOLLOW_55_in_term2022); 
 
-                            pushFollow(FOLLOW_add_in_term2007);
+                            pushFollow(FOLLOW_add_in_term2032);
                             num=add();
 
                             state._fsp--;
 
 
-                            match(input,57,FOLLOW_57_in_term2009); 
+                            match(input,56,FOLLOW_56_in_term2034); 
 
                             }
                             break;
@@ -2067,34 +2101,36 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:370:5: nom= NOMBRE '.size' ( '()' )*
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:379:5: nom= NOMBRE '.' SIZE ( '()' )*
                     {
-                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2034); 
+                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2059); 
 
-                    match(input,49,FOLLOW_49_in_term2036); 
+                    match(input,47,FOLLOW_47_in_term2061); 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:370:24: ( '()' )*
-                    loop15:
+                    match(input,SIZE,FOLLOW_SIZE_in_term2063); 
+
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:379:25: ( '()' )*
+                    loop16:
                     do {
-                        int alt15=2;
-                        int LA15_0 = input.LA(1);
+                        int alt16=2;
+                        int LA16_0 = input.LA(1);
 
-                        if ( (LA15_0==38) ) {
-                            alt15=1;
+                        if ( (LA16_0==38) ) {
+                            alt16=1;
                         }
 
 
-                        switch (alt15) {
+                        switch (alt16) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:370:25: '()'
+                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:379:26: '()'
                     	    {
-                    	    match(input,38,FOLLOW_38_in_term2039); 
+                    	    match(input,38,FOLLOW_38_in_term2066); 
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop15;
+                    	    break loop16;
                         }
                     } while (true);
 
@@ -2125,7 +2161,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "unary"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:376:1: unary returns [Evaluator e] : ( '+' | '-' )* term ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:385:1: unary returns [Evaluator e] : ( '+' | '-' )* term ;
     public final Evaluator unary() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2134,39 +2170,39 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:377:3: ( ( '+' | '-' )* term )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:379:3: ( '+' | '-' )* term
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:386:3: ( ( '+' | '-' )* term )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:388:3: ( '+' | '-' )* term
             {
 
                boolean positive = true;
               
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:382:3: ( '+' | '-' )*
-            loop17:
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:391:3: ( '+' | '-' )*
+            loop18:
             do {
-                int alt17=3;
-                int LA17_0 = input.LA(1);
+                int alt18=3;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA17_0==40) ) {
-                    alt17=1;
+                if ( (LA18_0==40) ) {
+                    alt18=1;
                 }
-                else if ( (LA17_0==44) ) {
-                    alt17=2;
+                else if ( (LA18_0==44) ) {
+                    alt18=2;
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:383:7: '+'
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:392:7: '+'
             	    {
-            	    match(input,40,FOLLOW_40_in_unary2093); 
+            	    match(input,40,FOLLOW_40_in_unary2120); 
 
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:384:7: '-'
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:393:7: '-'
             	    {
-            	    match(input,44,FOLLOW_44_in_unary2101); 
+            	    match(input,44,FOLLOW_44_in_unary2128); 
 
 
             	              positive = !positive;
@@ -2176,12 +2212,12 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop18;
                 }
             } while (true);
 
 
-            pushFollow(FOLLOW_term_in_unary2122);
+            pushFollow(FOLLOW_term_in_unary2149);
             term26=term();
 
             state._fsp--;
@@ -2213,7 +2249,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "mult"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:397:1: mult returns [Evaluator e] : op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:406:1: mult returns [Evaluator e] : op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* ;
     public final Evaluator mult() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2224,10 +2260,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:398:3: (op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:399:3: op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:407:3: (op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:408:3: op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
             {
-            pushFollow(FOLLOW_unary_in_mult2156);
+            pushFollow(FOLLOW_unary_in_mult2183);
             op1=unary();
 
             state._fsp--;
@@ -2237,36 +2273,36 @@ public class LenguajeParser extends Parser {
                         e = op1;
                        
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:403:3: ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
-            loop18:
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:412:3: ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
+            loop19:
             do {
-                int alt18=4;
+                int alt19=4;
                 switch ( input.LA(1) ) {
                 case 39:
                     {
-                    alt18=1;
+                    alt19=1;
                     }
                     break;
-                case 50:
+                case 49:
                     {
-                    alt18=2;
+                    alt19=2;
                     }
                     break;
                 case 36:
                     {
-                    alt18=3;
+                    alt19=3;
                     }
                     break;
 
                 }
 
-                switch (alt18) {
+                switch (alt19) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:404:5: '*' op2= unary
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:413:5: '*' op2= unary
             	    {
-            	    match(input,39,FOLLOW_39_in_mult2180); 
+            	    match(input,39,FOLLOW_39_in_mult2207); 
 
-            	    pushFollow(FOLLOW_unary_in_mult2184);
+            	    pushFollow(FOLLOW_unary_in_mult2211);
             	    op2=unary();
 
             	    state._fsp--;
@@ -2279,11 +2315,11 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:408:7: '/' op2= unary
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:417:7: '/' op2= unary
             	    {
-            	    match(input,50,FOLLOW_50_in_mult2212); 
+            	    match(input,49,FOLLOW_49_in_mult2239); 
 
-            	    pushFollow(FOLLOW_unary_in_mult2216);
+            	    pushFollow(FOLLOW_unary_in_mult2243);
             	    op2=unary();
 
             	    state._fsp--;
@@ -2296,11 +2332,11 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:412:7: '%' op2= unary
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:421:7: '%' op2= unary
             	    {
-            	    match(input,36,FOLLOW_36_in_mult2246); 
+            	    match(input,36,FOLLOW_36_in_mult2273); 
 
-            	    pushFollow(FOLLOW_unary_in_mult2250);
+            	    pushFollow(FOLLOW_unary_in_mult2277);
             	    op2=unary();
 
             	    state._fsp--;
@@ -2309,106 +2345,6 @@ public class LenguajeParser extends Parser {
 
             	                        e = new ModEvaluator(e,op2);
             	                       
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop18;
-                }
-            } while (true);
-
-
-            }
-
-        }
-
-
-        catch (RecognitionException er) {
-            throw er; 
-        } 
-
-
-        finally {
-        	// do for sure before leaving
-        }
-        return e;
-    }
-    // $ANTLR end "mult"
-
-
-
-    // $ANTLR start "add"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:419:1: add returns [Evaluator e] : op1= mult ( '+' op2= mult | '-' op2= mult )* ;
-    public final Evaluator add() throws Exception, RecognitionException {
-        Evaluator e = null;
-
-
-        Evaluator op1 =null;
-
-        Evaluator op2 =null;
-
-
-        try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:420:3: (op1= mult ( '+' op2= mult | '-' op2= mult )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:421:3: op1= mult ( '+' op2= mult | '-' op2= mult )*
-            {
-            pushFollow(FOLLOW_mult_in_add2302);
-            op1=mult();
-
-            state._fsp--;
-
-
-
-                       e = op1;
-                      
-
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:425:3: ( '+' op2= mult | '-' op2= mult )*
-            loop19:
-            do {
-                int alt19=3;
-                int LA19_0 = input.LA(1);
-
-                if ( (LA19_0==40) ) {
-                    alt19=1;
-                }
-                else if ( (LA19_0==44) ) {
-                    alt19=2;
-                }
-
-
-                switch (alt19) {
-            	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:426:5: '+' op2= mult
-            	    {
-            	    match(input,40,FOLLOW_40_in_add2325); 
-
-            	    pushFollow(FOLLOW_mult_in_add2329);
-            	    op2=mult();
-
-            	    state._fsp--;
-
-
-            	      
-            	                     e = new PlusEvaluator(e, op2);
-            	                    
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:430:7: '-' op2= mult
-            	    {
-            	    match(input,44,FOLLOW_44_in_add2356); 
-
-            	    pushFollow(FOLLOW_mult_in_add2360);
-            	    op2=mult();
-
-            	    state._fsp--;
-
-
-
-            	                       e = new MinusEvaluator(e, op2);
-            	                      
 
             	    }
             	    break;
@@ -2434,203 +2370,87 @@ public class LenguajeParser extends Parser {
         }
         return e;
     }
-    // $ANTLR end "add"
+    // $ANTLR end "mult"
 
 
 
-    // $ANTLR start "relation"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:437:1: relation returns [Evaluator e] : ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* ;
-    public final Evaluator relation() throws Exception, RecognitionException {
+    // $ANTLR start "add"
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:428:1: add returns [Evaluator e] : op1= mult ( '+' op2= mult | '-' op2= mult )* ;
+    public final Evaluator add() throws Exception, RecognitionException {
         Evaluator e = null;
 
 
-        Evaluator ex1 =null;
+        Evaluator op1 =null;
 
-        Evaluator ex2 =null;
+        Evaluator op2 =null;
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:438:3: (ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:439:3: ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:429:3: (op1= mult ( '+' op2= mult | '-' op2= mult )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:430:3: op1= mult ( '+' op2= mult | '-' op2= mult )*
             {
-            pushFollow(FOLLOW_add_in_relation2411);
-            ex1=add();
+            pushFollow(FOLLOW_mult_in_add2329);
+            op1=mult();
 
             state._fsp--;
 
 
 
-                             e = ex1;
-                            
+                       e = op1;
+                      
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:443:3: ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
-            loop21:
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:434:3: ( '+' op2= mult | '-' op2= mult )*
+            loop20:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt20=3;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA21_0==35||(LA21_0 >= 51 && LA21_0 <= 55)) ) {
-                    alt21=1;
+                if ( (LA20_0==40) ) {
+                    alt20=1;
+                }
+                else if ( (LA20_0==44) ) {
+                    alt20=2;
                 }
 
 
-                switch (alt21) {
+                switch (alt20) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:444:5: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:435:5: '+' op2= mult
             	    {
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:444:5: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
-            	    int alt20=6;
-            	    switch ( input.LA(1) ) {
-            	    case 53:
-            	        {
-            	        alt20=1;
-            	        }
-            	        break;
-            	    case 54:
-            	        {
-            	        alt20=2;
-            	        }
-            	        break;
-            	    case 51:
-            	        {
-            	        alt20=3;
-            	        }
-            	        break;
-            	    case 35:
-            	        {
-            	        alt20=4;
-            	        }
-            	        break;
-            	    case 52:
-            	        {
-            	        alt20=5;
-            	        }
-            	        break;
-            	    case 55:
-            	        {
-            	        alt20=6;
-            	        }
-            	        break;
-            	    default:
-            	        NoViableAltException nvae =
-            	            new NoViableAltException("", 20, 0, input);
+            	    match(input,40,FOLLOW_40_in_add2352); 
 
-            	        throw nvae;
+            	    pushFollow(FOLLOW_mult_in_add2356);
+            	    op2=mult();
+
+            	    state._fsp--;
+
+
+            	      
+            	                     e = new PlusEvaluator(e, op2);
+            	                    
 
             	    }
+            	    break;
+            	case 2 :
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:439:7: '-' op2= mult
+            	    {
+            	    match(input,44,FOLLOW_44_in_add2383); 
 
-            	    switch (alt20) {
-            	        case 1 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:445:7: '==' ex2= add
-            	            {
-            	            match(input,53,FOLLOW_53_in_relation2448); 
+            	    pushFollow(FOLLOW_mult_in_add2387);
+            	    op2=mult();
 
-            	            pushFollow(FOLLOW_add_in_relation2452);
-            	            ex2=add();
-
-            	            state._fsp--;
-
-
-
-            	                                      e = new IgualIgualEvaluator(e,ex2);
-            	                                     
-
-            	            }
-            	            break;
-            	        case 2 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:449:9: '>' ex2= add
-            	            {
-            	            match(input,54,FOLLOW_54_in_relation2490); 
-
-            	            pushFollow(FOLLOW_add_in_relation2494);
-            	            ex2=add();
-
-            	            state._fsp--;
+            	    state._fsp--;
 
 
 
-            	                                       e = new MayorEvaluator(e,ex2);
-            	                                      
-
-            	            }
-            	            break;
-            	        case 3 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:453:9: '<' ex2= add
-            	            {
-            	            match(input,51,FOLLOW_51_in_relation2533); 
-
-            	            pushFollow(FOLLOW_add_in_relation2537);
-            	            ex2=add();
-
-            	            state._fsp--;
-
-
-
-            	                                       e = new MenorEvaluator(e,ex2);
-            	                                      
-
-            	            }
-            	            break;
-            	        case 4 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:457:9: '!=' ex2= add
-            	            {
-            	            match(input,35,FOLLOW_35_in_relation2576); 
-
-            	            pushFollow(FOLLOW_add_in_relation2580);
-            	            ex2=add();
-
-            	            state._fsp--;
-
-
-
-            	                                        e = new DiferenteEvaluator(e,ex2);
-            	                                       
-
-            	            }
-            	            break;
-            	        case 5 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:461:9: '<=' ex2= add
-            	            {
-            	            match(input,52,FOLLOW_52_in_relation2620); 
-
-            	            pushFollow(FOLLOW_add_in_relation2624);
-            	            ex2=add();
-
-            	            state._fsp--;
-
-
-
-            	                                        e = new MenorIgualEvaluator(e,ex2);
-            	                                       
-
-            	            }
-            	            break;
-            	        case 6 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:465:9: '>=' ex2= add
-            	            {
-            	            match(input,55,FOLLOW_55_in_relation2664); 
-
-            	            pushFollow(FOLLOW_add_in_relation2668);
-            	            ex2=add();
-
-            	            state._fsp--;
-
-
-
-            	                                        e = new MayorIgualEvaluator(e,ex2);
-            	                                       
-
-            	            }
-            	            break;
-
-            	    }
-
+            	                       e = new MinusEvaluator(e, op2);
+            	                      
 
             	    }
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop20;
                 }
             } while (true);
 
@@ -2650,81 +2470,197 @@ public class LenguajeParser extends Parser {
         }
         return e;
     }
-    // $ANTLR end "relation"
+    // $ANTLR end "add"
 
 
 
-    // $ANTLR start "logico"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:473:1: logico returns [Evaluator e] : rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* ;
-    public final Evaluator logico() throws Exception, RecognitionException {
+    // $ANTLR start "relation"
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:446:1: relation returns [Evaluator e] : ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* ;
+    public final Evaluator relation() throws Exception, RecognitionException {
         Evaluator e = null;
 
 
-        Evaluator rel1 =null;
+        Evaluator ex1 =null;
 
-        Evaluator rel2 =null;
+        Evaluator ex2 =null;
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:474:3: (rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:475:3: rel1= relation ( '&&' rel2= relation | '||' rel2= relation )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:447:3: (ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:448:3: ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
             {
-            pushFollow(FOLLOW_relation_in_logico2734);
-            rel1=relation();
+            pushFollow(FOLLOW_add_in_relation2438);
+            ex1=add();
 
             state._fsp--;
 
 
 
-                            e = rel1;
-                           
+                             e = ex1;
+                            
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:479:3: ( '&&' rel2= relation | '||' rel2= relation )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:452:3: ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
             loop22:
             do {
-                int alt22=3;
+                int alt22=2;
                 int LA22_0 = input.LA(1);
 
-                if ( (LA22_0==37) ) {
+                if ( (LA22_0==35||(LA22_0 >= 50 && LA22_0 <= 54)) ) {
                     alt22=1;
-                }
-                else if ( (LA22_0==58) ) {
-                    alt22=2;
                 }
 
 
                 switch (alt22) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:480:5: '&&' rel2= relation
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:453:5: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
             	    {
-            	    match(input,37,FOLLOW_37_in_logico2762); 
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:453:5: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
+            	    int alt21=6;
+            	    switch ( input.LA(1) ) {
+            	    case 52:
+            	        {
+            	        alt21=1;
+            	        }
+            	        break;
+            	    case 53:
+            	        {
+            	        alt21=2;
+            	        }
+            	        break;
+            	    case 50:
+            	        {
+            	        alt21=3;
+            	        }
+            	        break;
+            	    case 35:
+            	        {
+            	        alt21=4;
+            	        }
+            	        break;
+            	    case 51:
+            	        {
+            	        alt21=5;
+            	        }
+            	        break;
+            	    case 54:
+            	        {
+            	        alt21=6;
+            	        }
+            	        break;
+            	    default:
+            	        NoViableAltException nvae =
+            	            new NoViableAltException("", 21, 0, input);
 
-            	    pushFollow(FOLLOW_relation_in_logico2766);
-            	    rel2=relation();
-
-            	    state._fsp--;
-
-
-
-            	                           e = new AndEvaluator(e,rel2);
-            	                          
+            	        throw nvae;
 
             	    }
-            	    break;
-            	case 2 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:484:7: '||' rel2= relation
-            	    {
-            	    match(input,58,FOLLOW_58_in_logico2799); 
 
-            	    pushFollow(FOLLOW_relation_in_logico2803);
-            	    rel2=relation();
+            	    switch (alt21) {
+            	        case 1 :
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:454:7: '==' ex2= add
+            	            {
+            	            match(input,52,FOLLOW_52_in_relation2475); 
 
-            	    state._fsp--;
+            	            pushFollow(FOLLOW_add_in_relation2479);
+            	            ex2=add();
+
+            	            state._fsp--;
 
 
 
-            	                             e = new OrEvaluator(e,rel2);
-            	                            
+            	                                      e = new IgualIgualEvaluator(e,ex2);
+            	                                     
+
+            	            }
+            	            break;
+            	        case 2 :
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:458:9: '>' ex2= add
+            	            {
+            	            match(input,53,FOLLOW_53_in_relation2517); 
+
+            	            pushFollow(FOLLOW_add_in_relation2521);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+
+            	                                       e = new MayorEvaluator(e,ex2);
+            	                                      
+
+            	            }
+            	            break;
+            	        case 3 :
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:462:9: '<' ex2= add
+            	            {
+            	            match(input,50,FOLLOW_50_in_relation2560); 
+
+            	            pushFollow(FOLLOW_add_in_relation2564);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+
+            	                                       e = new MenorEvaluator(e,ex2);
+            	                                      
+
+            	            }
+            	            break;
+            	        case 4 :
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:466:9: '!=' ex2= add
+            	            {
+            	            match(input,35,FOLLOW_35_in_relation2603); 
+
+            	            pushFollow(FOLLOW_add_in_relation2607);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+
+            	                                        e = new DiferenteEvaluator(e,ex2);
+            	                                       
+
+            	            }
+            	            break;
+            	        case 5 :
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:470:9: '<=' ex2= add
+            	            {
+            	            match(input,51,FOLLOW_51_in_relation2647); 
+
+            	            pushFollow(FOLLOW_add_in_relation2651);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+
+            	                                        e = new MenorIgualEvaluator(e,ex2);
+            	                                       
+
+            	            }
+            	            break;
+            	        case 6 :
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:474:9: '>=' ex2= add
+            	            {
+            	            match(input,54,FOLLOW_54_in_relation2691); 
+
+            	            pushFollow(FOLLOW_add_in_relation2695);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+
+            	                                        e = new MayorIgualEvaluator(e,ex2);
+            	                                       
+
+            	            }
+            	            break;
+
+            	    }
+
 
             	    }
             	    break;
@@ -2750,12 +2686,112 @@ public class LenguajeParser extends Parser {
         }
         return e;
     }
+    // $ANTLR end "relation"
+
+
+
+    // $ANTLR start "logico"
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:482:1: logico returns [Evaluator e] : rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* ;
+    public final Evaluator logico() throws Exception, RecognitionException {
+        Evaluator e = null;
+
+
+        Evaluator rel1 =null;
+
+        Evaluator rel2 =null;
+
+
+        try {
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:483:3: (rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:484:3: rel1= relation ( '&&' rel2= relation | '||' rel2= relation )*
+            {
+            pushFollow(FOLLOW_relation_in_logico2761);
+            rel1=relation();
+
+            state._fsp--;
+
+
+
+                            e = rel1;
+                           
+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:488:3: ( '&&' rel2= relation | '||' rel2= relation )*
+            loop23:
+            do {
+                int alt23=3;
+                int LA23_0 = input.LA(1);
+
+                if ( (LA23_0==37) ) {
+                    alt23=1;
+                }
+                else if ( (LA23_0==57) ) {
+                    alt23=2;
+                }
+
+
+                switch (alt23) {
+            	case 1 :
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:489:5: '&&' rel2= relation
+            	    {
+            	    match(input,37,FOLLOW_37_in_logico2789); 
+
+            	    pushFollow(FOLLOW_relation_in_logico2793);
+            	    rel2=relation();
+
+            	    state._fsp--;
+
+
+
+            	                           e = new AndEvaluator(e,rel2);
+            	                          
+
+            	    }
+            	    break;
+            	case 2 :
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:493:7: '||' rel2= relation
+            	    {
+            	    match(input,57,FOLLOW_57_in_logico2826); 
+
+            	    pushFollow(FOLLOW_relation_in_logico2830);
+            	    rel2=relation();
+
+            	    state._fsp--;
+
+
+
+            	                             e = new OrEvaluator(e,rel2);
+            	                            
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop23;
+                }
+            } while (true);
+
+
+            }
+
+        }
+
+
+        catch (RecognitionException er) {
+            throw er; 
+        } 
+
+
+        finally {
+        	// do for sure before leaving
+        }
+        return e;
+    }
     // $ANTLR end "logico"
 
 
 
     // $ANTLR start "expression"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:491:3: expression returns [Evaluator e] : logico ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:500:3: expression returns [Evaluator e] : logico ;
     public final Evaluator expression() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2764,10 +2800,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:492:5: ( logico )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:492:9: logico
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:501:5: ( logico )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:501:9: logico
             {
-            pushFollow(FOLLOW_logico_in_expression2862);
+            pushFollow(FOLLOW_logico_in_expression2889);
             logico27=logico();
 
             state._fsp--;
@@ -2795,7 +2831,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "llamadofuncion"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:496:1: llamadofuncion returns [Evaluator e] : nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:505:1: llamadofuncion returns [Evaluator e] : nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC ;
     public final Evaluator llamadofuncion() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2805,30 +2841,30 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:497:4: (nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:498:9: nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:506:4: (nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:507:9: nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_llamadofuncion2900); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_llamadofuncion2927); 
 
             e = funciones.get((nom!=null?nom.getText():null));
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_llamadofuncion2905); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_llamadofuncion2932); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:500:4: ( (ev= term ) ( ',' ev= term )* )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:509:4: ( (ev= term ) ( ',' ev= term )* )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA24_0==BOOLEAN||LA24_0==DOBLE||(LA24_0 >= NOMBRE && LA24_0 <= NUMERO)||LA24_0==PARENTESIS_I||LA24_0==TEXTO) ) {
-                alt24=1;
+            if ( (LA25_0==BOOLEAN||LA25_0==DOBLE||(LA25_0 >= NOMBRE && LA25_0 <= NUMERO)||LA25_0==PARENTESIS_I||LA25_0==TEXTO) ) {
+                alt25=1;
             }
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:500:9: (ev= term ) ( ',' ev= term )*
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:509:9: (ev= term ) ( ',' ev= term )*
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:500:9: (ev= term )
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:500:10: ev= term
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:509:9: (ev= term )
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:509:10: ev= term
                     {
-                    pushFollow(FOLLOW_term_in_llamadofuncion2920);
+                    pushFollow(FOLLOW_term_in_llamadofuncion2947);
                     ev=term();
 
                     state._fsp--;
@@ -2839,24 +2875,24 @@ public class LenguajeParser extends Parser {
                     }
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:502:4: ( ',' ev= term )*
-                    loop23:
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:511:4: ( ',' ev= term )*
+                    loop24:
                     do {
-                        int alt23=2;
-                        int LA23_0 = input.LA(1);
+                        int alt24=2;
+                        int LA24_0 = input.LA(1);
 
-                        if ( (LA23_0==43) ) {
-                            alt23=1;
+                        if ( (LA24_0==43) ) {
+                            alt24=1;
                         }
 
 
-                        switch (alt23) {
+                        switch (alt24) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:502:5: ',' ev= term
+                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:511:5: ',' ev= term
                     	    {
-                    	    match(input,43,FOLLOW_43_in_llamadofuncion2932); 
+                    	    match(input,43,FOLLOW_43_in_llamadofuncion2959); 
 
-                    	    pushFollow(FOLLOW_term_in_llamadofuncion2939);
+                    	    pushFollow(FOLLOW_term_in_llamadofuncion2966);
                     	    ev=term();
 
                     	    state._fsp--;
@@ -2868,7 +2904,7 @@ public class LenguajeParser extends Parser {
                     	    break;
 
                     	default :
-                    	    break loop23;
+                    	    break loop24;
                         }
                     } while (true);
 
@@ -2879,9 +2915,9 @@ public class LenguajeParser extends Parser {
             }
 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_llamadofuncion2952); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_llamadofuncion2979); 
 
-            match(input,PC,FOLLOW_PC_in_llamadofuncion2963); 
+            match(input,PC,FOLLOW_PC_in_llamadofuncion2990); 
 
             }
 
@@ -2903,7 +2939,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "ifstatements"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:512:1: ifstatements returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:521:1: ifstatements returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
     public final Evaluator ifstatements() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2946,467 +2982,7 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:512:52: ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
-            int alt25=19;
-            switch ( input.LA(1) ) {
-            case PRINT:
-                {
-                alt25=1;
-                }
-                break;
-            case PRINTLN:
-                {
-                alt25=2;
-                }
-                break;
-            case NOMBRE:
-                {
-                switch ( input.LA(2) ) {
-                case ASIGNACION:
-                    {
-                    alt25=3;
-                    }
-                    break;
-                case 47:
-                    {
-                    int LA25_13 = input.LA(3);
-
-                    if ( (LA25_13==PUSH) ) {
-                        alt25=11;
-                    }
-                    else if ( (LA25_13==SIZE) ) {
-                        alt25=15;
-                    }
-                    else {
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 25, 13, input);
-
-                        throw nvae;
-
-                    }
-                    }
-                    break;
-                case 41:
-                    {
-                    alt25=16;
-                    }
-                    break;
-                case 45:
-                    {
-                    alt25=17;
-                    }
-                    break;
-                case 42:
-                    {
-                    alt25=18;
-                    }
-                    break;
-                case 46:
-                    {
-                    alt25=19;
-                    }
-                    break;
-                case SET:
-                case 56:
-                    {
-                    alt25=13;
-                    }
-                    break;
-                default:
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 25, 3, input);
-
-                    throw nvae;
-
-                }
-
-                }
-                break;
-            case READ:
-                {
-                alt25=4;
-                }
-                break;
-            case COMENTARIO:
-                {
-                alt25=5;
-                }
-                break;
-            case RETURN:
-                {
-                alt25=6;
-                }
-                break;
-            case WHILE:
-                {
-                alt25=7;
-                }
-                break;
-            case IF:
-                {
-                alt25=8;
-                }
-                break;
-            case VARIABLE:
-                {
-                alt25=9;
-                }
-                break;
-            case LIST:
-                {
-                int LA25_10 = input.LA(2);
-
-                if ( (LA25_10==NOMBRE) ) {
-                    int LA25_19 = input.LA(3);
-
-                    if ( (LA25_19==ASIGNACION) ) {
-                        alt25=14;
-                    }
-                    else if ( (LA25_19==PC) ) {
-                        alt25=10;
-                    }
-                    else {
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 25, 19, input);
-
-                        throw nvae;
-
-                    }
-                }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 25, 10, input);
-
-                    throw nvae;
-
-                }
-                }
-                break;
-            case FOR:
-                {
-                alt25=12;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 25, 0, input);
-
-                throw nvae;
-
-            }
-
-            switch (alt25) {
-                case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:514:5: print1
-                    {
-                    pushFollow(FOLLOW_print1_in_ifstatements2994);
-                    print128=print1();
-
-                    state._fsp--;
-
-
-                    e = print128;
-
-                    }
-                    break;
-                case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:515:5: println
-                    {
-                    pushFollow(FOLLOW_println_in_ifstatements3002);
-                    println29=println();
-
-                    state._fsp--;
-
-
-                    e = println29;
-
-                    }
-                    break;
-                case 3 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:516:5: asignacion
-                    {
-                    pushFollow(FOLLOW_asignacion_in_ifstatements3013);
-                    asignacion30=asignacion();
-
-                    state._fsp--;
-
-
-                    e = asignacion30;
-
-                    }
-                    break;
-                case 4 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:517:5: lectura
-                    {
-                    pushFollow(FOLLOW_lectura_in_ifstatements3020);
-                    lectura31=lectura();
-
-                    state._fsp--;
-
-
-                    e = lectura31;
-
-                    }
-                    break;
-                case 5 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:518:5: comentario
-                    {
-                    pushFollow(FOLLOW_comentario_in_ifstatements3028);
-                    comentario();
-
-                    state._fsp--;
-
-
-                    e =null;
-
-                    }
-                    break;
-                case 6 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:519:5: return1
-                    {
-                    pushFollow(FOLLOW_return1_in_ifstatements3036);
-                    return132=return1();
-
-                    state._fsp--;
-
-
-                    e = return132;
-
-                    }
-                    break;
-                case 7 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:520:5: whilestatemet
-                    {
-                    pushFollow(FOLLOW_whilestatemet_in_ifstatements3044);
-                    whilestatemet33=whilestatemet();
-
-                    state._fsp--;
-
-
-                    e = whilestatemet33;
-
-                    }
-                    break;
-                case 8 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:521:5: ifstatement
-                    {
-                    pushFollow(FOLLOW_ifstatement_in_ifstatements3052);
-                    ifstatement34=ifstatement();
-
-                    state._fsp--;
-
-
-                    e = ifstatement34;
-
-                    }
-                    break;
-                case 9 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:522:5: declaracion
-                    {
-                    pushFollow(FOLLOW_declaracion_in_ifstatements3061);
-                    declaracion35=declaracion();
-
-                    state._fsp--;
-
-
-                    e = declaracion35;
-
-                    }
-                    break;
-                case 10 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:524:5: declaracion_lista
-                    {
-                    pushFollow(FOLLOW_declaracion_lista_in_ifstatements3071);
-                    declaracion_lista36=declaracion_lista();
-
-                    state._fsp--;
-
-
-                    e = declaracion_lista36;
-
-                    }
-                    break;
-                case 11 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:525:5: push
-                    {
-                    pushFollow(FOLLOW_push_in_ifstatements3078);
-                    push37=push();
-
-                    state._fsp--;
-
-
-                     e = push37; 
-
-                    }
-                    break;
-                case 12 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:526:5: forstatemet
-                    {
-                    pushFollow(FOLLOW_forstatemet_in_ifstatements3085);
-                    forstatemet38=forstatemet();
-
-                    state._fsp--;
-
-
-                    e = forstatemet38;
-
-                    }
-                    break;
-                case 13 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:527:5: asignacion_lista
-                    {
-                    pushFollow(FOLLOW_asignacion_lista_in_ifstatements3092);
-                    asignacion_lista39=asignacion_lista();
-
-                    state._fsp--;
-
-
-                    e = asignacion_lista39;
-
-                    }
-                    break;
-                case 14 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:528:5: lista_texto
-                    {
-                    pushFollow(FOLLOW_lista_texto_in_ifstatements3100);
-                    lista_texto40=lista_texto();
-
-                    state._fsp--;
-
-
-                    e = lista_texto40;
-
-                    }
-                    break;
-                case 15 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:529:5: size
-                    {
-                    pushFollow(FOLLOW_size_in_ifstatements3113);
-                    size41=size();
-
-                    state._fsp--;
-
-
-                    e = size41;
-
-                    }
-                    break;
-                case 16 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:530:5: unincremento
-                    {
-                    pushFollow(FOLLOW_unincremento_in_ifstatements3126);
-                    unincremento42=unincremento();
-
-                    state._fsp--;
-
-
-                    e = unincremento42;
-
-                    }
-                    break;
-                case 17 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:531:5: menosunincremento
-                    {
-                    pushFollow(FOLLOW_menosunincremento_in_ifstatements3139);
-                    menosunincremento43=menosunincremento();
-
-                    state._fsp--;
-
-
-                    e = menosunincremento43;
-
-                    }
-                    break;
-                case 18 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:532:5: incremento
-                    {
-                    pushFollow(FOLLOW_incremento_in_ifstatements3147);
-                    incremento44=incremento();
-
-                    state._fsp--;
-
-
-                    e = incremento44;
-
-                    }
-                    break;
-                case 19 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:533:5: decremento
-                    {
-                    pushFollow(FOLLOW_decremento_in_ifstatements3160);
-                    decremento45=decremento();
-
-                    state._fsp--;
-
-
-                    e = decremento45;
-
-                    }
-                    break;
-
-            }
-        }
-
-
-        catch (RecognitionException er) {
-            throw er; 
-        } 
-
-
-        finally {
-        	// do for sure before leaving
-        }
-        return e;
-    }
-    // $ANTLR end "ifstatements"
-
-
-
-    // $ANTLR start "elsestataments"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:538:1: elsestataments returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
-    public final Evaluator elsestataments() throws Exception, RecognitionException {
-        Evaluator e = null;
-
-
-        Evaluator print146 =null;
-
-        Evaluator println47 =null;
-
-        Evaluator asignacion48 =null;
-
-        Evaluator lectura49 =null;
-
-        Evaluator return150 =null;
-
-        Evaluator whilestatemet51 =null;
-
-        Evaluator ifstatement52 =null;
-
-        Evaluator declaracion53 =null;
-
-        Evaluator declaracion_lista54 =null;
-
-        Evaluator push55 =null;
-
-        Evaluator forstatemet56 =null;
-
-        Evaluator asignacion_lista57 =null;
-
-        Evaluator lista_texto58 =null;
-
-        Evaluator size59 =null;
-
-        Evaluator unincremento60 =null;
-
-        Evaluator menosunincremento61 =null;
-
-        Evaluator incremento62 =null;
-
-        Evaluator decremento63 =null;
-
-
-        try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:538:54: ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:521:52: ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
             int alt26=19;
             switch ( input.LA(1) ) {
             case PRINT:
@@ -3467,7 +3043,7 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case SET:
-                case 56:
+                case 55:
                     {
                     alt26=13;
                     }
@@ -3557,61 +3133,61 @@ public class LenguajeParser extends Parser {
 
             switch (alt26) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:540:5: print1
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:523:5: print1
                     {
-                    pushFollow(FOLLOW_print1_in_elsestataments3198);
-                    print146=print1();
+                    pushFollow(FOLLOW_print1_in_ifstatements3021);
+                    print128=print1();
 
                     state._fsp--;
 
 
-                    e = print146;
+                    e = print128;
 
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:541:5: println
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:524:5: println
                     {
-                    pushFollow(FOLLOW_println_in_elsestataments3206);
-                    println47=println();
+                    pushFollow(FOLLOW_println_in_ifstatements3029);
+                    println29=println();
 
                     state._fsp--;
 
 
-                    e = println47;
+                    e = println29;
 
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:542:5: asignacion
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:525:5: asignacion
                     {
-                    pushFollow(FOLLOW_asignacion_in_elsestataments3215);
-                    asignacion48=asignacion();
+                    pushFollow(FOLLOW_asignacion_in_ifstatements3040);
+                    asignacion30=asignacion();
 
                     state._fsp--;
 
 
-                    e = asignacion48;
+                    e = asignacion30;
 
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:543:5: lectura
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:526:5: lectura
                     {
-                    pushFollow(FOLLOW_lectura_in_elsestataments3222);
-                    lectura49=lectura();
+                    pushFollow(FOLLOW_lectura_in_ifstatements3047);
+                    lectura31=lectura();
 
                     state._fsp--;
 
 
-                    e = lectura49;
+                    e = lectura31;
 
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:544:5: comentario
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:527:5: comentario
                     {
-                    pushFollow(FOLLOW_comentario_in_elsestataments3230);
+                    pushFollow(FOLLOW_comentario_in_ifstatements3055);
                     comentario();
 
                     state._fsp--;
@@ -3622,9 +3198,469 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:545:5: return1
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:528:5: return1
                     {
-                    pushFollow(FOLLOW_return1_in_elsestataments3238);
+                    pushFollow(FOLLOW_return1_in_ifstatements3063);
+                    return132=return1();
+
+                    state._fsp--;
+
+
+                    e = return132;
+
+                    }
+                    break;
+                case 7 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:529:5: whilestatemet
+                    {
+                    pushFollow(FOLLOW_whilestatemet_in_ifstatements3071);
+                    whilestatemet33=whilestatemet();
+
+                    state._fsp--;
+
+
+                    e = whilestatemet33;
+
+                    }
+                    break;
+                case 8 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:530:5: ifstatement
+                    {
+                    pushFollow(FOLLOW_ifstatement_in_ifstatements3079);
+                    ifstatement34=ifstatement();
+
+                    state._fsp--;
+
+
+                    e = ifstatement34;
+
+                    }
+                    break;
+                case 9 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:531:5: declaracion
+                    {
+                    pushFollow(FOLLOW_declaracion_in_ifstatements3088);
+                    declaracion35=declaracion();
+
+                    state._fsp--;
+
+
+                    e = declaracion35;
+
+                    }
+                    break;
+                case 10 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:533:5: declaracion_lista
+                    {
+                    pushFollow(FOLLOW_declaracion_lista_in_ifstatements3098);
+                    declaracion_lista36=declaracion_lista();
+
+                    state._fsp--;
+
+
+                    e = declaracion_lista36;
+
+                    }
+                    break;
+                case 11 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:534:5: push
+                    {
+                    pushFollow(FOLLOW_push_in_ifstatements3105);
+                    push37=push();
+
+                    state._fsp--;
+
+
+                     e = push37; 
+
+                    }
+                    break;
+                case 12 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:535:5: forstatemet
+                    {
+                    pushFollow(FOLLOW_forstatemet_in_ifstatements3112);
+                    forstatemet38=forstatemet();
+
+                    state._fsp--;
+
+
+                    e = forstatemet38;
+
+                    }
+                    break;
+                case 13 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:536:5: asignacion_lista
+                    {
+                    pushFollow(FOLLOW_asignacion_lista_in_ifstatements3119);
+                    asignacion_lista39=asignacion_lista();
+
+                    state._fsp--;
+
+
+                    e = asignacion_lista39;
+
+                    }
+                    break;
+                case 14 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:537:5: lista_texto
+                    {
+                    pushFollow(FOLLOW_lista_texto_in_ifstatements3127);
+                    lista_texto40=lista_texto();
+
+                    state._fsp--;
+
+
+                    e = lista_texto40;
+
+                    }
+                    break;
+                case 15 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:538:5: size
+                    {
+                    pushFollow(FOLLOW_size_in_ifstatements3140);
+                    size41=size();
+
+                    state._fsp--;
+
+
+                    e = size41;
+
+                    }
+                    break;
+                case 16 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:539:5: unincremento
+                    {
+                    pushFollow(FOLLOW_unincremento_in_ifstatements3153);
+                    unincremento42=unincremento();
+
+                    state._fsp--;
+
+
+                    e = unincremento42;
+
+                    }
+                    break;
+                case 17 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:540:5: menosunincremento
+                    {
+                    pushFollow(FOLLOW_menosunincremento_in_ifstatements3166);
+                    menosunincremento43=menosunincremento();
+
+                    state._fsp--;
+
+
+                    e = menosunincremento43;
+
+                    }
+                    break;
+                case 18 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:541:5: incremento
+                    {
+                    pushFollow(FOLLOW_incremento_in_ifstatements3174);
+                    incremento44=incremento();
+
+                    state._fsp--;
+
+
+                    e = incremento44;
+
+                    }
+                    break;
+                case 19 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:542:5: decremento
+                    {
+                    pushFollow(FOLLOW_decremento_in_ifstatements3187);
+                    decremento45=decremento();
+
+                    state._fsp--;
+
+
+                    e = decremento45;
+
+                    }
+                    break;
+
+            }
+        }
+
+
+        catch (RecognitionException er) {
+            throw er; 
+        } 
+
+
+        finally {
+        	// do for sure before leaving
+        }
+        return e;
+    }
+    // $ANTLR end "ifstatements"
+
+
+
+    // $ANTLR start "elsestataments"
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:547:1: elsestataments returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
+    public final Evaluator elsestataments() throws Exception, RecognitionException {
+        Evaluator e = null;
+
+
+        Evaluator print146 =null;
+
+        Evaluator println47 =null;
+
+        Evaluator asignacion48 =null;
+
+        Evaluator lectura49 =null;
+
+        Evaluator return150 =null;
+
+        Evaluator whilestatemet51 =null;
+
+        Evaluator ifstatement52 =null;
+
+        Evaluator declaracion53 =null;
+
+        Evaluator declaracion_lista54 =null;
+
+        Evaluator push55 =null;
+
+        Evaluator forstatemet56 =null;
+
+        Evaluator asignacion_lista57 =null;
+
+        Evaluator lista_texto58 =null;
+
+        Evaluator size59 =null;
+
+        Evaluator unincremento60 =null;
+
+        Evaluator menosunincremento61 =null;
+
+        Evaluator incremento62 =null;
+
+        Evaluator decremento63 =null;
+
+
+        try {
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:547:54: ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
+            int alt27=19;
+            switch ( input.LA(1) ) {
+            case PRINT:
+                {
+                alt27=1;
+                }
+                break;
+            case PRINTLN:
+                {
+                alt27=2;
+                }
+                break;
+            case NOMBRE:
+                {
+                switch ( input.LA(2) ) {
+                case ASIGNACION:
+                    {
+                    alt27=3;
+                    }
+                    break;
+                case 47:
+                    {
+                    int LA27_13 = input.LA(3);
+
+                    if ( (LA27_13==PUSH) ) {
+                        alt27=11;
+                    }
+                    else if ( (LA27_13==SIZE) ) {
+                        alt27=15;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 27, 13, input);
+
+                        throw nvae;
+
+                    }
+                    }
+                    break;
+                case 41:
+                    {
+                    alt27=16;
+                    }
+                    break;
+                case 45:
+                    {
+                    alt27=17;
+                    }
+                    break;
+                case 42:
+                    {
+                    alt27=18;
+                    }
+                    break;
+                case 46:
+                    {
+                    alt27=19;
+                    }
+                    break;
+                case SET:
+                case 55:
+                    {
+                    alt27=13;
+                    }
+                    break;
+                default:
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 27, 3, input);
+
+                    throw nvae;
+
+                }
+
+                }
+                break;
+            case READ:
+                {
+                alt27=4;
+                }
+                break;
+            case COMENTARIO:
+                {
+                alt27=5;
+                }
+                break;
+            case RETURN:
+                {
+                alt27=6;
+                }
+                break;
+            case WHILE:
+                {
+                alt27=7;
+                }
+                break;
+            case IF:
+                {
+                alt27=8;
+                }
+                break;
+            case VARIABLE:
+                {
+                alt27=9;
+                }
+                break;
+            case LIST:
+                {
+                int LA27_10 = input.LA(2);
+
+                if ( (LA27_10==NOMBRE) ) {
+                    int LA27_19 = input.LA(3);
+
+                    if ( (LA27_19==ASIGNACION) ) {
+                        alt27=14;
+                    }
+                    else if ( (LA27_19==PC) ) {
+                        alt27=10;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 27, 19, input);
+
+                        throw nvae;
+
+                    }
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 27, 10, input);
+
+                    throw nvae;
+
+                }
+                }
+                break;
+            case FOR:
+                {
+                alt27=12;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 27, 0, input);
+
+                throw nvae;
+
+            }
+
+            switch (alt27) {
+                case 1 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:549:5: print1
+                    {
+                    pushFollow(FOLLOW_print1_in_elsestataments3225);
+                    print146=print1();
+
+                    state._fsp--;
+
+
+                    e = print146;
+
+                    }
+                    break;
+                case 2 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:550:5: println
+                    {
+                    pushFollow(FOLLOW_println_in_elsestataments3233);
+                    println47=println();
+
+                    state._fsp--;
+
+
+                    e = println47;
+
+                    }
+                    break;
+                case 3 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:551:5: asignacion
+                    {
+                    pushFollow(FOLLOW_asignacion_in_elsestataments3242);
+                    asignacion48=asignacion();
+
+                    state._fsp--;
+
+
+                    e = asignacion48;
+
+                    }
+                    break;
+                case 4 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:552:5: lectura
+                    {
+                    pushFollow(FOLLOW_lectura_in_elsestataments3249);
+                    lectura49=lectura();
+
+                    state._fsp--;
+
+
+                    e = lectura49;
+
+                    }
+                    break;
+                case 5 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:553:5: comentario
+                    {
+                    pushFollow(FOLLOW_comentario_in_elsestataments3257);
+                    comentario();
+
+                    state._fsp--;
+
+
+                    e =null;
+
+                    }
+                    break;
+                case 6 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:554:5: return1
+                    {
+                    pushFollow(FOLLOW_return1_in_elsestataments3265);
                     return150=return1();
 
                     state._fsp--;
@@ -3635,9 +3671,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:546:5: whilestatemet
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:555:5: whilestatemet
                     {
-                    pushFollow(FOLLOW_whilestatemet_in_elsestataments3246);
+                    pushFollow(FOLLOW_whilestatemet_in_elsestataments3273);
                     whilestatemet51=whilestatemet();
 
                     state._fsp--;
@@ -3648,9 +3684,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:547:5: ifstatement
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:556:5: ifstatement
                     {
-                    pushFollow(FOLLOW_ifstatement_in_elsestataments3254);
+                    pushFollow(FOLLOW_ifstatement_in_elsestataments3281);
                     ifstatement52=ifstatement();
 
                     state._fsp--;
@@ -3661,9 +3697,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:548:5: declaracion
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:557:5: declaracion
                     {
-                    pushFollow(FOLLOW_declaracion_in_elsestataments3263);
+                    pushFollow(FOLLOW_declaracion_in_elsestataments3290);
                     declaracion53=declaracion();
 
                     state._fsp--;
@@ -3674,9 +3710,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:550:5: declaracion_lista
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:559:5: declaracion_lista
                     {
-                    pushFollow(FOLLOW_declaracion_lista_in_elsestataments3273);
+                    pushFollow(FOLLOW_declaracion_lista_in_elsestataments3300);
                     declaracion_lista54=declaracion_lista();
 
                     state._fsp--;
@@ -3687,9 +3723,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:551:5: push
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:560:5: push
                     {
-                    pushFollow(FOLLOW_push_in_elsestataments3280);
+                    pushFollow(FOLLOW_push_in_elsestataments3307);
                     push55=push();
 
                     state._fsp--;
@@ -3700,9 +3736,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:552:5: forstatemet
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:561:5: forstatemet
                     {
-                    pushFollow(FOLLOW_forstatemet_in_elsestataments3287);
+                    pushFollow(FOLLOW_forstatemet_in_elsestataments3314);
                     forstatemet56=forstatemet();
 
                     state._fsp--;
@@ -3713,9 +3749,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:553:5: asignacion_lista
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:562:5: asignacion_lista
                     {
-                    pushFollow(FOLLOW_asignacion_lista_in_elsestataments3294);
+                    pushFollow(FOLLOW_asignacion_lista_in_elsestataments3321);
                     asignacion_lista57=asignacion_lista();
 
                     state._fsp--;
@@ -3726,9 +3762,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:554:5: lista_texto
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:563:5: lista_texto
                     {
-                    pushFollow(FOLLOW_lista_texto_in_elsestataments3302);
+                    pushFollow(FOLLOW_lista_texto_in_elsestataments3329);
                     lista_texto58=lista_texto();
 
                     state._fsp--;
@@ -3739,9 +3775,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:555:5: size
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:564:5: size
                     {
-                    pushFollow(FOLLOW_size_in_elsestataments3315);
+                    pushFollow(FOLLOW_size_in_elsestataments3342);
                     size59=size();
 
                     state._fsp--;
@@ -3752,9 +3788,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:556:5: unincremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:565:5: unincremento
                     {
-                    pushFollow(FOLLOW_unincremento_in_elsestataments3328);
+                    pushFollow(FOLLOW_unincremento_in_elsestataments3355);
                     unincremento60=unincremento();
 
                     state._fsp--;
@@ -3765,9 +3801,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 17 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:557:5: menosunincremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:566:5: menosunincremento
                     {
-                    pushFollow(FOLLOW_menosunincremento_in_elsestataments3341);
+                    pushFollow(FOLLOW_menosunincremento_in_elsestataments3368);
                     menosunincremento61=menosunincremento();
 
                     state._fsp--;
@@ -3778,9 +3814,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 18 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:558:5: incremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:567:5: incremento
                     {
-                    pushFollow(FOLLOW_incremento_in_elsestataments3349);
+                    pushFollow(FOLLOW_incremento_in_elsestataments3376);
                     incremento62=incremento();
 
                     state._fsp--;
@@ -3791,9 +3827,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 19 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:559:5: decremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:568:5: decremento
                     {
-                    pushFollow(FOLLOW_decremento_in_elsestataments3362);
+                    pushFollow(FOLLOW_decremento_in_elsestataments3389);
                     decremento63=decremento();
 
                     state._fsp--;
@@ -3823,7 +3859,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "ifstatement"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:565:1: ifstatement returns [Evaluator e] : IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )? )* ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:574:1: ifstatement returns [Evaluator e] : IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )? )* ;
     public final Evaluator ifstatement() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -3838,14 +3874,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:565:51: ( IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )? )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:567:1: IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )? )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:574:51: ( IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )? )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:576:1: IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )? )*
             {
-            match(input,IF,FOLLOW_IF_in_ifstatement3390); 
+            match(input,IF,FOLLOW_IF_in_ifstatement3417); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3392); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3419); 
 
-            pushFollow(FOLLOW_logico_in_ifstatement3398);
+            pushFollow(FOLLOW_logico_in_ifstatement3425);
             rel=logico();
 
             state._fsp--;
@@ -3856,30 +3892,9 @@ public class LenguajeParser extends Parser {
               ((IfEvaluator) e).agregarCondicion(rel);
 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3404); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3431); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:572:16: ( PC )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
-
-            if ( (LA27_0==PC) ) {
-                alt27=1;
-            }
-            switch (alt27) {
-                case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:572:16: PC
-                    {
-                    match(input,PC,FOLLOW_PC_in_ifstatement3406); 
-
-                    }
-                    break;
-
-            }
-
-
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3409); 
-
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:572:28: ( PC )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:581:16: ( PC )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -3888,9 +3903,9 @@ public class LenguajeParser extends Parser {
             }
             switch (alt28) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:572:28: PC
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:581:16: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_ifstatement3411); 
+                    match(input,PC,FOLLOW_PC_in_ifstatement3433); 
 
                     }
                     break;
@@ -3898,22 +3913,43 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:573:2: (ifs= ifstatements )*
-            loop29:
-            do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3436); 
 
-                if ( (LA29_0==COMENTARIO||LA29_0==FOR||(LA29_0 >= IF && LA29_0 <= LIST)||LA29_0==NOMBRE||(LA29_0 >= PRINT && LA29_0 <= PRINTLN)||(LA29_0 >= READ && LA29_0 <= RETURN)||(LA29_0 >= VARIABLE && LA29_0 <= WHILE)) ) {
-                    alt29=1;
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:581:28: ( PC )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
+
+            if ( (LA29_0==PC) ) {
+                alt29=1;
+            }
+            switch (alt29) {
+                case 1 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:581:28: PC
+                    {
+                    match(input,PC,FOLLOW_PC_in_ifstatement3438); 
+
+                    }
+                    break;
+
+            }
+
+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:582:2: (ifs= ifstatements )*
+            loop30:
+            do {
+                int alt30=2;
+                int LA30_0 = input.LA(1);
+
+                if ( (LA30_0==COMENTARIO||LA30_0==FOR||(LA30_0 >= IF && LA30_0 <= LIST)||LA30_0==NOMBRE||(LA30_0 >= PRINT && LA30_0 <= PRINTLN)||(LA30_0 >= READ && LA30_0 <= RETURN)||(LA30_0 >= VARIABLE && LA30_0 <= WHILE)) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt30) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:573:3: ifs= ifstatements
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:582:3: ifs= ifstatements
             	    {
-            	    pushFollow(FOLLOW_ifstatements_in_ifstatement3421);
+            	    pushFollow(FOLLOW_ifstatements_in_ifstatement3448);
             	    ifs=ifstatements();
 
             	    state._fsp--;
@@ -3928,25 +3964,25 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop30;
                 }
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3431); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3458); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:578:10: ( PC )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:587:10: ( PC )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA30_0==PC) ) {
-                alt30=1;
+            if ( (LA31_0==PC) ) {
+                alt31=1;
             }
-            switch (alt30) {
+            switch (alt31) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:578:10: PC
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:587:10: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_ifstatement3433); 
+                    match(input,PC,FOLLOW_PC_in_ifstatement3460); 
 
                     }
                     break;
@@ -3954,26 +3990,26 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:581:2: ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? )*
-            loop35:
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:590:2: ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )? )*
+            loop36:
             do {
-                int alt35=2;
-                int LA35_0 = input.LA(1);
+                int alt36=2;
+                int LA36_0 = input.LA(1);
 
-                if ( (LA35_0==ELSEIF) ) {
-                    alt35=1;
+                if ( (LA36_0==ELSEIF) ) {
+                    alt36=1;
                 }
 
 
-                switch (alt35) {
+                switch (alt36) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:581:3: ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )?
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:590:3: ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= ifstatements )* LLAVE_D ( PC )?
             	    {
-            	    match(input,ELSEIF,FOLLOW_ELSEIF_in_ifstatement3442); 
+            	    match(input,ELSEIF,FOLLOW_ELSEIF_in_ifstatement3469); 
 
-            	    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3444); 
+            	    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3471); 
 
-            	    pushFollow(FOLLOW_logico_in_ifstatement3448);
+            	    pushFollow(FOLLOW_logico_in_ifstatement3475);
             	    rel1=logico();
 
             	    state._fsp--;
@@ -3984,30 +4020,9 @@ public class LenguajeParser extends Parser {
             	     ((IfEvaluator) e).agregarCondicion(rel1); 
 
 
-            	    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3454); 
+            	    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3481); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:586:16: ( PC )?
-            	    int alt31=2;
-            	    int LA31_0 = input.LA(1);
-
-            	    if ( (LA31_0==PC) ) {
-            	        alt31=1;
-            	    }
-            	    switch (alt31) {
-            	        case 1 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:586:16: PC
-            	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3456); 
-
-            	            }
-            	            break;
-
-            	    }
-
-
-            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3459); 
-
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:586:28: ( PC )?
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:595:16: ( PC )?
             	    int alt32=2;
             	    int LA32_0 = input.LA(1);
 
@@ -4016,9 +4031,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    switch (alt32) {
             	        case 1 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:586:28: PC
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:595:16: PC
             	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3461); 
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3483); 
 
             	            }
             	            break;
@@ -4026,22 +4041,43 @@ public class LenguajeParser extends Parser {
             	    }
 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:587:2: (ifs= ifstatements )*
-            	    loop33:
-            	    do {
-            	        int alt33=2;
-            	        int LA33_0 = input.LA(1);
+            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3486); 
 
-            	        if ( (LA33_0==COMENTARIO||LA33_0==FOR||(LA33_0 >= IF && LA33_0 <= LIST)||LA33_0==NOMBRE||(LA33_0 >= PRINT && LA33_0 <= PRINTLN)||(LA33_0 >= READ && LA33_0 <= RETURN)||(LA33_0 >= VARIABLE && LA33_0 <= WHILE)) ) {
-            	            alt33=1;
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:595:28: ( PC )?
+            	    int alt33=2;
+            	    int LA33_0 = input.LA(1);
+
+            	    if ( (LA33_0==PC) ) {
+            	        alt33=1;
+            	    }
+            	    switch (alt33) {
+            	        case 1 :
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:595:28: PC
+            	            {
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3488); 
+
+            	            }
+            	            break;
+
+            	    }
+
+
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:596:2: (ifs= ifstatements )*
+            	    loop34:
+            	    do {
+            	        int alt34=2;
+            	        int LA34_0 = input.LA(1);
+
+            	        if ( (LA34_0==COMENTARIO||LA34_0==FOR||(LA34_0 >= IF && LA34_0 <= LIST)||LA34_0==NOMBRE||(LA34_0 >= PRINT && LA34_0 <= PRINTLN)||(LA34_0 >= READ && LA34_0 <= RETURN)||(LA34_0 >= VARIABLE && LA34_0 <= WHILE)) ) {
+            	            alt34=1;
             	        }
 
 
-            	        switch (alt33) {
+            	        switch (alt34) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:587:3: ifs= ifstatements
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:596:3: ifs= ifstatements
             	    	    {
-            	    	    pushFollow(FOLLOW_ifstatements_in_ifstatement3469);
+            	    	    pushFollow(FOLLOW_ifstatements_in_ifstatement3496);
             	    	    ifs=ifstatements();
 
             	    	    state._fsp--;
@@ -4055,25 +4091,25 @@ public class LenguajeParser extends Parser {
             	    	    break;
 
             	    	default :
-            	    	    break loop33;
+            	    	    break loop34;
             	        }
             	    } while (true);
 
 
-            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3479); 
+            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3506); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:591:10: ( PC )?
-            	    int alt34=2;
-            	    int LA34_0 = input.LA(1);
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:600:10: ( PC )?
+            	    int alt35=2;
+            	    int LA35_0 = input.LA(1);
 
-            	    if ( (LA34_0==PC) ) {
-            	        alt34=1;
+            	    if ( (LA35_0==PC) ) {
+            	        alt35=1;
             	    }
-            	    switch (alt34) {
+            	    switch (alt35) {
             	        case 1 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:591:10: PC
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:600:10: PC
             	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3481); 
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3508); 
 
             	            }
             	            break;
@@ -4085,50 +4121,29 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop35;
+            	    break loop36;
                 }
             } while (true);
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:597:3: ( ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )? )*
-            loop40:
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:606:3: ( ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )? )*
+            loop41:
             do {
-                int alt40=2;
-                int LA40_0 = input.LA(1);
+                int alt41=2;
+                int LA41_0 = input.LA(1);
 
-                if ( (LA40_0==ELSE) ) {
-                    alt40=1;
+                if ( (LA41_0==ELSE) ) {
+                    alt41=1;
                 }
 
 
-                switch (alt40) {
+                switch (alt41) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:597:3: ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )?
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:606:3: ELSE ( PC )? LLAVE_I ( PC )? (elses= elsestataments )* LLAVE_D ( PC )?
             	    {
-            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement3499); 
+            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement3526); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:597:8: ( PC )?
-            	    int alt36=2;
-            	    int LA36_0 = input.LA(1);
-
-            	    if ( (LA36_0==PC) ) {
-            	        alt36=1;
-            	    }
-            	    switch (alt36) {
-            	        case 1 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:597:8: PC
-            	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3501); 
-
-            	            }
-            	            break;
-
-            	    }
-
-
-            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3505); 
-
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:598:10: ( PC )?
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:606:8: ( PC )?
             	    int alt37=2;
             	    int LA37_0 = input.LA(1);
 
@@ -4137,9 +4152,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    switch (alt37) {
             	        case 1 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:598:10: PC
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:606:8: PC
             	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3507); 
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3528); 
 
             	            }
             	            break;
@@ -4147,22 +4162,43 @@ public class LenguajeParser extends Parser {
             	    }
 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:598:13: (elses= elsestataments )*
-            	    loop38:
-            	    do {
-            	        int alt38=2;
-            	        int LA38_0 = input.LA(1);
+            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3532); 
 
-            	        if ( (LA38_0==COMENTARIO||LA38_0==FOR||(LA38_0 >= IF && LA38_0 <= LIST)||LA38_0==NOMBRE||(LA38_0 >= PRINT && LA38_0 <= PRINTLN)||(LA38_0 >= READ && LA38_0 <= RETURN)||(LA38_0 >= VARIABLE && LA38_0 <= WHILE)) ) {
-            	            alt38=1;
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:607:10: ( PC )?
+            	    int alt38=2;
+            	    int LA38_0 = input.LA(1);
+
+            	    if ( (LA38_0==PC) ) {
+            	        alt38=1;
+            	    }
+            	    switch (alt38) {
+            	        case 1 :
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:607:10: PC
+            	            {
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3534); 
+
+            	            }
+            	            break;
+
+            	    }
+
+
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:607:13: (elses= elsestataments )*
+            	    loop39:
+            	    do {
+            	        int alt39=2;
+            	        int LA39_0 = input.LA(1);
+
+            	        if ( (LA39_0==COMENTARIO||LA39_0==FOR||(LA39_0 >= IF && LA39_0 <= LIST)||LA39_0==NOMBRE||(LA39_0 >= PRINT && LA39_0 <= PRINTLN)||(LA39_0 >= READ && LA39_0 <= RETURN)||(LA39_0 >= VARIABLE && LA39_0 <= WHILE)) ) {
+            	            alt39=1;
             	        }
 
 
-            	        switch (alt38) {
+            	        switch (alt39) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:599:5: elses= elsestataments
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:608:5: elses= elsestataments
             	    	    {
-            	    	    pushFollow(FOLLOW_elsestataments_in_ifstatement3519);
+            	    	    pushFollow(FOLLOW_elsestataments_in_ifstatement3546);
             	    	    elses=elsestataments();
 
             	    	    state._fsp--;
@@ -4177,25 +4213,25 @@ public class LenguajeParser extends Parser {
             	    	    break;
 
             	    	default :
-            	    	    break loop38;
+            	    	    break loop39;
             	        }
             	    } while (true);
 
 
-            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3527); 
+            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3554); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:604:10: ( PC )?
-            	    int alt39=2;
-            	    int LA39_0 = input.LA(1);
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:613:10: ( PC )?
+            	    int alt40=2;
+            	    int LA40_0 = input.LA(1);
 
-            	    if ( (LA39_0==PC) ) {
-            	        alt39=1;
+            	    if ( (LA40_0==PC) ) {
+            	        alt40=1;
             	    }
-            	    switch (alt39) {
+            	    switch (alt40) {
             	        case 1 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:604:10: PC
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:613:10: PC
             	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3529); 
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3556); 
 
             	            }
             	            break;
@@ -4207,7 +4243,7 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop40;
+            	    break loop41;
                 }
             } while (true);
 
@@ -4232,7 +4268,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "whilestatements"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:613:1: whilestatements returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:622:1: whilestatements returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
     public final Evaluator whilestatements() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -4275,17 +4311,17 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:613:55: ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
-            int alt41=19;
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:622:55: ( print1 | println | asignacion | lectura | comentario | return1 | whilestatemet | ifstatement | declaracion | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
+            int alt42=19;
             switch ( input.LA(1) ) {
             case PRINT:
                 {
-                alt41=1;
+                alt42=1;
                 }
                 break;
             case PRINTLN:
                 {
-                alt41=2;
+                alt42=2;
                 }
                 break;
             case NOMBRE:
@@ -4293,22 +4329,22 @@ public class LenguajeParser extends Parser {
                 switch ( input.LA(2) ) {
                 case ASIGNACION:
                     {
-                    alt41=3;
+                    alt42=3;
                     }
                     break;
                 case 47:
                     {
-                    int LA41_13 = input.LA(3);
+                    int LA42_13 = input.LA(3);
 
-                    if ( (LA41_13==PUSH) ) {
-                        alt41=11;
+                    if ( (LA42_13==PUSH) ) {
+                        alt42=11;
                     }
-                    else if ( (LA41_13==SIZE) ) {
-                        alt41=15;
+                    else if ( (LA42_13==SIZE) ) {
+                        alt42=15;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 41, 13, input);
+                            new NoViableAltException("", 42, 13, input);
 
                         throw nvae;
 
@@ -4317,33 +4353,33 @@ public class LenguajeParser extends Parser {
                     break;
                 case 41:
                     {
-                    alt41=16;
+                    alt42=16;
                     }
                     break;
                 case 45:
                     {
-                    alt41=17;
+                    alt42=17;
                     }
                     break;
                 case 42:
                     {
-                    alt41=18;
+                    alt42=18;
                     }
                     break;
                 case 46:
                     {
-                    alt41=19;
+                    alt42=19;
                     }
                     break;
                 case SET:
-                case 56:
+                case 55:
                     {
-                    alt41=13;
+                    alt42=13;
                     }
                     break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 41, 3, input);
+                        new NoViableAltException("", 42, 3, input);
 
                     throw nvae;
 
@@ -4353,50 +4389,50 @@ public class LenguajeParser extends Parser {
                 break;
             case READ:
                 {
-                alt41=4;
+                alt42=4;
                 }
                 break;
             case COMENTARIO:
                 {
-                alt41=5;
+                alt42=5;
                 }
                 break;
             case RETURN:
                 {
-                alt41=6;
+                alt42=6;
                 }
                 break;
             case WHILE:
                 {
-                alt41=7;
+                alt42=7;
                 }
                 break;
             case IF:
                 {
-                alt41=8;
+                alt42=8;
                 }
                 break;
             case VARIABLE:
                 {
-                alt41=9;
+                alt42=9;
                 }
                 break;
             case LIST:
                 {
-                int LA41_10 = input.LA(2);
+                int LA42_10 = input.LA(2);
 
-                if ( (LA41_10==NOMBRE) ) {
-                    int LA41_19 = input.LA(3);
+                if ( (LA42_10==NOMBRE) ) {
+                    int LA42_19 = input.LA(3);
 
-                    if ( (LA41_19==ASIGNACION) ) {
-                        alt41=14;
+                    if ( (LA42_19==ASIGNACION) ) {
+                        alt42=14;
                     }
-                    else if ( (LA41_19==PC) ) {
-                        alt41=10;
+                    else if ( (LA42_19==PC) ) {
+                        alt42=10;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 41, 19, input);
+                            new NoViableAltException("", 42, 19, input);
 
                         throw nvae;
 
@@ -4404,7 +4440,7 @@ public class LenguajeParser extends Parser {
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 41, 10, input);
+                        new NoViableAltException("", 42, 10, input);
 
                     throw nvae;
 
@@ -4413,22 +4449,22 @@ public class LenguajeParser extends Parser {
                 break;
             case FOR:
                 {
-                alt41=12;
+                alt42=12;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 41, 0, input);
+                    new NoViableAltException("", 42, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt41) {
+            switch (alt42) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:616:5: print1
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:625:5: print1
                     {
-                    pushFollow(FOLLOW_print1_in_whilestatements3567);
+                    pushFollow(FOLLOW_print1_in_whilestatements3594);
                     print164=print1();
 
                     state._fsp--;
@@ -4439,9 +4475,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:617:5: println
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:626:5: println
                     {
-                    pushFollow(FOLLOW_println_in_whilestatements3575);
+                    pushFollow(FOLLOW_println_in_whilestatements3602);
                     println65=println();
 
                     state._fsp--;
@@ -4452,9 +4488,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:618:5: asignacion
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:627:5: asignacion
                     {
-                    pushFollow(FOLLOW_asignacion_in_whilestatements3584);
+                    pushFollow(FOLLOW_asignacion_in_whilestatements3611);
                     asignacion66=asignacion();
 
                     state._fsp--;
@@ -4465,9 +4501,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:619:5: lectura
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:628:5: lectura
                     {
-                    pushFollow(FOLLOW_lectura_in_whilestatements3591);
+                    pushFollow(FOLLOW_lectura_in_whilestatements3618);
                     lectura67=lectura();
 
                     state._fsp--;
@@ -4478,9 +4514,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:620:5: comentario
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:629:5: comentario
                     {
-                    pushFollow(FOLLOW_comentario_in_whilestatements3599);
+                    pushFollow(FOLLOW_comentario_in_whilestatements3626);
                     comentario();
 
                     state._fsp--;
@@ -4491,9 +4527,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:621:5: return1
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:630:5: return1
                     {
-                    pushFollow(FOLLOW_return1_in_whilestatements3607);
+                    pushFollow(FOLLOW_return1_in_whilestatements3634);
                     return168=return1();
 
                     state._fsp--;
@@ -4504,9 +4540,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:622:5: whilestatemet
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:631:5: whilestatemet
                     {
-                    pushFollow(FOLLOW_whilestatemet_in_whilestatements3615);
+                    pushFollow(FOLLOW_whilestatemet_in_whilestatements3642);
                     whilestatemet69=whilestatemet();
 
                     state._fsp--;
@@ -4517,9 +4553,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:623:5: ifstatement
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:632:5: ifstatement
                     {
-                    pushFollow(FOLLOW_ifstatement_in_whilestatements3624);
+                    pushFollow(FOLLOW_ifstatement_in_whilestatements3651);
                     ifstatement70=ifstatement();
 
                     state._fsp--;
@@ -4530,9 +4566,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:624:5: declaracion
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:633:5: declaracion
                     {
-                    pushFollow(FOLLOW_declaracion_in_whilestatements3633);
+                    pushFollow(FOLLOW_declaracion_in_whilestatements3660);
                     declaracion71=declaracion();
 
                     state._fsp--;
@@ -4543,9 +4579,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:626:5: declaracion_lista
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:635:5: declaracion_lista
                     {
-                    pushFollow(FOLLOW_declaracion_lista_in_whilestatements3645);
+                    pushFollow(FOLLOW_declaracion_lista_in_whilestatements3672);
                     declaracion_lista72=declaracion_lista();
 
                     state._fsp--;
@@ -4556,9 +4592,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:627:5: push
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:636:5: push
                     {
-                    pushFollow(FOLLOW_push_in_whilestatements3652);
+                    pushFollow(FOLLOW_push_in_whilestatements3679);
                     push73=push();
 
                     state._fsp--;
@@ -4569,9 +4605,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:628:5: forstatemet
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:637:5: forstatemet
                     {
-                    pushFollow(FOLLOW_forstatemet_in_whilestatements3659);
+                    pushFollow(FOLLOW_forstatemet_in_whilestatements3686);
                     forstatemet74=forstatemet();
 
                     state._fsp--;
@@ -4582,9 +4618,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:629:5: asignacion_lista
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:638:5: asignacion_lista
                     {
-                    pushFollow(FOLLOW_asignacion_lista_in_whilestatements3666);
+                    pushFollow(FOLLOW_asignacion_lista_in_whilestatements3693);
                     asignacion_lista75=asignacion_lista();
 
                     state._fsp--;
@@ -4595,9 +4631,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:630:5: lista_texto
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:639:5: lista_texto
                     {
-                    pushFollow(FOLLOW_lista_texto_in_whilestatements3674);
+                    pushFollow(FOLLOW_lista_texto_in_whilestatements3701);
                     lista_texto76=lista_texto();
 
                     state._fsp--;
@@ -4608,9 +4644,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:631:5: size
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:640:5: size
                     {
-                    pushFollow(FOLLOW_size_in_whilestatements3687);
+                    pushFollow(FOLLOW_size_in_whilestatements3714);
                     size77=size();
 
                     state._fsp--;
@@ -4621,9 +4657,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:632:5: unincremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:641:5: unincremento
                     {
-                    pushFollow(FOLLOW_unincremento_in_whilestatements3700);
+                    pushFollow(FOLLOW_unincremento_in_whilestatements3727);
                     unincremento78=unincremento();
 
                     state._fsp--;
@@ -4634,9 +4670,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 17 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:633:5: menosunincremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:642:5: menosunincremento
                     {
-                    pushFollow(FOLLOW_menosunincremento_in_whilestatements3713);
+                    pushFollow(FOLLOW_menosunincremento_in_whilestatements3740);
                     menosunincremento79=menosunincremento();
 
                     state._fsp--;
@@ -4647,9 +4683,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 18 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:634:5: incremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:643:5: incremento
                     {
-                    pushFollow(FOLLOW_incremento_in_whilestatements3721);
+                    pushFollow(FOLLOW_incremento_in_whilestatements3748);
                     incremento80=incremento();
 
                     state._fsp--;
@@ -4660,9 +4696,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 19 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:635:5: decremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:644:5: decremento
                     {
-                    pushFollow(FOLLOW_decremento_in_whilestatements3734);
+                    pushFollow(FOLLOW_decremento_in_whilestatements3761);
                     decremento81=decremento();
 
                     state._fsp--;
@@ -4692,7 +4728,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "whilestatemet"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:640:1: whilestatemet returns [Evaluator e] : WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )? ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:649:1: whilestatemet returns [Evaluator e] : WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )? ;
     public final Evaluator whilestatemet() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -4703,14 +4739,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:640:53: ( WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )? )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:643:1: WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:649:53: ( WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )? )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:652:1: WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )?
             {
-            match(input,WHILE,FOLLOW_WHILE_in_whilestatemet3769); 
+            match(input,WHILE,FOLLOW_WHILE_in_whilestatemet3796); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_whilestatemet3771); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_whilestatemet3798); 
 
-            pushFollow(FOLLOW_logico_in_whilestatemet3775);
+            pushFollow(FOLLOW_logico_in_whilestatemet3802);
             rel=logico();
 
             state._fsp--;
@@ -4723,30 +4759,9 @@ public class LenguajeParser extends Parser {
               
              
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_whilestatemet3778); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_whilestatemet3805); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:648:17: ( PC )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
-
-            if ( (LA42_0==PC) ) {
-                alt42=1;
-            }
-            switch (alt42) {
-                case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:648:17: PC
-                    {
-                    match(input,PC,FOLLOW_PC_in_whilestatemet3780); 
-
-                    }
-                    break;
-
-            }
-
-
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_whilestatemet3783); 
-
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:648:29: ( PC )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:657:17: ( PC )?
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -4755,9 +4770,9 @@ public class LenguajeParser extends Parser {
             }
             switch (alt43) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:648:29: PC
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:657:17: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_whilestatemet3785); 
+                    match(input,PC,FOLLOW_PC_in_whilestatemet3807); 
 
                     }
                     break;
@@ -4765,22 +4780,43 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:649:2: (wh= whilestatements )*
-            loop44:
-            do {
-                int alt44=2;
-                int LA44_0 = input.LA(1);
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_whilestatemet3810); 
 
-                if ( (LA44_0==COMENTARIO||LA44_0==FOR||(LA44_0 >= IF && LA44_0 <= LIST)||LA44_0==NOMBRE||(LA44_0 >= PRINT && LA44_0 <= PRINTLN)||(LA44_0 >= READ && LA44_0 <= RETURN)||(LA44_0 >= VARIABLE && LA44_0 <= WHILE)) ) {
-                    alt44=1;
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:657:29: ( PC )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
+
+            if ( (LA44_0==PC) ) {
+                alt44=1;
+            }
+            switch (alt44) {
+                case 1 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:657:29: PC
+                    {
+                    match(input,PC,FOLLOW_PC_in_whilestatemet3812); 
+
+                    }
+                    break;
+
+            }
+
+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:658:2: (wh= whilestatements )*
+            loop45:
+            do {
+                int alt45=2;
+                int LA45_0 = input.LA(1);
+
+                if ( (LA45_0==COMENTARIO||LA45_0==FOR||(LA45_0 >= IF && LA45_0 <= LIST)||LA45_0==NOMBRE||(LA45_0 >= PRINT && LA45_0 <= PRINTLN)||(LA45_0 >= READ && LA45_0 <= RETURN)||(LA45_0 >= VARIABLE && LA45_0 <= WHILE)) ) {
+                    alt45=1;
                 }
 
 
-                switch (alt44) {
+                switch (alt45) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:649:3: wh= whilestatements
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:658:3: wh= whilestatements
             	    {
-            	    pushFollow(FOLLOW_whilestatements_in_whilestatemet3794);
+            	    pushFollow(FOLLOW_whilestatements_in_whilestatemet3821);
             	    wh=whilestatements();
 
             	    state._fsp--;
@@ -4796,25 +4832,25 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop44;
+            	    break loop45;
                 }
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_whilestatemet3805); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_whilestatemet3832); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:657:9: ( PC )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:666:9: ( PC )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA45_0==PC) ) {
-                alt45=1;
+            if ( (LA46_0==PC) ) {
+                alt46=1;
             }
-            switch (alt45) {
+            switch (alt46) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:657:9: PC
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:666:9: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_whilestatemet3807); 
+                    match(input,PC,FOLLOW_PC_in_whilestatemet3834); 
 
                     }
                     break;
@@ -4842,7 +4878,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "forstatemet"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:661:1: forstatemet returns [Evaluator e] : FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )? ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:670:1: forstatemet returns [Evaluator e] : FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )? ;
     public final Evaluator forstatemet() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -4857,28 +4893,28 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:661:51: ( FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )? )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:664:1: FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:670:51: ( FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )? )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:673:1: FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= whilestatements )* LLAVE_D ( PC )?
             {
-            match(input,FOR,FOLLOW_FOR_in_forstatemet3828); 
+            match(input,FOR,FOLLOW_FOR_in_forstatemet3855); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_forstatemet3830); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_forstatemet3857); 
 
-            pushFollow(FOLLOW_declaracion_in_forstatemet3834);
+            pushFollow(FOLLOW_declaracion_in_forstatemet3861);
             decl=declaracion();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_logico_in_forstatemet3838);
+            pushFollow(FOLLOW_logico_in_forstatemet3865);
             logi=logico();
 
             state._fsp--;
 
 
-            match(input,PC,FOLLOW_PC_in_forstatemet3840); 
+            match(input,PC,FOLLOW_PC_in_forstatemet3867); 
 
-            pushFollow(FOLLOW_add_in_forstatemet3844);
+            pushFollow(FOLLOW_add_in_forstatemet3871);
             aumento=add();
 
             state._fsp--;
@@ -4891,30 +4927,9 @@ public class LenguajeParser extends Parser {
               
              
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_forstatemet3849); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_forstatemet3876); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:669:17: ( PC )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
-
-            if ( (LA46_0==PC) ) {
-                alt46=1;
-            }
-            switch (alt46) {
-                case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:669:17: PC
-                    {
-                    match(input,PC,FOLLOW_PC_in_forstatemet3851); 
-
-                    }
-                    break;
-
-            }
-
-
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_forstatemet3854); 
-
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:669:29: ( PC )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:678:17: ( PC )?
             int alt47=2;
             int LA47_0 = input.LA(1);
 
@@ -4923,9 +4938,9 @@ public class LenguajeParser extends Parser {
             }
             switch (alt47) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:669:29: PC
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:678:17: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_forstatemet3856); 
+                    match(input,PC,FOLLOW_PC_in_forstatemet3878); 
 
                     }
                     break;
@@ -4933,22 +4948,43 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:670:2: (wh= whilestatements )*
-            loop48:
-            do {
-                int alt48=2;
-                int LA48_0 = input.LA(1);
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_forstatemet3881); 
 
-                if ( (LA48_0==COMENTARIO||LA48_0==FOR||(LA48_0 >= IF && LA48_0 <= LIST)||LA48_0==NOMBRE||(LA48_0 >= PRINT && LA48_0 <= PRINTLN)||(LA48_0 >= READ && LA48_0 <= RETURN)||(LA48_0 >= VARIABLE && LA48_0 <= WHILE)) ) {
-                    alt48=1;
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:678:29: ( PC )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
+
+            if ( (LA48_0==PC) ) {
+                alt48=1;
+            }
+            switch (alt48) {
+                case 1 :
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:678:29: PC
+                    {
+                    match(input,PC,FOLLOW_PC_in_forstatemet3883); 
+
+                    }
+                    break;
+
+            }
+
+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:679:2: (wh= whilestatements )*
+            loop49:
+            do {
+                int alt49=2;
+                int LA49_0 = input.LA(1);
+
+                if ( (LA49_0==COMENTARIO||LA49_0==FOR||(LA49_0 >= IF && LA49_0 <= LIST)||LA49_0==NOMBRE||(LA49_0 >= PRINT && LA49_0 <= PRINTLN)||(LA49_0 >= READ && LA49_0 <= RETURN)||(LA49_0 >= VARIABLE && LA49_0 <= WHILE)) ) {
+                    alt49=1;
                 }
 
 
-                switch (alt48) {
+                switch (alt49) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:670:3: wh= whilestatements
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:679:3: wh= whilestatements
             	    {
-            	    pushFollow(FOLLOW_whilestatements_in_forstatemet3866);
+            	    pushFollow(FOLLOW_whilestatements_in_forstatemet3893);
             	    wh=whilestatements();
 
             	    state._fsp--;
@@ -4964,25 +5000,25 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop48;
+            	    break loop49;
                 }
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_forstatemet3877); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_forstatemet3904); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:678:9: ( PC )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:687:9: ( PC )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA49_0==PC) ) {
-                alt49=1;
+            if ( (LA50_0==PC) ) {
+                alt50=1;
             }
-            switch (alt49) {
+            switch (alt50) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:678:9: PC
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:687:9: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_forstatemet3879); 
+                    match(input,PC,FOLLOW_PC_in_forstatemet3906); 
 
                     }
                     break;
@@ -5097,10 +5133,10 @@ public class LenguajeParser extends Parser {
     public static final BitSet FOLLOW_ASIGNACION_in_asignacion1328 = new BitSet(new long[]{0x00001100402C0220L});
     public static final BitSet FOLLOW_evaluator_in_asignacion1334 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_PC_in_asignacion1374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_asignacion_lista1404 = new BitSet(new long[]{0x0100000010000000L});
-    public static final BitSet FOLLOW_56_in_asignacion_lista1413 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_NUMERO_in_asignacion_lista1417 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_57_in_asignacion_lista1419 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_NOMBRE_in_asignacion_lista1404 = new BitSet(new long[]{0x0080000010000000L});
+    public static final BitSet FOLLOW_55_in_asignacion_lista1413 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_NUMERO_in_asignacion_lista1417 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_asignacion_lista1419 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_ASIGNACION_in_asignacion_lista1421 = new BitSet(new long[]{0x00001100402C0220L});
     public static final BitSet FOLLOW_evaluator_in_asignacion_lista1427 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_SET_in_asignacion_lista1435 = new BitSet(new long[]{0x0000000000200000L});
@@ -5112,185 +5148,188 @@ public class LenguajeParser extends Parser {
     public static final BitSet FOLLOW_PC_in_asignacion_lista1497 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_COMENTARIO_in_comentario1515 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_READ_in_lectura1541 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_NOMBRE_in_lectura1545 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_lectura1592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PRINT_in_print11621 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_expression_in_print11632 = new BitSet(new long[]{0x0000080000400000L});
-    public static final BitSet FOLLOW_43_in_print11644 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_expression_in_print11654 = new BitSet(new long[]{0x0000080000400000L});
-    public static final BitSet FOLLOW_PC_in_print11665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PRINTLN_in_println1694 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_expression_in_println1704 = new BitSet(new long[]{0x0000080000400000L});
-    public static final BitSet FOLLOW_43_in_println1716 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_expression_in_println1726 = new BitSet(new long[]{0x0000080000400000L});
-    public static final BitSet FOLLOW_PC_in_println1737 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logico_in_evaluator1762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_llamadofuncion_in_term1808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BOOLEAN_in_term1824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term1843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NUMERO_in_term1861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DOBLE_in_term1880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TEXTO_in_term1914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_term1935 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_term1937 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_term1939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term1972 = new BitSet(new long[]{0x0101000000000000L});
-    public static final BitSet FOLLOW_48_in_term1981 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_term1987 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_term1989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_term1997 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_term2007 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_57_in_term2009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term2034 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_49_in_term2036 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_38_in_term2039 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_40_in_unary2093 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_44_in_unary2101 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_term_in_unary2122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_in_mult2156 = new BitSet(new long[]{0x0004009000000002L});
-    public static final BitSet FOLLOW_39_in_mult2180 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_unary_in_mult2184 = new BitSet(new long[]{0x0004009000000002L});
-    public static final BitSet FOLLOW_50_in_mult2212 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_unary_in_mult2216 = new BitSet(new long[]{0x0004009000000002L});
-    public static final BitSet FOLLOW_36_in_mult2246 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_unary_in_mult2250 = new BitSet(new long[]{0x0004009000000002L});
-    public static final BitSet FOLLOW_mult_in_add2302 = new BitSet(new long[]{0x0000110000000002L});
-    public static final BitSet FOLLOW_40_in_add2325 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_NOMBRE_in_lectura1545 = new BitSet(new long[]{0x0000080000400000L});
+    public static final BitSet FOLLOW_43_in_lectura1577 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_expression_in_lectura1583 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_lectura1617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRINT_in_print11646 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_expression_in_print11657 = new BitSet(new long[]{0x0000080000400000L});
+    public static final BitSet FOLLOW_43_in_print11669 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_expression_in_print11679 = new BitSet(new long[]{0x0000080000400000L});
+    public static final BitSet FOLLOW_PC_in_print11690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRINTLN_in_println1719 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_expression_in_println1729 = new BitSet(new long[]{0x0000080000400000L});
+    public static final BitSet FOLLOW_43_in_println1741 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_expression_in_println1751 = new BitSet(new long[]{0x0000080000400000L});
+    public static final BitSet FOLLOW_PC_in_println1762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logico_in_evaluator1787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_llamadofuncion_in_term1833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BOOLEAN_in_term1849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term1868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NUMERO_in_term1886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOBLE_in_term1905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TEXTO_in_term1939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_term1960 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_term1962 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_term1964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term1997 = new BitSet(new long[]{0x0081000000000000L});
+    public static final BitSet FOLLOW_48_in_term2006 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_term2012 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_term2014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_term2022 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_term2032 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_term2034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term2059 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_term2061 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SIZE_in_term2063 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_38_in_term2066 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_40_in_unary2120 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_44_in_unary2128 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_term_in_unary2149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_in_mult2183 = new BitSet(new long[]{0x0002009000000002L});
+    public static final BitSet FOLLOW_39_in_mult2207 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_unary_in_mult2211 = new BitSet(new long[]{0x0002009000000002L});
+    public static final BitSet FOLLOW_49_in_mult2239 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_unary_in_mult2243 = new BitSet(new long[]{0x0002009000000002L});
+    public static final BitSet FOLLOW_36_in_mult2273 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_unary_in_mult2277 = new BitSet(new long[]{0x0002009000000002L});
     public static final BitSet FOLLOW_mult_in_add2329 = new BitSet(new long[]{0x0000110000000002L});
-    public static final BitSet FOLLOW_44_in_add2356 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_mult_in_add2360 = new BitSet(new long[]{0x0000110000000002L});
-    public static final BitSet FOLLOW_add_in_relation2411 = new BitSet(new long[]{0x00F8000800000002L});
-    public static final BitSet FOLLOW_53_in_relation2448 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_relation2452 = new BitSet(new long[]{0x00F8000800000002L});
-    public static final BitSet FOLLOW_54_in_relation2490 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_relation2494 = new BitSet(new long[]{0x00F8000800000002L});
-    public static final BitSet FOLLOW_51_in_relation2533 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_relation2537 = new BitSet(new long[]{0x00F8000800000002L});
-    public static final BitSet FOLLOW_35_in_relation2576 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_relation2580 = new BitSet(new long[]{0x00F8000800000002L});
-    public static final BitSet FOLLOW_52_in_relation2620 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_relation2624 = new BitSet(new long[]{0x00F8000800000002L});
-    public static final BitSet FOLLOW_55_in_relation2664 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_relation2668 = new BitSet(new long[]{0x00F8000800000002L});
-    public static final BitSet FOLLOW_relation_in_logico2734 = new BitSet(new long[]{0x0400002000000002L});
-    public static final BitSet FOLLOW_37_in_logico2762 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_relation_in_logico2766 = new BitSet(new long[]{0x0400002000000002L});
-    public static final BitSet FOLLOW_58_in_logico2799 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_relation_in_logico2803 = new BitSet(new long[]{0x0400002000000002L});
-    public static final BitSet FOLLOW_logico_in_expression2862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_llamadofuncion2900 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_llamadofuncion2905 = new BitSet(new long[]{0x00000000403C0220L});
-    public static final BitSet FOLLOW_term_in_llamadofuncion2920 = new BitSet(new long[]{0x0000080000100000L});
-    public static final BitSet FOLLOW_43_in_llamadofuncion2932 = new BitSet(new long[]{0x00000000402C0220L});
-    public static final BitSet FOLLOW_term_in_llamadofuncion2939 = new BitSet(new long[]{0x0000080000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_llamadofuncion2952 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_llamadofuncion2963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_print1_in_ifstatements2994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_println_in_ifstatements3002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_in_ifstatements3013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lectura_in_ifstatements3020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_comentario_in_ifstatements3028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_return1_in_ifstatements3036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_whilestatemet_in_ifstatements3044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifstatement_in_ifstatements3052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_in_ifstatements3061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_lista_in_ifstatements3071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_push_in_ifstatements3078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forstatemet_in_ifstatements3085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_lista_in_ifstatements3092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lista_texto_in_ifstatements3100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_size_in_ifstatements3113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unincremento_in_ifstatements3126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_menosunincremento_in_ifstatements3139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_incremento_in_ifstatements3147 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_decremento_in_ifstatements3160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_print1_in_elsestataments3198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_println_in_elsestataments3206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_in_elsestataments3215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lectura_in_elsestataments3222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_comentario_in_elsestataments3230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_return1_in_elsestataments3238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_whilestatemet_in_elsestataments3246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifstatement_in_elsestataments3254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_in_elsestataments3263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_lista_in_elsestataments3273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_push_in_elsestataments3280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forstatemet_in_elsestataments3287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_lista_in_elsestataments3294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lista_texto_in_elsestataments3302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_size_in_elsestataments3315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unincremento_in_elsestataments3328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_menosunincremento_in_elsestataments3341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_incremento_in_elsestataments3349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_decremento_in_elsestataments3362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_ifstatement3390 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3392 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_logico_in_ifstatement3398 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3404 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3406 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3409 = new BitSet(new long[]{0x000000030DC5D040L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3411 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_ifstatements_in_ifstatement3421 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3431 = new BitSet(new long[]{0x0000000000400C02L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3433 = new BitSet(new long[]{0x0000000000000C02L});
-    public static final BitSet FOLLOW_ELSEIF_in_ifstatement3442 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3444 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_logico_in_ifstatement3448 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3454 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3456 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3459 = new BitSet(new long[]{0x000000030DC5D040L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3461 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_ifstatements_in_ifstatement3469 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3479 = new BitSet(new long[]{0x0000000000400C02L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3481 = new BitSet(new long[]{0x0000000000000C02L});
-    public static final BitSet FOLLOW_ELSE_in_ifstatement3499 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3501 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3505 = new BitSet(new long[]{0x000000030DC5D040L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3507 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_elsestataments_in_ifstatement3519 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3527 = new BitSet(new long[]{0x0000000000400402L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3529 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_print1_in_whilestatements3567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_println_in_whilestatements3575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_in_whilestatements3584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lectura_in_whilestatements3591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_comentario_in_whilestatements3599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_return1_in_whilestatements3607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_whilestatemet_in_whilestatements3615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifstatement_in_whilestatements3624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_in_whilestatements3633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_lista_in_whilestatements3645 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_push_in_whilestatements3652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forstatemet_in_whilestatements3659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_lista_in_whilestatements3666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lista_texto_in_whilestatements3674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_size_in_whilestatements3687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unincremento_in_whilestatements3700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_menosunincremento_in_whilestatements3713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_incremento_in_whilestatements3721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_decremento_in_whilestatements3734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WHILE_in_whilestatemet3769 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_whilestatemet3771 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_logico_in_whilestatemet3775 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_whilestatemet3778 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_whilestatemet3780 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_whilestatemet3783 = new BitSet(new long[]{0x000000030DC5D040L});
-    public static final BitSet FOLLOW_PC_in_whilestatemet3785 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_whilestatements_in_whilestatemet3794 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_whilestatemet3805 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_PC_in_whilestatemet3807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FOR_in_forstatemet3828 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_forstatemet3830 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_declaracion_in_forstatemet3834 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_logico_in_forstatemet3838 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3840 = new BitSet(new long[]{0x00001100402C0220L});
-    public static final BitSet FOLLOW_add_in_forstatemet3844 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_forstatemet3849 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3851 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_forstatemet3854 = new BitSet(new long[]{0x000000030DC5D040L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3856 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_whilestatements_in_forstatemet3866 = new BitSet(new long[]{0x000000030D85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_forstatemet3877 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_add2352 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_mult_in_add2356 = new BitSet(new long[]{0x0000110000000002L});
+    public static final BitSet FOLLOW_44_in_add2383 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_mult_in_add2387 = new BitSet(new long[]{0x0000110000000002L});
+    public static final BitSet FOLLOW_add_in_relation2438 = new BitSet(new long[]{0x007C000800000002L});
+    public static final BitSet FOLLOW_52_in_relation2475 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_relation2479 = new BitSet(new long[]{0x007C000800000002L});
+    public static final BitSet FOLLOW_53_in_relation2517 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_relation2521 = new BitSet(new long[]{0x007C000800000002L});
+    public static final BitSet FOLLOW_50_in_relation2560 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_relation2564 = new BitSet(new long[]{0x007C000800000002L});
+    public static final BitSet FOLLOW_35_in_relation2603 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_relation2607 = new BitSet(new long[]{0x007C000800000002L});
+    public static final BitSet FOLLOW_51_in_relation2647 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_relation2651 = new BitSet(new long[]{0x007C000800000002L});
+    public static final BitSet FOLLOW_54_in_relation2691 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_relation2695 = new BitSet(new long[]{0x007C000800000002L});
+    public static final BitSet FOLLOW_relation_in_logico2761 = new BitSet(new long[]{0x0200002000000002L});
+    public static final BitSet FOLLOW_37_in_logico2789 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_relation_in_logico2793 = new BitSet(new long[]{0x0200002000000002L});
+    public static final BitSet FOLLOW_57_in_logico2826 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_relation_in_logico2830 = new BitSet(new long[]{0x0200002000000002L});
+    public static final BitSet FOLLOW_logico_in_expression2889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_llamadofuncion2927 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_llamadofuncion2932 = new BitSet(new long[]{0x00000000403C0220L});
+    public static final BitSet FOLLOW_term_in_llamadofuncion2947 = new BitSet(new long[]{0x0000080000100000L});
+    public static final BitSet FOLLOW_43_in_llamadofuncion2959 = new BitSet(new long[]{0x00000000402C0220L});
+    public static final BitSet FOLLOW_term_in_llamadofuncion2966 = new BitSet(new long[]{0x0000080000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_llamadofuncion2979 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_llamadofuncion2990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_print1_in_ifstatements3021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_println_in_ifstatements3029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_in_ifstatements3040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lectura_in_ifstatements3047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comentario_in_ifstatements3055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_return1_in_ifstatements3063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whilestatemet_in_ifstatements3071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifstatement_in_ifstatements3079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_in_ifstatements3088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_lista_in_ifstatements3098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_push_in_ifstatements3105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forstatemet_in_ifstatements3112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_lista_in_ifstatements3119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lista_texto_in_ifstatements3127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_size_in_ifstatements3140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unincremento_in_ifstatements3153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_menosunincremento_in_ifstatements3166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_incremento_in_ifstatements3174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_decremento_in_ifstatements3187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_print1_in_elsestataments3225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_println_in_elsestataments3233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_in_elsestataments3242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lectura_in_elsestataments3249 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comentario_in_elsestataments3257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_return1_in_elsestataments3265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whilestatemet_in_elsestataments3273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifstatement_in_elsestataments3281 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_in_elsestataments3290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_lista_in_elsestataments3300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_push_in_elsestataments3307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forstatemet_in_elsestataments3314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_lista_in_elsestataments3321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lista_texto_in_elsestataments3329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_size_in_elsestataments3342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unincremento_in_elsestataments3355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_menosunincremento_in_elsestataments3368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_incremento_in_elsestataments3376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_decremento_in_elsestataments3389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_ifstatement3417 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3419 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_logico_in_ifstatement3425 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3431 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3433 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3436 = new BitSet(new long[]{0x000000030DC5D040L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3438 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_ifstatements_in_ifstatement3448 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3458 = new BitSet(new long[]{0x0000000000400C02L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3460 = new BitSet(new long[]{0x0000000000000C02L});
+    public static final BitSet FOLLOW_ELSEIF_in_ifstatement3469 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3471 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_logico_in_ifstatement3475 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3481 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3483 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3486 = new BitSet(new long[]{0x000000030DC5D040L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3488 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_ifstatements_in_ifstatement3496 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3506 = new BitSet(new long[]{0x0000000000400C02L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3508 = new BitSet(new long[]{0x0000000000000C02L});
+    public static final BitSet FOLLOW_ELSE_in_ifstatement3526 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3528 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3532 = new BitSet(new long[]{0x000000030DC5D040L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3534 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_elsestataments_in_ifstatement3546 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3554 = new BitSet(new long[]{0x0000000000400402L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3556 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_print1_in_whilestatements3594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_println_in_whilestatements3602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_in_whilestatements3611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lectura_in_whilestatements3618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comentario_in_whilestatements3626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_return1_in_whilestatements3634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whilestatemet_in_whilestatements3642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifstatement_in_whilestatements3651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_in_whilestatements3660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_lista_in_whilestatements3672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_push_in_whilestatements3679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forstatemet_in_whilestatements3686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_lista_in_whilestatements3693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lista_texto_in_whilestatements3701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_size_in_whilestatements3714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unincremento_in_whilestatements3727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_menosunincremento_in_whilestatements3740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_incremento_in_whilestatements3748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_decremento_in_whilestatements3761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WHILE_in_whilestatemet3796 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_whilestatemet3798 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_logico_in_whilestatemet3802 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_whilestatemet3805 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_whilestatemet3807 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_whilestatemet3810 = new BitSet(new long[]{0x000000030DC5D040L});
+    public static final BitSet FOLLOW_PC_in_whilestatemet3812 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_whilestatements_in_whilestatemet3821 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_whilestatemet3832 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_PC_in_whilestatemet3834 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FOR_in_forstatemet3855 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_forstatemet3857 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_declaracion_in_forstatemet3861 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_logico_in_forstatemet3865 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3867 = new BitSet(new long[]{0x00001100402C0220L});
+    public static final BitSet FOLLOW_add_in_forstatemet3871 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_forstatemet3876 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3878 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_forstatemet3881 = new BitSet(new long[]{0x000000030DC5D040L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3883 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_whilestatements_in_forstatemet3893 = new BitSet(new long[]{0x000000030D85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_forstatemet3904 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3906 = new BitSet(new long[]{0x0000000000000002L});
 
 }

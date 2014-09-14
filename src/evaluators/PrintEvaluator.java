@@ -26,7 +26,18 @@ public class PrintEvaluator implements Evaluator {
 
 		StringBuilder s = new StringBuilder();
 		for (int i = 0; i < evaluators.size(); i++)
-			s.append(evaluators.get(i).evaluate(pila).toString());
+		{
+			String aux  = evaluators.get(i).evaluate(pila).toString();
+			if(evaluators.get(i).evaluate(pila) instanceof Double )
+			{
+				double num = (Double) evaluators.get(i).evaluate(pila);
+				if(num - (int)(num) == 0)
+				{
+					aux = String.valueOf((int)num);
+				}
+			}
+			s.append(aux);
+		}
 		System.out.println("imprimiendo.." + s);
 
 		return s.toString();

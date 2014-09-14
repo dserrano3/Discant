@@ -284,6 +284,15 @@ lectura returns [Evaluator e] throws Exception
                         $e = new ReadEvaluator(pila, $n.text);
                     }
                   }
+  (
+      ',' exp = expression { 
+              if(bandera)
+                    { 
+                        ((ReadEvaluator)$e).addText($exp.e);
+                    }
+             
+             }
+  )?
                       
   PC
   ;
@@ -367,7 +376,7 @@ term returns [Evaluator e] throws Exception
          {
                 $e = new GetEvaluator($nom.text,$num.e);     
          }
-  | nom=NOMBRE '.size' ('()')*
+  | nom=NOMBRE '.' SIZE ('()')*
             {
                   $e = new SizeEvaluator($nom.text);
             }
@@ -694,7 +703,7 @@ TOKEN
 
 IF
   :
-  'if'
+  'if' | 'si'
   ;
 //NEWLINE: '\r'? '\n' ;
 PC
