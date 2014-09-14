@@ -2,10 +2,14 @@ package interpreter;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Image;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
@@ -45,7 +49,7 @@ public class TextEditor extends JFrame {
 
 	private JPanel contentPane;
 	private JMenuBar menuBar;
-	private JButton btnBorrar;
+	//private JButton btnBorrar;
 	private JButton btnEjecutar;
 	private RTextScrollPane rtScrollPane;
 	private JButton btnOpen;
@@ -78,12 +82,15 @@ public class TextEditor extends JFrame {
 	}
 
 	private void initialize() {
-		setTitle("spanish_PL_textEditor");
+		setTitle("Discant");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 624, 472);
 		setJMenuBar(getMenuBar_1());
 		setContentPane(getContentPane());
 		fc = new JFileChooser();
+		FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                "Discant files (*.dis)", "dis");
+		fc.setFileFilter(filter);;
 	}
 
 	public JPanel getContentPane() {
@@ -101,33 +108,19 @@ public class TextEditor extends JFrame {
 		if (menuBar == null) {
 			menuBar = new JMenuBar();
 			menuBar.setToolTipText("");
-			menuBar.add(getBtnBorrar());
 			menuBar.add(getBtnGuardar());
 			menuBar.add(getBtnOpen());
 		}
 		return menuBar;
 	}
 
-	private JButton getBtnBorrar() {
-		if (btnBorrar == null) {
-			btnBorrar = new JButton("Borrar");
-			btnBorrar.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-				}
-			});
-			btnBorrar.addMouseListener(new MouseAdapter() {
-				@Override
-				public void mouseReleased(MouseEvent e) {
-					codigo.setText("");
-				}
-			});
-		}
-		return btnBorrar;
-	}
+	
 
 	private JButton getBtnEjecutar() {
 		if (btnEjecutar == null) {
-			btnEjecutar = new JButton("Ejecutar");
+			btnEjecutar = new JButton("Run");
+			ImageIcon img = new ImageIcon("images/play.png");
+			btnEjecutar.setIcon((img));
 			btnEjecutar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 				}
@@ -156,7 +149,9 @@ public class TextEditor extends JFrame {
 
 	private JButton getBtnOpen() {
 		if (btnOpen == null) {
-			btnOpen = new JButton("Abrir");
+			btnOpen = new JButton("Open");
+			ImageIcon img = new ImageIcon("images/open.png");
+			btnOpen.setIcon((img));
 			btnOpen.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
@@ -192,13 +187,19 @@ public class TextEditor extends JFrame {
 
 	private JButton getBtnGuardar() {
 		if (btnSave == null) {
-			btnSave = new JButton("Guardar");
+			btnSave = new JButton("Save");
+			ImageIcon img = new ImageIcon("images/save.png");
+			btnSave.setIcon((img));
 			btnSave.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
 					int returnVal = fc.showDialog(TextEditor.this, "Guardar");
 					if (returnVal == JFileChooser.APPROVE_OPTION) {
 						File file = fc.getSelectedFile();
+						String suffix = ".dis";
+						if(!fc.getSelectedFile().getAbsolutePath().endsWith(suffix)){
+							file = new File(fc.getSelectedFile() + suffix);
+						}
 						FileOutputStream outFileStream = null;
 						PrintWriter outStream = null;
 

@@ -24,7 +24,7 @@ public class Main {
 	 */
 	public static void infoBox(String infoMessage, String location)
     {
-        JOptionPane.showMessageDialog(null, infoMessage, "InfoBox: " + location, JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, infoMessage, "Problem: " + location, JOptionPane.INFORMATION_MESSAGE);
     }
 	
 	public static void main(String args[]) throws IOException {
@@ -41,14 +41,14 @@ public class Main {
 	}
 
 	/**
-	 * Runs the program using the code in tokentest.cfpp
+	 * Runs the program using the code in tokentest
 	 * 
 	 * @param data
 	 * @return
 	 * @throws IOException
 	 */
 	public static String GUI(String data) throws IOException, Exception {
-		File outFile = new File("tokentest.cfpp");
+		File outFile = new File("code.dis");
 		FileOutputStream outFileStream = null;
 		PrintWriter outStream = null;
 
@@ -58,7 +58,7 @@ public class Main {
 		outStream.close();
 
 		LenguajeLexer lexer = new LenguajeLexer(new ANTLRFileStream(
-				"tokentest.cfpp"));// tokentest.cfpp
+				"code.dis"));
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
 
 		LenguajeParser parser = new LenguajeParser(tokens);

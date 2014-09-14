@@ -40,6 +40,7 @@ public class WhileEvaluator implements Evaluator {
 		lista.add(a);
 	}
 
+	
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
 
