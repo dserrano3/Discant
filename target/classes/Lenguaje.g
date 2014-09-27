@@ -93,7 +93,7 @@ programa returns [StringBuilder output] throws Exception
   funcion returns[Evaluator e] throws Exception
   :
   {$e = new FuncionEvaluator();}  
-  FUNCTION nom = NOMBRE '(' 
+  FUNCTION nom = NOMBRE parentesis_i 
 	
 	( (
 	  VARIABLE nom1 = NOMBRE
@@ -108,7 +108,7 @@ programa returns [StringBuilder output] throws Exception
     }
   )*)?
 	 
-	')' PC?
+	parentesis_d PC?
 	'{' PC?
 	  
 	  (wh = whilestatements{
@@ -225,7 +225,7 @@ declaracion returns [Evaluator e] throws Exception
   
   size returns [Evaluator e] throws Exception
   :
-  nom=NOMBRE '.' SIZE ('()')*
+  nom=NOMBRE  size1 ('()')*
                                  {
                                   if(bandera)
                                     {
@@ -376,7 +376,7 @@ term returns [Evaluator e] throws Exception
          {
                 $e = new GetEvaluator($nom.text,$num.e);     
          }
-  | nom=NOMBRE '.' SIZE ('()')*
+  | nom=NOMBRE  size1 ('()')*
             {
                   $e = new SizeEvaluator($nom.text);
             }
@@ -432,14 +432,14 @@ add returns [Evaluator e] throws Exception
            $e = $op1.e;
           }
   (
-    '+' op2=mult 
+    ('+' op2=mult 
                 {  
                  $e = new PlusEvaluator($e, $op2.e);
-                }
-    | '-' op2=mult 
+                })
+    | (minus op2=mult 
                   {
                    $e = new MinusEvaluator($e, $op2.e);
-                  }
+                  })
   )*
   ;
 
@@ -701,16 +701,22 @@ TOKEN
   'hola'
   ;
 
-IF
-  :
-  'if' | 'si'
-  ;
+
+
+
+
 //NEWLINE: '\r'? '\n' ;
 PC
   :
-  (';'? '\r'? ('\n')+) | ';' /*| '\r'? '\n' | '\r' | EOF*/ 
+  (';'? '\r'? ('\n')+) | ';' 
   ;
-//COMPARACION: ('==' | '>'|'<'|'!='|'<='|'>=');
+//COMPARACION: ('==' | '>'|'<'|'!='|'<='|'>='); 
+
+
+COMENTARIO
+  :
+  (('/*' (.)* '*/') PC?) | (('//' (.)*) PC)  
+  ;
 
 /*
 FUNCION:
@@ -780,14 +786,27 @@ BOOLEAN
    'verdadero' | 'falso' | 'FALSO' | 'VERDADERO' | 'Verdadero' | 'Falso' 
   ;
 
-
+minus 
+   :
+   '-'
+   ;
 
 PARENTESIS_D
   :
   ')'
   ;
+  
+  parentesis_d
+  :
+  ')'
+  ;
 
 PARENTESIS_I
+  :
+  '('
+  ;
+  
+  parentesis_i
   :
   '('
   ;
@@ -830,27 +849,30 @@ PUSH:
   ('push' | 'insertar')
   ;
   
-SIZE:
-  ('size' | 'tamano');
+size1:
+  ('.tamano' | '.size' );
   
 SET:
   ('.set' | '.fijar');
 
 RETURN:
   ('return' | 'devolver');
-
+IF
+  :
+  'if' | 'si'
+  ;
 
 NOMBRE
   :
   (
     (
       'a'..'z'
-      | 'A'..'Z' | '_' | '-'
+      | 'A'..'Z' | '_' 
     )
     (
       (
         'a'..'z'
-      | 'A'..'Z' | '_' | '-'
+      | 'A'..'Z' | '_'
       )
       | ('1'..'9')
     )*
@@ -864,10 +886,7 @@ TEXTO
   ;
 //COMENTARIO: '/*'('a'..'z'|'A'..'Z'|'1'..'9'|' ')+'*/';
 
-COMENTARIO
-  :
-  (('/*' (.)* '*/') PC?) | (('//' (.)*) PC)  
-  ;
+
  
   
 
@@ -876,5 +895,6 @@ COMENTARIO
 
 // Este token sirve para omitir todos los espacios y tabulaciones en el texto
 WS : (' '|'\t')+ {$channel = HIDDEN;};
+WSOPT   :       (' ')* {skip();};
 
-// Este token sirve para omitir todos los saltos de l�nea en el texto
+// Este token sirve para omitir todos los saltos de linea en el texto

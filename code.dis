@@ -1,30 +1,36 @@
-funcion not_main(var a, var b){
+function not_main(var a, var b){
    var c = a + b;
    return c;
 }
+
 /*Don't need to create a main function*/
 var test1 = 5;
 var test2 = "5";
-si(test1 == test2) {
-   imprimirln "It auto casts values";
+
+if(test1 == test2) {
+   println "It auto casts values";
 }
-lista lis;
-lis.insertar(1);
-lis.insertar(2.3);
-lis.insertar("three");
-imprimirln lis.get(0); /*First item of the list*/
+list lis;
+lis.push(1);
+lis.push(2);
+lis.push("three");
+println lis.get(0); /*First item of the list*/
 lis[0] = 11;
-lis.fijar(1, 12);/*Position 1 becomes 12*/
-para(var i = 0; i < lis.tamano(); 1) {/*Increments by 1*/
-   imprimirln lis.get(i);
+lis.set(1, 12);/*Position 1 becomes 12*/
+
+for(var i = 0; i < lis.size(); 1) {/*Increments by 1*/
+   println lis.get(i);
 }
-lista lis2 = leer("codigo.cfpp");/*reads a file puts each line into a field of the list*/
-imprimirln lis2;/*Prints the entire list*/
-r = 44;/*You van not use the 'var' word*/
-leer r, "Insert the value";/*It can read booleans, doubles, integers or strings*/
+
+list lis2 = read("codigo.cfpp");/*reads a file puts each line into a field of the list*/
+print lis2;/*Prints the entire list*/
+r = 44;/*You can skip the 'var' word*/
+read r, "Insert the value";/*It can read booleans, doubles, integers or strings*/
+
 var t = not_main(3,5);/*It will print 8*/
-imprimir t;
+print t;
+
+
 /*It has many more features like, && and || operators, <, > , <=, >= != comparasons.
 * ++,--, -=, += operators, while statements, and many more.
-*/
-;
+*/;
