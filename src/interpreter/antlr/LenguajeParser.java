@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-09-26 21:47:34
+// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-09-26 21:51:22
 
 package interpreter.antlr; 
 import interpreter.*;

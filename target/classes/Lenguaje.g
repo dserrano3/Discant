@@ -705,7 +705,7 @@ TOKEN
 
 
 
-//NEWLINE: '\r'? '\n' ;
+//NEWLINE: '\r'? '\n' ;  
 PC
   :
   (';'? '\r'? ('\n')+) | ';' 
