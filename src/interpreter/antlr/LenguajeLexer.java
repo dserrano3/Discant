@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-09-26 21:51:23
+// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g 2014-09-26 22:54:05
 
 package interpreter.antlr;
 
@@ -664,36 +664,15 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:710:3: ( ( ( ';' )? ( '\\r' )? ( '\\n' )+ ) | ';' )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
-
-            if ( (LA4_0==';') ) {
-                int LA4_1 = input.LA(2);
-
-                if ( (LA4_1=='\n'||LA4_1=='\r') ) {
-                    alt4=1;
-                }
-                else {
-                    alt4=2;
-                }
-            }
-            else if ( (LA4_0=='\n'||LA4_0=='\r') ) {
-                alt4=1;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
-
-                throw nvae;
-
-            }
-            switch (alt4) {
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:710:3: ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* )
+            int alt6=2;
+            alt6 = dfa6.predict(input);
+            switch (alt6) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:3: ( ( ';' )? ( '\\r' )? ( '\\n' )+ )
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:3: ( ( ';' )? ( '\\r' )? ( '\\n' )+ )
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:4: ( ';' )? ( '\\r' )? ( '\\n' )+
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:4: ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+
                     {
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:4: ( ';' )?
                     int alt1=2;
@@ -714,16 +693,42 @@ public class LenguajeLexer extends Lexer {
                     }
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:9: ( '\\r' )?
-                    int alt2=2;
-                    int LA2_0 = input.LA(1);
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:9: ( ' ' )*
+                    loop2:
+                    do {
+                        int alt2=2;
+                        int LA2_0 = input.LA(1);
 
-                    if ( (LA2_0=='\r') ) {
-                        alt2=1;
+                        if ( (LA2_0==' ') ) {
+                            alt2=1;
+                        }
+
+
+                        switch (alt2) {
+                    	case 1 :
+                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:9: ' '
+                    	    {
+                    	    match(' '); 
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop2;
+                        }
+                    } while (true);
+
+
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:14: ( '\\r' )?
+                    int alt3=2;
+                    int LA3_0 = input.LA(1);
+
+                    if ( (LA3_0=='\r') ) {
+                        alt3=1;
                     }
-                    switch (alt2) {
+                    switch (alt3) {
                         case 1 :
-                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:9: '\\r'
+                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:14: '\\r'
                             {
                             match('\r'); 
 
@@ -733,21 +738,21 @@ public class LenguajeLexer extends Lexer {
                     }
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:15: ( '\\n' )+
-                    int cnt3=0;
-                    loop3:
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:20: ( '\\n' )+
+                    int cnt4=0;
+                    loop4:
                     do {
-                        int alt3=2;
-                        int LA3_0 = input.LA(1);
+                        int alt4=2;
+                        int LA4_0 = input.LA(1);
 
-                        if ( (LA3_0=='\n') ) {
-                            alt3=1;
+                        if ( (LA4_0=='\n') ) {
+                            alt4=1;
                         }
 
 
-                        switch (alt3) {
+                        switch (alt4) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:16: '\\n'
+                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:21: '\\n'
                     	    {
                     	    match('\n'); 
 
@@ -755,12 +760,12 @@ public class LenguajeLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    if ( cnt3 >= 1 ) break loop3;
+                    	    if ( cnt4 >= 1 ) break loop4;
                                 EarlyExitException eee =
-                                    new EarlyExitException(3, input);
+                                    new EarlyExitException(4, input);
                                 throw eee;
                         }
-                        cnt3++;
+                        cnt4++;
                     } while (true);
 
 
@@ -770,9 +775,35 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:26: ';'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:31: ';' ( ' ' )*
                     {
                     match(';'); 
+
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:35: ( ' ' )*
+                    loop5:
+                    do {
+                        int alt5=2;
+                        int LA5_0 = input.LA(1);
+
+                        if ( (LA5_0==' ') ) {
+                            alt5=1;
+                        }
+
+
+                        switch (alt5) {
+                    	case 1 :
+                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:711:35: ' '
+                    	    {
+                    	    match(' '); 
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop5;
+                        }
+                    } while (true);
+
 
                     }
                     break;
@@ -793,21 +824,21 @@ public class LenguajeLexer extends Lexer {
             int _type = COMENTARIO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:717:3: ( ( ( '/*' ( . )* '*/' ) ( PC )? ) | ( ( '//' ( . )* ) PC ) )
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA8_0=='/') ) {
-                int LA8_1 = input.LA(2);
+            if ( (LA10_0=='/') ) {
+                int LA10_1 = input.LA(2);
 
-                if ( (LA8_1=='*') ) {
-                    alt8=1;
+                if ( (LA10_1=='*') ) {
+                    alt10=1;
                 }
-                else if ( (LA8_1=='/') ) {
-                    alt8=2;
+                else if ( (LA10_1=='/') ) {
+                    alt10=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 8, 1, input);
+                        new NoViableAltException("", 10, 1, input);
 
                     throw nvae;
 
@@ -815,12 +846,12 @@ public class LenguajeLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt8) {
+            switch (alt10) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:718:3: ( ( '/*' ( . )* '*/' ) ( PC )? )
                     {
@@ -835,29 +866,29 @@ public class LenguajeLexer extends Lexer {
 
 
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:718:10: ( . )*
-                    loop5:
+                    loop7:
                     do {
-                        int alt5=2;
-                        int LA5_0 = input.LA(1);
+                        int alt7=2;
+                        int LA7_0 = input.LA(1);
 
-                        if ( (LA5_0=='*') ) {
-                            int LA5_1 = input.LA(2);
+                        if ( (LA7_0=='*') ) {
+                            int LA7_1 = input.LA(2);
 
-                            if ( (LA5_1=='/') ) {
-                                alt5=2;
+                            if ( (LA7_1=='/') ) {
+                                alt7=2;
                             }
-                            else if ( ((LA5_1 >= '\u0000' && LA5_1 <= '.')||(LA5_1 >= '0' && LA5_1 <= '\uFFFF')) ) {
-                                alt5=1;
+                            else if ( ((LA7_1 >= '\u0000' && LA7_1 <= '.')||(LA7_1 >= '0' && LA7_1 <= '\uFFFF')) ) {
+                                alt7=1;
                             }
 
 
                         }
-                        else if ( ((LA5_0 >= '\u0000' && LA5_0 <= ')')||(LA5_0 >= '+' && LA5_0 <= '\uFFFF')) ) {
-                            alt5=1;
+                        else if ( ((LA7_0 >= '\u0000' && LA7_0 <= ')')||(LA7_0 >= '+' && LA7_0 <= '\uFFFF')) ) {
+                            alt7=1;
                         }
 
 
-                        switch (alt5) {
+                        switch (alt7) {
                     	case 1 :
                     	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:718:11: .
                     	    {
@@ -867,7 +898,7 @@ public class LenguajeLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop5;
+                    	    break loop7;
                         }
                     } while (true);
 
@@ -880,13 +911,13 @@ public class LenguajeLexer extends Lexer {
 
 
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:718:21: ( PC )?
-                    int alt6=2;
-                    int LA6_0 = input.LA(1);
+                    int alt8=2;
+                    int LA8_0 = input.LA(1);
 
-                    if ( (LA6_0=='\n'||LA6_0=='\r'||LA6_0==';') ) {
-                        alt6=1;
+                    if ( (LA8_0=='\n'||LA8_0=='\r'||LA8_0==' '||LA8_0==';') ) {
+                        alt8=1;
                     }
-                    switch (alt6) {
+                    switch (alt8) {
                         case 1 :
                             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:718:21: PC
                             {
@@ -918,26 +949,29 @@ public class LenguajeLexer extends Lexer {
 
 
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:718:35: ( . )*
-                    loop7:
+                    loop9:
                     do {
-                        int alt7=2;
-                        int LA7_0 = input.LA(1);
+                        int alt9=2;
+                        int LA9_0 = input.LA(1);
 
-                        if ( (LA7_0==';') ) {
-                            alt7=2;
+                        if ( (LA9_0==';') ) {
+                            alt9=2;
                         }
-                        else if ( (LA7_0=='\r') ) {
-                            alt7=2;
+                        else if ( (LA9_0==' ') ) {
+                            alt9=2;
                         }
-                        else if ( (LA7_0=='\n') ) {
-                            alt7=2;
+                        else if ( (LA9_0=='\r') ) {
+                            alt9=2;
                         }
-                        else if ( ((LA7_0 >= '\u0000' && LA7_0 <= '\t')||(LA7_0 >= '\u000B' && LA7_0 <= '\f')||(LA7_0 >= '\u000E' && LA7_0 <= ':')||(LA7_0 >= '<' && LA7_0 <= '\uFFFF')) ) {
-                            alt7=1;
+                        else if ( (LA9_0=='\n') ) {
+                            alt9=2;
+                        }
+                        else if ( ((LA9_0 >= '\u0000' && LA9_0 <= '\t')||(LA9_0 >= '\u000B' && LA9_0 <= '\f')||(LA9_0 >= '\u000E' && LA9_0 <= '\u001F')||(LA9_0 >= '!' && LA9_0 <= ':')||(LA9_0 >= '<' && LA9_0 <= '\uFFFF')) ) {
+                            alt9=1;
                         }
 
 
-                        switch (alt7) {
+                        switch (alt9) {
                     	case 1 :
                     	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:718:36: .
                     	    {
@@ -947,7 +981,7 @@ public class LenguajeLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop7;
+                    	    break loop9;
                         }
                     } while (true);
 
@@ -1001,23 +1035,23 @@ public class LenguajeLexer extends Lexer {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:742:3: ( 'while' | 'mientras' )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA9_0=='w') ) {
-                alt9=1;
+            if ( (LA11_0=='w') ) {
+                alt11=1;
             }
-            else if ( (LA9_0=='m') ) {
-                alt9=2;
+            else if ( (LA11_0=='m') ) {
+                alt11=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 11, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt9) {
+            switch (alt11) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:743:3: 'while'
                     {
@@ -1053,23 +1087,23 @@ public class LenguajeLexer extends Lexer {
             int _type = FOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:747:3: ( 'for' | 'para' )
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA10_0=='f') ) {
-                alt10=1;
+            if ( (LA12_0=='f') ) {
+                alt12=1;
             }
-            else if ( (LA10_0=='p') ) {
-                alt10=2;
+            else if ( (LA12_0=='p') ) {
+                alt12=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 10, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt10) {
+            switch (alt12) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:748:3: 'for'
                     {
@@ -1105,23 +1139,23 @@ public class LenguajeLexer extends Lexer {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:752:3: ( 'else' | 'si_no' )
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA11_0=='e') ) {
-                alt11=1;
+            if ( (LA13_0=='e') ) {
+                alt13=1;
             }
-            else if ( (LA11_0=='s') ) {
-                alt11=2;
+            else if ( (LA13_0=='s') ) {
+                alt13=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt11) {
+            switch (alt13) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:753:3: 'else'
                     {
@@ -1180,31 +1214,31 @@ public class LenguajeLexer extends Lexer {
             int _type = LIST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:758:5: ( 'list' | 'lista' )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA12_0=='l') ) {
-                int LA12_1 = input.LA(2);
+            if ( (LA14_0=='l') ) {
+                int LA14_1 = input.LA(2);
 
-                if ( (LA12_1=='i') ) {
-                    int LA12_2 = input.LA(3);
+                if ( (LA14_1=='i') ) {
+                    int LA14_2 = input.LA(3);
 
-                    if ( (LA12_2=='s') ) {
-                        int LA12_3 = input.LA(4);
+                    if ( (LA14_2=='s') ) {
+                        int LA14_3 = input.LA(4);
 
-                        if ( (LA12_3=='t') ) {
-                            int LA12_4 = input.LA(5);
+                        if ( (LA14_3=='t') ) {
+                            int LA14_4 = input.LA(5);
 
-                            if ( (LA12_4=='a') ) {
-                                alt12=2;
+                            if ( (LA14_4=='a') ) {
+                                alt14=2;
                             }
                             else {
-                                alt12=1;
+                                alt14=1;
                             }
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 12, 3, input);
+                                new NoViableAltException("", 14, 3, input);
 
                             throw nvae;
 
@@ -1212,7 +1246,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 12, 2, input);
+                            new NoViableAltException("", 14, 2, input);
 
                         throw nvae;
 
@@ -1220,7 +1254,7 @@ public class LenguajeLexer extends Lexer {
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 12, 1, input);
+                        new NoViableAltException("", 14, 1, input);
 
                     throw nvae;
 
@@ -1228,12 +1262,12 @@ public class LenguajeLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt12) {
+            switch (alt14) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:759:4: 'list'
                     {
@@ -1269,30 +1303,30 @@ public class LenguajeLexer extends Lexer {
             int _type = FUNCTION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:762:3: ( 'function' | 'funcion' )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA13_0=='f') ) {
-                int LA13_1 = input.LA(2);
+            if ( (LA15_0=='f') ) {
+                int LA15_1 = input.LA(2);
 
-                if ( (LA13_1=='u') ) {
-                    int LA13_2 = input.LA(3);
+                if ( (LA15_1=='u') ) {
+                    int LA15_2 = input.LA(3);
 
-                    if ( (LA13_2=='n') ) {
-                        int LA13_3 = input.LA(4);
+                    if ( (LA15_2=='n') ) {
+                        int LA15_3 = input.LA(4);
 
-                        if ( (LA13_3=='c') ) {
-                            int LA13_4 = input.LA(5);
+                        if ( (LA15_3=='c') ) {
+                            int LA15_4 = input.LA(5);
 
-                            if ( (LA13_4=='t') ) {
-                                alt13=1;
+                            if ( (LA15_4=='t') ) {
+                                alt15=1;
                             }
-                            else if ( (LA13_4=='i') ) {
-                                alt13=2;
+                            else if ( (LA15_4=='i') ) {
+                                alt15=2;
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 13, 4, input);
+                                    new NoViableAltException("", 15, 4, input);
 
                                 throw nvae;
 
@@ -1300,7 +1334,7 @@ public class LenguajeLexer extends Lexer {
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 13, 3, input);
+                                new NoViableAltException("", 15, 3, input);
 
                             throw nvae;
 
@@ -1308,7 +1342,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 13, 2, input);
+                            new NoViableAltException("", 15, 2, input);
 
                         throw nvae;
 
@@ -1316,7 +1350,7 @@ public class LenguajeLexer extends Lexer {
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 13, 1, input);
+                        new NoViableAltException("", 15, 1, input);
 
                     throw nvae;
 
@@ -1324,12 +1358,12 @@ public class LenguajeLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt13) {
+            switch (alt15) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:763:3: 'function'
                     {
@@ -1365,23 +1399,23 @@ public class LenguajeLexer extends Lexer {
             int _type = ELSEIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:767:3: ( 'else if' | 'si_no si' )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA14_0=='e') ) {
-                alt14=1;
+            if ( (LA16_0=='e') ) {
+                alt16=1;
             }
-            else if ( (LA14_0=='s') ) {
-                alt14=2;
+            else if ( (LA16_0=='s') ) {
+                alt16=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt14) {
+            switch (alt16) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:768:3: 'else if'
                     {
@@ -1423,117 +1457,6 @@ public class LenguajeLexer extends Lexer {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:773:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
             {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:773:5: ( '0' .. '9' )+
-            int cnt15=0;
-            loop15:
-            do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
-
-                if ( ((LA15_0 >= '0' && LA15_0 <= '9')) ) {
-                    alt15=1;
-                }
-
-
-                switch (alt15) {
-            	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
-            	    {
-            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-            	        input.consume();
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt15 >= 1 ) break loop15;
-                        EarlyExitException eee =
-                            new EarlyExitException(15, input);
-                        throw eee;
-                }
-                cnt15++;
-            } while (true);
-
-
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:773:16: ( '.' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:773:17: '.'
-            {
-            match('.'); 
-
-            }
-
-
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:773:22: ( '0' .. '9' )+
-            int cnt16=0;
-            loop16:
-            do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
-
-                if ( ((LA16_0 >= '0' && LA16_0 <= '9')) ) {
-                    alt16=1;
-                }
-
-
-                switch (alt16) {
-            	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
-            	    {
-            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-            	        input.consume();
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt16 >= 1 ) break loop16;
-                        EarlyExitException eee =
-                            new EarlyExitException(16, input);
-                        throw eee;
-                }
-                cnt16++;
-            } while (true);
-
-
-            }
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "DOBLE"
-
-    // $ANTLR start "NUMERO"
-    public final void mNUMERO() throws RecognitionException {
-        try {
-            int _type = NUMERO;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:779:3: ( ( ( '0' .. '9' )+ ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:780:3: ( ( '0' .. '9' )+ )
-            {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:780:3: ( ( '0' .. '9' )+ )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:780:5: ( '0' .. '9' )+
-            {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:780:5: ( '0' .. '9' )+
             int cnt17=0;
             loop17:
             do {
@@ -1572,6 +1495,117 @@ public class LenguajeLexer extends Lexer {
             } while (true);
 
 
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:773:16: ( '.' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:773:17: '.'
+            {
+            match('.'); 
+
+            }
+
+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:773:22: ( '0' .. '9' )+
+            int cnt18=0;
+            loop18:
+            do {
+                int alt18=2;
+                int LA18_0 = input.LA(1);
+
+                if ( ((LA18_0 >= '0' && LA18_0 <= '9')) ) {
+                    alt18=1;
+                }
+
+
+                switch (alt18) {
+            	case 1 :
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
+            	    {
+            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+            	        input.consume();
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt18 >= 1 ) break loop18;
+                        EarlyExitException eee =
+                            new EarlyExitException(18, input);
+                        throw eee;
+                }
+                cnt18++;
+            } while (true);
+
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "DOBLE"
+
+    // $ANTLR start "NUMERO"
+    public final void mNUMERO() throws RecognitionException {
+        try {
+            int _type = NUMERO;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:779:3: ( ( ( '0' .. '9' )+ ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:780:3: ( ( '0' .. '9' )+ )
+            {
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:780:3: ( ( '0' .. '9' )+ )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:780:5: ( '0' .. '9' )+
+            {
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:780:5: ( '0' .. '9' )+
+            int cnt19=0;
+            loop19:
+            do {
+                int alt19=2;
+                int LA19_0 = input.LA(1);
+
+                if ( ((LA19_0 >= '0' && LA19_0 <= '9')) ) {
+                    alt19=1;
+                }
+
+
+                switch (alt19) {
+            	case 1 :
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
+            	    {
+            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+            	        input.consume();
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt19 >= 1 ) break loop19;
+                        EarlyExitException eee =
+                            new EarlyExitException(19, input);
+                        throw eee;
+                }
+                cnt19++;
+            } while (true);
+
+
             }
 
 
@@ -1592,35 +1626,35 @@ public class LenguajeLexer extends Lexer {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:784:3: ( 'true' | 'false' | 'FALSE' | 'TRUE' | 'True' | 'False' | 'verdadero' | 'falso' | 'FALSO' | 'VERDADERO' | 'Verdadero' | 'Falso' )
-            int alt18=12;
+            int alt20=12;
             switch ( input.LA(1) ) {
             case 't':
                 {
-                alt18=1;
+                alt20=1;
                 }
                 break;
             case 'f':
                 {
-                int LA18_2 = input.LA(2);
+                int LA20_2 = input.LA(2);
 
-                if ( (LA18_2=='a') ) {
-                    int LA18_7 = input.LA(3);
+                if ( (LA20_2=='a') ) {
+                    int LA20_7 = input.LA(3);
 
-                    if ( (LA18_7=='l') ) {
-                        int LA18_14 = input.LA(4);
+                    if ( (LA20_7=='l') ) {
+                        int LA20_14 = input.LA(4);
 
-                        if ( (LA18_14=='s') ) {
-                            int LA18_17 = input.LA(5);
+                        if ( (LA20_14=='s') ) {
+                            int LA20_17 = input.LA(5);
 
-                            if ( (LA18_17=='e') ) {
-                                alt18=2;
+                            if ( (LA20_17=='e') ) {
+                                alt20=2;
                             }
-                            else if ( (LA18_17=='o') ) {
-                                alt18=8;
+                            else if ( (LA20_17=='o') ) {
+                                alt20=8;
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 18, 17, input);
+                                    new NoViableAltException("", 20, 17, input);
 
                                 throw nvae;
 
@@ -1628,7 +1662,7 @@ public class LenguajeLexer extends Lexer {
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 14, input);
+                                new NoViableAltException("", 20, 14, input);
 
                             throw nvae;
 
@@ -1636,7 +1670,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 18, 7, input);
+                            new NoViableAltException("", 20, 7, input);
 
                         throw nvae;
 
@@ -1644,7 +1678,7 @@ public class LenguajeLexer extends Lexer {
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 18, 2, input);
+                        new NoViableAltException("", 20, 2, input);
 
                     throw nvae;
 
@@ -1653,26 +1687,26 @@ public class LenguajeLexer extends Lexer {
                 break;
             case 'F':
                 {
-                int LA18_3 = input.LA(2);
+                int LA20_3 = input.LA(2);
 
-                if ( (LA18_3=='A') ) {
-                    int LA18_8 = input.LA(3);
+                if ( (LA20_3=='A') ) {
+                    int LA20_8 = input.LA(3);
 
-                    if ( (LA18_8=='L') ) {
-                        int LA18_15 = input.LA(4);
+                    if ( (LA20_8=='L') ) {
+                        int LA20_15 = input.LA(4);
 
-                        if ( (LA18_15=='S') ) {
-                            int LA18_18 = input.LA(5);
+                        if ( (LA20_15=='S') ) {
+                            int LA20_18 = input.LA(5);
 
-                            if ( (LA18_18=='E') ) {
-                                alt18=3;
+                            if ( (LA20_18=='E') ) {
+                                alt20=3;
                             }
-                            else if ( (LA18_18=='O') ) {
-                                alt18=9;
+                            else if ( (LA20_18=='O') ) {
+                                alt20=9;
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 18, 18, input);
+                                    new NoViableAltException("", 20, 18, input);
 
                                 throw nvae;
 
@@ -1680,7 +1714,7 @@ public class LenguajeLexer extends Lexer {
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 15, input);
+                                new NoViableAltException("", 20, 15, input);
 
                             throw nvae;
 
@@ -1688,30 +1722,30 @@ public class LenguajeLexer extends Lexer {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 18, 8, input);
+                            new NoViableAltException("", 20, 8, input);
 
                         throw nvae;
 
                     }
                 }
-                else if ( (LA18_3=='a') ) {
-                    int LA18_9 = input.LA(3);
+                else if ( (LA20_3=='a') ) {
+                    int LA20_9 = input.LA(3);
 
-                    if ( (LA18_9=='l') ) {
-                        int LA18_16 = input.LA(4);
+                    if ( (LA20_9=='l') ) {
+                        int LA20_16 = input.LA(4);
 
-                        if ( (LA18_16=='s') ) {
-                            int LA18_19 = input.LA(5);
+                        if ( (LA20_16=='s') ) {
+                            int LA20_19 = input.LA(5);
 
-                            if ( (LA18_19=='e') ) {
-                                alt18=6;
+                            if ( (LA20_19=='e') ) {
+                                alt20=6;
                             }
-                            else if ( (LA18_19=='o') ) {
-                                alt18=12;
+                            else if ( (LA20_19=='o') ) {
+                                alt20=12;
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 18, 19, input);
+                                    new NoViableAltException("", 20, 19, input);
 
                                 throw nvae;
 
@@ -1719,7 +1753,7 @@ public class LenguajeLexer extends Lexer {
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 16, input);
+                                new NoViableAltException("", 20, 16, input);
 
                             throw nvae;
 
@@ -1727,7 +1761,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 18, 9, input);
+                            new NoViableAltException("", 20, 9, input);
 
                         throw nvae;
 
@@ -1735,7 +1769,7 @@ public class LenguajeLexer extends Lexer {
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 18, 3, input);
+                        new NoViableAltException("", 20, 3, input);
 
                     throw nvae;
 
@@ -1744,17 +1778,17 @@ public class LenguajeLexer extends Lexer {
                 break;
             case 'T':
                 {
-                int LA18_4 = input.LA(2);
+                int LA20_4 = input.LA(2);
 
-                if ( (LA18_4=='R') ) {
-                    alt18=4;
+                if ( (LA20_4=='R') ) {
+                    alt20=4;
                 }
-                else if ( (LA18_4=='r') ) {
-                    alt18=5;
+                else if ( (LA20_4=='r') ) {
+                    alt20=5;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 18, 4, input);
+                        new NoViableAltException("", 20, 4, input);
 
                     throw nvae;
 
@@ -1763,22 +1797,22 @@ public class LenguajeLexer extends Lexer {
                 break;
             case 'v':
                 {
-                alt18=7;
+                alt20=7;
                 }
                 break;
             case 'V':
                 {
-                int LA18_6 = input.LA(2);
+                int LA20_6 = input.LA(2);
 
-                if ( (LA18_6=='E') ) {
-                    alt18=10;
+                if ( (LA20_6=='E') ) {
+                    alt20=10;
                 }
-                else if ( (LA18_6=='e') ) {
-                    alt18=11;
+                else if ( (LA20_6=='e') ) {
+                    alt20=11;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 18, 6, input);
+                        new NoViableAltException("", 20, 6, input);
 
                     throw nvae;
 
@@ -1787,13 +1821,13 @@ public class LenguajeLexer extends Lexer {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt18) {
+            switch (alt20) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:785:4: 'true'
                     {
@@ -2048,23 +2082,23 @@ public class LenguajeLexer extends Lexer {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:836:3: ( 'print' | 'imprimir' )
             {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:836:3: ( 'print' | 'imprimir' )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA19_0=='p') ) {
-                alt19=1;
+            if ( (LA21_0=='p') ) {
+                alt21=1;
             }
-            else if ( (LA19_0=='i') ) {
-                alt19=2;
+            else if ( (LA21_0=='i') ) {
+                alt21=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt19) {
+            switch (alt21) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:836:4: 'print'
                     {
@@ -2107,23 +2141,23 @@ public class LenguajeLexer extends Lexer {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:841:3: ( 'println' | 'imprimirln' )
             {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:841:3: ( 'println' | 'imprimirln' )
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA20_0=='p') ) {
-                alt20=1;
+            if ( (LA22_0=='p') ) {
+                alt22=1;
             }
-            else if ( (LA20_0=='i') ) {
-                alt20=2;
+            else if ( (LA22_0=='i') ) {
+                alt22=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt20) {
+            switch (alt22) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:841:4: 'println'
                     {
@@ -2166,23 +2200,23 @@ public class LenguajeLexer extends Lexer {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:846:3: ( 'read' | 'leer' )
             {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:846:3: ( 'read' | 'leer' )
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA21_0=='r') ) {
-                alt21=1;
+            if ( (LA23_0=='r') ) {
+                alt23=1;
             }
-            else if ( (LA21_0=='l') ) {
-                alt21=2;
+            else if ( (LA23_0=='l') ) {
+                alt23=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 21, 0, input);
+                    new NoViableAltException("", 23, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt21) {
+            switch (alt23) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:846:4: 'read'
                     {
@@ -2225,23 +2259,23 @@ public class LenguajeLexer extends Lexer {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:849:3: ( 'push' | 'insertar' )
             {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:849:3: ( 'push' | 'insertar' )
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA22_0=='p') ) {
-                alt22=1;
+            if ( (LA24_0=='p') ) {
+                alt24=1;
             }
-            else if ( (LA22_0=='i') ) {
-                alt22=2;
+            else if ( (LA24_0=='i') ) {
+                alt24=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt22) {
+            switch (alt24) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:849:4: 'push'
                     {
@@ -2284,21 +2318,21 @@ public class LenguajeLexer extends Lexer {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:856:3: ( '.set' | '.fijar' )
             {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:856:3: ( '.set' | '.fijar' )
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA23_0=='.') ) {
-                int LA23_1 = input.LA(2);
+            if ( (LA25_0=='.') ) {
+                int LA25_1 = input.LA(2);
 
-                if ( (LA23_1=='s') ) {
-                    alt23=1;
+                if ( (LA25_1=='s') ) {
+                    alt25=1;
                 }
-                else if ( (LA23_1=='f') ) {
-                    alt23=2;
+                else if ( (LA25_1=='f') ) {
+                    alt25=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 23, 1, input);
+                        new NoViableAltException("", 25, 1, input);
 
                     throw nvae;
 
@@ -2306,12 +2340,12 @@ public class LenguajeLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt23) {
+            switch (alt25) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:856:4: '.set'
                     {
@@ -2354,23 +2388,23 @@ public class LenguajeLexer extends Lexer {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:859:3: ( 'return' | 'devolver' )
             {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:859:3: ( 'return' | 'devolver' )
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA24_0=='r') ) {
-                alt24=1;
+            if ( (LA26_0=='r') ) {
+                alt26=1;
             }
-            else if ( (LA24_0=='d') ) {
-                alt24=2;
+            else if ( (LA26_0=='d') ) {
+                alt26=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 26, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt24) {
+            switch (alt26) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:859:4: 'return'
                     {
@@ -2410,23 +2444,23 @@ public class LenguajeLexer extends Lexer {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:861:3: ( 'if' | 'si' )
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA25_0=='i') ) {
-                alt25=1;
+            if ( (LA27_0=='i') ) {
+                alt27=1;
             }
-            else if ( (LA25_0=='s') ) {
-                alt25=2;
+            else if ( (LA27_0=='s') ) {
+                alt27=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 25, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt25) {
+            switch (alt27) {
                 case 1 :
                     // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:862:3: 'if'
                     {
@@ -2478,17 +2512,17 @@ public class LenguajeLexer extends Lexer {
 
 
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:872:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )*
-            loop26:
+            loop28:
             do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
+                int alt28=2;
+                int LA28_0 = input.LA(1);
 
-                if ( ((LA26_0 >= '1' && LA26_0 <= '9')||(LA26_0 >= 'A' && LA26_0 <= 'Z')||LA26_0=='_'||(LA26_0 >= 'a' && LA26_0 <= 'z')) ) {
-                    alt26=1;
+                if ( ((LA28_0 >= '1' && LA28_0 <= '9')||(LA28_0 >= 'A' && LA28_0 <= 'Z')||LA28_0=='_'||(LA28_0 >= 'a' && LA28_0 <= 'z')) ) {
+                    alt28=1;
                 }
 
 
-                switch (alt26) {
+                switch (alt28) {
             	case 1 :
             	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
             	    {
@@ -2506,7 +2540,7 @@ public class LenguajeLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop28;
                 }
             } while (true);
 
@@ -2537,20 +2571,20 @@ public class LenguajeLexer extends Lexer {
 
 
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:885:13: ( . )*
-            loop27:
+            loop29:
             do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( (LA27_0=='\"') ) {
-                    alt27=2;
+                if ( (LA29_0=='\"') ) {
+                    alt29=2;
                 }
-                else if ( ((LA27_0 >= '\u0000' && LA27_0 <= '!')||(LA27_0 >= '#' && LA27_0 <= '\uFFFF')) ) {
-                    alt27=1;
+                else if ( ((LA29_0 >= '\u0000' && LA29_0 <= '!')||(LA29_0 >= '#' && LA29_0 <= '\uFFFF')) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt27) {
+                switch (alt29) {
             	case 1 :
             	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:885:14: .
             	    {
@@ -2560,7 +2594,7 @@ public class LenguajeLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop27;
+            	    break loop29;
                 }
             } while (true);
 
@@ -2588,18 +2622,18 @@ public class LenguajeLexer extends Lexer {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:897:6: ( ' ' | '\\t' )+
             {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:897:6: ( ' ' | '\\t' )+
-            int cnt28=0;
-            loop28:
+            int cnt30=0;
+            loop30:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA28_0=='\t'||LA28_0==' ') ) {
-                    alt28=1;
+                if ( (LA30_0=='\t'||LA30_0==' ') ) {
+                    alt30=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt30) {
             	case 1 :
             	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:
             	    {
@@ -2617,12 +2651,12 @@ public class LenguajeLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt28 >= 1 ) break loop28;
+            	    if ( cnt30 >= 1 ) break loop30;
                         EarlyExitException eee =
-                            new EarlyExitException(28, input);
+                            new EarlyExitException(30, input);
                         throw eee;
                 }
-                cnt28++;
+                cnt30++;
             } while (true);
 
 
@@ -2648,17 +2682,17 @@ public class LenguajeLexer extends Lexer {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:898:17: ( ' ' )*
             {
             // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:898:17: ( ' ' )*
-            loop29:
+            loop31:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt31=2;
+                int LA31_0 = input.LA(1);
 
-                if ( (LA29_0==' ') ) {
-                    alt29=1;
+                if ( (LA31_0==' ') ) {
+                    alt31=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt31) {
             	case 1 :
             	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:898:18: ' '
             	    {
@@ -2668,7 +2702,7 @@ public class LenguajeLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop31;
                 }
             } while (true);
 
@@ -2688,9 +2722,9 @@ public class LenguajeLexer extends Lexer {
 
     public void mTokens() throws RecognitionException {
         // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:8: ( T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | TOKEN | PC | COMENTARIO | ASIGNACION | WHILE | FOR | ELSE | VARIABLE | LIST | FUNCTION | ELSEIF | DOBLE | NUMERO | BOOLEAN | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | PUSH | SET | RETURN | IF | NOMBRE | TEXTO | WS | WSOPT )
-        int alt30=56;
-        alt30 = dfa30.predict(input);
-        switch (alt30) {
+        int alt32=56;
+        alt32 = dfa32.predict(input);
+        switch (alt32) {
             case 1 :
                 // C:\\Users\\Daniel\\Google Drive\\lenguaje\\fucnionando_funciones\\funcionando\\Extendedprojectocoso\\ExtendedProjectcoso\\target\\classes\\Lenguaje.g:1:10: T__35
                 {
@@ -3145,72 +3179,126 @@ public class LenguajeLexer extends Lexer {
     }
 
 
-    protected DFA30 dfa30 = new DFA30(this);
-    static final String DFA30_eotS =
+    protected DFA6 dfa6 = new DFA6(this);
+    protected DFA32 dfa32 = new DFA32(this);
+    static final String DFA6_eotS =
+        "\1\uffff\1\4\1\uffff\1\4\1\uffff";
+    static final String DFA6_eofS =
+        "\5\uffff";
+    static final String DFA6_minS =
+        "\2\12\1\uffff\1\12\1\uffff";
+    static final String DFA6_maxS =
+        "\1\73\1\40\1\uffff\1\40\1\uffff";
+    static final String DFA6_acceptS =
+        "\2\uffff\1\1\1\uffff\1\2";
+    static final String DFA6_specialS =
+        "\5\uffff}>";
+    static final String[] DFA6_transitionS = {
+            "\1\2\2\uffff\1\2\22\uffff\1\2\32\uffff\1\1",
+            "\1\2\2\uffff\1\2\22\uffff\1\3",
+            "",
+            "\1\2\2\uffff\1\2\22\uffff\1\3",
+            ""
+    };
+
+    static final short[] DFA6_eot = DFA.unpackEncodedString(DFA6_eotS);
+    static final short[] DFA6_eof = DFA.unpackEncodedString(DFA6_eofS);
+    static final char[] DFA6_min = DFA.unpackEncodedStringToUnsignedChars(DFA6_minS);
+    static final char[] DFA6_max = DFA.unpackEncodedStringToUnsignedChars(DFA6_maxS);
+    static final short[] DFA6_accept = DFA.unpackEncodedString(DFA6_acceptS);
+    static final short[] DFA6_special = DFA.unpackEncodedString(DFA6_specialS);
+    static final short[][] DFA6_transition;
+
+    static {
+        int numStates = DFA6_transitionS.length;
+        DFA6_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA6_transition[i] = DFA.unpackEncodedString(DFA6_transitionS[i]);
+        }
+    }
+
+    class DFA6 extends DFA {
+
+        public DFA6(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 6;
+            this.eot = DFA6_eot;
+            this.eof = DFA6_eof;
+            this.min = DFA6_min;
+            this.max = DFA6_max;
+            this.accept = DFA6_accept;
+            this.special = DFA6_special;
+            this.transition = DFA6_transition;
+        }
+        public String getDescription() {
+            return "709:1: PC : ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* );";
+        }
+    }
+    static final String DFA32_eotS =
         "\1\53\3\uffff\1\55\1\uffff\1\60\1\uffff\1\63\1\70\1\72\1\74\1\76"+
-        "\1\100\3\uffff\1\50\1\uffff\10\50\1\121\4\50\3\uffff\1\131\1\uffff"+
-        "\3\50\1\uffff\1\52\27\uffff\12\50\1\154\4\50\2\uffff\7\50\2\uffff"+
-        "\2\50\1\154\2\50\1\uffff\3\50\1\u0080\7\50\1\uffff\1\u0088\17\50"+
-        "\1\u0098\2\50\1\uffff\2\50\1\u0080\1\50\1\u00a0\1\u00a2\1\50\1\uffff"+
-        "\1\50\1\u00a6\1\u00a7\1\u00a8\2\50\2\u00a8\4\50\1\u00a7\2\50\1\uffff"+
-        "\1\u00b3\3\50\2\u00a8\1\u00b8\3\uffff\1\u00a2\1\50\1\u00a6\3\uffff"+
-        "\4\u00a8\6\50\1\uffff\4\50\1\uffff\5\50\1\u00c9\3\50\1\u00cd\1\u00ce"+
-        "\5\50\1\uffff\1\50\1\u00b3\1\u00cd\2\uffff\3\50\1\u00b8\1\u00a0"+
-        "\1\u00c9\3\u00a8\1\50\1\u00ce";
-    static final String DFA30_eofS =
+        "\1\100\3\uffff\1\51\1\uffff\1\52\10\51\1\121\4\51\3\uffff\1\131"+
+        "\1\uffff\3\51\30\uffff\12\51\1\154\4\51\2\uffff\7\51\2\uffff\2\51"+
+        "\1\154\2\51\1\uffff\3\51\1\u0080\7\51\1\uffff\1\u0088\17\51\1\u0098"+
+        "\2\51\1\uffff\2\51\1\u0080\1\51\1\u00a0\1\u00a2\1\51\1\uffff\1\51"+
+        "\1\u00a6\1\u00a7\1\u00a8\2\51\2\u00a8\4\51\1\u00a7\2\51\1\uffff"+
+        "\1\u00b3\3\51\2\u00a8\1\u00b8\3\uffff\1\u00a2\1\51\1\u00a6\3\uffff"+
+        "\4\u00a8\6\51\1\uffff\4\51\1\uffff\5\51\1\u00c9\3\51\1\u00cd\1\u00ce"+
+        "\5\51\1\uffff\1\51\1\u00b3\1\u00cd\2\uffff\3\51\1\u00b8\1\u00a0"+
+        "\1\u00c9\3\u00a8\1\51\1\u00ce";
+    static final String DFA32_eofS =
         "\u00da\uffff";
-    static final String DFA30_minS =
+    static final String DFA32_minS =
         "\1\11\3\uffff\1\51\1\uffff\1\53\1\uffff\1\55\1\146\1\52\3\75\3\uffff"+
-        "\1\157\1\uffff\1\150\1\151\2\141\1\154\1\151\1\141\1\145\1\56\1"+
-        "\162\1\101\1\122\1\105\3\uffff\1\0\1\uffff\1\146\2\145\1\uffff\1"+
-        "\40\13\uffff\1\145\13\uffff\1\154\1\151\1\145\1\162\1\156\1\154"+
-        "\1\162\1\151\2\163\1\61\2\162\1\163\1\145\2\uffff\1\165\1\114\1"+
-        "\154\1\125\1\165\1\122\1\162\2\uffff\1\160\1\163\1\61\1\141\1\166"+
-        "\1\uffff\1\141\1\154\1\156\1\61\1\143\1\163\1\141\1\156\1\150\1"+
-        "\145\1\156\1\uffff\1\61\1\144\1\164\1\162\1\145\1\123\1\163\1\105"+
-        "\1\145\1\104\1\144\1\162\1\145\1\144\1\165\1\157\1\61\1\145\1\164"+
-        "\1\uffff\1\151\1\145\1\61\1\164\1\61\1\40\1\157\1\uffff\1\141\3"+
-        "\61\1\105\1\145\2\61\1\101\1\141\1\151\1\162\1\61\1\162\1\154\1"+
-        "\uffff\1\61\1\162\1\151\1\157\3\61\3\uffff\1\40\1\144\1\61\3\uffff"+
-        "\4\61\1\104\1\144\1\155\1\164\1\156\1\166\1\uffff\1\141\1\157\2"+
-        "\156\1\uffff\1\145\1\105\1\145\1\151\1\141\1\61\1\145\1\163\1\156"+
-        "\2\61\1\162\1\122\3\162\1\uffff\1\162\2\61\2\uffff\1\157\1\117\1"+
-        "\157\6\61\1\156\1\61";
-    static final String DFA30_maxS =
+        "\1\157\1\uffff\1\12\1\150\1\151\2\141\1\154\1\151\1\141\1\145\1"+
+        "\56\1\162\1\101\1\122\1\105\3\uffff\1\0\1\uffff\1\146\2\145\14\uffff"+
+        "\1\145\13\uffff\1\154\1\151\1\145\1\162\1\156\1\154\1\162\1\151"+
+        "\2\163\1\61\2\162\1\163\1\145\2\uffff\1\165\1\114\1\154\1\125\1"+
+        "\165\1\122\1\162\2\uffff\1\160\1\163\1\61\1\141\1\166\1\uffff\1"+
+        "\141\1\154\1\156\1\61\1\143\1\163\1\141\1\156\1\150\1\145\1\156"+
+        "\1\uffff\1\61\1\144\1\164\1\162\1\145\1\123\1\163\1\105\1\145\1"+
+        "\104\1\144\1\162\1\145\1\144\1\165\1\157\1\61\1\145\1\164\1\uffff"+
+        "\1\151\1\145\1\61\1\164\1\61\1\40\1\157\1\uffff\1\141\3\61\1\105"+
+        "\1\145\2\61\1\101\1\141\1\151\1\162\1\61\1\162\1\154\1\uffff\1\61"+
+        "\1\162\1\151\1\157\3\61\3\uffff\1\40\1\144\1\61\3\uffff\4\61\1\104"+
+        "\1\144\1\155\1\164\1\156\1\166\1\uffff\1\141\1\157\2\156\1\uffff"+
+        "\1\145\1\105\1\145\1\151\1\141\1\61\1\145\1\163\1\156\2\61\1\162"+
+        "\1\122\3\162\1\uffff\1\162\2\61\2\uffff\1\157\1\117\1\157\6\61\1"+
+        "\156\1\61";
+    static final String DFA32_maxS =
         "\1\175\3\uffff\1\51\1\uffff\1\75\1\uffff\1\75\1\164\1\57\3\75\3"+
-        "\uffff\1\157\1\uffff\1\150\1\151\2\165\1\154\1\151\1\145\1\151\1"+
-        "\71\1\162\1\141\1\162\1\145\3\uffff\1\uffff\1\uffff\1\156\2\145"+
-        "\1\uffff\1\40\13\uffff\1\151\13\uffff\1\154\1\151\1\145\1\162\1"+
-        "\156\1\154\1\162\1\151\2\163\1\172\2\162\1\163\1\145\2\uffff\1\165"+
-        "\1\114\1\154\1\125\1\165\1\122\1\162\2\uffff\1\160\1\163\1\172\1"+
-        "\164\1\166\1\uffff\1\141\1\154\1\156\1\172\1\143\1\163\1\141\1\156"+
-        "\1\150\1\145\1\156\1\uffff\1\172\1\144\1\164\1\162\1\145\1\123\1"+
-        "\163\1\105\1\145\1\104\1\144\1\162\1\145\1\144\1\165\1\157\1\172"+
-        "\1\145\1\164\1\uffff\1\164\1\157\1\172\1\164\2\172\1\157\1\uffff"+
-        "\1\141\3\172\1\117\1\157\2\172\1\101\1\141\1\151\1\162\1\172\1\162"+
-        "\1\154\1\uffff\1\172\1\162\1\151\1\157\3\172\3\uffff\1\172\1\144"+
-        "\1\172\3\uffff\4\172\1\104\1\144\1\155\1\164\1\156\1\166\1\uffff"+
-        "\1\141\1\157\2\156\1\uffff\1\145\1\105\1\145\1\151\1\141\1\172\1"+
-        "\145\1\163\1\156\2\172\1\162\1\122\3\162\1\uffff\1\162\2\172\2\uffff"+
-        "\1\157\1\117\1\157\6\172\1\156\1\172";
-    static final String DFA30_acceptS =
+        "\uffff\1\157\1\uffff\1\40\1\150\1\151\2\165\1\154\1\151\1\145\1"+
+        "\151\1\71\1\162\1\141\1\162\1\145\3\uffff\1\uffff\1\uffff\1\156"+
+        "\2\145\14\uffff\1\151\13\uffff\1\154\1\151\1\145\1\162\1\156\1\154"+
+        "\1\162\1\151\2\163\1\172\2\162\1\163\1\145\2\uffff\1\165\1\114\1"+
+        "\154\1\125\1\165\1\122\1\162\2\uffff\1\160\1\163\1\172\1\164\1\166"+
+        "\1\uffff\1\141\1\154\1\156\1\172\1\143\1\163\1\141\1\156\1\150\1"+
+        "\145\1\156\1\uffff\1\172\1\144\1\164\1\162\1\145\1\123\1\163\1\105"+
+        "\1\145\1\104\1\144\1\162\1\145\1\144\1\165\1\157\1\172\1\145\1\164"+
+        "\1\uffff\1\164\1\157\1\172\1\164\2\172\1\157\1\uffff\1\141\3\172"+
+        "\1\117\1\157\2\172\1\101\1\141\1\151\1\162\1\172\1\162\1\154\1\uffff"+
+        "\1\172\1\162\1\151\1\157\3\172\3\uffff\1\172\1\144\1\172\3\uffff"+
+        "\4\172\1\104\1\144\1\155\1\164\1\156\1\166\1\uffff\1\141\1\157\2"+
+        "\156\1\uffff\1\145\1\105\1\145\1\151\1\141\1\172\1\145\1\163\1\156"+
+        "\2\172\1\162\1\122\3\162\1\uffff\1\162\2\172\2\uffff\1\157\1\117"+
+        "\1\157\6\172\1\156\1\172";
+    static final String DFA32_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\uffff\1\11\6\uffff\1\27\1\30"+
-        "\1\31\1\uffff\1\33\15\uffff\1\50\1\52\1\53\1\uffff\1\55\3\uffff"+
-        "\1\65\1\uffff\1\67\1\70\1\4\1\51\1\7\1\10\1\6\1\13\1\14\1\12\1\16"+
-        "\1\uffff\1\20\1\62\1\15\1\34\1\21\1\23\1\22\1\24\1\35\1\26\1\25"+
-        "\17\uffff\1\45\1\46\7\uffff\1\54\1\66\5\uffff\1\17\13\uffff\1\64"+
-        "\23\uffff\1\37\7\uffff\1\41\17\uffff\1\32\7\uffff\1\61\1\44\1\40"+
-        "\3\uffff\1\42\1\60\1\47\12\uffff\1\36\4\uffff\1\56\20\uffff\1\63"+
-        "\3\uffff\1\43\1\57\13\uffff";
-    static final String DFA30_specialS =
-        "\43\uffff\1\0\u00b6\uffff}>";
-    static final String[] DFA30_transitionS = {
-            "\1\52\1\22\2\uffff\1\22\22\uffff\1\51\1\1\1\43\2\uffff\1\2\1"+
-            "\3\1\44\1\4\1\40\1\5\1\6\1\7\1\10\1\11\1\12\12\33\1\uffff\1"+
-            "\22\1\13\1\14\1\15\2\uffff\5\50\1\35\15\50\1\36\1\50\1\37\4"+
-            "\50\1\16\1\uffff\1\17\1\uffff\1\50\1\uffff\3\50\1\47\1\27\1"+
-            "\25\1\50\1\21\1\45\2\50\1\32\1\24\2\50\1\26\1\50\1\46\1\30\1"+
-            "\34\1\50\1\31\1\23\3\50\1\42\1\20\1\41",
+        "\1\31\1\uffff\1\33\16\uffff\1\50\1\52\1\53\1\uffff\1\55\3\uffff"+
+        "\1\65\1\67\1\70\1\4\1\51\1\7\1\10\1\6\1\13\1\14\1\12\1\16\1\uffff"+
+        "\1\20\1\62\1\15\1\34\1\21\1\23\1\22\1\24\1\35\1\26\1\25\17\uffff"+
+        "\1\45\1\46\7\uffff\1\54\1\66\5\uffff\1\17\13\uffff\1\64\23\uffff"+
+        "\1\37\7\uffff\1\41\17\uffff\1\32\7\uffff\1\61\1\44\1\40\3\uffff"+
+        "\1\42\1\60\1\47\12\uffff\1\36\4\uffff\1\56\20\uffff\1\63\3\uffff"+
+        "\1\43\1\57\13\uffff";
+    static final String DFA32_specialS =
+        "\44\uffff\1\0\u00b5\uffff}>";
+    static final String[] DFA32_transitionS = {
+            "\1\52\1\22\2\uffff\1\22\22\uffff\1\23\1\1\1\44\2\uffff\1\2\1"+
+            "\3\1\45\1\4\1\41\1\5\1\6\1\7\1\10\1\11\1\12\12\34\1\uffff\1"+
+            "\22\1\13\1\14\1\15\2\uffff\5\51\1\36\15\51\1\37\1\51\1\40\4"+
+            "\51\1\16\1\uffff\1\17\1\uffff\1\51\1\uffff\3\51\1\50\1\30\1"+
+            "\26\1\51\1\21\1\46\2\51\1\33\1\25\2\51\1\27\1\51\1\47\1\31\1"+
+            "\35\1\51\1\32\1\24\3\51\1\43\1\20\1\42",
             "",
             "",
             "",
@@ -3229,6 +3317,7 @@ public class LenguajeLexer extends Lexer {
             "",
             "\1\101",
             "",
+            "\1\22\2\uffff\1\22\22\uffff\1\23",
             "\1\102",
             "\1\103",
             "\1\106\15\uffff\1\104\5\uffff\1\105",
@@ -3237,7 +3326,7 @@ public class LenguajeLexer extends Lexer {
             "\1\113",
             "\1\114\3\uffff\1\115",
             "\1\117\3\uffff\1\116",
-            "\1\120\1\uffff\12\33",
+            "\1\120\1\uffff\12\34",
             "\1\122",
             "\1\123\37\uffff\1\124",
             "\1\125\37\uffff\1\126",
@@ -3251,7 +3340,6 @@ public class LenguajeLexer extends Lexer {
             "\1\136",
             "\1\137",
             "",
-            "\1\51",
             "",
             "",
             "",
@@ -3285,7 +3373,7 @@ public class LenguajeLexer extends Lexer {
             "\1\150",
             "\1\151",
             "\1\152",
-            "\11\50\7\uffff\32\50\4\uffff\1\153\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\153\1\uffff\32\51",
             "\1\155",
             "\1\156",
             "\1\157",
@@ -3303,14 +3391,14 @@ public class LenguajeLexer extends Lexer {
             "",
             "\1\170",
             "\1\171",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\172\22\uffff\1\173",
             "\1\174",
             "",
             "\1\175",
             "\1\176",
             "\1\177",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u0081",
             "\1\u0082",
             "\1\u0083",
@@ -3319,7 +3407,7 @@ public class LenguajeLexer extends Lexer {
             "\1\u0086",
             "\1\u0087",
             "",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u0089",
             "\1\u008a",
             "\1\u008b",
@@ -3335,57 +3423,57 @@ public class LenguajeLexer extends Lexer {
             "\1\u0095",
             "\1\u0096",
             "\1\u0097",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u0099",
             "\1\u009a",
             "",
             "\1\u009c\12\uffff\1\u009b",
             "\1\u009d\11\uffff\1\u009e",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u009f",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\1\u00a1\20\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff"+
-            "\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00a1\20\uffff\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff"+
+            "\32\51",
             "\1\u00a3",
             "",
             "\1\u00a4",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\1\u00a5\31\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\1\u00a5\31\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00a9\11\uffff\1\u00aa",
             "\1\u00ab\11\uffff\1\u00ac",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00ad",
             "\1\u00ae",
             "\1\u00af",
             "\1\u00b0",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00b1",
             "\1\u00b2",
             "",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00b4",
             "\1\u00b5",
             "\1\u00b6",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\13\50\1\u00b7\16"+
-            "\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\13\51\1\u00b7\16"+
+            "\51",
             "",
             "",
             "",
-            "\1\u00a1\20\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff"+
-            "\32\50",
+            "\1\u00a1\20\uffff\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff"+
+            "\32\51",
             "\1\u00b9",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "",
             "",
             "",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00ba",
             "\1\u00bb",
             "\1\u00bc",
@@ -3403,12 +3491,12 @@ public class LenguajeLexer extends Lexer {
             "\1\u00c6",
             "\1\u00c7",
             "\1\u00c8",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00ca",
             "\1\u00cb",
             "\1\u00cc",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00cf",
             "\1\u00d0",
             "\1\u00d1",
@@ -3416,52 +3504,52 @@ public class LenguajeLexer extends Lexer {
             "\1\u00d3",
             "",
             "\1\u00d4",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "",
             "",
             "\1\u00d5",
             "\1\u00d6",
             "\1\u00d7",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\13\50\1\u00d8\16"+
-            "\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\13\51\1\u00d8\16"+
+            "\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00d9",
-            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50"
+            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51"
     };
 
-    static final short[] DFA30_eot = DFA.unpackEncodedString(DFA30_eotS);
-    static final short[] DFA30_eof = DFA.unpackEncodedString(DFA30_eofS);
-    static final char[] DFA30_min = DFA.unpackEncodedStringToUnsignedChars(DFA30_minS);
-    static final char[] DFA30_max = DFA.unpackEncodedStringToUnsignedChars(DFA30_maxS);
-    static final short[] DFA30_accept = DFA.unpackEncodedString(DFA30_acceptS);
-    static final short[] DFA30_special = DFA.unpackEncodedString(DFA30_specialS);
-    static final short[][] DFA30_transition;
+    static final short[] DFA32_eot = DFA.unpackEncodedString(DFA32_eotS);
+    static final short[] DFA32_eof = DFA.unpackEncodedString(DFA32_eofS);
+    static final char[] DFA32_min = DFA.unpackEncodedStringToUnsignedChars(DFA32_minS);
+    static final char[] DFA32_max = DFA.unpackEncodedStringToUnsignedChars(DFA32_maxS);
+    static final short[] DFA32_accept = DFA.unpackEncodedString(DFA32_acceptS);
+    static final short[] DFA32_special = DFA.unpackEncodedString(DFA32_specialS);
+    static final short[][] DFA32_transition;
 
     static {
-        int numStates = DFA30_transitionS.length;
-        DFA30_transition = new short[numStates][];
+        int numStates = DFA32_transitionS.length;
+        DFA32_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA30_transition[i] = DFA.unpackEncodedString(DFA30_transitionS[i]);
+            DFA32_transition[i] = DFA.unpackEncodedString(DFA32_transitionS[i]);
         }
     }
 
-    class DFA30 extends DFA {
+    class DFA32 extends DFA {
 
-        public DFA30(BaseRecognizer recognizer) {
+        public DFA32(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 30;
-            this.eot = DFA30_eot;
-            this.eof = DFA30_eof;
-            this.min = DFA30_min;
-            this.max = DFA30_max;
-            this.accept = DFA30_accept;
-            this.special = DFA30_special;
-            this.transition = DFA30_transition;
+            this.decisionNumber = 32;
+            this.eot = DFA32_eot;
+            this.eof = DFA32_eof;
+            this.min = DFA32_min;
+            this.max = DFA32_max;
+            this.accept = DFA32_accept;
+            this.special = DFA32_special;
+            this.transition = DFA32_transition;
         }
         public String getDescription() {
             return "1:1: Tokens : ( T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | TOKEN | PC | COMENTARIO | ASIGNACION | WHILE | FOR | ELSE | VARIABLE | LIST | FUNCTION | ELSEIF | DOBLE | NUMERO | BOOLEAN | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | PUSH | SET | RETURN | IF | NOMBRE | TEXTO | WS | WSOPT );";
@@ -3471,10 +3559,10 @@ public class LenguajeLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA30_35 = input.LA(1);
+                        int LA32_36 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA30_35 >= '\u0000' && LA30_35 <= '\uFFFF')) ) {s = 90;}
+                        if ( ((LA32_36 >= '\u0000' && LA32_36 <= '\uFFFF')) ) {s = 90;}
 
                         else s = 89;
 
@@ -3482,7 +3570,7 @@ public class LenguajeLexer extends Lexer {
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 30, _s, input);
+                new NoViableAltException(getDescription(), 32, _s, input);
             error(nvae);
             throw nvae;
         }

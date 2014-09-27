@@ -25,15 +25,8 @@ public class AsignacionEvaluator implements Evaluator {
 		for (i = pila.size() - 1; i >= 0; i--) {
 
 			if (pila.get(i).get(nombre) != null) {
-				Object asd = e.evaluate(pila);
-
-				Evaluator coso = null;
-				if (asd instanceof Double)
-					coso = new DoubleEvaluator((Double) asd);
-				if (asd instanceof String)
-					coso = new StringEvaluator((String) asd);
-
-				pila.get(i).put(nombre, coso);
+				
+				pila.get(i).put(nombre, e);
 				return null;
 			}
 		}

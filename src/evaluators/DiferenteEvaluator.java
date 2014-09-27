@@ -18,13 +18,61 @@ public class DiferenteEvaluator implements Evaluator {
 
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
-		// TODO also compare with Strings.
 		try {
-			if ((Double) op1.evaluate(pila) != (Double) op2.evaluate(pila))
-				return true;
+			// Both double.
+			if (op1.evaluate(pila) instanceof Double
+					&& op2.evaluate(pila) instanceof Double) {
+				if ((double) ((Double) op1.evaluate(pila)) == (double) ((Double) op2
+						.evaluate(pila))) {
+					return false;
+				} else
+					return true;
+			}
+			// Both String.
+			if (op1.evaluate(pila) instanceof String
+					&& op2.evaluate(pila) instanceof String) {
+				if (((String) op1.evaluate(pila)).equals(((String) op2
+						.evaluate(pila)))) {
+					return false;
+				} else
+					return true;
+			}
+
+			// Both Boolean.
+			if (op1.evaluate(pila) instanceof Boolean
+					&& op2.evaluate(pila) instanceof Boolean) {
+				if (((Boolean) op1.evaluate(pila)).equals(((Boolean) op2
+						.evaluate(pila)))) {
+					return false;
+				} else
+					return true;
+			}
+
+			// Double and String
+			if (op1.evaluate(pila) instanceof Double
+					&& op2.evaluate(pila) instanceof String) {
+				if (((Double) op1.evaluate(pila)).equals(Double
+						.valueOf((((String) op2.evaluate(pila)))))) {
+					return false;
+				} else
+					return true;
+			}
+
+			// String and Double
+			if (op1.evaluate(pila) instanceof String
+					&& op2.evaluate(pila) instanceof Double) {
+				if (((Double) op2.evaluate(pila)).equals(Double
+						.valueOf((((String) op1.evaluate(pila)))))) {
+					return false;
+				} else
+					return true;
+			}
+
+			// Change for an exception.
 			return false;
 		} catch (Exception e) {
-			throw new Exception("Comparing for different values had a problem " + e.getMessage());
+			throw new Exception("Comparing for different values had a problem "
+					+ e.getMessage());
 		}
 	}
 }

@@ -20,7 +20,7 @@ public class MenorIgualEvaluator implements Evaluator {
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
 		// TODO Make it work with strings.
 		try {
-			if ((Integer) op1.evaluate(pila) <= (Integer) op2.evaluate(pila))
+			if ((Double) op1.evaluate(pila) <= (Double) op2.evaluate(pila))
 				return true;
 			return false;
 		} catch (Exception e) {
