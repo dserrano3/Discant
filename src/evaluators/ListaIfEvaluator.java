@@ -38,7 +38,6 @@ public class ListaIfEvaluator implements Evaluator {
 		
 		if ((Boolean)condicion.evaluate(pila)==true)
 		{
-			System.out.println("Se cumple la condicion");
 			for (Evaluator e: lista)
 			{
 				if (e!=null)
@@ -75,7 +74,6 @@ public class ListaIfEvaluator implements Evaluator {
 				}
 				else 
 				{
-					System.out.println("Pila vacia");
 				}
 			}
 		}

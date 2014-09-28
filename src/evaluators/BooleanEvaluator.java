@@ -19,7 +19,6 @@ public class BooleanEvaluator implements Evaluator {
 
 	public BooleanEvaluator(String a) {
 		//This is in case the user writes the bool with capital letter.
-		System.out.println("entre a boolean");
 		a = a.toLowerCase();
 		valor = Boolean.valueOf(a);
 	}

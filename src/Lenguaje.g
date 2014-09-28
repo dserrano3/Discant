@@ -341,12 +341,12 @@ term returns [Evaluator e] throws Exception
         }
   | BOOLEAN 
           {
-           System.out.println("entiendo que es un boolean");
+           //System.out.println("entiendo que es un boolean");
            $e = new BooleanEvaluator(($BOOLEAN.text)); 
           }
   | NOMBRE  
         {   
-        System.out.println("entiendo que es un llamado");
+        //System.out.println("entiendo que es un llamado");
          if(bandera){  
          	  $e = new TermEvaluator(($NOMBRE.text));//((pila.peek().get($NOMBRE.text))); 
          	}
@@ -358,7 +358,7 @@ term returns [Evaluator e] throws Exception
   | DOBLE 
           {
            $e = new DoubleEvaluator(Double.parseDouble($DOBLE.text));
-          }    
+          }
           
   | TEXTO 
          {

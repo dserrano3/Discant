@@ -22,7 +22,6 @@ public class TermEvaluator implements Evaluator {
 		}
 		// If the variable is not found, it creates the variable and fills it
 		// with a 0.
-		System.out.println("variable no existe");
 		pila.get(pila.size() - 1).put(var, new DoubleEvaluator(0));
 		return pila.get(pila.size() - 1).get(var).evaluate(pila);
 		// throw new Exception("Name of variable not declared before");

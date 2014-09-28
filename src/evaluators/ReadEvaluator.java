@@ -1,9 +1,10 @@
 package evaluators;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.swing.JOptionPane;
 
 import conte.Context1;
 
@@ -44,16 +45,15 @@ public class ReadEvaluator implements Evaluator {
 	
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
 		Evaluator e = null;
-		System.out.println("entre a la lectura!!!!!!");
-		String line;
-		if(!texto){
-		line = JOptionPane
-				.showInputDialog("input dato " + nombre + ": ");
-		}else{
-			line = JOptionPane
-					.showInputDialog(text);
+		BufferedReader bf = new BufferedReader (new InputStreamReader (System.in));
+		String line = "";          
+		try {
+		line = bf.readLine();
+		
+		} catch (IOException e1) {
+		
+		e1.printStackTrace();
 		}
-		System.out.println("lei " + line);
 		comprobarVariable();
 		int i;
 		for (i = pila.size() - 1; i >= 0; i--) {
@@ -68,7 +68,6 @@ public class ReadEvaluator implements Evaluator {
 						pattern = "(([0-9])+)";
 						if ((line.matches(pattern)))
 							e = new DoubleEvaluator(Double.parseDouble(s));
-						System.out.println("objeto " + e);
 
 						@SuppressWarnings("unchecked")
 						List<Object> lis = (List<Object>) pila.get(i)
