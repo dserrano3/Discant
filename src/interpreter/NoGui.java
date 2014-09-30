@@ -12,9 +12,9 @@ import antlr.RecognitionException;
 
 public class NoGui {
 	public static void main(String args[]) throws org.antlr.runtime.RecognitionException, Exception {
-
+		
 		LenguajeLexer lexer = new LenguajeLexer(new ANTLRFileStream(
-				"code.dis"));// tokentest.cfpp
+				args[0]));// tokentest.cfpp
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
 
 		LenguajeParser parser = new LenguajeParser(tokens);

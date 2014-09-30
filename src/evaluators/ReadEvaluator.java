@@ -14,10 +14,15 @@ public class ReadEvaluator implements Evaluator {
 	String nombre;
 	boolean texto = false;
 	String text;
+	static BufferedReader bf;
 
 	public ReadEvaluator(ArrayList<Context1> pila, String nombre) {
 		this.pila = pila;
 		this.nombre = nombre;
+		if(bf == null)
+		{
+			bf = new BufferedReader (new InputStreamReader (System.in));
+		}
 	}
 	 /*
 	  * Checks if the variable where the value will be stored exists, if it doesn't it will create it.
@@ -45,7 +50,7 @@ public class ReadEvaluator implements Evaluator {
 	
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
 		Evaluator e = null;
-		BufferedReader bf = new BufferedReader (new InputStreamReader (System.in));
+		//BufferedReader bf = new BufferedReader (new InputStreamReader (System.in));
 		String line = "";          
 		try {
 		line = bf.readLine();
@@ -56,6 +61,7 @@ public class ReadEvaluator implements Evaluator {
 		}
 		comprobarVariable();
 		int i;
+		if(line == null)return null;
 		for (i = pila.size() - 1; i >= 0; i--) {
 			if (pila.get(i).get(nombre) != null) {
 				if (pila.get(i).get(nombre) instanceof ListEvaluator) {
