@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g 2014-10-04 19:36:52
+// $ANTLR 3.4 C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g 2014-10-03 20:41:02
 
 package interpreter.antlr;
 
@@ -640,17 +640,17 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:581:3: ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:593:3: ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* )
             int alt6=2;
             alt6 = dfa6.predict(input);
             switch (alt6) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
                     {
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:4: ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:4: ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+
                     {
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:4: ( ';' )?
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:4: ( ';' )?
                     int alt1=2;
                     int LA1_0 = input.LA(1);
 
@@ -659,7 +659,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     switch (alt1) {
                         case 1 :
-                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:4: ';'
+                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:4: ';'
                             {
                             match(';'); 
 
@@ -669,7 +669,7 @@ public class LenguajeLexer extends Lexer {
                     }
 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:9: ( ' ' )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:9: ( ' ' )*
                     loop2:
                     do {
                         int alt2=2;
@@ -682,7 +682,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:9: ' '
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:9: ' '
                     	    {
                     	    match(' '); 
 
@@ -695,7 +695,7 @@ public class LenguajeLexer extends Lexer {
                     } while (true);
 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:14: ( '\\r' )?
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:14: ( '\\r' )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -704,7 +704,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     switch (alt3) {
                         case 1 :
-                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:14: '\\r'
+                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:14: '\\r'
                             {
                             match('\r'); 
 
@@ -714,7 +714,7 @@ public class LenguajeLexer extends Lexer {
                     }
 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:20: ( '\\n' )+
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:20: ( '\\n' )+
                     int cnt4=0;
                     loop4:
                     do {
@@ -728,7 +728,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:21: '\\n'
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:21: '\\n'
                     	    {
                     	    match('\n'); 
 
@@ -751,11 +751,11 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:31: ';' ( ' ' )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:31: ';' ( ' ' )*
                     {
                     match(';'); 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:35: ( ' ' )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:35: ( ' ' )*
                     loop5:
                     do {
                         int alt5=2;
@@ -768,7 +768,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:582:35: ' '
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:35: ' '
                     	    {
                     	    match(' '); 
 
@@ -799,7 +799,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMENTARIO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:588:3: ( ( ( '/*' ( . )* '*/' ) ( PC )? ) | ( ( '//' ( . )* ) PC ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:600:3: ( ( ( '/*' ( . )* '*/' ) ( PC )? ) | ( ( '//' ( . )* ) PC ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -829,19 +829,19 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:3: ( ( '/*' ( . )* '*/' ) ( PC )? )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:3: ( ( '/*' ( . )* '*/' ) ( PC )? )
                     {
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:3: ( ( '/*' ( . )* '*/' ) ( PC )? )
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:4: ( '/*' ( . )* '*/' ) ( PC )?
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:3: ( ( '/*' ( . )* '*/' ) ( PC )? )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:4: ( '/*' ( . )* '*/' ) ( PC )?
                     {
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:4: ( '/*' ( . )* '*/' )
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:5: '/*' ( . )* '*/'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:4: ( '/*' ( . )* '*/' )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:5: '/*' ( . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:10: ( . )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:10: ( . )*
                     loop7:
                     do {
                         int alt7=2;
@@ -866,7 +866,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:11: .
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:11: .
                     	    {
                     	    matchAny(); 
 
@@ -886,7 +886,7 @@ public class LenguajeLexer extends Lexer {
                     }
 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:21: ( PC )?
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:21: ( PC )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -895,7 +895,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:21: PC
+                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:21: PC
                             {
                             mPC(); 
 
@@ -912,19 +912,19 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:28: ( ( '//' ( . )* ) PC )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:28: ( ( '//' ( . )* ) PC )
                     {
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:28: ( ( '//' ( . )* ) PC )
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:29: ( '//' ( . )* ) PC
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:28: ( ( '//' ( . )* ) PC )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:29: ( '//' ( . )* ) PC
                     {
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:29: ( '//' ( . )* )
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:30: '//' ( . )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:29: ( '//' ( . )* )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:30: '//' ( . )*
                     {
                     match("//"); 
 
 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:35: ( . )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:35: ( . )*
                     loop9:
                     do {
                         int alt9=2;
@@ -949,7 +949,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:589:36: .
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:36: .
                     	    {
                     	    matchAny(); 
 
@@ -989,8 +989,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ASIGNACION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:593:3: ( '=' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:3: '='
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:605:3: ( '=' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:606:3: '='
             {
             match('='); 
 
@@ -1010,7 +1010,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:598:3: ( 'while' | 'mientras' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:610:3: ( 'while' | 'mientras' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1029,7 +1029,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:599:3: 'while'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:611:3: 'while'
                     {
                     match("while"); 
 
@@ -1038,7 +1038,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:599:13: 'mientras'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:611:13: 'mientras'
                     {
                     match("mientras"); 
 
@@ -1062,7 +1062,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = FOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:603:3: ( 'for' | 'para' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:615:3: ( 'for' | 'para' )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1081,7 +1081,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:604:3: 'for'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:616:3: 'for'
                     {
                     match("for"); 
 
@@ -1090,7 +1090,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:604:11: 'para'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:616:11: 'para'
                     {
                     match("para"); 
 
@@ -1114,7 +1114,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:608:3: ( 'else' | 'si_no' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:620:3: ( 'else' | 'si_no' )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1133,7 +1133,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:609:3: 'else'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:621:3: 'else'
                     {
                     match("else"); 
 
@@ -1142,7 +1142,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:609:12: 'si_no'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:621:12: 'si_no'
                     {
                     match("si_no"); 
 
@@ -1166,8 +1166,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = VARIABLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:611:9: ( 'var' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:612:3: 'var'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:623:9: ( 'var' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:624:3: 'var'
             {
             match("var"); 
 
@@ -1189,7 +1189,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LIST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:614:5: ( 'list' | 'lista' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:626:5: ( 'list' | 'lista' )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1245,7 +1245,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt14) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:615:4: 'list'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:627:4: 'list'
                     {
                     match("list"); 
 
@@ -1254,7 +1254,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:615:13: 'lista'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:627:13: 'lista'
                     {
                     match("lista"); 
 
@@ -1278,7 +1278,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = FUNCTION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:618:3: ( 'function' | 'funcion' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:630:3: ( 'function' | 'funcion' )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1341,7 +1341,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:619:3: 'function'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:631:3: 'function'
                     {
                     match("function"); 
 
@@ -1350,7 +1350,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:619:16: 'funcion'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:631:16: 'funcion'
                     {
                     match("funcion"); 
 
@@ -1374,7 +1374,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ELSEIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:623:3: ( 'else if' | 'si_no si' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:635:3: ( 'else if' | 'si_no si' )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1393,7 +1393,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt16) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:624:3: 'else if'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:636:3: 'else if'
                     {
                     match("else if"); 
 
@@ -1402,7 +1402,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:624:15: 'si_no si'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:636:15: 'si_no si'
                     {
                     match("si_no si"); 
 
@@ -1426,13 +1426,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = DOBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:628:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:629:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:640:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:629:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:629:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:629:5: ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:5: ( '0' .. '9' )+
             int cnt17=0;
             loop17:
             do {
@@ -1471,15 +1471,15 @@ public class LenguajeLexer extends Lexer {
             } while (true);
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:629:16: ( '.' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:629:17: '.'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:16: ( '.' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:17: '.'
             {
             match('.'); 
 
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:629:22: ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:22: ( '0' .. '9' )+
             int cnt18=0;
             loop18:
             do {
@@ -1537,13 +1537,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NUMERO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:635:3: ( ( ( '0' .. '9' )+ ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:636:3: ( ( '0' .. '9' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:647:3: ( ( ( '0' .. '9' )+ ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:648:3: ( ( '0' .. '9' )+ )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:636:3: ( ( '0' .. '9' )+ )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:636:5: ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:648:3: ( ( '0' .. '9' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:648:5: ( '0' .. '9' )+
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:636:5: ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:648:5: ( '0' .. '9' )+
             int cnt19=0;
             loop19:
             do {
@@ -1601,7 +1601,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:640:3: ( 'true' | 'false' | 'FALSE' | 'TRUE' | 'True' | 'False' | 'verdadero' | 'falso' | 'FALSO' | 'VERDADERO' | 'Verdadero' | 'Falso' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:652:3: ( 'true' | 'false' | 'FALSE' | 'TRUE' | 'True' | 'False' | 'verdadero' | 'falso' | 'FALSO' | 'VERDADERO' | 'Verdadero' | 'Falso' )
             int alt20=12;
             switch ( input.LA(1) ) {
             case 't':
@@ -1805,7 +1805,7 @@ public class LenguajeLexer extends Lexer {
 
             switch (alt20) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:4: 'true'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:4: 'true'
                     {
                     match("true"); 
 
@@ -1814,7 +1814,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:13: 'false'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:13: 'false'
                     {
                     match("false"); 
 
@@ -1823,7 +1823,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:23: 'FALSE'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:23: 'FALSE'
                     {
                     match("FALSE"); 
 
@@ -1832,7 +1832,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:33: 'TRUE'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:33: 'TRUE'
                     {
                     match("TRUE"); 
 
@@ -1841,7 +1841,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:42: 'True'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:42: 'True'
                     {
                     match("True"); 
 
@@ -1850,7 +1850,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:51: 'False'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:51: 'False'
                     {
                     match("False"); 
 
@@ -1859,7 +1859,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:642:4: 'verdadero'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:4: 'verdadero'
                     {
                     match("verdadero"); 
 
@@ -1868,7 +1868,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:642:18: 'falso'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:18: 'falso'
                     {
                     match("falso"); 
 
@@ -1877,7 +1877,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:642:28: 'FALSO'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:28: 'FALSO'
                     {
                     match("FALSO"); 
 
@@ -1886,7 +1886,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:642:38: 'VERDADERO'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:38: 'VERDADERO'
                     {
                     match("VERDADERO"); 
 
@@ -1895,7 +1895,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:642:52: 'Verdadero'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:52: 'Verdadero'
                     {
                     match("Verdadero"); 
 
@@ -1904,7 +1904,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:642:66: 'Falso'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:66: 'Falso'
                     {
                     match("Falso"); 
 
@@ -1928,8 +1928,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:651:3: ( ')' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:652:3: ')'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:663:3: ( ')' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:664:3: ')'
             {
             match(')'); 
 
@@ -1949,8 +1949,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:661:3: ( '(' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:662:3: '('
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:673:3: ( '(' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:674:3: '('
             {
             match('('); 
 
@@ -1970,8 +1970,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:671:3: ( '}' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:672:3: '}'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:683:3: ( '}' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:684:3: '}'
             {
             match('}'); 
 
@@ -1991,8 +1991,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:676:3: ( '{' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:677:3: '{'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:688:3: ( '{' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:689:3: '{'
             {
             match('{'); 
 
@@ -2012,8 +2012,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:681:3: ( '\\\"' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:682:3: '\\\"'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:693:3: ( '\\\"' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:694:3: '\\\"'
             {
             match('\"'); 
 
@@ -2033,8 +2033,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:686:3: ( '\\'' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:687:3: '\\''
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:698:3: ( '\\'' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:699:3: '\\''
             {
             match('\''); 
 
@@ -2054,10 +2054,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PRINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:691:3: ( ( 'print' | 'imprimir' ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:692:3: ( 'print' | 'imprimir' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:703:3: ( ( 'print' | 'imprimir' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:704:3: ( 'print' | 'imprimir' )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:692:3: ( 'print' | 'imprimir' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:704:3: ( 'print' | 'imprimir' )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -2076,7 +2076,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt21) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:692:4: 'print'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:704:4: 'print'
                     {
                     match("print"); 
 
@@ -2085,7 +2085,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:692:14: 'imprimir'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:704:14: 'imprimir'
                     {
                     match("imprimir"); 
 
@@ -2113,10 +2113,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PRINTLN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:696:3: ( ( 'println' | 'imprimirln' ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:697:3: ( 'println' | 'imprimirln' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:708:3: ( ( 'println' | 'imprimirln' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:709:3: ( 'println' | 'imprimirln' )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:697:3: ( 'println' | 'imprimirln' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:709:3: ( 'println' | 'imprimirln' )
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -2135,7 +2135,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt22) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:697:4: 'println'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:709:4: 'println'
                     {
                     match("println"); 
 
@@ -2144,7 +2144,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:697:16: 'imprimirln'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:709:16: 'imprimirln'
                     {
                     match("imprimirln"); 
 
@@ -2172,10 +2172,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:701:3: ( ( 'read' | 'leer' ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:702:3: ( 'read' | 'leer' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:713:3: ( ( 'read' | 'leer' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:714:3: ( 'read' | 'leer' )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:702:3: ( 'read' | 'leer' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:714:3: ( 'read' | 'leer' )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2194,7 +2194,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt23) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:702:4: 'read'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:714:4: 'read'
                     {
                     match("read"); 
 
@@ -2203,7 +2203,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:702:13: 'leer'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:714:13: 'leer'
                     {
                     match("leer"); 
 
@@ -2231,10 +2231,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PUSH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:704:5: ( ( 'push' | 'insertar' ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:705:3: ( 'push' | 'insertar' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:716:5: ( ( 'push' | 'insertar' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:717:3: ( 'push' | 'insertar' )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:705:3: ( 'push' | 'insertar' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:717:3: ( 'push' | 'insertar' )
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -2253,7 +2253,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt24) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:705:4: 'push'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:717:4: 'push'
                     {
                     match("push"); 
 
@@ -2262,7 +2262,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:705:13: 'insertar'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:717:13: 'insertar'
                     {
                     match("insertar"); 
 
@@ -2290,10 +2290,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = SET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:711:4: ( ( '.set' | '.fijar' ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:712:3: ( '.set' | '.fijar' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:723:4: ( ( '.set' | '.fijar' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:724:3: ( '.set' | '.fijar' )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:712:3: ( '.set' | '.fijar' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:724:3: ( '.set' | '.fijar' )
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -2323,7 +2323,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt25) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:712:4: '.set'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:724:4: '.set'
                     {
                     match(".set"); 
 
@@ -2332,7 +2332,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:712:13: '.fijar'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:724:13: '.fijar'
                     {
                     match(".fijar"); 
 
@@ -2360,10 +2360,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:714:7: ( ( 'return' | 'devolver' ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:715:3: ( 'return' | 'devolver' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:726:7: ( ( 'return' | 'devolver' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:727:3: ( 'return' | 'devolver' )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:715:3: ( 'return' | 'devolver' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:727:3: ( 'return' | 'devolver' )
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -2382,7 +2382,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt26) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:715:4: 'return'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:727:4: 'return'
                     {
                     match("return"); 
 
@@ -2391,7 +2391,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:715:15: 'devolver'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:727:15: 'devolver'
                     {
                     match("devolver"); 
 
@@ -2419,7 +2419,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:717:3: ( 'if' | 'si' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:729:3: ( 'if' | 'si' )
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -2438,7 +2438,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt27) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:718:3: 'if'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:730:3: 'if'
                     {
                     match("if"); 
 
@@ -2447,7 +2447,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:718:10: 'si'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:730:10: 'si'
                     {
                     match("si"); 
 
@@ -2471,11 +2471,11 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NOMBRE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:722:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* ) )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:723:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:734:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:735:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* )
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:723:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:724:5: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:735:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:736:5: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -2487,7 +2487,7 @@ public class LenguajeLexer extends Lexer {
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:728:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:740:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )*
             loop28:
             do {
                 int alt28=2;
@@ -2540,13 +2540,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = TEXTO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:740:3: ( COMILLASD ( . )* COMILLASD )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:741:3: COMILLASD ( . )* COMILLASD
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:752:3: ( COMILLASD ( . )* COMILLASD )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:753:3: COMILLASD ( . )* COMILLASD
             {
             mCOMILLASD(); 
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:741:13: ( . )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:753:13: ( . )*
             loop29:
             do {
                 int alt29=2;
@@ -2562,7 +2562,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt29) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:741:14: .
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:753:14: .
             	    {
             	    matchAny(); 
 
@@ -2594,10 +2594,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:753:4: ( ( ' ' | '\\t' )+ )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:753:6: ( ' ' | '\\t' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:765:4: ( ( ' ' | '\\t' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:765:6: ( ' ' | '\\t' )+
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:753:6: ( ' ' | '\\t' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:765:6: ( ' ' | '\\t' )+
             int cnt30=0;
             loop30:
             do {
@@ -2654,10 +2654,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WSOPT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:754:9: ( ( ' ' )* )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:754:17: ( ' ' )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:766:9: ( ( ' ' )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:766:17: ( ' ' )*
             {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:754:17: ( ' ' )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:766:17: ( ' ' )*
             loop31:
             do {
                 int alt31=2;
@@ -2670,7 +2670,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt31) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:754:18: ' '
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:766:18: ' '
             	    {
             	    match(' '); 
 
@@ -3199,7 +3199,7 @@ public class LenguajeLexer extends Lexer {
             this.transition = DFA6_transition;
         }
         public String getDescription() {
-            return "580:1: PC : ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* );";
+            return "592:1: PC : ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* );";
         }
     }
     static final String DFA32_eotS =

@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g 2014-10-04 19:36:52
+// $ANTLR 3.4 C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g 2014-10-03 20:41:01
 
 package interpreter.antlr; 
 import interpreter.*;
@@ -999,8 +999,78 @@ public class LenguajeParser extends Parser {
 
 
 
+    // $ANTLR start "declaracion"
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:146:1: declaracion returns [Evaluator e] : VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? PC ;
+    public final Evaluator declaracion() throws Exception, RecognitionException {
+        Evaluator e = null;
+
+
+        Token nom=null;
+        Evaluator ev =null;
+
+
+        try {
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:147:3: ( VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:148:3: VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? PC
+            {
+            match(input,VARIABLE,FOLLOW_VARIABLE_in_declaracion769); 
+
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion775); 
+
+              if(bandera)
+                        e = new DeclaracionEvaluator((nom!=null?nom.getText():null), new DoubleEvaluator(0)); 
+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:151:3: ( ASIGNACION ev= evaluator )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
+
+            if ( (LA12_0==ASIGNACION) ) {
+                alt12=1;
+            }
+            switch (alt12) {
+                case 1 :
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:151:7: ASIGNACION ev= evaluator
+                    {
+                    match(input,ASIGNACION,FOLLOW_ASIGNACION_in_declaracion794); 
+
+                    pushFollow(FOLLOW_evaluator_in_declaracion800);
+                    ev=evaluator();
+
+                    state._fsp--;
+
+
+                     if(bandera)
+                              { ((DeclaracionEvaluator)e).asignar(ev); } 
+
+                    }
+                    break;
+
+            }
+
+
+            match(input,PC,FOLLOW_PC_in_declaracion824); 
+
+            }
+
+        }
+
+
+        catch (RecognitionException er) {
+            throw er; 
+        } 
+
+
+        finally {
+        	// do for sure before leaving
+        }
+        return e;
+    }
+    // $ANTLR end "declaracion"
+
+
+
     // $ANTLR start "unincremento"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:146:1: unincremento returns [Evaluator e] : nom= NOMBRE '++' PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:158:1: unincremento returns [Evaluator e] : nom= NOMBRE '++' PC ;
     public final Evaluator unincremento() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1008,12 +1078,12 @@ public class LenguajeParser extends Parser {
         Token nom=null;
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:147:3: (nom= NOMBRE '++' PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:148:3: nom= NOMBRE '++' PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:159:3: (nom= NOMBRE '++' PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:160:3: nom= NOMBRE '++' PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_unincremento772); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_unincremento852); 
 
-            match(input,40,FOLLOW_40_in_unincremento774); 
+            match(input,40,FOLLOW_40_in_unincremento854); 
 
              
                  if(bandera){
@@ -1021,7 +1091,7 @@ public class LenguajeParser extends Parser {
                   }   
               
 
-            match(input,PC,FOLLOW_PC_in_unincremento779); 
+            match(input,PC,FOLLOW_PC_in_unincremento859); 
 
             }
 
@@ -1043,7 +1113,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "menosunincremento"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:156:4: menosunincremento returns [Evaluator e] : nom= NOMBRE '--' PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:168:4: menosunincremento returns [Evaluator e] : nom= NOMBRE '--' PC ;
     public final Evaluator menosunincremento() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1051,19 +1121,19 @@ public class LenguajeParser extends Parser {
         Token nom=null;
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:157:3: (nom= NOMBRE '--' PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:158:3: nom= NOMBRE '--' PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:169:3: (nom= NOMBRE '--' PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:170:3: nom= NOMBRE '--' PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_menosunincremento811); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_menosunincremento891); 
 
-            match(input,44,FOLLOW_44_in_menosunincremento813); 
+            match(input,44,FOLLOW_44_in_menosunincremento893); 
 
              
                  if(bandera)
                   e = new IncrementoEvaluator((nom!=null?nom.getText():null),new DoubleEvaluator(-1));   
               
 
-            match(input,PC,FOLLOW_PC_in_menosunincremento822); 
+            match(input,PC,FOLLOW_PC_in_menosunincremento902); 
 
             }
 
@@ -1085,7 +1155,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "incremento"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:166:3: incremento returns [Evaluator e] : nom= NOMBRE '+=' ev= evaluator PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:178:3: incremento returns [Evaluator e] : nom= NOMBRE '+=' ev= evaluator PC ;
     public final Evaluator incremento() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1095,14 +1165,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:167:3: (nom= NOMBRE '+=' ev= evaluator PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:168:3: nom= NOMBRE '+=' ev= evaluator PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:179:3: (nom= NOMBRE '+=' ev= evaluator PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:180:3: nom= NOMBRE '+=' ev= evaluator PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_incremento853); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_incremento933); 
 
-            match(input,41,FOLLOW_41_in_incremento855); 
+            match(input,41,FOLLOW_41_in_incremento935); 
 
-            pushFollow(FOLLOW_evaluator_in_incremento860);
+            pushFollow(FOLLOW_evaluator_in_incremento940);
             ev=evaluator();
 
             state._fsp--;
@@ -1113,7 +1183,7 @@ public class LenguajeParser extends Parser {
                   e = new IncrementoEvaluator((nom!=null?nom.getText():null),ev);   
               
 
-            match(input,PC,FOLLOW_PC_in_incremento871); 
+            match(input,PC,FOLLOW_PC_in_incremento951); 
 
             }
 
@@ -1135,7 +1205,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "decremento"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:176:3: decremento returns [Evaluator e] : nom= NOMBRE '-=' ev= evaluator PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:188:3: decremento returns [Evaluator e] : nom= NOMBRE '-=' ev= evaluator PC ;
     public final Evaluator decremento() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1145,14 +1215,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:177:3: (nom= NOMBRE '-=' ev= evaluator PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:178:3: nom= NOMBRE '-=' ev= evaluator PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:189:3: (nom= NOMBRE '-=' ev= evaluator PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:190:3: nom= NOMBRE '-=' ev= evaluator PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_decremento901); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_decremento981); 
 
-            match(input,45,FOLLOW_45_in_decremento903); 
+            match(input,45,FOLLOW_45_in_decremento983); 
 
-            pushFollow(FOLLOW_evaluator_in_decremento908);
+            pushFollow(FOLLOW_evaluator_in_decremento988);
             ev=evaluator();
 
             state._fsp--;
@@ -1163,7 +1233,7 @@ public class LenguajeParser extends Parser {
                   e = new IncrementoEvaluator((nom!=null?nom.getText():null),ev, true);   
               
 
-            match(input,PC,FOLLOW_PC_in_decremento919); 
+            match(input,PC,FOLLOW_PC_in_decremento999); 
 
             }
 
@@ -1185,7 +1255,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "declaracion_lista"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:188:3: declaracion_lista returns [Evaluator e] : LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:200:3: declaracion_lista returns [Evaluator e] : LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC ;
     public final Evaluator declaracion_lista() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1194,14 +1264,14 @@ public class LenguajeParser extends Parser {
         Token nom2=null;
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:189:3: ( LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:191:3: LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:201:3: ( LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:203:3: LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC
             {
              e = new DeclaracionMultipleEvaluator(); 
 
-            match(input,LIST,FOLLOW_LIST_in_declaracion_lista961); 
+            match(input,LIST,FOLLOW_LIST_in_declaracion_lista1041); 
 
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion_lista965); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion_lista1045); 
 
 
                                               if(bandera)
@@ -1210,24 +1280,24 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:199:3: ( ',' nom2= NOMBRE )*
-            loop12:
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:211:3: ( ',' nom2= NOMBRE )*
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==42) ) {
-                    alt12=1;
+                if ( (LA13_0==42) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:199:7: ',' nom2= NOMBRE
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:211:7: ',' nom2= NOMBRE
             	    {
-            	    match(input,42,FOLLOW_42_in_declaracion_lista1008); 
+            	    match(input,42,FOLLOW_42_in_declaracion_lista1088); 
 
-            	    nom2=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion_lista1020); 
+            	    nom2=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_declaracion_lista1100); 
 
 
             	                                      if(bandera)
@@ -1240,12 +1310,12 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
 
-            match(input,PC,FOLLOW_PC_in_declaracion_lista1097); 
+            match(input,PC,FOLLOW_PC_in_declaracion_lista1177); 
 
             }
 
@@ -1267,7 +1337,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "lista_texto"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:212:1: lista_texto returns [Evaluator e] : LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:224:1: lista_texto returns [Evaluator e] : LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC ;
     public final Evaluator lista_texto() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1276,22 +1346,22 @@ public class LenguajeParser extends Parser {
         Token tex=null;
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:213:3: ( LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:214:3: LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:225:3: ( LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:226:3: LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC
             {
-            match(input,LIST,FOLLOW_LIST_in_lista_texto1123); 
+            match(input,LIST,FOLLOW_LIST_in_lista_texto1203); 
 
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_lista_texto1127); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_lista_texto1207); 
 
-            match(input,ASIGNACION,FOLLOW_ASIGNACION_in_lista_texto1129); 
+            match(input,ASIGNACION,FOLLOW_ASIGNACION_in_lista_texto1209); 
 
-            match(input,READ,FOLLOW_READ_in_lista_texto1131); 
+            match(input,READ,FOLLOW_READ_in_lista_texto1211); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_lista_texto1133); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_lista_texto1213); 
 
-            tex=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_lista_texto1137); 
+            tex=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_lista_texto1217); 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_lista_texto1139); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_lista_texto1219); 
 
 
                                               if(bandera)
@@ -1300,7 +1370,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_lista_texto1212); 
+            match(input,PC,FOLLOW_PC_in_lista_texto1292); 
 
             }
 
@@ -1322,7 +1392,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "push"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:225:1: push returns [Evaluator e] : nom= NOMBRE '.' PUSH '(' exp= expression ')' PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:237:1: push returns [Evaluator e] : nom= NOMBRE '.' PUSH '(' exp= expression ')' PC ;
     public final Evaluator push() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1332,24 +1402,24 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:226:3: (nom= NOMBRE '.' PUSH '(' exp= expression ')' PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:227:3: nom= NOMBRE '.' PUSH '(' exp= expression ')' PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:238:3: (nom= NOMBRE '.' PUSH '(' exp= expression ')' PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:239:3: nom= NOMBRE '.' PUSH '(' exp= expression ')' PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_push1240); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_push1320); 
 
-            match(input,46,FOLLOW_46_in_push1242); 
+            match(input,46,FOLLOW_46_in_push1322); 
 
-            match(input,PUSH,FOLLOW_PUSH_in_push1244); 
+            match(input,PUSH,FOLLOW_PUSH_in_push1324); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_push1246); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_push1326); 
 
-            pushFollow(FOLLOW_expression_in_push1252);
+            pushFollow(FOLLOW_expression_in_push1332);
             exp=expression();
 
             state._fsp--;
 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_push1254); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_push1334); 
 
 
                                               if(bandera)
@@ -1358,7 +1428,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_push1324); 
+            match(input,PC,FOLLOW_PC_in_push1404); 
 
             }
 
@@ -1380,7 +1450,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "size"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:237:1: size returns [Evaluator e] : nom= NOMBRE size1 ( '()' )* PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:249:1: size returns [Evaluator e] : nom= NOMBRE size1 ( '()' )* PC ;
     public final Evaluator size() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1388,39 +1458,39 @@ public class LenguajeParser extends Parser {
         Token nom=null;
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:238:3: (nom= NOMBRE size1 ( '()' )* PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:239:3: nom= NOMBRE size1 ( '()' )* PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:250:3: (nom= NOMBRE size1 ( '()' )* PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:251:3: nom= NOMBRE size1 ( '()' )* PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_size1352); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_size1432); 
 
-            pushFollow(FOLLOW_size1_in_size1355);
+            pushFollow(FOLLOW_size1_in_size1435);
             size1();
 
             state._fsp--;
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:239:21: ( '()' )*
-            loop13:
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:251:21: ( '()' )*
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==37) ) {
-                    alt13=1;
+                if ( (LA14_0==37) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:239:22: '()'
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:251:22: '()'
             	    {
-            	    match(input,37,FOLLOW_37_in_size1358); 
+            	    match(input,37,FOLLOW_37_in_size1438); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
@@ -1432,7 +1502,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_size1430); 
+            match(input,PC,FOLLOW_PC_in_size1510); 
 
             }
 
@@ -1454,7 +1524,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "asignacion"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:251:1: asignacion returns [Evaluator e] : nom= NOMBRE ASIGNACION ev= evaluator PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:263:1: asignacion returns [Evaluator e] : nom= NOMBRE ASIGNACION ev= evaluator PC ;
     public final Evaluator asignacion() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1464,14 +1534,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:252:3: (nom= NOMBRE ASIGNACION ev= evaluator PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:253:4: nom= NOMBRE ASIGNACION ev= evaluator PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:264:3: (nom= NOMBRE ASIGNACION ev= evaluator PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:265:4: nom= NOMBRE ASIGNACION ev= evaluator PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_asignacion1465); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_asignacion1545); 
 
-            match(input,ASIGNACION,FOLLOW_ASIGNACION_in_asignacion1467); 
+            match(input,ASIGNACION,FOLLOW_ASIGNACION_in_asignacion1547); 
 
-            pushFollow(FOLLOW_evaluator_in_asignacion1473);
+            pushFollow(FOLLOW_evaluator_in_asignacion1553);
             ev=evaluator();
 
             state._fsp--;
@@ -1485,7 +1555,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_asignacion1513); 
+            match(input,PC,FOLLOW_PC_in_asignacion1593); 
 
             }
 
@@ -1507,7 +1577,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "asignacion_lista"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:265:1: asignacion_lista returns [Evaluator e] : nom= NOMBRE ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' ) PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:277:1: asignacion_lista returns [Evaluator e] : nom= NOMBRE ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' ) PC ;
     public final Evaluator asignacion_lista() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1518,41 +1588,41 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:266:3: (nom= NOMBRE ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' ) PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:267:4: nom= NOMBRE ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' ) PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:278:3: (nom= NOMBRE ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' ) PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:279:4: nom= NOMBRE ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' ) PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_asignacion_lista1541); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_asignacion_lista1621); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:268:4: ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:280:4: ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==56) ) {
-                alt14=1;
+            if ( (LA15_0==56) ) {
+                alt15=1;
             }
-            else if ( (LA14_0==SET) ) {
-                alt14=2;
+            else if ( (LA15_0==SET) ) {
+                alt15=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:268:7: '[' num= NUMERO ']' ASIGNACION ev= evaluator
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:280:7: '[' num= NUMERO ']' ASIGNACION ev= evaluator
                     {
-                    match(input,56,FOLLOW_56_in_asignacion_lista1550); 
+                    match(input,56,FOLLOW_56_in_asignacion_lista1630); 
 
-                    num=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_asignacion_lista1554); 
+                    num=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_asignacion_lista1634); 
 
-                    match(input,57,FOLLOW_57_in_asignacion_lista1556); 
+                    match(input,57,FOLLOW_57_in_asignacion_lista1636); 
 
-                    match(input,ASIGNACION,FOLLOW_ASIGNACION_in_asignacion_lista1558); 
+                    match(input,ASIGNACION,FOLLOW_ASIGNACION_in_asignacion_lista1638); 
 
-                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1564);
+                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1644);
                     ev=evaluator();
 
                     state._fsp--;
@@ -1561,23 +1631,23 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:269:7: SET '(' num= NUMERO ',' ev= evaluator ')'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:281:7: SET '(' num= NUMERO ',' ev= evaluator ')'
                     {
-                    match(input,SET,FOLLOW_SET_in_asignacion_lista1572); 
+                    match(input,SET,FOLLOW_SET_in_asignacion_lista1652); 
 
-                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_asignacion_lista1574); 
+                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_asignacion_lista1654); 
 
-                    num=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_asignacion_lista1578); 
+                    num=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_asignacion_lista1658); 
 
-                    match(input,42,FOLLOW_42_in_asignacion_lista1580); 
+                    match(input,42,FOLLOW_42_in_asignacion_lista1660); 
 
-                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1586);
+                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1666);
                     ev=evaluator();
 
                     state._fsp--;
 
 
-                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_asignacion_lista1588); 
+                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_asignacion_lista1668); 
 
                     }
                     break;
@@ -1593,7 +1663,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_asignacion_lista1634); 
+            match(input,PC,FOLLOW_PC_in_asignacion_lista1714); 
 
             }
 
@@ -1615,13 +1685,13 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "comentario"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:283:1: comentario : COMENTARIO ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:295:1: comentario : COMENTARIO ;
     public final void comentario() throws RecognitionException {
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:284:3: ( COMENTARIO )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:285:3: COMENTARIO
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:296:3: ( COMENTARIO )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:297:3: COMENTARIO
             {
-            match(input,COMENTARIO,FOLLOW_COMENTARIO_in_comentario1652); 
+            match(input,COMENTARIO,FOLLOW_COMENTARIO_in_comentario1732); 
 
             }
 
@@ -1643,7 +1713,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "lectura"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:288:1: lectura returns [Evaluator e] : r= READ n= NOMBRE ( ',' exp= expression )? PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:300:1: lectura returns [Evaluator e] : r= READ n= NOMBRE ( ',' exp= expression )? PC ;
     public final Evaluator lectura() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1654,12 +1724,12 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:289:3: (r= READ n= NOMBRE ( ',' exp= expression )? PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:290:3: r= READ n= NOMBRE ( ',' exp= expression )? PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:301:3: (r= READ n= NOMBRE ( ',' exp= expression )? PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:302:3: r= READ n= NOMBRE ( ',' exp= expression )? PC
             {
-            r=(Token)match(input,READ,FOLLOW_READ_in_lectura1678); 
+            r=(Token)match(input,READ,FOLLOW_READ_in_lectura1758); 
 
-            n=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_lectura1682); 
+            n=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_lectura1762); 
 
 
                               if(bandera)
@@ -1669,20 +1739,20 @@ public class LenguajeParser extends Parser {
                                 }
                               
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:298:3: ( ',' exp= expression )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:310:3: ( ',' exp= expression )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0==42) ) {
-                alt15=1;
+            if ( (LA16_0==42) ) {
+                alt16=1;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:299:7: ',' exp= expression
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:311:7: ',' exp= expression
                     {
-                    match(input,42,FOLLOW_42_in_lectura1714); 
+                    match(input,42,FOLLOW_42_in_lectura1794); 
 
-                    pushFollow(FOLLOW_expression_in_lectura1720);
+                    pushFollow(FOLLOW_expression_in_lectura1800);
                     exp=expression();
 
                     state._fsp--;
@@ -1702,7 +1772,7 @@ public class LenguajeParser extends Parser {
             }
 
 
-            match(input,PC,FOLLOW_PC_in_lectura1754); 
+            match(input,PC,FOLLOW_PC_in_lectura1834); 
 
             }
 
@@ -1724,7 +1794,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "print1"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:311:1: print1 returns [Evaluator e] : PRINT (exp= expression ) ( ',' exp= expression )* PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:323:1: print1 returns [Evaluator e] : PRINT (exp= expression ) ( ',' exp= expression )* PC ;
     public final Evaluator print1() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1733,17 +1803,17 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:312:3: ( PRINT (exp= expression ) ( ',' exp= expression )* PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:313:3: PRINT (exp= expression ) ( ',' exp= expression )* PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:324:3: ( PRINT (exp= expression ) ( ',' exp= expression )* PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:325:3: PRINT (exp= expression ) ( ',' exp= expression )* PC
             {
              e = new PrintEvaluator(); 
 
-            match(input,PRINT,FOLLOW_PRINT_in_print11783); 
+            match(input,PRINT,FOLLOW_PRINT_in_print11863); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:315:3: (exp= expression )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:315:5: exp= expression
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:327:3: (exp= expression )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:327:5: exp= expression
             {
-            pushFollow(FOLLOW_expression_in_print11794);
+            pushFollow(FOLLOW_expression_in_print11874);
             exp=expression();
 
             state._fsp--;
@@ -1754,24 +1824,24 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:317:3: ( ',' exp= expression )*
-            loop16:
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:329:3: ( ',' exp= expression )*
+            loop17:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA16_0==42) ) {
-                    alt16=1;
+                if ( (LA17_0==42) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt17) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:317:5: ',' exp= expression
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:329:5: ',' exp= expression
             	    {
-            	    match(input,42,FOLLOW_42_in_print11806); 
+            	    match(input,42,FOLLOW_42_in_print11886); 
 
-            	    pushFollow(FOLLOW_expression_in_print11816);
+            	    pushFollow(FOLLOW_expression_in_print11896);
             	    exp=expression();
 
             	    state._fsp--;
@@ -1783,12 +1853,12 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop17;
                 }
             } while (true);
 
 
-            match(input,PC,FOLLOW_PC_in_print11827); 
+            match(input,PC,FOLLOW_PC_in_print11907); 
 
             }
 
@@ -1810,7 +1880,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "println"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:323:1: println returns [Evaluator e] : PRINTLN (exp= expression ) ( ',' exp= expression )* PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:335:1: println returns [Evaluator e] : PRINTLN (exp= expression ) ( ',' exp= expression )* PC ;
     public final Evaluator println() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1819,17 +1889,17 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:324:3: ( PRINTLN (exp= expression ) ( ',' exp= expression )* PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:325:3: PRINTLN (exp= expression ) ( ',' exp= expression )* PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:336:3: ( PRINTLN (exp= expression ) ( ',' exp= expression )* PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:337:3: PRINTLN (exp= expression ) ( ',' exp= expression )* PC
             {
              e = new PrintlnEvaluator(); 
 
-            match(input,PRINTLN,FOLLOW_PRINTLN_in_println1856); 
+            match(input,PRINTLN,FOLLOW_PRINTLN_in_println1936); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:327:3: (exp= expression )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:327:5: exp= expression
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:339:3: (exp= expression )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:339:5: exp= expression
             {
-            pushFollow(FOLLOW_expression_in_println1866);
+            pushFollow(FOLLOW_expression_in_println1946);
             exp=expression();
 
             state._fsp--;
@@ -1840,24 +1910,24 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:329:3: ( ',' exp= expression )*
-            loop17:
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:341:3: ( ',' exp= expression )*
+            loop18:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA17_0==42) ) {
-                    alt17=1;
+                if ( (LA18_0==42) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:329:5: ',' exp= expression
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:341:5: ',' exp= expression
             	    {
-            	    match(input,42,FOLLOW_42_in_println1878); 
+            	    match(input,42,FOLLOW_42_in_println1958); 
 
-            	    pushFollow(FOLLOW_expression_in_println1888);
+            	    pushFollow(FOLLOW_expression_in_println1968);
             	    exp=expression();
 
             	    state._fsp--;
@@ -1869,12 +1939,12 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop18;
                 }
             } while (true);
 
 
-            match(input,PC,FOLLOW_PC_in_println1899); 
+            match(input,PC,FOLLOW_PC_in_println1979); 
 
             }
 
@@ -1896,7 +1966,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "evaluator"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:335:1: evaluator returns [Evaluator e] : logico ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:347:1: evaluator returns [Evaluator e] : logico ;
     public final Evaluator evaluator() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1905,10 +1975,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:336:3: ( logico )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:337:3: logico
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:348:3: ( logico )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:349:3: logico
             {
-            pushFollow(FOLLOW_logico_in_evaluator1924);
+            pushFollow(FOLLOW_logico_in_evaluator2004);
             logico19=logico();
 
             state._fsp--;
@@ -1938,7 +2008,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "term"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:343:1: term returns [Evaluator e] : (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE size1 ( '()' )* );
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:355:1: term returns [Evaluator e] : (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE size1 ( '()' )* );
     public final Evaluator term() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1957,15 +2027,15 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:344:3: (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE size1 ( '()' )* )
-            int alt20=9;
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:356:3: (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE size1 ( '()' )* )
+            int alt21=9;
             switch ( input.LA(1) ) {
             case NOMBRE:
                 {
                 switch ( input.LA(2) ) {
                 case PARENTESIS_I:
                     {
-                    alt20=1;
+                    alt21=1;
                     }
                     break;
                 case PARENTESIS_D:
@@ -1986,24 +2056,24 @@ public class LenguajeParser extends Parser {
                 case 57:
                 case 58:
                     {
-                    alt20=3;
+                    alt21=3;
                     }
                     break;
                 case 47:
                 case 56:
                     {
-                    alt20=8;
+                    alt21=8;
                     }
                     break;
                 case 48:
                 case 49:
                     {
-                    alt20=9;
+                    alt21=9;
                     }
                     break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 20, 1, input);
+                        new NoViableAltException("", 21, 1, input);
 
                     throw nvae;
 
@@ -2013,46 +2083,46 @@ public class LenguajeParser extends Parser {
                 break;
             case BOOLEAN:
                 {
-                alt20=2;
+                alt21=2;
                 }
                 break;
             case NUMERO:
                 {
-                alt20=4;
+                alt21=4;
                 }
                 break;
             case DOBLE:
                 {
-                alt20=5;
+                alt21=5;
                 }
                 break;
             case TEXTO:
                 {
-                alt20=6;
+                alt21=6;
                 }
                 break;
             case PARENTESIS_I:
                 {
-                alt20=7;
+                alt21=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:346:3: lla= llamadofuncion
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:358:3: lla= llamadofuncion
                     {
 
                        e = new IntEvaluator(0);
                       
 
-                    pushFollow(FOLLOW_llamadofuncion_in_term1970);
+                    pushFollow(FOLLOW_llamadofuncion_in_term2050);
                     lla=llamadofuncion();
 
                     state._fsp--;
@@ -2065,9 +2135,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:353:5: BOOLEAN
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:365:5: BOOLEAN
                     {
-                    BOOLEAN20=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_term1986); 
+                    BOOLEAN20=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_term2066); 
 
 
                                System.out.println("entiendo que es un boolean");
@@ -2077,9 +2147,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:358:5: NOMBRE
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:370:5: NOMBRE
                     {
-                    NOMBRE21=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2005); 
+                    NOMBRE21=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2085); 
 
                        
                             System.out.println("entiendo que es un llamado");
@@ -2091,9 +2161,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:365:5: NUMERO
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:377:5: NUMERO
                     {
-                    NUMERO22=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_term2023); 
+                    NUMERO22=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_term2103); 
 
 
                                e = new DoubleEvaluator(Double.parseDouble((NUMERO22!=null?NUMERO22.getText():null)));
@@ -2102,9 +2172,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:369:5: DOBLE
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:381:5: DOBLE
                     {
-                    DOBLE23=(Token)match(input,DOBLE,FOLLOW_DOBLE_in_term2042); 
+                    DOBLE23=(Token)match(input,DOBLE,FOLLOW_DOBLE_in_term2122); 
 
 
                                e = new DoubleEvaluator(Double.parseDouble((DOBLE23!=null?DOBLE23.getText():null)));
@@ -2113,9 +2183,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:374:5: TEXTO
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:386:5: TEXTO
                     {
-                    TEXTO24=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_term2076); 
+                    TEXTO24=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_term2156); 
 
 
                               e = new StringEvaluator(((TEXTO24!=null?TEXTO24.getText():null)));
@@ -2124,17 +2194,17 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:379:5: '(' add ')'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:391:5: '(' add ')'
                     {
-                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_term2097); 
+                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_term2177); 
 
-                    pushFollow(FOLLOW_add_in_term2099);
+                    pushFollow(FOLLOW_add_in_term2179);
                     add25=add();
 
                     state._fsp--;
 
 
-                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term2101); 
+                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term2181); 
 
 
                                            e = add25;
@@ -2143,55 +2213,55 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:383:5: nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:395:5: nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' )
                     {
-                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2134); 
+                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2214); 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:384:5: ( '.get(' num= add ')' | '[' num= add ']' )
-                    int alt18=2;
-                    int LA18_0 = input.LA(1);
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:396:5: ( '.get(' num= add ')' | '[' num= add ']' )
+                    int alt19=2;
+                    int LA19_0 = input.LA(1);
 
-                    if ( (LA18_0==47) ) {
-                        alt18=1;
+                    if ( (LA19_0==47) ) {
+                        alt19=1;
                     }
-                    else if ( (LA18_0==56) ) {
-                        alt18=2;
+                    else if ( (LA19_0==56) ) {
+                        alt19=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 18, 0, input);
+                            new NoViableAltException("", 19, 0, input);
 
                         throw nvae;
 
                     }
-                    switch (alt18) {
+                    switch (alt19) {
                         case 1 :
-                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:384:7: '.get(' num= add ')'
+                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:396:7: '.get(' num= add ')'
                             {
-                            match(input,47,FOLLOW_47_in_term2143); 
+                            match(input,47,FOLLOW_47_in_term2223); 
 
-                            pushFollow(FOLLOW_add_in_term2149);
+                            pushFollow(FOLLOW_add_in_term2229);
                             num=add();
 
                             state._fsp--;
 
 
-                            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term2151); 
+                            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term2231); 
 
                             }
                             break;
                         case 2 :
-                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:385:7: '[' num= add ']'
+                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:397:7: '[' num= add ']'
                             {
-                            match(input,56,FOLLOW_56_in_term2159); 
+                            match(input,56,FOLLOW_56_in_term2239); 
 
-                            pushFollow(FOLLOW_add_in_term2169);
+                            pushFollow(FOLLOW_add_in_term2249);
                             num=add();
 
                             state._fsp--;
 
 
-                            match(input,57,FOLLOW_57_in_term2171); 
+                            match(input,57,FOLLOW_57_in_term2251); 
 
                             }
                             break;
@@ -2206,38 +2276,38 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:390:5: nom= NOMBRE size1 ( '()' )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:402:5: nom= NOMBRE size1 ( '()' )*
                     {
-                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2196); 
+                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2276); 
 
-                    pushFollow(FOLLOW_size1_in_term2199);
+                    pushFollow(FOLLOW_size1_in_term2279);
                     size1();
 
                     state._fsp--;
 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:390:23: ( '()' )*
-                    loop19:
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:402:23: ( '()' )*
+                    loop20:
                     do {
-                        int alt19=2;
-                        int LA19_0 = input.LA(1);
+                        int alt20=2;
+                        int LA20_0 = input.LA(1);
 
-                        if ( (LA19_0==37) ) {
-                            alt19=1;
+                        if ( (LA20_0==37) ) {
+                            alt20=1;
                         }
 
 
-                        switch (alt19) {
+                        switch (alt20) {
                     	case 1 :
-                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:390:24: '()'
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:402:24: '()'
                     	    {
-                    	    match(input,37,FOLLOW_37_in_term2202); 
+                    	    match(input,37,FOLLOW_37_in_term2282); 
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop19;
+                    	    break loop20;
                         }
                     } while (true);
 
@@ -2268,7 +2338,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "unary"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:396:1: unary returns [Evaluator e] : ( '+' | '-' )* term ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:408:1: unary returns [Evaluator e] : ( '+' | '-' )* term ;
     public final Evaluator unary() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2277,39 +2347,39 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:397:3: ( ( '+' | '-' )* term )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:399:3: ( '+' | '-' )* term
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:409:3: ( ( '+' | '-' )* term )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:411:3: ( '+' | '-' )* term
             {
 
                boolean positive = true;
               
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:402:3: ( '+' | '-' )*
-            loop21:
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:414:3: ( '+' | '-' )*
+            loop22:
             do {
-                int alt21=3;
-                int LA21_0 = input.LA(1);
+                int alt22=3;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA21_0==39) ) {
-                    alt21=1;
+                if ( (LA22_0==39) ) {
+                    alt22=1;
                 }
-                else if ( (LA21_0==43) ) {
-                    alt21=2;
+                else if ( (LA22_0==43) ) {
+                    alt22=2;
                 }
 
 
-                switch (alt21) {
+                switch (alt22) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:403:7: '+'
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:415:7: '+'
             	    {
-            	    match(input,39,FOLLOW_39_in_unary2256); 
+            	    match(input,39,FOLLOW_39_in_unary2336); 
 
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:404:7: '-'
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:416:7: '-'
             	    {
-            	    match(input,43,FOLLOW_43_in_unary2264); 
+            	    match(input,43,FOLLOW_43_in_unary2344); 
 
 
             	              positive = !positive;
@@ -2319,12 +2389,12 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop22;
                 }
             } while (true);
 
 
-            pushFollow(FOLLOW_term_in_unary2285);
+            pushFollow(FOLLOW_term_in_unary2365);
             term26=term();
 
             state._fsp--;
@@ -2356,7 +2426,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "mult"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:417:1: mult returns [Evaluator e] : op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:429:1: mult returns [Evaluator e] : op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* ;
     public final Evaluator mult() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2367,10 +2437,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:418:3: (op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:419:6: op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:430:3: (op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:431:6: op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
             {
-            pushFollow(FOLLOW_unary_in_mult2322);
+            pushFollow(FOLLOW_unary_in_mult2402);
             op1=unary();
 
             state._fsp--;
@@ -2378,36 +2448,36 @@ public class LenguajeParser extends Parser {
 
             e = op1;
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:420:3: ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
-            loop22:
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:432:3: ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
+            loop23:
             do {
-                int alt22=4;
+                int alt23=4;
                 switch ( input.LA(1) ) {
                 case 38:
                     {
-                    alt22=1;
+                    alt23=1;
                     }
                     break;
                 case 50:
                     {
-                    alt22=2;
+                    alt23=2;
                     }
                     break;
                 case 35:
                     {
-                    alt22=3;
+                    alt23=3;
                     }
                     break;
 
                 }
 
-                switch (alt22) {
+                switch (alt23) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:420:6: '*' op2= unary
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:432:6: '*' op2= unary
             	    {
-            	    match(input,38,FOLLOW_38_in_mult2331); 
+            	    match(input,38,FOLLOW_38_in_mult2411); 
 
-            	    pushFollow(FOLLOW_unary_in_mult2335);
+            	    pushFollow(FOLLOW_unary_in_mult2415);
             	    op2=unary();
 
             	    state._fsp--;
@@ -2418,11 +2488,11 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:421:6: '/' op2= unary
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:433:6: '/' op2= unary
             	    {
-            	    match(input,50,FOLLOW_50_in_mult2343); 
+            	    match(input,50,FOLLOW_50_in_mult2423); 
 
-            	    pushFollow(FOLLOW_unary_in_mult2347);
+            	    pushFollow(FOLLOW_unary_in_mult2427);
             	    op2=unary();
 
             	    state._fsp--;
@@ -2433,127 +2503,17 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:422:6: '%' op2= unary
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:434:6: '%' op2= unary
             	    {
-            	    match(input,35,FOLLOW_35_in_mult2356); 
+            	    match(input,35,FOLLOW_35_in_mult2436); 
 
-            	    pushFollow(FOLLOW_unary_in_mult2360);
+            	    pushFollow(FOLLOW_unary_in_mult2440);
             	    op2=unary();
 
             	    state._fsp--;
 
 
             	    e = new ModEvaluator(e,op2); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop22;
-                }
-            } while (true);
-
-
-            }
-
-        }
-
-
-        catch (RecognitionException er) {
-            throw er; 
-        } 
-
-
-        finally {
-        	// do for sure before leaving
-        }
-        return e;
-    }
-    // $ANTLR end "mult"
-
-
-
-    // $ANTLR start "add"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:426:1: add returns [Evaluator e] : op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )* ;
-    public final Evaluator add() throws Exception, RecognitionException {
-        Evaluator e = null;
-
-
-        Evaluator op1 =null;
-
-        Evaluator op2 =null;
-
-
-        try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:427:3: (op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )* )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:428:5: op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )*
-            {
-            pushFollow(FOLLOW_mult_in_add2394);
-            op1=mult();
-
-            state._fsp--;
-
-
-            e = op1;
-
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:429:3: ( ( '+' op2= mult ) | ( minus op2= mult ) )*
-            loop23:
-            do {
-                int alt23=3;
-                int LA23_0 = input.LA(1);
-
-                if ( (LA23_0==39) ) {
-                    alt23=1;
-                }
-                else if ( (LA23_0==43) ) {
-                    alt23=2;
-                }
-
-
-                switch (alt23) {
-            	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:430:3: ( '+' op2= mult )
-            	    {
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:430:3: ( '+' op2= mult )
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:430:5: '+' op2= mult
-            	    {
-            	    match(input,39,FOLLOW_39_in_add2406); 
-
-            	    pushFollow(FOLLOW_mult_in_add2410);
-            	    op2=mult();
-
-            	    state._fsp--;
-
-
-            	    e = new PlusEvaluator(e, op2);
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:432:5: ( minus op2= mult )
-            	    {
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:432:5: ( minus op2= mult )
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:432:6: minus op2= mult
-            	    {
-            	    pushFollow(FOLLOW_minus_in_add2423);
-            	    minus();
-
-            	    state._fsp--;
-
-
-            	    pushFollow(FOLLOW_mult_in_add2427);
-            	    op2=mult();
-
-            	    state._fsp--;
-
-
-            	    e = new MinusEvaluator(e, op2);
-
-            	    }
-
 
             	    }
             	    break;
@@ -2579,180 +2539,88 @@ public class LenguajeParser extends Parser {
         }
         return e;
     }
-    // $ANTLR end "add"
+    // $ANTLR end "mult"
 
 
 
-    // $ANTLR start "relation"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:437:1: relation returns [Evaluator e] : ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* ;
-    public final Evaluator relation() throws Exception, RecognitionException {
+    // $ANTLR start "add"
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:438:1: add returns [Evaluator e] : op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )* ;
+    public final Evaluator add() throws Exception, RecognitionException {
         Evaluator e = null;
 
 
-        Evaluator ex1 =null;
+        Evaluator op1 =null;
 
-        Evaluator ex2 =null;
+        Evaluator op2 =null;
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:438:3: (ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:439:5: ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:439:3: (op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:440:5: op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )*
             {
-            pushFollow(FOLLOW_add_in_relation2465);
-            ex1=add();
+            pushFollow(FOLLOW_mult_in_add2474);
+            op1=mult();
 
             state._fsp--;
 
 
-            e = ex1;
+            e = op1;
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:440:3: ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
-            loop25:
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:441:3: ( ( '+' op2= mult ) | ( minus op2= mult ) )*
+            loop24:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt24=3;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA25_0==34||(LA25_0 >= 51 && LA25_0 <= 55)) ) {
-                    alt25=1;
+                if ( (LA24_0==39) ) {
+                    alt24=1;
+                }
+                else if ( (LA24_0==43) ) {
+                    alt24=2;
                 }
 
 
-                switch (alt25) {
+                switch (alt24) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:441:3: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:442:3: ( '+' op2= mult )
             	    {
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:441:3: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
-            	    int alt24=6;
-            	    switch ( input.LA(1) ) {
-            	    case 53:
-            	        {
-            	        alt24=1;
-            	        }
-            	        break;
-            	    case 54:
-            	        {
-            	        alt24=2;
-            	        }
-            	        break;
-            	    case 51:
-            	        {
-            	        alt24=3;
-            	        }
-            	        break;
-            	    case 34:
-            	        {
-            	        alt24=4;
-            	        }
-            	        break;
-            	    case 52:
-            	        {
-            	        alt24=5;
-            	        }
-            	        break;
-            	    case 55:
-            	        {
-            	        alt24=6;
-            	        }
-            	        break;
-            	    default:
-            	        NoViableAltException nvae =
-            	            new NoViableAltException("", 24, 0, input);
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:442:3: ( '+' op2= mult )
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:442:5: '+' op2= mult
+            	    {
+            	    match(input,39,FOLLOW_39_in_add2486); 
 
-            	        throw nvae;
+            	    pushFollow(FOLLOW_mult_in_add2490);
+            	    op2=mult();
+
+            	    state._fsp--;
+
+
+            	    e = new PlusEvaluator(e, op2);
 
             	    }
 
-            	    switch (alt24) {
-            	        case 1 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:442:5: '==' ex2= add
-            	            {
-            	            match(input,53,FOLLOW_53_in_relation2481); 
 
-            	            pushFollow(FOLLOW_add_in_relation2485);
-            	            ex2=add();
+            	    }
+            	    break;
+            	case 2 :
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:444:5: ( minus op2= mult )
+            	    {
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:444:5: ( minus op2= mult )
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:444:6: minus op2= mult
+            	    {
+            	    pushFollow(FOLLOW_minus_in_add2503);
+            	    minus();
 
-            	            state._fsp--;
-
-
-            	            e = new IgualIgualEvaluator(e,ex2);
-
-            	            }
-            	            break;
-            	        case 2 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:443:5: '>' ex2= add
-            	            {
-            	            match(input,54,FOLLOW_54_in_relation2493); 
-
-            	            pushFollow(FOLLOW_add_in_relation2497);
-            	            ex2=add();
-
-            	            state._fsp--;
+            	    state._fsp--;
 
 
-            	            e = new MayorEvaluator(e,ex2);
+            	    pushFollow(FOLLOW_mult_in_add2507);
+            	    op2=mult();
 
-            	            }
-            	            break;
-            	        case 3 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:444:5: '<' ex2= add
-            	            {
-            	            match(input,51,FOLLOW_51_in_relation2508); 
-
-            	            pushFollow(FOLLOW_add_in_relation2512);
-            	            ex2=add();
-
-            	            state._fsp--;
+            	    state._fsp--;
 
 
-            	            e = new MenorEvaluator(e,ex2);
-
-            	            }
-            	            break;
-            	        case 4 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:445:5: '!=' ex2= add
-            	            {
-            	            match(input,34,FOLLOW_34_in_relation2523); 
-
-            	            pushFollow(FOLLOW_add_in_relation2527);
-            	            ex2=add();
-
-            	            state._fsp--;
-
-
-            	            e = new DiferenteEvaluator(e,ex2);
-
-            	            }
-            	            break;
-            	        case 5 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:446:5: '<=' ex2= add
-            	            {
-            	            match(input,52,FOLLOW_52_in_relation2537); 
-
-            	            pushFollow(FOLLOW_add_in_relation2541);
-            	            ex2=add();
-
-            	            state._fsp--;
-
-
-            	            e = new MenorIgualEvaluator(e,ex2);
-
-            	            }
-            	            break;
-            	        case 6 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:447:5: '>=' ex2= add
-            	            {
-            	            match(input,55,FOLLOW_55_in_relation2551); 
-
-            	            pushFollow(FOLLOW_add_in_relation2555);
-            	            ex2=add();
-
-            	            state._fsp--;
-
-
-            	            e = new MayorIgualEvaluator(e,ex2);
-
-            	            }
-            	            break;
+            	    e = new MinusEvaluator(e, op2);
 
             	    }
 
@@ -2761,7 +2629,7 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop24;
                 }
             } while (true);
 
@@ -2781,81 +2649,183 @@ public class LenguajeParser extends Parser {
         }
         return e;
     }
-    // $ANTLR end "relation"
+    // $ANTLR end "add"
 
 
 
-    // $ANTLR start "logico"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:452:1: logico returns [Evaluator e] : rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* ;
-    public final Evaluator logico() throws Exception, RecognitionException {
+    // $ANTLR start "relation"
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:449:1: relation returns [Evaluator e] : ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* ;
+    public final Evaluator relation() throws Exception, RecognitionException {
         Evaluator e = null;
 
 
-        Evaluator rel1 =null;
+        Evaluator ex1 =null;
 
-        Evaluator rel2 =null;
+        Evaluator ex2 =null;
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:453:3: (rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:454:5: rel1= relation ( '&&' rel2= relation | '||' rel2= relation )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:450:3: (ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:451:5: ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
             {
-            pushFollow(FOLLOW_relation_in_logico2595);
-            rel1=relation();
+            pushFollow(FOLLOW_add_in_relation2545);
+            ex1=add();
 
             state._fsp--;
 
 
+            e = ex1;
 
-                            e = rel1;
-                           
-
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:458:3: ( '&&' rel2= relation | '||' rel2= relation )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:452:3: ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
             loop26:
             do {
-                int alt26=3;
+                int alt26=2;
                 int LA26_0 = input.LA(1);
 
-                if ( (LA26_0==36) ) {
+                if ( (LA26_0==34||(LA26_0 >= 51 && LA26_0 <= 55)) ) {
                     alt26=1;
-                }
-                else if ( (LA26_0==58) ) {
-                    alt26=2;
                 }
 
 
                 switch (alt26) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:459:5: '&&' rel2= relation
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:453:3: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
             	    {
-            	    match(input,36,FOLLOW_36_in_logico2623); 
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:453:3: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
+            	    int alt25=6;
+            	    switch ( input.LA(1) ) {
+            	    case 53:
+            	        {
+            	        alt25=1;
+            	        }
+            	        break;
+            	    case 54:
+            	        {
+            	        alt25=2;
+            	        }
+            	        break;
+            	    case 51:
+            	        {
+            	        alt25=3;
+            	        }
+            	        break;
+            	    case 34:
+            	        {
+            	        alt25=4;
+            	        }
+            	        break;
+            	    case 52:
+            	        {
+            	        alt25=5;
+            	        }
+            	        break;
+            	    case 55:
+            	        {
+            	        alt25=6;
+            	        }
+            	        break;
+            	    default:
+            	        NoViableAltException nvae =
+            	            new NoViableAltException("", 25, 0, input);
 
-            	    pushFollow(FOLLOW_relation_in_logico2627);
-            	    rel2=relation();
-
-            	    state._fsp--;
-
-
-
-            	                           e = new AndEvaluator(e,rel2);
-            	                          
+            	        throw nvae;
 
             	    }
-            	    break;
-            	case 2 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:463:6: '||' rel2= relation
-            	    {
-            	    match(input,58,FOLLOW_58_in_logico2659); 
 
-            	    pushFollow(FOLLOW_relation_in_logico2663);
-            	    rel2=relation();
+            	    switch (alt25) {
+            	        case 1 :
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:454:5: '==' ex2= add
+            	            {
+            	            match(input,53,FOLLOW_53_in_relation2561); 
 
-            	    state._fsp--;
+            	            pushFollow(FOLLOW_add_in_relation2565);
+            	            ex2=add();
+
+            	            state._fsp--;
 
 
+            	            e = new IgualIgualEvaluator(e,ex2);
 
-            	                             e = new OrEvaluator(e,rel2);
-            	                            
+            	            }
+            	            break;
+            	        case 2 :
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:455:5: '>' ex2= add
+            	            {
+            	            match(input,54,FOLLOW_54_in_relation2573); 
+
+            	            pushFollow(FOLLOW_add_in_relation2577);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+            	            e = new MayorEvaluator(e,ex2);
+
+            	            }
+            	            break;
+            	        case 3 :
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:456:5: '<' ex2= add
+            	            {
+            	            match(input,51,FOLLOW_51_in_relation2588); 
+
+            	            pushFollow(FOLLOW_add_in_relation2592);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+            	            e = new MenorEvaluator(e,ex2);
+
+            	            }
+            	            break;
+            	        case 4 :
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:457:5: '!=' ex2= add
+            	            {
+            	            match(input,34,FOLLOW_34_in_relation2603); 
+
+            	            pushFollow(FOLLOW_add_in_relation2607);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+            	            e = new DiferenteEvaluator(e,ex2);
+
+            	            }
+            	            break;
+            	        case 5 :
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:458:5: '<=' ex2= add
+            	            {
+            	            match(input,52,FOLLOW_52_in_relation2617); 
+
+            	            pushFollow(FOLLOW_add_in_relation2621);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+            	            e = new MenorIgualEvaluator(e,ex2);
+
+            	            }
+            	            break;
+            	        case 6 :
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:459:5: '>=' ex2= add
+            	            {
+            	            match(input,55,FOLLOW_55_in_relation2631); 
+
+            	            pushFollow(FOLLOW_add_in_relation2635);
+            	            ex2=add();
+
+            	            state._fsp--;
+
+
+            	            e = new MayorIgualEvaluator(e,ex2);
+
+            	            }
+            	            break;
+
+            	    }
+
 
             	    }
             	    break;
@@ -2881,12 +2851,112 @@ public class LenguajeParser extends Parser {
         }
         return e;
     }
+    // $ANTLR end "relation"
+
+
+
+    // $ANTLR start "logico"
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:464:1: logico returns [Evaluator e] : rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* ;
+    public final Evaluator logico() throws Exception, RecognitionException {
+        Evaluator e = null;
+
+
+        Evaluator rel1 =null;
+
+        Evaluator rel2 =null;
+
+
+        try {
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:465:3: (rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:466:5: rel1= relation ( '&&' rel2= relation | '||' rel2= relation )*
+            {
+            pushFollow(FOLLOW_relation_in_logico2675);
+            rel1=relation();
+
+            state._fsp--;
+
+
+
+                            e = rel1;
+                           
+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:470:3: ( '&&' rel2= relation | '||' rel2= relation )*
+            loop27:
+            do {
+                int alt27=3;
+                int LA27_0 = input.LA(1);
+
+                if ( (LA27_0==36) ) {
+                    alt27=1;
+                }
+                else if ( (LA27_0==58) ) {
+                    alt27=2;
+                }
+
+
+                switch (alt27) {
+            	case 1 :
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:471:5: '&&' rel2= relation
+            	    {
+            	    match(input,36,FOLLOW_36_in_logico2703); 
+
+            	    pushFollow(FOLLOW_relation_in_logico2707);
+            	    rel2=relation();
+
+            	    state._fsp--;
+
+
+
+            	                           e = new AndEvaluator(e,rel2);
+            	                          
+
+            	    }
+            	    break;
+            	case 2 :
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:475:6: '||' rel2= relation
+            	    {
+            	    match(input,58,FOLLOW_58_in_logico2739); 
+
+            	    pushFollow(FOLLOW_relation_in_logico2743);
+            	    rel2=relation();
+
+            	    state._fsp--;
+
+
+
+            	                             e = new OrEvaluator(e,rel2);
+            	                            
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop27;
+                }
+            } while (true);
+
+
+            }
+
+        }
+
+
+        catch (RecognitionException er) {
+            throw er; 
+        } 
+
+
+        finally {
+        	// do for sure before leaving
+        }
+        return e;
+    }
     // $ANTLR end "logico"
 
 
 
     // $ANTLR start "expression"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:470:3: expression returns [Evaluator e] : logico ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:482:3: expression returns [Evaluator e] : logico ;
     public final Evaluator expression() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2895,10 +2965,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:471:2: ( logico )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:471:6: logico
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:483:2: ( logico )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:483:6: logico
             {
-            pushFollow(FOLLOW_logico_in_expression2719);
+            pushFollow(FOLLOW_logico_in_expression2799);
             logico27=logico();
 
             state._fsp--;
@@ -2926,7 +2996,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "llamadofuncion"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:475:1: llamadofuncion returns [Evaluator e] : nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:487:1: llamadofuncion returns [Evaluator e] : nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC ;
     public final Evaluator llamadofuncion() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2936,30 +3006,30 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:476:4: (nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:477:9: nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:488:4: (nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:489:9: nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_llamadofuncion2754); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_llamadofuncion2834); 
 
             e = funciones.get((nom!=null?nom.getText():null));
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_llamadofuncion2759); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_llamadofuncion2839); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:479:4: ( (ev= term ) ( ',' ev= term )* )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:491:4: ( (ev= term ) ( ',' ev= term )* )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA28_0==BOOLEAN||LA28_0==DOBLE||(LA28_0 >= NOMBRE && LA28_0 <= NUMERO)||LA28_0==PARENTESIS_I||LA28_0==TEXTO) ) {
-                alt28=1;
+            if ( (LA29_0==BOOLEAN||LA29_0==DOBLE||(LA29_0 >= NOMBRE && LA29_0 <= NUMERO)||LA29_0==PARENTESIS_I||LA29_0==TEXTO) ) {
+                alt29=1;
             }
-            switch (alt28) {
+            switch (alt29) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:479:9: (ev= term ) ( ',' ev= term )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:491:9: (ev= term ) ( ',' ev= term )*
                     {
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:479:9: (ev= term )
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:479:10: ev= term
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:491:9: (ev= term )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:491:10: ev= term
                     {
-                    pushFollow(FOLLOW_term_in_llamadofuncion2774);
+                    pushFollow(FOLLOW_term_in_llamadofuncion2854);
                     ev=term();
 
                     state._fsp--;
@@ -2970,24 +3040,24 @@ public class LenguajeParser extends Parser {
                     }
 
 
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:481:4: ( ',' ev= term )*
-                    loop27:
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:493:4: ( ',' ev= term )*
+                    loop28:
                     do {
-                        int alt27=2;
-                        int LA27_0 = input.LA(1);
+                        int alt28=2;
+                        int LA28_0 = input.LA(1);
 
-                        if ( (LA27_0==42) ) {
-                            alt27=1;
+                        if ( (LA28_0==42) ) {
+                            alt28=1;
                         }
 
 
-                        switch (alt27) {
+                        switch (alt28) {
                     	case 1 :
-                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:481:5: ',' ev= term
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:493:5: ',' ev= term
                     	    {
-                    	    match(input,42,FOLLOW_42_in_llamadofuncion2786); 
+                    	    match(input,42,FOLLOW_42_in_llamadofuncion2866); 
 
-                    	    pushFollow(FOLLOW_term_in_llamadofuncion2793);
+                    	    pushFollow(FOLLOW_term_in_llamadofuncion2873);
                     	    ev=term();
 
                     	    state._fsp--;
@@ -2999,7 +3069,7 @@ public class LenguajeParser extends Parser {
                     	    break;
 
                     	default :
-                    	    break loop27;
+                    	    break loop28;
                         }
                     } while (true);
 
@@ -3010,9 +3080,9 @@ public class LenguajeParser extends Parser {
             }
 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_llamadofuncion2806); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_llamadofuncion2886); 
 
-            match(input,PC,FOLLOW_PC_in_llamadofuncion2817); 
+            match(input,PC,FOLLOW_PC_in_llamadofuncion2897); 
 
             }
 
@@ -3034,7 +3104,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "statements"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:487:1: statements returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | ifstatement | whilestatemet | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:499:1: statements returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | ifstatement | whilestatemet | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
     public final Evaluator statements() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -3079,17 +3149,17 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:488:3: ( print1 | println | asignacion | lectura | comentario | return1 | ifstatement | whilestatemet | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
-            int alt29=20;
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:500:3: ( print1 | println | asignacion | lectura | comentario | return1 | ifstatement | whilestatemet | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
+            int alt30=20;
             switch ( input.LA(1) ) {
             case PRINT:
                 {
-                alt29=1;
+                alt30=1;
                 }
                 break;
             case PRINTLN:
                 {
-                alt29=2;
+                alt30=2;
                 }
                 break;
             case NOMBRE:
@@ -3097,54 +3167,54 @@ public class LenguajeParser extends Parser {
                 switch ( input.LA(2) ) {
                 case ASIGNACION:
                     {
-                    alt29=3;
+                    alt30=3;
                     }
                     break;
                 case 46:
                     {
-                    alt29=12;
+                    alt30=12;
                     }
                     break;
                 case 40:
                     {
-                    alt29=17;
+                    alt30=17;
                     }
                     break;
                 case 44:
                     {
-                    alt29=18;
+                    alt30=18;
                     }
                     break;
                 case 41:
                     {
-                    alt29=19;
+                    alt30=19;
                     }
                     break;
                 case 45:
                     {
-                    alt29=20;
+                    alt30=20;
                     }
                     break;
                 case PARENTESIS_I:
                     {
-                    alt29=9;
+                    alt30=9;
                     }
                     break;
                 case SET:
                 case 56:
                     {
-                    alt29=14;
+                    alt30=14;
                     }
                     break;
                 case 48:
                 case 49:
                     {
-                    alt29=16;
+                    alt30=16;
                     }
                     break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 29, 3, input);
+                        new NoViableAltException("", 30, 3, input);
 
                     throw nvae;
 
@@ -3154,50 +3224,50 @@ public class LenguajeParser extends Parser {
                 break;
             case READ:
                 {
-                alt29=4;
+                alt30=4;
                 }
                 break;
             case COMENTARIO:
                 {
-                alt29=5;
+                alt30=5;
                 }
                 break;
             case RETURN:
                 {
-                alt29=6;
+                alt30=6;
                 }
                 break;
             case IF:
                 {
-                alt29=7;
+                alt30=7;
                 }
                 break;
             case WHILE:
                 {
-                alt29=8;
+                alt30=8;
                 }
                 break;
             case VARIABLE:
                 {
-                alt29=10;
+                alt30=10;
                 }
                 break;
             case LIST:
                 {
-                int LA29_10 = input.LA(2);
+                int LA30_10 = input.LA(2);
 
-                if ( (LA29_10==NOMBRE) ) {
-                    int LA29_21 = input.LA(3);
+                if ( (LA30_10==NOMBRE) ) {
+                    int LA30_21 = input.LA(3);
 
-                    if ( (LA29_21==ASIGNACION) ) {
-                        alt29=15;
+                    if ( (LA30_21==ASIGNACION) ) {
+                        alt30=15;
                     }
-                    else if ( (LA29_21==PC||LA29_21==42) ) {
-                        alt29=11;
+                    else if ( (LA30_21==PC||LA30_21==42) ) {
+                        alt30=11;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 29, 21, input);
+                            new NoViableAltException("", 30, 21, input);
 
                         throw nvae;
 
@@ -3205,7 +3275,7 @@ public class LenguajeParser extends Parser {
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 29, 10, input);
+                        new NoViableAltException("", 30, 10, input);
 
                     throw nvae;
 
@@ -3214,22 +3284,22 @@ public class LenguajeParser extends Parser {
                 break;
             case FOR:
                 {
-                alt29=13;
+                alt30=13;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt29) {
+            switch (alt30) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:489:5: print1
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:501:5: print1
                     {
-                    pushFollow(FOLLOW_print1_in_statements2851);
+                    pushFollow(FOLLOW_print1_in_statements2931);
                     print128=print1();
 
                     state._fsp--;
@@ -3240,9 +3310,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:490:5: println
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:502:5: println
                     {
-                    pushFollow(FOLLOW_println_in_statements2871);
+                    pushFollow(FOLLOW_println_in_statements2951);
                     println29=println();
 
                     state._fsp--;
@@ -3253,9 +3323,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:491:5: asignacion
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:503:5: asignacion
                     {
-                    pushFollow(FOLLOW_asignacion_in_statements2890);
+                    pushFollow(FOLLOW_asignacion_in_statements2970);
                     asignacion30=asignacion();
 
                     state._fsp--;
@@ -3266,9 +3336,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:492:5: lectura
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:504:5: lectura
                     {
-                    pushFollow(FOLLOW_lectura_in_statements2905);
+                    pushFollow(FOLLOW_lectura_in_statements2985);
                     lectura31=lectura();
 
                     state._fsp--;
@@ -3279,9 +3349,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:493:5: comentario
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:505:5: comentario
                     {
-                    pushFollow(FOLLOW_comentario_in_statements2924);
+                    pushFollow(FOLLOW_comentario_in_statements3004);
                     comentario();
 
                     state._fsp--;
@@ -3292,9 +3362,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:494:5: return1
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:506:5: return1
                     {
-                    pushFollow(FOLLOW_return1_in_statements2939);
+                    pushFollow(FOLLOW_return1_in_statements3019);
                     return132=return1();
 
                     state._fsp--;
@@ -3305,9 +3375,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:495:5: ifstatement
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:507:5: ifstatement
                     {
-                    pushFollow(FOLLOW_ifstatement_in_statements2957);
+                    pushFollow(FOLLOW_ifstatement_in_statements3037);
                     ifstatement33=ifstatement();
 
                     state._fsp--;
@@ -3318,9 +3388,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:496:5: whilestatemet
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:508:5: whilestatemet
                     {
-                    pushFollow(FOLLOW_whilestatemet_in_statements2972);
+                    pushFollow(FOLLOW_whilestatemet_in_statements3052);
                     whilestatemet34=whilestatemet();
 
                     state._fsp--;
@@ -3331,9 +3401,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:497:5: llamadofuncion
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:509:5: llamadofuncion
                     {
-                    pushFollow(FOLLOW_llamadofuncion_in_statements2984);
+                    pushFollow(FOLLOW_llamadofuncion_in_statements3064);
                     llamadofuncion35=llamadofuncion();
 
                     state._fsp--;
@@ -3344,9 +3414,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:498:5: declaracion_mult
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:510:5: declaracion_mult
                     {
-                    pushFollow(FOLLOW_declaracion_mult_in_statements2996);
+                    pushFollow(FOLLOW_declaracion_mult_in_statements3076);
                     declaracion_mult36=declaracion_mult();
 
                     state._fsp--;
@@ -3357,9 +3427,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:499:5: declaracion_lista
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:511:5: declaracion_lista
                     {
-                    pushFollow(FOLLOW_declaracion_lista_in_statements3005);
+                    pushFollow(FOLLOW_declaracion_lista_in_statements3085);
                     declaracion_lista37=declaracion_lista();
 
                     state._fsp--;
@@ -3370,9 +3440,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:500:5: push
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:512:5: push
                     {
-                    pushFollow(FOLLOW_push_in_statements3013);
+                    pushFollow(FOLLOW_push_in_statements3093);
                     push38=push();
 
                     state._fsp--;
@@ -3383,9 +3453,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:501:5: forstatemet
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:513:5: forstatemet
                     {
-                    pushFollow(FOLLOW_forstatemet_in_statements3034);
+                    pushFollow(FOLLOW_forstatemet_in_statements3114);
                     forstatemet39=forstatemet();
 
                     state._fsp--;
@@ -3396,9 +3466,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:502:5: asignacion_lista
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:514:5: asignacion_lista
                     {
-                    pushFollow(FOLLOW_asignacion_lista_in_statements3048);
+                    pushFollow(FOLLOW_asignacion_lista_in_statements3128);
                     asignacion_lista40=asignacion_lista();
 
                     state._fsp--;
@@ -3409,9 +3479,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:503:5: lista_texto
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:515:5: lista_texto
                     {
-                    pushFollow(FOLLOW_lista_texto_in_statements3057);
+                    pushFollow(FOLLOW_lista_texto_in_statements3137);
                     lista_texto41=lista_texto();
 
                     state._fsp--;
@@ -3422,9 +3492,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:504:5: size
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:516:5: size
                     {
-                    pushFollow(FOLLOW_size_in_statements3071);
+                    pushFollow(FOLLOW_size_in_statements3151);
                     size42=size();
 
                     state._fsp--;
@@ -3435,9 +3505,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 17 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:505:5: unincremento
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:517:5: unincremento
                     {
-                    pushFollow(FOLLOW_unincremento_in_statements3092);
+                    pushFollow(FOLLOW_unincremento_in_statements3172);
                     unincremento43=unincremento();
 
                     state._fsp--;
@@ -3448,9 +3518,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 18 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:506:5: menosunincremento
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:518:5: menosunincremento
                     {
-                    pushFollow(FOLLOW_menosunincremento_in_statements3105);
+                    pushFollow(FOLLOW_menosunincremento_in_statements3185);
                     menosunincremento44=menosunincremento();
 
                     state._fsp--;
@@ -3461,9 +3531,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 19 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:507:5: incremento
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:519:5: incremento
                     {
-                    pushFollow(FOLLOW_incremento_in_statements3113);
+                    pushFollow(FOLLOW_incremento_in_statements3193);
                     incremento45=incremento();
 
                     state._fsp--;
@@ -3474,9 +3544,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 20 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:508:5: decremento
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:520:5: decremento
                     {
-                    pushFollow(FOLLOW_decremento_in_statements3128);
+                    pushFollow(FOLLOW_decremento_in_statements3208);
                     decremento46=decremento();
 
                     state._fsp--;
@@ -3506,7 +3576,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "ifstatement"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:511:1: ifstatement returns [Evaluator e] : IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )? )* ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:523:1: ifstatement returns [Evaluator e] : IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )? )* ;
     public final Evaluator ifstatement() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -3521,14 +3591,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:512:3: ( IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )? )* )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:513:3: IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )? )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:524:3: ( IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )? )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:525:3: IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? )* ( ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )? )*
             {
-            match(input,IF,FOLLOW_IF_in_ifstatement3160); 
+            match(input,IF,FOLLOW_IF_in_ifstatement3240); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3162); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3242); 
 
-            pushFollow(FOLLOW_logico_in_ifstatement3168);
+            pushFollow(FOLLOW_logico_in_ifstatement3248);
             rel=logico();
 
             state._fsp--;
@@ -3539,30 +3609,9 @@ public class LenguajeParser extends Parser {
             			  ((IfEvaluator) e).agregarCondicion(rel);
             			
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3176); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3256); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:518:15: ( PC )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
-
-            if ( (LA30_0==PC) ) {
-                alt30=1;
-            }
-            switch (alt30) {
-                case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:518:15: PC
-                    {
-                    match(input,PC,FOLLOW_PC_in_ifstatement3178); 
-
-                    }
-                    break;
-
-            }
-
-
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3181); 
-
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:518:27: ( PC )?
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:530:15: ( PC )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -3571,9 +3620,9 @@ public class LenguajeParser extends Parser {
             }
             switch (alt31) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:518:27: PC
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:530:15: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_ifstatement3183); 
+                    match(input,PC,FOLLOW_PC_in_ifstatement3258); 
 
                     }
                     break;
@@ -3581,22 +3630,43 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:519:3: (ifs= statements )*
-            loop32:
-            do {
-                int alt32=2;
-                int LA32_0 = input.LA(1);
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3261); 
 
-                if ( (LA32_0==COMENTARIO||LA32_0==FOR||(LA32_0 >= IF && LA32_0 <= LIST)||LA32_0==NOMBRE||(LA32_0 >= PRINT && LA32_0 <= PRINTLN)||(LA32_0 >= READ && LA32_0 <= RETURN)||(LA32_0 >= VARIABLE && LA32_0 <= WHILE)) ) {
-                    alt32=1;
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:530:27: ( PC )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
+
+            if ( (LA32_0==PC) ) {
+                alt32=1;
+            }
+            switch (alt32) {
+                case 1 :
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:530:27: PC
+                    {
+                    match(input,PC,FOLLOW_PC_in_ifstatement3263); 
+
+                    }
+                    break;
+
+            }
+
+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:531:3: (ifs= statements )*
+            loop33:
+            do {
+                int alt33=2;
+                int LA33_0 = input.LA(1);
+
+                if ( (LA33_0==COMENTARIO||LA33_0==FOR||(LA33_0 >= IF && LA33_0 <= LIST)||LA33_0==NOMBRE||(LA33_0 >= PRINT && LA33_0 <= PRINTLN)||(LA33_0 >= READ && LA33_0 <= RETURN)||(LA33_0 >= VARIABLE && LA33_0 <= WHILE)) ) {
+                    alt33=1;
                 }
 
 
-                switch (alt32) {
+                switch (alt33) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:519:4: ifs= statements
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:531:4: ifs= statements
             	    {
-            	    pushFollow(FOLLOW_statements_in_ifstatement3194);
+            	    pushFollow(FOLLOW_statements_in_ifstatement3274);
             	    ifs=statements();
 
             	    state._fsp--;
@@ -3611,25 +3681,25 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop32;
+            	    break loop33;
                 }
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3212); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3292); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:525:13: ( PC )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:537:13: ( PC )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA33_0==PC) ) {
-                alt33=1;
+            if ( (LA34_0==PC) ) {
+                alt34=1;
             }
-            switch (alt33) {
+            switch (alt34) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:525:13: PC
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:537:13: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_ifstatement3214); 
+                    match(input,PC,FOLLOW_PC_in_ifstatement3294); 
 
                     }
                     break;
@@ -3637,26 +3707,26 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:528:3: ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? )*
-            loop38:
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:540:3: ( ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )? )*
+            loop39:
             do {
-                int alt38=2;
-                int LA38_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA38_0==ELSEIF) ) {
-                    alt38=1;
+                if ( (LA39_0==ELSEIF) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt38) {
+                switch (alt39) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:528:4: ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )?
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:540:4: ELSEIF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (ifs= statements )* LLAVE_D ( PC )?
             	    {
-            	    match(input,ELSEIF,FOLLOW_ELSEIF_in_ifstatement3224); 
+            	    match(input,ELSEIF,FOLLOW_ELSEIF_in_ifstatement3304); 
 
-            	    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3226); 
+            	    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3306); 
 
-            	    pushFollow(FOLLOW_logico_in_ifstatement3230);
+            	    pushFollow(FOLLOW_logico_in_ifstatement3310);
             	    rel1=logico();
 
             	    state._fsp--;
@@ -3667,30 +3737,9 @@ public class LenguajeParser extends Parser {
             	    			 ((IfEvaluator) e).agregarCondicion(rel1); 
             	    			
 
-            	    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3238); 
+            	    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3318); 
 
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:533:15: ( PC )?
-            	    int alt34=2;
-            	    int LA34_0 = input.LA(1);
-
-            	    if ( (LA34_0==PC) ) {
-            	        alt34=1;
-            	    }
-            	    switch (alt34) {
-            	        case 1 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:533:15: PC
-            	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3240); 
-
-            	            }
-            	            break;
-
-            	    }
-
-
-            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3243); 
-
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:533:27: ( PC )?
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:545:15: ( PC )?
             	    int alt35=2;
             	    int LA35_0 = input.LA(1);
 
@@ -3699,9 +3748,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    switch (alt35) {
             	        case 1 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:533:27: PC
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:545:15: PC
             	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3245); 
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3320); 
 
             	            }
             	            break;
@@ -3709,22 +3758,43 @@ public class LenguajeParser extends Parser {
             	    }
 
 
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:534:3: (ifs= statements )*
-            	    loop36:
-            	    do {
-            	        int alt36=2;
-            	        int LA36_0 = input.LA(1);
+            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3323); 
 
-            	        if ( (LA36_0==COMENTARIO||LA36_0==FOR||(LA36_0 >= IF && LA36_0 <= LIST)||LA36_0==NOMBRE||(LA36_0 >= PRINT && LA36_0 <= PRINTLN)||(LA36_0 >= READ && LA36_0 <= RETURN)||(LA36_0 >= VARIABLE && LA36_0 <= WHILE)) ) {
-            	            alt36=1;
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:545:27: ( PC )?
+            	    int alt36=2;
+            	    int LA36_0 = input.LA(1);
+
+            	    if ( (LA36_0==PC) ) {
+            	        alt36=1;
+            	    }
+            	    switch (alt36) {
+            	        case 1 :
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:545:27: PC
+            	            {
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3325); 
+
+            	            }
+            	            break;
+
+            	    }
+
+
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:546:3: (ifs= statements )*
+            	    loop37:
+            	    do {
+            	        int alt37=2;
+            	        int LA37_0 = input.LA(1);
+
+            	        if ( (LA37_0==COMENTARIO||LA37_0==FOR||(LA37_0 >= IF && LA37_0 <= LIST)||LA37_0==NOMBRE||(LA37_0 >= PRINT && LA37_0 <= PRINTLN)||(LA37_0 >= READ && LA37_0 <= RETURN)||(LA37_0 >= VARIABLE && LA37_0 <= WHILE)) ) {
+            	            alt37=1;
             	        }
 
 
-            	        switch (alt36) {
+            	        switch (alt37) {
             	    	case 1 :
-            	    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:535:5: ifs= statements
+            	    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:547:5: ifs= statements
             	    	    {
-            	    	    pushFollow(FOLLOW_statements_in_ifstatement3259);
+            	    	    pushFollow(FOLLOW_statements_in_ifstatement3339);
             	    	    ifs=statements();
 
             	    	    state._fsp--;
@@ -3738,25 +3808,25 @@ public class LenguajeParser extends Parser {
             	    	    break;
 
             	    	default :
-            	    	    break loop36;
+            	    	    break loop37;
             	        }
             	    } while (true);
 
 
-            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3275); 
+            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3355); 
 
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:540:11: ( PC )?
-            	    int alt37=2;
-            	    int LA37_0 = input.LA(1);
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:552:11: ( PC )?
+            	    int alt38=2;
+            	    int LA38_0 = input.LA(1);
 
-            	    if ( (LA37_0==PC) ) {
-            	        alt37=1;
+            	    if ( (LA38_0==PC) ) {
+            	        alt38=1;
             	    }
-            	    switch (alt37) {
+            	    switch (alt38) {
             	        case 1 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:540:11: PC
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:552:11: PC
             	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3277); 
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3357); 
 
             	            }
             	            break;
@@ -3768,50 +3838,29 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop39;
                 }
             } while (true);
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:542:3: ( ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )? )*
-            loop43:
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:554:3: ( ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )? )*
+            loop44:
             do {
-                int alt43=2;
-                int LA43_0 = input.LA(1);
+                int alt44=2;
+                int LA44_0 = input.LA(1);
 
-                if ( (LA43_0==ELSE) ) {
-                    alt43=1;
+                if ( (LA44_0==ELSE) ) {
+                    alt44=1;
                 }
 
 
-                switch (alt43) {
+                switch (alt44) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:542:5: ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )?
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:554:5: ELSE ( PC )? LLAVE_I ( PC )? (elses= statements )* LLAVE_D ( PC )?
             	    {
-            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement3289); 
+            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement3369); 
 
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:542:10: ( PC )?
-            	    int alt39=2;
-            	    int LA39_0 = input.LA(1);
-
-            	    if ( (LA39_0==PC) ) {
-            	        alt39=1;
-            	    }
-            	    switch (alt39) {
-            	        case 1 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:542:10: PC
-            	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3291); 
-
-            	            }
-            	            break;
-
-            	    }
-
-
-            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3296); 
-
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:543:11: ( PC )?
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:554:10: ( PC )?
             	    int alt40=2;
             	    int LA40_0 = input.LA(1);
 
@@ -3820,9 +3869,9 @@ public class LenguajeParser extends Parser {
             	    }
             	    switch (alt40) {
             	        case 1 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:543:11: PC
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:554:10: PC
             	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3298); 
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3371); 
 
             	            }
             	            break;
@@ -3830,22 +3879,43 @@ public class LenguajeParser extends Parser {
             	    }
 
 
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:543:14: (elses= statements )*
-            	    loop41:
-            	    do {
-            	        int alt41=2;
-            	        int LA41_0 = input.LA(1);
+            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3376); 
 
-            	        if ( (LA41_0==COMENTARIO||LA41_0==FOR||(LA41_0 >= IF && LA41_0 <= LIST)||LA41_0==NOMBRE||(LA41_0 >= PRINT && LA41_0 <= PRINTLN)||(LA41_0 >= READ && LA41_0 <= RETURN)||(LA41_0 >= VARIABLE && LA41_0 <= WHILE)) ) {
-            	            alt41=1;
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:555:11: ( PC )?
+            	    int alt41=2;
+            	    int LA41_0 = input.LA(1);
+
+            	    if ( (LA41_0==PC) ) {
+            	        alt41=1;
+            	    }
+            	    switch (alt41) {
+            	        case 1 :
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:555:11: PC
+            	            {
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3378); 
+
+            	            }
+            	            break;
+
+            	    }
+
+
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:555:14: (elses= statements )*
+            	    loop42:
+            	    do {
+            	        int alt42=2;
+            	        int LA42_0 = input.LA(1);
+
+            	        if ( (LA42_0==COMENTARIO||LA42_0==FOR||(LA42_0 >= IF && LA42_0 <= LIST)||LA42_0==NOMBRE||(LA42_0 >= PRINT && LA42_0 <= PRINTLN)||(LA42_0 >= READ && LA42_0 <= RETURN)||(LA42_0 >= VARIABLE && LA42_0 <= WHILE)) ) {
+            	            alt42=1;
             	        }
 
 
-            	        switch (alt41) {
+            	        switch (alt42) {
             	    	case 1 :
-            	    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:544:5: elses= statements
+            	    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:556:5: elses= statements
             	    	    {
-            	    	    pushFollow(FOLLOW_statements_in_ifstatement3310);
+            	    	    pushFollow(FOLLOW_statements_in_ifstatement3390);
             	    	    elses=statements();
 
             	    	    state._fsp--;
@@ -3857,25 +3927,25 @@ public class LenguajeParser extends Parser {
             	    	    break;
 
             	    	default :
-            	    	    break loop41;
+            	    	    break loop42;
             	        }
             	    } while (true);
 
 
-            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3324); 
+            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3404); 
 
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:547:11: ( PC )?
-            	    int alt42=2;
-            	    int LA42_0 = input.LA(1);
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:559:11: ( PC )?
+            	    int alt43=2;
+            	    int LA43_0 = input.LA(1);
 
-            	    if ( (LA42_0==PC) ) {
-            	        alt42=1;
+            	    if ( (LA43_0==PC) ) {
+            	        alt43=1;
             	    }
-            	    switch (alt42) {
+            	    switch (alt43) {
             	        case 1 :
-            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:547:11: PC
+            	            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:559:11: PC
             	            {
-            	            match(input,PC,FOLLOW_PC_in_ifstatement3326); 
+            	            match(input,PC,FOLLOW_PC_in_ifstatement3406); 
 
             	            }
             	            break;
@@ -3887,7 +3957,7 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop43;
+            	    break loop44;
                 }
             } while (true);
 
@@ -3912,7 +3982,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "whilestatemet"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:551:1: whilestatemet returns [Evaluator e] : WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )? ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:563:1: whilestatemet returns [Evaluator e] : WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )? ;
     public final Evaluator whilestatemet() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -3923,14 +3993,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:552:4: ( WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )? )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:553:4: WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )?
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:564:4: ( WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )? )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:565:4: WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )?
             {
-            match(input,WHILE,FOLLOW_WHILE_in_whilestatemet3365); 
+            match(input,WHILE,FOLLOW_WHILE_in_whilestatemet3445); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_whilestatemet3367); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_whilestatemet3447); 
 
-            pushFollow(FOLLOW_logico_in_whilestatemet3371);
+            pushFollow(FOLLOW_logico_in_whilestatemet3451);
             rel=logico();
 
             state._fsp--;
@@ -3938,30 +4008,9 @@ public class LenguajeParser extends Parser {
 
              e = new WhileEvaluator(rel); 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_whilestatemet3383); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_whilestatemet3463); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:555:16: ( PC )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
-
-            if ( (LA44_0==PC) ) {
-                alt44=1;
-            }
-            switch (alt44) {
-                case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:555:16: PC
-                    {
-                    match(input,PC,FOLLOW_PC_in_whilestatemet3385); 
-
-                    }
-                    break;
-
-            }
-
-
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_whilestatemet3388); 
-
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:555:28: ( PC )?
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:567:16: ( PC )?
             int alt45=2;
             int LA45_0 = input.LA(1);
 
@@ -3970,9 +4019,9 @@ public class LenguajeParser extends Parser {
             }
             switch (alt45) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:555:28: PC
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:567:16: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_whilestatemet3390); 
+                    match(input,PC,FOLLOW_PC_in_whilestatemet3465); 
 
                     }
                     break;
@@ -3980,22 +4029,43 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:556:3: (wh= statements )*
-            loop46:
-            do {
-                int alt46=2;
-                int LA46_0 = input.LA(1);
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_whilestatemet3468); 
 
-                if ( (LA46_0==COMENTARIO||LA46_0==FOR||(LA46_0 >= IF && LA46_0 <= LIST)||LA46_0==NOMBRE||(LA46_0 >= PRINT && LA46_0 <= PRINTLN)||(LA46_0 >= READ && LA46_0 <= RETURN)||(LA46_0 >= VARIABLE && LA46_0 <= WHILE)) ) {
-                    alt46=1;
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:567:28: ( PC )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
+
+            if ( (LA46_0==PC) ) {
+                alt46=1;
+            }
+            switch (alt46) {
+                case 1 :
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:567:28: PC
+                    {
+                    match(input,PC,FOLLOW_PC_in_whilestatemet3470); 
+
+                    }
+                    break;
+
+            }
+
+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:568:3: (wh= statements )*
+            loop47:
+            do {
+                int alt47=2;
+                int LA47_0 = input.LA(1);
+
+                if ( (LA47_0==COMENTARIO||LA47_0==FOR||(LA47_0 >= IF && LA47_0 <= LIST)||LA47_0==NOMBRE||(LA47_0 >= PRINT && LA47_0 <= PRINTLN)||(LA47_0 >= READ && LA47_0 <= RETURN)||(LA47_0 >= VARIABLE && LA47_0 <= WHILE)) ) {
+                    alt47=1;
                 }
 
 
-                switch (alt46) {
+                switch (alt47) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:556:4: wh= statements
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:568:4: wh= statements
             	    {
-            	    pushFollow(FOLLOW_statements_in_whilestatemet3400);
+            	    pushFollow(FOLLOW_statements_in_whilestatemet3480);
             	    wh=statements();
 
             	    state._fsp--;
@@ -4007,25 +4077,25 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop46;
+            	    break loop47;
                 }
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_whilestatemet3419); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_whilestatemet3499); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:560:11: ( PC )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:572:11: ( PC )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA47_0==PC) ) {
-                alt47=1;
+            if ( (LA48_0==PC) ) {
+                alt48=1;
             }
-            switch (alt47) {
+            switch (alt48) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:560:11: PC
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:572:11: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_whilestatemet3421); 
+                    match(input,PC,FOLLOW_PC_in_whilestatemet3501); 
 
                     }
                     break;
@@ -4053,7 +4123,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "forstatemet"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:564:1: forstatemet returns [Evaluator e] : FOR PARENTESIS_I decl= declaracion_mult logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )? ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:576:1: forstatemet returns [Evaluator e] : FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )? ;
     public final Evaluator forstatemet() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -4068,28 +4138,28 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:565:3: ( FOR PARENTESIS_I decl= declaracion_mult logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )? )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:566:3: FOR PARENTESIS_I decl= declaracion_mult logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )?
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:577:3: ( FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )? )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:578:3: FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )? LLAVE_I ( PC )? (wh= statements )* LLAVE_D ( PC )?
             {
-            match(input,FOR,FOLLOW_FOR_in_forstatemet3446); 
+            match(input,FOR,FOLLOW_FOR_in_forstatemet3526); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_forstatemet3448); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_forstatemet3528); 
 
-            pushFollow(FOLLOW_declaracion_mult_in_forstatemet3452);
-            decl=declaracion_mult();
+            pushFollow(FOLLOW_declaracion_in_forstatemet3532);
+            decl=declaracion();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_logico_in_forstatemet3456);
+            pushFollow(FOLLOW_logico_in_forstatemet3536);
             logi=logico();
 
             state._fsp--;
 
 
-            match(input,PC,FOLLOW_PC_in_forstatemet3458); 
+            match(input,PC,FOLLOW_PC_in_forstatemet3538); 
 
-            pushFollow(FOLLOW_add_in_forstatemet3462);
+            pushFollow(FOLLOW_add_in_forstatemet3542);
             aumento=add();
 
             state._fsp--;
@@ -4097,30 +4167,9 @@ public class LenguajeParser extends Parser {
 
              e = new ForEvaluator(decl, logi, aumento); 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_forstatemet3476); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_forstatemet3556); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:568:16: ( PC )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
-
-            if ( (LA48_0==PC) ) {
-                alt48=1;
-            }
-            switch (alt48) {
-                case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:568:16: PC
-                    {
-                    match(input,PC,FOLLOW_PC_in_forstatemet3478); 
-
-                    }
-                    break;
-
-            }
-
-
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_forstatemet3481); 
-
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:568:28: ( PC )?
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:580:16: ( PC )?
             int alt49=2;
             int LA49_0 = input.LA(1);
 
@@ -4129,9 +4178,9 @@ public class LenguajeParser extends Parser {
             }
             switch (alt49) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:568:28: PC
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:580:16: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_forstatemet3483); 
+                    match(input,PC,FOLLOW_PC_in_forstatemet3558); 
 
                     }
                     break;
@@ -4139,22 +4188,43 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:569:3: (wh= statements )*
-            loop50:
-            do {
-                int alt50=2;
-                int LA50_0 = input.LA(1);
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_forstatemet3561); 
 
-                if ( (LA50_0==COMENTARIO||LA50_0==FOR||(LA50_0 >= IF && LA50_0 <= LIST)||LA50_0==NOMBRE||(LA50_0 >= PRINT && LA50_0 <= PRINTLN)||(LA50_0 >= READ && LA50_0 <= RETURN)||(LA50_0 >= VARIABLE && LA50_0 <= WHILE)) ) {
-                    alt50=1;
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:580:28: ( PC )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
+
+            if ( (LA50_0==PC) ) {
+                alt50=1;
+            }
+            switch (alt50) {
+                case 1 :
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:580:28: PC
+                    {
+                    match(input,PC,FOLLOW_PC_in_forstatemet3563); 
+
+                    }
+                    break;
+
+            }
+
+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:581:3: (wh= statements )*
+            loop51:
+            do {
+                int alt51=2;
+                int LA51_0 = input.LA(1);
+
+                if ( (LA51_0==COMENTARIO||LA51_0==FOR||(LA51_0 >= IF && LA51_0 <= LIST)||LA51_0==NOMBRE||(LA51_0 >= PRINT && LA51_0 <= PRINTLN)||(LA51_0 >= READ && LA51_0 <= RETURN)||(LA51_0 >= VARIABLE && LA51_0 <= WHILE)) ) {
+                    alt51=1;
                 }
 
 
-                switch (alt50) {
+                switch (alt51) {
             	case 1 :
-            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:569:4: wh= statements
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:581:4: wh= statements
             	    {
-            	    pushFollow(FOLLOW_statements_in_forstatemet3494);
+            	    pushFollow(FOLLOW_statements_in_forstatemet3574);
             	    wh=statements();
 
             	    state._fsp--;
@@ -4166,25 +4236,25 @@ public class LenguajeParser extends Parser {
             	    break;
 
             	default :
-            	    break loop50;
+            	    break loop51;
                 }
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_forstatemet3511); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_forstatemet3591); 
 
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:572:11: ( PC )?
-            int alt51=2;
-            int LA51_0 = input.LA(1);
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:584:11: ( PC )?
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( (LA51_0==PC) ) {
-                alt51=1;
+            if ( (LA52_0==PC) ) {
+                alt52=1;
             }
-            switch (alt51) {
+            switch (alt52) {
                 case 1 :
-                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:572:11: PC
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:584:11: PC
                     {
-                    match(input,PC,FOLLOW_PC_in_forstatemet3513); 
+                    match(input,PC,FOLLOW_PC_in_forstatemet3593); 
 
                     }
                     break;
@@ -4212,13 +4282,13 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "minus"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:645:1: minus : '-' ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:657:1: minus : '-' ;
     public final void minus() throws RecognitionException {
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:646:4: ( '-' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:647:4: '-'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:658:4: ( '-' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:659:4: '-'
             {
-            match(input,43,FOLLOW_43_in_minus3888); 
+            match(input,43,FOLLOW_43_in_minus3968); 
 
             }
 
@@ -4240,13 +4310,13 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "parentesis_d"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:655:3: parentesis_d : ')' ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:667:3: parentesis_d : ')' ;
     public final void parentesis_d() throws RecognitionException {
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:656:3: ( ')' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:657:3: ')'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:668:3: ( ')' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:669:3: ')'
             {
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_parentesis_d3923); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_parentesis_d4003); 
 
             }
 
@@ -4268,13 +4338,13 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "parentesis_i"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:665:3: parentesis_i : '(' ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:677:3: parentesis_i : '(' ;
     public final void parentesis_i() throws RecognitionException {
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:666:3: ( '(' )
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:667:3: '('
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:678:3: ( '(' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:679:3: '('
             {
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_parentesis_i3957); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_parentesis_i4037); 
 
             }
 
@@ -4296,10 +4366,10 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "size1"
-    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:708:1: size1 : ( '.tamano' | '.size' ) ;
+    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:720:1: size1 : ( '.tamano' | '.size' ) ;
     public final void size1() throws RecognitionException {
         try {
-            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:708:6: ( ( '.tamano' | '.size' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:720:6: ( ( '.tamano' | '.size' ) )
             // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:
             {
             if ( (input.LA(1) >= 48 && input.LA(1) <= 49) ) {
@@ -4382,210 +4452,215 @@ public class LenguajeParser extends Parser {
     public static final BitSet FOLLOW_ASIGNACION_in_declaracion_mult708 = new BitSet(new long[]{0x00000880202C0220L});
     public static final BitSet FOLLOW_evaluator_in_declaracion_mult714 = new BitSet(new long[]{0x0000040000400000L});
     public static final BitSet FOLLOW_PC_in_declaracion_mult744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_unincremento772 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_unincremento774 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_unincremento779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_menosunincremento811 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_menosunincremento813 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_menosunincremento822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_incremento853 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_incremento855 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_evaluator_in_incremento860 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_incremento871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_decremento901 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_45_in_decremento903 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_evaluator_in_decremento908 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_decremento919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LIST_in_declaracion_lista961 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_NOMBRE_in_declaracion_lista965 = new BitSet(new long[]{0x0000040000400000L});
-    public static final BitSet FOLLOW_42_in_declaracion_lista1008 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_NOMBRE_in_declaracion_lista1020 = new BitSet(new long[]{0x0000040000400000L});
-    public static final BitSet FOLLOW_PC_in_declaracion_lista1097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LIST_in_lista_texto1123 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_NOMBRE_in_lista_texto1127 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ASIGNACION_in_lista_texto1129 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_READ_in_lista_texto1131 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_lista_texto1133 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_TEXTO_in_lista_texto1137 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_lista_texto1139 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_lista_texto1212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_push1240 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_46_in_push1242 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_PUSH_in_push1244 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_push1246 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_expression_in_push1252 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_push1254 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_push1324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_size1352 = new BitSet(new long[]{0x0003000000000000L});
-    public static final BitSet FOLLOW_size1_in_size1355 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_37_in_size1358 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_PC_in_size1430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_asignacion1465 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ASIGNACION_in_asignacion1467 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_evaluator_in_asignacion1473 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_asignacion1513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_asignacion_lista1541 = new BitSet(new long[]{0x0100000010000000L});
-    public static final BitSet FOLLOW_56_in_asignacion_lista1550 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_NUMERO_in_asignacion_lista1554 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_57_in_asignacion_lista1556 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ASIGNACION_in_asignacion_lista1558 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1564 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_SET_in_asignacion_lista1572 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_asignacion_lista1574 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_NUMERO_in_asignacion_lista1578 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_asignacion_lista1580 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1586 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_asignacion_lista1588 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_asignacion_lista1634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMENTARIO_in_comentario1652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_READ_in_lectura1678 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_NOMBRE_in_lectura1682 = new BitSet(new long[]{0x0000040000400000L});
-    public static final BitSet FOLLOW_42_in_lectura1714 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_expression_in_lectura1720 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_lectura1754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PRINT_in_print11783 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_expression_in_print11794 = new BitSet(new long[]{0x0000040000400000L});
-    public static final BitSet FOLLOW_42_in_print11806 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_expression_in_print11816 = new BitSet(new long[]{0x0000040000400000L});
-    public static final BitSet FOLLOW_PC_in_print11827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PRINTLN_in_println1856 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_expression_in_println1866 = new BitSet(new long[]{0x0000040000400000L});
-    public static final BitSet FOLLOW_42_in_println1878 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_expression_in_println1888 = new BitSet(new long[]{0x0000040000400000L});
-    public static final BitSet FOLLOW_PC_in_println1899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logico_in_evaluator1924 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_llamadofuncion_in_term1970 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BOOLEAN_in_term1986 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term2005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NUMERO_in_term2023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DOBLE_in_term2042 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TEXTO_in_term2076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_term2097 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_term2099 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_term2101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term2134 = new BitSet(new long[]{0x0100800000000000L});
-    public static final BitSet FOLLOW_47_in_term2143 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_term2149 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_term2151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_term2159 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_term2169 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_57_in_term2171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term2196 = new BitSet(new long[]{0x0003000000000000L});
-    public static final BitSet FOLLOW_size1_in_term2199 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_37_in_term2202 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_39_in_unary2256 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_43_in_unary2264 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_term_in_unary2285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_in_mult2322 = new BitSet(new long[]{0x0004004800000002L});
-    public static final BitSet FOLLOW_38_in_mult2331 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_unary_in_mult2335 = new BitSet(new long[]{0x0004004800000002L});
-    public static final BitSet FOLLOW_50_in_mult2343 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_unary_in_mult2347 = new BitSet(new long[]{0x0004004800000002L});
-    public static final BitSet FOLLOW_35_in_mult2356 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_unary_in_mult2360 = new BitSet(new long[]{0x0004004800000002L});
-    public static final BitSet FOLLOW_mult_in_add2394 = new BitSet(new long[]{0x0000088000000002L});
-    public static final BitSet FOLLOW_39_in_add2406 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_mult_in_add2410 = new BitSet(new long[]{0x0000088000000002L});
-    public static final BitSet FOLLOW_minus_in_add2423 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_mult_in_add2427 = new BitSet(new long[]{0x0000088000000002L});
-    public static final BitSet FOLLOW_add_in_relation2465 = new BitSet(new long[]{0x00F8000400000002L});
-    public static final BitSet FOLLOW_53_in_relation2481 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_relation2485 = new BitSet(new long[]{0x00F8000400000002L});
-    public static final BitSet FOLLOW_54_in_relation2493 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_relation2497 = new BitSet(new long[]{0x00F8000400000002L});
-    public static final BitSet FOLLOW_51_in_relation2508 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_relation2512 = new BitSet(new long[]{0x00F8000400000002L});
-    public static final BitSet FOLLOW_34_in_relation2523 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_relation2527 = new BitSet(new long[]{0x00F8000400000002L});
-    public static final BitSet FOLLOW_52_in_relation2537 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_relation2541 = new BitSet(new long[]{0x00F8000400000002L});
-    public static final BitSet FOLLOW_55_in_relation2551 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_relation2555 = new BitSet(new long[]{0x00F8000400000002L});
-    public static final BitSet FOLLOW_relation_in_logico2595 = new BitSet(new long[]{0x0400001000000002L});
-    public static final BitSet FOLLOW_36_in_logico2623 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_relation_in_logico2627 = new BitSet(new long[]{0x0400001000000002L});
-    public static final BitSet FOLLOW_58_in_logico2659 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_relation_in_logico2663 = new BitSet(new long[]{0x0400001000000002L});
-    public static final BitSet FOLLOW_logico_in_expression2719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_llamadofuncion2754 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_llamadofuncion2759 = new BitSet(new long[]{0x00000000203C0220L});
-    public static final BitSet FOLLOW_term_in_llamadofuncion2774 = new BitSet(new long[]{0x0000040000100000L});
-    public static final BitSet FOLLOW_42_in_llamadofuncion2786 = new BitSet(new long[]{0x00000000202C0220L});
-    public static final BitSet FOLLOW_term_in_llamadofuncion2793 = new BitSet(new long[]{0x0000040000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_llamadofuncion2806 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_llamadofuncion2817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_print1_in_statements2851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_println_in_statements2871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_in_statements2890 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lectura_in_statements2905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_comentario_in_statements2924 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_return1_in_statements2939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifstatement_in_statements2957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_whilestatemet_in_statements2972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_llamadofuncion_in_statements2984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_mult_in_statements2996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_lista_in_statements3005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_push_in_statements3013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forstatemet_in_statements3034 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_lista_in_statements3048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lista_texto_in_statements3057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_size_in_statements3071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unincremento_in_statements3092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_menosunincremento_in_statements3105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_incremento_in_statements3113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_decremento_in_statements3128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_ifstatement3160 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3162 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_logico_in_ifstatement3168 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3176 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3178 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3181 = new BitSet(new long[]{0x00000000CDC5D040L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3183 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_statements_in_ifstatement3194 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3212 = new BitSet(new long[]{0x0000000000400C02L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3214 = new BitSet(new long[]{0x0000000000000C02L});
-    public static final BitSet FOLLOW_ELSEIF_in_ifstatement3224 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3226 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_logico_in_ifstatement3230 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3238 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3240 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3243 = new BitSet(new long[]{0x00000000CDC5D040L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3245 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_statements_in_ifstatement3259 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3275 = new BitSet(new long[]{0x0000000000400C02L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3277 = new BitSet(new long[]{0x0000000000000C02L});
-    public static final BitSet FOLLOW_ELSE_in_ifstatement3289 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3291 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3296 = new BitSet(new long[]{0x00000000CDC5D040L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3298 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_statements_in_ifstatement3310 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3324 = new BitSet(new long[]{0x0000000000400402L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3326 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_WHILE_in_whilestatemet3365 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_whilestatemet3367 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_logico_in_whilestatemet3371 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_whilestatemet3383 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_whilestatemet3385 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_whilestatemet3388 = new BitSet(new long[]{0x00000000CDC5D040L});
-    public static final BitSet FOLLOW_PC_in_whilestatemet3390 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_statements_in_whilestatemet3400 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_whilestatemet3419 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_PC_in_whilestatemet3421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FOR_in_forstatemet3446 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_forstatemet3448 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_declaracion_mult_in_forstatemet3452 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_logico_in_forstatemet3456 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3458 = new BitSet(new long[]{0x00000880202C0220L});
-    public static final BitSet FOLLOW_add_in_forstatemet3462 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_forstatemet3476 = new BitSet(new long[]{0x0000000000420000L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3478 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_forstatemet3481 = new BitSet(new long[]{0x00000000CDC5D040L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3483 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_statements_in_forstatemet3494 = new BitSet(new long[]{0x00000000CD85D040L});
-    public static final BitSet FOLLOW_LLAVE_D_in_forstatemet3511 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_minus3888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_parentesis_d3923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_parentesis_i3957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VARIABLE_in_declaracion769 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_NOMBRE_in_declaracion775 = new BitSet(new long[]{0x0000000000400010L});
+    public static final BitSet FOLLOW_ASIGNACION_in_declaracion794 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_evaluator_in_declaracion800 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_declaracion824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_unincremento852 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_unincremento854 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_unincremento859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_menosunincremento891 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_menosunincremento893 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_menosunincremento902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_incremento933 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_incremento935 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_evaluator_in_incremento940 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_incremento951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_decremento981 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_45_in_decremento983 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_evaluator_in_decremento988 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_decremento999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LIST_in_declaracion_lista1041 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_NOMBRE_in_declaracion_lista1045 = new BitSet(new long[]{0x0000040000400000L});
+    public static final BitSet FOLLOW_42_in_declaracion_lista1088 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_NOMBRE_in_declaracion_lista1100 = new BitSet(new long[]{0x0000040000400000L});
+    public static final BitSet FOLLOW_PC_in_declaracion_lista1177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LIST_in_lista_texto1203 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_NOMBRE_in_lista_texto1207 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ASIGNACION_in_lista_texto1209 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_READ_in_lista_texto1211 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_lista_texto1213 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_TEXTO_in_lista_texto1217 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_lista_texto1219 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_lista_texto1292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_push1320 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_46_in_push1322 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_PUSH_in_push1324 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_push1326 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_expression_in_push1332 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_push1334 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_push1404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_size1432 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_size1_in_size1435 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_37_in_size1438 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_PC_in_size1510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_asignacion1545 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ASIGNACION_in_asignacion1547 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_evaluator_in_asignacion1553 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_asignacion1593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_asignacion_lista1621 = new BitSet(new long[]{0x0100000010000000L});
+    public static final BitSet FOLLOW_56_in_asignacion_lista1630 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_NUMERO_in_asignacion_lista1634 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_57_in_asignacion_lista1636 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ASIGNACION_in_asignacion_lista1638 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1644 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_SET_in_asignacion_lista1652 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_asignacion_lista1654 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_NUMERO_in_asignacion_lista1658 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_asignacion_lista1660 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1666 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_asignacion_lista1668 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_asignacion_lista1714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMENTARIO_in_comentario1732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_READ_in_lectura1758 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_NOMBRE_in_lectura1762 = new BitSet(new long[]{0x0000040000400000L});
+    public static final BitSet FOLLOW_42_in_lectura1794 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_expression_in_lectura1800 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_lectura1834 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRINT_in_print11863 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_expression_in_print11874 = new BitSet(new long[]{0x0000040000400000L});
+    public static final BitSet FOLLOW_42_in_print11886 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_expression_in_print11896 = new BitSet(new long[]{0x0000040000400000L});
+    public static final BitSet FOLLOW_PC_in_print11907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRINTLN_in_println1936 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_expression_in_println1946 = new BitSet(new long[]{0x0000040000400000L});
+    public static final BitSet FOLLOW_42_in_println1958 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_expression_in_println1968 = new BitSet(new long[]{0x0000040000400000L});
+    public static final BitSet FOLLOW_PC_in_println1979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logico_in_evaluator2004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_llamadofuncion_in_term2050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BOOLEAN_in_term2066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term2085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NUMERO_in_term2103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOBLE_in_term2122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TEXTO_in_term2156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_term2177 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_term2179 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_term2181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term2214 = new BitSet(new long[]{0x0100800000000000L});
+    public static final BitSet FOLLOW_47_in_term2223 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_term2229 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_term2231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_term2239 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_term2249 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_57_in_term2251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term2276 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_size1_in_term2279 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_37_in_term2282 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_39_in_unary2336 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_43_in_unary2344 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_term_in_unary2365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_in_mult2402 = new BitSet(new long[]{0x0004004800000002L});
+    public static final BitSet FOLLOW_38_in_mult2411 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_unary_in_mult2415 = new BitSet(new long[]{0x0004004800000002L});
+    public static final BitSet FOLLOW_50_in_mult2423 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_unary_in_mult2427 = new BitSet(new long[]{0x0004004800000002L});
+    public static final BitSet FOLLOW_35_in_mult2436 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_unary_in_mult2440 = new BitSet(new long[]{0x0004004800000002L});
+    public static final BitSet FOLLOW_mult_in_add2474 = new BitSet(new long[]{0x0000088000000002L});
+    public static final BitSet FOLLOW_39_in_add2486 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_mult_in_add2490 = new BitSet(new long[]{0x0000088000000002L});
+    public static final BitSet FOLLOW_minus_in_add2503 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_mult_in_add2507 = new BitSet(new long[]{0x0000088000000002L});
+    public static final BitSet FOLLOW_add_in_relation2545 = new BitSet(new long[]{0x00F8000400000002L});
+    public static final BitSet FOLLOW_53_in_relation2561 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_relation2565 = new BitSet(new long[]{0x00F8000400000002L});
+    public static final BitSet FOLLOW_54_in_relation2573 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_relation2577 = new BitSet(new long[]{0x00F8000400000002L});
+    public static final BitSet FOLLOW_51_in_relation2588 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_relation2592 = new BitSet(new long[]{0x00F8000400000002L});
+    public static final BitSet FOLLOW_34_in_relation2603 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_relation2607 = new BitSet(new long[]{0x00F8000400000002L});
+    public static final BitSet FOLLOW_52_in_relation2617 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_relation2621 = new BitSet(new long[]{0x00F8000400000002L});
+    public static final BitSet FOLLOW_55_in_relation2631 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_relation2635 = new BitSet(new long[]{0x00F8000400000002L});
+    public static final BitSet FOLLOW_relation_in_logico2675 = new BitSet(new long[]{0x0400001000000002L});
+    public static final BitSet FOLLOW_36_in_logico2703 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_relation_in_logico2707 = new BitSet(new long[]{0x0400001000000002L});
+    public static final BitSet FOLLOW_58_in_logico2739 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_relation_in_logico2743 = new BitSet(new long[]{0x0400001000000002L});
+    public static final BitSet FOLLOW_logico_in_expression2799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_llamadofuncion2834 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_llamadofuncion2839 = new BitSet(new long[]{0x00000000203C0220L});
+    public static final BitSet FOLLOW_term_in_llamadofuncion2854 = new BitSet(new long[]{0x0000040000100000L});
+    public static final BitSet FOLLOW_42_in_llamadofuncion2866 = new BitSet(new long[]{0x00000000202C0220L});
+    public static final BitSet FOLLOW_term_in_llamadofuncion2873 = new BitSet(new long[]{0x0000040000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_llamadofuncion2886 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_llamadofuncion2897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_print1_in_statements2931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_println_in_statements2951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_in_statements2970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lectura_in_statements2985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comentario_in_statements3004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_return1_in_statements3019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifstatement_in_statements3037 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whilestatemet_in_statements3052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_llamadofuncion_in_statements3064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_mult_in_statements3076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_lista_in_statements3085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_push_in_statements3093 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forstatemet_in_statements3114 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_lista_in_statements3128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lista_texto_in_statements3137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_size_in_statements3151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unincremento_in_statements3172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_menosunincremento_in_statements3185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_incremento_in_statements3193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_decremento_in_statements3208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_ifstatement3240 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3242 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_logico_in_ifstatement3248 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3256 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3258 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3261 = new BitSet(new long[]{0x00000000CDC5D040L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3263 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_statements_in_ifstatement3274 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3292 = new BitSet(new long[]{0x0000000000400C02L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3294 = new BitSet(new long[]{0x0000000000000C02L});
+    public static final BitSet FOLLOW_ELSEIF_in_ifstatement3304 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3306 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_logico_in_ifstatement3310 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3318 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3320 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3323 = new BitSet(new long[]{0x00000000CDC5D040L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3325 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_statements_in_ifstatement3339 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3355 = new BitSet(new long[]{0x0000000000400C02L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3357 = new BitSet(new long[]{0x0000000000000C02L});
+    public static final BitSet FOLLOW_ELSE_in_ifstatement3369 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3371 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3376 = new BitSet(new long[]{0x00000000CDC5D040L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3378 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_statements_in_ifstatement3390 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3404 = new BitSet(new long[]{0x0000000000400402L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3406 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_WHILE_in_whilestatemet3445 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_whilestatemet3447 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_logico_in_whilestatemet3451 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_whilestatemet3463 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_whilestatemet3465 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_whilestatemet3468 = new BitSet(new long[]{0x00000000CDC5D040L});
+    public static final BitSet FOLLOW_PC_in_whilestatemet3470 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_statements_in_whilestatemet3480 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_whilestatemet3499 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_PC_in_whilestatemet3501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FOR_in_forstatemet3526 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_forstatemet3528 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_declaracion_in_forstatemet3532 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_logico_in_forstatemet3536 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3538 = new BitSet(new long[]{0x00000880202C0220L});
+    public static final BitSet FOLLOW_add_in_forstatemet3542 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_forstatemet3556 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3558 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_forstatemet3561 = new BitSet(new long[]{0x00000000CDC5D040L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3563 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_statements_in_forstatemet3574 = new BitSet(new long[]{0x00000000CD85D040L});
+    public static final BitSet FOLLOW_LLAVE_D_in_forstatemet3591 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_minus3968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_parentesis_d4003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_parentesis_i4037 = new BitSet(new long[]{0x0000000000000002L});
 
 }

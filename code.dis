@@ -1,7 +1,6 @@
-var a = 9, b = 8, c;
-
-list d, e, f;
-
-d.push(a);
-d.push(b);
-print d[0] d[1];;
+var a, b, c=8;
+print c;
+for(var i = 0; i < 20; 2){
+	print i;
+}
+;

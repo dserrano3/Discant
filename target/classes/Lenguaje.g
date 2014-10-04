@@ -141,6 +141,18 @@ declaracion_mult returns [Evaluator e] throws Exception
 	  )?
   )*
   PC
+  ;
+  
+declaracion returns [Evaluator e] throws Exception
+  :
+  VARIABLE nom = NOMBRE 
+        {  if(bandera)
+            $e = new DeclaracionEvaluator($nom.text, new DoubleEvaluator(0)); }
+  (   ASIGNACION ev = evaluator     
+        { if(bandera)
+          { ((DeclaracionEvaluator)$e).asignar($ev.e); } }
+  )?
+  PC
   ; 
   
 unincremento returns [Evaluator e] throws Exception
@@ -563,7 +575,7 @@ whilestatemet returns [Evaluator e] throws Exception
 
 forstatemet returns [Evaluator e] throws Exception
   :
-  FOR PARENTESIS_I decl=declaracion_mult logi=logico PC aumento=add  
+  FOR PARENTESIS_I decl=declaracion logi=logico PC aumento=add  
       { $e = new ForEvaluator($decl.e, $logi.e, $aumento.e); }
   PARENTESIS_D PC? LLAVE_I PC? 
   (wh = statements
