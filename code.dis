@@ -1,1 +1,3 @@
-read a, "leyendo algo";;
+var a, b = 8, d ,c;
+
+print b;;
