@@ -56,24 +56,24 @@ programa returns [StringBuilder output] throws Exception
       print1           {$output.append((String)$print1.e.evaluate(pila));}
     | println          {$output.append((String)$println.e.evaluate(pila));}
     | asignacion       {$asignacion.e.evaluate(pila);}
-    | ifstatement      {$output.append((String)$ifstatement.e.evaluate(pila));}
     | lectura          {$lectura.e.evaluate(pila);}
     | comentario
+    | ifstatement      {$output.append((String)$ifstatement.e.evaluate(pila));}
     | whilestatemet    {$output.append((String)$whilestatemet.e.evaluate(pila));}
     | funcion
-    | llamadofuncion   {$output.append((String)$llamadofuncion.e.evaluate(pila));}
-    | declaracion      {$declaracion.e.evaluate(pila);}
-    //| declaracion2     {$declaracion2.e.evaluate(pila);}
+    | llamadofuncion   {$output.append((String)$llamadofuncion.e.evaluate(pila));} 
+    | declaracion_mult {$declaracion_mult.e.evaluate(pila);}
     | declaracion_lista{$declaracion_lista.e.evaluate(pila);}
     | push             {$push.e.evaluate(pila);}
     | forstatemet      {$output.append((String)$forstatemet.e.evaluate(pila));}
     | asignacion_lista {$asignacion_lista.e.evaluate(pila);}
     | lista_texto      {$lista_texto.e.evaluate(pila);}
-    | size      {$size.e.evaluate(pila);}
+    | size             {$size.e.evaluate(pila);}
     | unincremento      {$unincremento.e.evaluate(pila);}
     | menosunincremento      {$menosunincremento.e.evaluate(pila);}
     | incremento      {$incremento.e.evaluate(pila);}
     | decremento      {$decremento.e.evaluate(pila);}
+    
   )+ 
   ;
   
@@ -111,7 +111,7 @@ programa returns [StringBuilder output] throws Exception
 	parentesis_d PC?
 	'{' PC?
 	  
-	  (wh = whilestatements{
+	  (wh = statements{
  
      ((FuncionEvaluator) $e).add($wh.e);   
      } 
@@ -121,28 +121,29 @@ programa returns [StringBuilder output] throws Exception
 ;
  
  
- 
-
-
-
-declaracion returns [Evaluator e] throws Exception
+declaracion_mult returns [Evaluator e] throws Exception
   :
-  VARIABLE nom=NOMBRE { 
-     if(bandera)
-      $e = new DeclaracionEvaluator($nom.text,new DoubleEvaluator(0));   
-  }
-  (ASIGNACION ev = evaluator     
-	    {
-	     if(bandera)
-	      {
-	     		  $e = new DeclaracionEvaluator($nom.text,$ev.e);    	
-	     	}
-	 })?
-	 
-  PC 
+  { $e = new DeclaracionMultipleEvaluator(); }
+  VARIABLE nom = NOMBRE 
+			  {  if(bandera)
+			      ((DeclaracionMultipleEvaluator)$e).addDeclaracion($nom.text, new DoubleEvaluator(0)); }
+  (   ASIGNACION ev = evaluator     
+        { if(bandera)
+          { ((DeclaracionMultipleEvaluator)$e).addAsigancion($ev.e); } }
+  )?
+  (   ','
+      nom2 = NOMBRE 
+      {  if(bandera)
+          ((DeclaracionMultipleEvaluator)$e).addDeclaracion($nom2.text, new DoubleEvaluator(0)); }
+	  (   ASIGNACION ev2 = evaluator     
+		      { if(bandera)
+		        { ((DeclaracionMultipleEvaluator)$e).addAsigancion($ev2.e); } }
+	  )?
+  )*
+  PC
   ; 
   
-  unincremento returns [Evaluator e] throws Exception
+unincremento returns [Evaluator e] throws Exception
   :
   nom=NOMBRE '++'{ 
      if(bandera){
@@ -187,18 +188,28 @@ declaracion returns [Evaluator e] throws Exception
   declaracion_lista returns [Evaluator e] throws Exception
   :
   //TODO:(danielserrano) change the list constant for a regex variable.
-  LIST nom=NOMBRE
+  { $e = new DeclaracionMultipleEvaluator(); }
+      LIST nom=NOMBRE
                                  {
                                   if(bandera)
                                     {
-                                        $e = new DeclaracionEvaluator($nom.text,new ListEvaluator());   
+                                        ((DeclaracionMultipleEvaluator)$e).addDeclaracion($nom.text, new ListEvaluator());   
                                     }
                                  }
+  (   ','
+      nom2 = NOMBRE
+                                {
+                                  if(bandera)
+                                    {
+                                        ((DeclaracionMultipleEvaluator)$e).addDeclaracion($nom2.text, new ListEvaluator());      
+                                    }
+                                 }
+  )*
                                  
   PC
   ; 
   
-    lista_texto returns [Evaluator e] throws Exception
+lista_texto returns [Evaluator e] throws Exception
   :
   LIST nom=NOMBRE ASIGNACION READ '(' tex=TEXTO ')'
                                  {
@@ -211,7 +222,7 @@ declaracion returns [Evaluator e] throws Exception
   PC
   ; 
   
-  push returns [Evaluator e] throws Exception
+push returns [Evaluator e] throws Exception
   :
   nom=NOMBRE '.' PUSH '(' exp = expression ')'
                                  {
@@ -223,7 +234,7 @@ declaracion returns [Evaluator e] throws Exception
                                  PC
   ; 
   
-  size returns [Evaluator e] throws Exception
+size returns [Evaluator e] throws Exception
   :
   nom=NOMBRE  size1 ('()')*
                                  {
@@ -237,7 +248,7 @@ declaracion returns [Evaluator e] throws Exception
   
   
   
-  asignacion returns [Evaluator e] throws Exception
+asignacion returns [Evaluator e] throws Exception
   :
    nom=NOMBRE ASIGNACION ev = evaluator 
                                  {
@@ -251,7 +262,7 @@ declaracion returns [Evaluator e] throws Exception
   ; 
 
 
-  asignacion_lista returns [Evaluator e] throws Exception
+asignacion_lista returns [Evaluator e] throws Exception
   :
    nom=NOMBRE 
    (  '[' num=NUMERO ']' ASIGNACION ev = evaluator
@@ -405,83 +416,42 @@ unary returns [Evaluator e] throws Exception
 
 mult returns [Evaluator e] throws Exception
   :
-  op1=unary 
-           {
-            $e = $op1.e;
-           }
-  (
-    '*' op2=unary 
-                 {
-                  $e = new TimesEvaluator($e,$op2.e);
-                 }
-    | '/' op2=unary 
-                   {
-                    $e = new DivideEvaluator($e,$op2.e);
-                   }
-    | '%' op2=unary 
-                   {
-                    $e = new ModEvaluator($e,$op2.e);
-                   }
+     op1=unary {$e = $op1.e;}
+  (  '*' op2=unary{$e = new TimesEvaluator($e,$op2.e);}
+  |  '/' op2=unary {$e = new DivideEvaluator($e,$op2.e);}
+  |  '%' op2=unary {$e = new ModEvaluator($e,$op2.e); }
   )*
   ;
 
 add returns [Evaluator e] throws Exception
   :
-  op1=mult 
-          {
-           $e = $op1.e;
-          }
+    op1=mult {$e = $op1.e;}
   (
-    ('+' op2=mult 
-                {  
-                 $e = new PlusEvaluator($e, $op2.e);
-                })
-    | (minus op2=mult 
-                  {
-                   $e = new MinusEvaluator($e, $op2.e);
-                  })
+  ( '+' op2=mult {$e = new PlusEvaluator($e, $op2.e);}
+  )
+  | (minus op2=mult {$e = new MinusEvaluator($e, $op2.e);}
+  )
   )*
   ;
 
 relation returns [Evaluator e] throws Exception
   :
-  ex1=add 
-                {
-                 $e = $ex1.e;
-                }
+    ex1=add {$e = $ex1.e;}
   (
-    (
-      '==' ex2=add 
-                         {
-                          $e = new IgualIgualEvaluator($e,$ex2.e);
-                         }
-      | '>' ex2=add 
-                          {
-                           $e = new MayorEvaluator($e,$ex2.e);
-                          }
-      | '<' ex2=add 
-                          {
-                           $e = new MenorEvaluator($e,$ex2.e);
-                          }
-      | '!=' ex2=add 
-                           {
-                            $e = new DiferenteEvaluator($e,$ex2.e);
-                           }
-      | '<=' ex2=add 
-                           {
-                            $e = new MenorIgualEvaluator($e,$ex2.e);
-                           }
-      | '>=' ex2=add 
-                           {
-                            $e = new MayorIgualEvaluator($e,$ex2.e);
-                           }
-    )
+  (
+    '==' ex2=add {$e = new IgualIgualEvaluator($e,$ex2.e);}
+  | '>' ex2=add    {$e = new MayorEvaluator($e,$ex2.e);}
+  | '<' ex2=add    {$e = new MenorEvaluator($e,$ex2.e);}
+  | '!=' ex2=add   {$e = new DiferenteEvaluator($e,$ex2.e);}
+  | '<=' ex2=add   {$e = new MenorIgualEvaluator($e,$ex2.e);}
+  | '>=' ex2=add   {$e = new MayorIgualEvaluator($e,$ex2.e);}
+  )
   )*
   ;
 
 logico returns [Evaluator e] throws Exception
   :
-  rel1=relation 
+    rel1=relation 
                {
                 $e = $rel1.e;
                }
@@ -490,7 +460,7 @@ logico returns [Evaluator e] throws Exception
                       {
                        $e = new AndEvaluator($e,$rel2.e);
                       }
-    | '||' rel2=relation 
+   | '||' rel2=relation 
                         {
                          $e = new OrEvaluator($e,$rel2.e);
                         }
@@ -498,8 +468,8 @@ logico returns [Evaluator e] throws Exception
   ;
 
   expression returns [Evaluator e] throws Exception
-		  :   logico { $e = $logico.e; }
-		  ;
+	:   logico { $e = $logico.e; }
+	;
 
 
 llamadofuncion returns[Evaluator e] throws Exception
@@ -513,192 +483,93 @@ llamadofuncion returns[Evaluator e] throws Exception
   ')'
          PC
    ; 
-
-
-
-
-
-ifstatements returns [Evaluator e] throws Exception:  
-
-    print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}  
-  | println {$e = $println.e;}   
-  | asignacion{$e = $asignacion.e;}//{$asignacion.e.evaluate(pila);}
-  | lectura{$e = $lectura.e;} 
-  | comentario {$e =null;}
-  | return1 {$e = $return1.e;}
-  | whilestatemet{$e = $whilestatemet.e;} 
-  | ifstatement{$e = $ifstatement.e;}  
-  | declaracion{$e = $declaracion.e;}
-  //| declaracion2{$e = $declaracion2.e;}  
-  | declaracion_lista{$e = $declaracion_lista.e;}
-  | push{ $e = $push.e; }
-  | forstatemet{$e = $forstatemet.e;}
-  | asignacion_lista {$e = $asignacion_lista.e;}
-  | lista_texto      {$e  = $lista_texto.e;}
-  | size      {$e = $size.e;}
-  | unincremento      {$e = $unincremento.e;}
-  | menosunincremento {$e = $menosunincremento.e;}
-  | incremento      {$e = $incremento.e;}
-  | decremento      {$e = $decremento.e;}
-   
-;  
-
-  
-elsestataments returns [Evaluator e] throws Exception: 
-
-    print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}    
-  | println {$e = $println.e;} 
-  | asignacion{$e = $asignacion.e;}//{$asignacion.e.evaluate(pila);}
-  | lectura{$e = $lectura.e;} 
-  | comentario {$e =null;}
-  | return1 {$e = $return1.e;}
-  | whilestatemet{$e = $whilestatemet.e;} 
-  | ifstatement{$e = $ifstatement.e;}  
-  | declaracion{$e = $declaracion.e;}
-  //| declaracion2{$e = $declaracion2.e;}  
-  | declaracion_lista{$e = $declaracion_lista.e;}
-  | push{ $e = $push.e; }
-  | forstatemet{$e = $forstatemet.e;}
-  | asignacion_lista {$e = $asignacion_lista.e;}
-  | lista_texto      {$e  = $lista_texto.e;}
-  | size      {$e = $size.e;}
-  | unincremento      {$e = $unincremento.e;}
-  | menosunincremento {$e = $menosunincremento.e;}
-  | incremento      {$e = $incremento.e;}
-  | decremento      {$e = $decremento.e;}
-
-
-;
-
  
-ifstatement returns [Evaluator e] throws Exception:
+statements returns [Evaluator e] throws Exception
+  :      
+    print1            {$e = $print1.e;} 
+  | println           {$e = $println.e;} 
+  | asignacion        {$e = $asignacion.e;}
+  | lectura           {$e = $lectura.e;} 
+  | comentario        {$e =null;}
+  | return1           {$e = $return1.e;}
+  | ifstatement       {$e = $ifstatement.e;} 
+  | whilestatemet     {$e = $whilestatemet.e;}
+  | llamadofuncion    {$e = $llamadofuncion.e;} 
+  | declaracion_mult {$e = $declaracion_mult.e;} 
+  | declaracion_lista {$e = $declaracion_lista.e;}
+  | push              {$e = $push.e;}
+  | forstatemet       {$e = $forstatemet.e;}
+  | asignacion_lista  {$e = $asignacion_lista.e;}
+  | lista_texto       {$e  = $lista_texto.e;}
+  | size              {$e = $size.e;}
+  | unincremento      {$e = $unincremento.e;}
+  | menosunincremento {$e = $menosunincremento.e;}
+  | incremento        {$e = $incremento.e;}
+  | decremento        {$e = $decremento.e;}
+  ;
 
-IF PARENTESIS_I rel = logico
-{
-  $e = new IfEvaluator ();   
-  ((IfEvaluator) $e).agregarCondicion($rel.e);
-}
-  PARENTESIS_D PC? LLAVE_I PC? //El PC es para admitir espacios, si ponen ; lo admitiria.
- (ifs = ifstatements  
- {
-   ((IfEvaluator) $e).agregarCoso($ifs.e);   
-  
- })*
- LLAVE_D PC?
+ifstatement returns [Evaluator e] throws Exception
+  :
+  IF PARENTESIS_I rel = logico
+			{
+			  $e = new IfEvaluator ();   
+			  ((IfEvaluator) $e).agregarCondicion($rel.e);
+			}
+	PARENTESIS_D PC? LLAVE_I PC? //El PC es para admitir espacios, si ponen ; lo admitiria.
+  (ifs = statements  
+		 {
+		   ((IfEvaluator) $e).agregarCoso($ifs.e);   
+		  
+		 }
+  )*
+    LLAVE_D PC?
  //--------------empieza el elseif----------------------------------
  
- (ELSEIF PARENTESIS_I rel1=logico
-{
- ((IfEvaluator) $e).nuevoSegmento();
- ((IfEvaluator) $e).agregarCondicion($rel1.e); 
-}
-  PARENTESIS_D PC? LLAVE_I PC?
- (ifs= ifstatements  
- {
-   ((IfEvaluator) $e).agregarCoso($ifs.e);   
- })*
- LLAVE_D PC?)* 
- 
-  
- 
- 
+  (ELSEIF PARENTESIS_I rel1=logico
+			{
+			 ((IfEvaluator) $e).nuevoSegmento();
+			 ((IfEvaluator) $e).agregarCondicion($rel1.e); 
+			}
+	PARENTESIS_D PC? LLAVE_I PC?
+  (
+    ifs= statements  
+		 {
+		   ((IfEvaluator) $e).agregarCoso($ifs.e);   
+		 }
+  )*
+  LLAVE_D PC? )* 
 //-----------------Empieza el else----------------------------------------------- 
-( ELSE PC?
- LLAVE_I PC?(
-    elses = elsestataments
- {    
-   ((IfEvaluator)$e).agregarCosoElse($elses.e);
- 
- })*
- LLAVE_D PC?
-)*  
- 
-
-;  
-
-
-
-
-whilestatements returns [Evaluator e] throws Exception:
-
-  
-    print1 {$e = $print1.e;}//{$print1.e.evaluate(pila);;}    
-  | println {$e = $println.e;} 
-  | asignacion{$e = $asignacion.e;}//{$asignacion.e.evaluate(pila);}
-  | lectura{$e = $lectura.e;} 
-  | comentario {$e =null;}
-  | return1 {$e = $return1.e;}
-  | whilestatemet{$e = $whilestatemet.e;}  
-  | ifstatement{$e = $ifstatement.e;}  
-  | declaracion{$e = $declaracion.e;}  
-  //| declaracion2{$e = $declaracion2.e;} 
-  | declaracion_lista{$e = $declaracion_lista.e;}
-  | push{ $e = $push.e; }
-  | forstatemet{$e = $forstatemet.e;}
-  | asignacion_lista {$e = $asignacion_lista.e;}
-  | lista_texto      {$e  = $lista_texto.e;}
-  | size      {$e = $size.e;}
-  | unincremento      {$e = $unincremento.e;}
-  | menosunincremento {$e = $menosunincremento.e;}
-  | incremento      {$e = $incremento.e;}
-  | decremento      {$e = $decremento.e;}
-
-;
+  ( ELSE PC?
+  LLAVE_I PC?(
+    elses = statements
+			 { ((IfEvaluator)$e).agregarCosoElse($elses.e); }
+	)*
+  LLAVE_D PC? )*  
+  ;
        
 
-whilestatemet returns [Evaluator e] throws Exception:
-
- 
-WHILE PARENTESIS_I rel=logico{
-  
-  //((WhileEvaluator) $e).setCondicion((Boolean)$rel.e.evaluate(pila));  
-   $e = new WhileEvaluator($rel.e); 
-  
- } PARENTESIS_D PC? LLAVE_I PC?
- (wh = whilestatements{
- 
-     ((WhileEvaluator) $e).add($wh.e);   
-     //System.out.println("coso evaluador while: "+$wh.e);
- }
- 
- )*
- 
-LLAVE_D PC?
-;
+whilestatemet returns [Evaluator e] throws Exception
+   :
+   WHILE PARENTESIS_I rel=logico
+      { $e = new WhileEvaluator($rel.e); }
+	 PARENTESIS_D PC? LLAVE_I PC?
+	 (wh = statements
+	    { ((WhileEvaluator) $e).add($wh.e); }
+	 )*
+	 
+	 LLAVE_D PC?
+	 ;
 
 
-forstatemet returns [Evaluator e] throws Exception:
-
- 
-FOR PARENTESIS_I decl=declaracion logi=logico PC aumento=add  {
-  
-  //((WhileEvaluator) $e).setCondicion((Boolean)$rel.e.evaluate(pila));  
-   $e = new ForEvaluator($decl.e, $logi.e, $aumento.e);  
-  
- } PARENTESIS_D PC? LLAVE_I PC? 
- (wh = whilestatements{
- 
-     ((ForEvaluator) $e).add($wh.e);   
-     //System.out.println("coso evaluador while: "+$wh.e);
- }
- 
- )*
- 
-LLAVE_D PC?
-;
-
-
-
-
-
-
-/*todo lo del if*************************************************/
-
-// Este es un token de prueba. Debes reemplazarlo por todos los tokens del lenguaje
-
-TOKEN
+forstatemet returns [Evaluator e] throws Exception
   :
-  'hola'
+  FOR PARENTESIS_I decl=declaracion_mult logi=logico PC aumento=add  
+      { $e = new ForEvaluator($decl.e, $logi.e, $aumento.e); }
+  PARENTESIS_D PC? LLAVE_I PC? 
+  (wh = statements
+      { ((ForEvaluator) $e).add($wh.e); }
+  )*
+  LLAVE_D PC?
   ;
 
 
@@ -717,21 +588,6 @@ COMENTARIO
   :
   (('/*' (.)* '*/') PC?) | (('//' (.)*) PC)  
   ;
-
-/*
-FUNCION:
-FUNCTION NOMBRE '('  
-  
-  (
-  ('var' NOMBRE)
-  (',' 'var' NOMBRE)*)?
-  
-  ')'
-  
-;
- */
-
-
 
 ASIGNACION
   :

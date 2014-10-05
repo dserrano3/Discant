@@ -1,3 +1,7 @@
-var a      
-leer a;
-println a;;
+var a = 9, b = 8, c;
+
+list d, e, f;
+
+d.push(a);
+d.push(b);
+print d[0] d[1];;

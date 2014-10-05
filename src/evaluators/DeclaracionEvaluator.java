@@ -18,6 +18,9 @@ public class DeclaracionEvaluator implements Evaluator {
 		this.e = e;
 	}
 
+	public void asignar(Evaluator e){
+		this.e = e;
+	}
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) {
 
