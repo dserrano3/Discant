@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g 2014-09-27 20:42:31
+// $ANTLR 3.4 C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g 2014-10-06 21:19:44
 
 package interpreter.antlr;
 
@@ -11,6 +11,7 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class LenguajeLexer extends Lexer {
     public static final int EOF=-1;
+    public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
     public static final int T__37=37;
@@ -35,7 +36,6 @@ public class LenguajeLexer extends Lexer {
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
-    public static final int T__59=59;
     public static final int ASIGNACION=4;
     public static final int BOOLEAN=5;
     public static final int COMENTARIO=6;
@@ -62,11 +62,10 @@ public class LenguajeLexer extends Lexer {
     public static final int RETURN=27;
     public static final int SET=28;
     public static final int TEXTO=29;
-    public static final int TOKEN=30;
-    public static final int VARIABLE=31;
-    public static final int WHILE=32;
-    public static final int WS=33;
-    public static final int WSOPT=34;
+    public static final int VARIABLE=30;
+    public static final int WHILE=31;
+    public static final int WS=32;
+    public static final int WSOPT=33;
 
     // delegates
     // delegators
@@ -81,19 +80,40 @@ public class LenguajeLexer extends Lexer {
     public LenguajeLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g"; }
+
+    // $ANTLR start "T__34"
+    public final void mT__34() throws RecognitionException {
+        try {
+            int _type = T__34;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:11:7: ( '!=' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:11:9: '!='
+            {
+            match("!="); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__34"
 
     // $ANTLR start "T__35"
     public final void mT__35() throws RecognitionException {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:11:7: ( '!=' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:11:9: '!='
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:12:7: ( '%' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:12:9: '%'
             {
-            match("!="); 
-
-
+            match('%'); 
 
             }
 
@@ -111,10 +131,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:12:7: ( '%' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:12:9: '%'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:13:7: ( '&&' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:13:9: '&&'
             {
-            match('%'); 
+            match("&&"); 
+
+
 
             }
 
@@ -132,10 +154,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:13:7: ( '&&' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:13:9: '&&'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:14:7: ( '()' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:14:9: '()'
             {
-            match("&&"); 
+            match("()"); 
 
 
 
@@ -155,12 +177,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:14:7: ( '()' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:14:9: '()'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:15:7: ( '*' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:15:9: '*'
             {
-            match("()"); 
-
-
+            match('*'); 
 
             }
 
@@ -178,10 +198,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:15:7: ( '*' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:15:9: '*'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:16:7: ( '+' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:16:9: '+'
             {
-            match('*'); 
+            match('+'); 
 
             }
 
@@ -199,10 +219,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:16:7: ( '+' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:16:9: '+'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:17:7: ( '++' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:17:9: '++'
             {
-            match('+'); 
+            match("++"); 
+
+
 
             }
 
@@ -220,10 +242,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:17:7: ( '++' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:17:9: '++'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:18:7: ( '+=' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:18:9: '+='
             {
-            match("++"); 
+            match("+="); 
 
 
 
@@ -243,12 +265,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:18:7: ( '+=' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:18:9: '+='
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:19:7: ( ',' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:19:9: ','
             {
-            match("+="); 
-
-
+            match(','); 
 
             }
 
@@ -266,10 +286,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:19:7: ( ',' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:19:9: ','
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:20:7: ( '-' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:20:9: '-'
             {
-            match(','); 
+            match('-'); 
 
             }
 
@@ -287,10 +307,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:20:7: ( '-' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:20:9: '-'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:21:7: ( '--' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:21:9: '--'
             {
-            match('-'); 
+            match("--"); 
+
+
 
             }
 
@@ -308,10 +330,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:21:7: ( '--' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:21:9: '--'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:22:7: ( '-=' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:22:9: '-='
             {
-            match("--"); 
+            match("-="); 
 
 
 
@@ -331,12 +353,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:22:7: ( '-=' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:22:9: '-='
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:23:7: ( '.' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:23:9: '.'
             {
-            match("-="); 
-
-
+            match('.'); 
 
             }
 
@@ -354,10 +374,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:23:7: ( '.' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:23:9: '.'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:24:7: ( '.get(' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:24:9: '.get('
             {
-            match('.'); 
+            match(".get("); 
+
+
 
             }
 
@@ -375,10 +397,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:24:7: ( '.get(' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:24:9: '.get('
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:25:7: ( '.size' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:25:9: '.size'
             {
-            match(".get("); 
+            match(".size"); 
 
 
 
@@ -398,10 +420,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:25:7: ( '.size' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:25:9: '.size'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:26:7: ( '.tamano' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:26:9: '.tamano'
             {
-            match(".size"); 
+            match(".tamano"); 
 
 
 
@@ -421,12 +443,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:26:7: ( '.tamano' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:26:9: '.tamano'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:27:7: ( '/' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:27:9: '/'
             {
-            match(".tamano"); 
-
-
+            match('/'); 
 
             }
 
@@ -444,10 +464,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:27:7: ( '/' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:27:9: '/'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:28:7: ( '<' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:28:9: '<'
             {
-            match('/'); 
+            match('<'); 
 
             }
 
@@ -465,10 +485,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:28:7: ( '<' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:28:9: '<'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:29:7: ( '<=' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:29:9: '<='
             {
-            match('<'); 
+            match("<="); 
+
+
 
             }
 
@@ -486,10 +508,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:29:7: ( '<=' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:29:9: '<='
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:30:7: ( '==' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:30:9: '=='
             {
-            match("<="); 
+            match("=="); 
 
 
 
@@ -509,12 +531,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:30:7: ( '==' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:30:9: '=='
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:31:7: ( '>' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:31:9: '>'
             {
-            match("=="); 
-
-
+            match('>'); 
 
             }
 
@@ -532,10 +552,12 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:31:7: ( '>' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:31:9: '>'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:32:7: ( '>=' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:32:9: '>='
             {
-            match('>'); 
+            match(">="); 
+
+
 
             }
 
@@ -553,12 +575,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:32:7: ( '>=' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:32:9: '>='
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:33:7: ( '[' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:33:9: '['
             {
-            match(">="); 
-
-
+            match('['); 
 
             }
 
@@ -576,10 +596,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:33:7: ( '[' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:33:9: '['
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:34:7: ( ']' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:34:9: ']'
             {
-            match('['); 
+            match(']'); 
 
             }
 
@@ -597,29 +617,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:34:7: ( ']' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:34:9: ']'
-            {
-            match(']'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__58"
-
-    // $ANTLR start "T__59"
-    public final void mT__59() throws RecognitionException {
-        try {
-            int _type = T__59;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:35:7: ( '||' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:35:9: '||'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:35:7: ( '||' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:35:9: '||'
             {
             match("||"); 
 
@@ -634,47 +633,24 @@ public class LenguajeLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__59"
-
-    // $ANTLR start "TOKEN"
-    public final void mTOKEN() throws RecognitionException {
-        try {
-            int _type = TOKEN;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:700:3: ( 'hola' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:701:3: 'hola'
-            {
-            match("hola"); 
-
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "TOKEN"
+    // $ANTLR end "T__58"
 
     // $ANTLR start "PC"
     public final void mPC() throws RecognitionException {
         try {
             int _type = PC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:710:3: ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:593:3: ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* )
             int alt6=2;
             alt6 = dfa6.predict(input);
             switch (alt6) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:4: ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:3: ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:4: ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:4: ( ';' )?
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:4: ( ';' )?
                     int alt1=2;
                     int LA1_0 = input.LA(1);
 
@@ -683,7 +659,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     switch (alt1) {
                         case 1 :
-                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:4: ';'
+                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:4: ';'
                             {
                             match(';'); 
 
@@ -693,7 +669,7 @@ public class LenguajeLexer extends Lexer {
                     }
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:9: ( ' ' )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:9: ( ' ' )*
                     loop2:
                     do {
                         int alt2=2;
@@ -706,7 +682,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:9: ' '
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:9: ' '
                     	    {
                     	    match(' '); 
 
@@ -719,7 +695,7 @@ public class LenguajeLexer extends Lexer {
                     } while (true);
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:14: ( '\\r' )?
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:14: ( '\\r' )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -728,7 +704,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     switch (alt3) {
                         case 1 :
-                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:14: '\\r'
+                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:14: '\\r'
                             {
                             match('\r'); 
 
@@ -738,7 +714,7 @@ public class LenguajeLexer extends Lexer {
                     }
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:20: ( '\\n' )+
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:20: ( '\\n' )+
                     int cnt4=0;
                     loop4:
                     do {
@@ -752,7 +728,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:21: '\\n'
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:21: '\\n'
                     	    {
                     	    match('\n'); 
 
@@ -775,11 +751,11 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:31: ';' ( ' ' )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:31: ';' ( ' ' )*
                     {
                     match(';'); 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:35: ( ' ' )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:35: ( ' ' )*
                     loop5:
                     do {
                         int alt5=2;
@@ -792,7 +768,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:711:35: ' '
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:594:35: ' '
                     	    {
                     	    match(' '); 
 
@@ -823,7 +799,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMENTARIO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:717:3: ( ( ( '/*' ( . )* '*/' ) ( PC )? ) | ( ( '//' ( . )* ) PC ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:600:3: ( ( ( '/*' ( . )* '*/' ) ( PC )? ) | ( ( '//' ( . )* ) PC ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -853,19 +829,19 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:3: ( ( '/*' ( . )* '*/' ) ( PC )? )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:3: ( ( '/*' ( . )* '*/' ) ( PC )? )
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:3: ( ( '/*' ( . )* '*/' ) ( PC )? )
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:4: ( '/*' ( . )* '*/' ) ( PC )?
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:3: ( ( '/*' ( . )* '*/' ) ( PC )? )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:4: ( '/*' ( . )* '*/' ) ( PC )?
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:4: ( '/*' ( . )* '*/' )
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:5: '/*' ( . )* '*/'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:4: ( '/*' ( . )* '*/' )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:5: '/*' ( . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:10: ( . )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:10: ( . )*
                     loop7:
                     do {
                         int alt7=2;
@@ -890,7 +866,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:11: .
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:11: .
                     	    {
                     	    matchAny(); 
 
@@ -910,7 +886,7 @@ public class LenguajeLexer extends Lexer {
                     }
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:21: ( PC )?
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:21: ( PC )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -919,7 +895,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:21: PC
+                            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:21: PC
                             {
                             mPC(); 
 
@@ -936,19 +912,19 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:28: ( ( '//' ( . )* ) PC )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:28: ( ( '//' ( . )* ) PC )
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:28: ( ( '//' ( . )* ) PC )
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:29: ( '//' ( . )* ) PC
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:28: ( ( '//' ( . )* ) PC )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:29: ( '//' ( . )* ) PC
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:29: ( '//' ( . )* )
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:30: '//' ( . )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:29: ( '//' ( . )* )
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:30: '//' ( . )*
                     {
                     match("//"); 
 
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:35: ( . )*
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:35: ( . )*
                     loop9:
                     do {
                         int alt9=2;
@@ -973,7 +949,7 @@ public class LenguajeLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:718:36: .
+                    	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:601:36: .
                     	    {
                     	    matchAny(); 
 
@@ -1013,8 +989,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ASIGNACION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:737:3: ( '=' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:738:3: '='
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:605:3: ( '=' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:606:3: '='
             {
             match('='); 
 
@@ -1034,7 +1010,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:742:3: ( 'while' | 'mientras' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:610:3: ( 'while' | 'mientras' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1053,7 +1029,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:743:3: 'while'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:611:3: 'while'
                     {
                     match("while"); 
 
@@ -1062,7 +1038,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:743:13: 'mientras'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:611:13: 'mientras'
                     {
                     match("mientras"); 
 
@@ -1086,7 +1062,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = FOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:747:3: ( 'for' | 'para' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:615:3: ( 'for' | 'para' )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1105,7 +1081,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:748:3: 'for'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:616:3: 'for'
                     {
                     match("for"); 
 
@@ -1114,7 +1090,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:748:11: 'para'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:616:11: 'para'
                     {
                     match("para"); 
 
@@ -1138,7 +1114,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:752:3: ( 'else' | 'si_no' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:620:3: ( 'else' | 'si_no' )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1157,7 +1133,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:753:3: 'else'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:621:3: 'else'
                     {
                     match("else"); 
 
@@ -1166,7 +1142,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:753:12: 'si_no'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:621:12: 'si_no'
                     {
                     match("si_no"); 
 
@@ -1190,8 +1166,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = VARIABLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:755:9: ( 'var' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:756:3: 'var'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:623:9: ( 'var' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:624:3: 'var'
             {
             match("var"); 
 
@@ -1213,7 +1189,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LIST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:758:5: ( 'list' | 'lista' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:626:5: ( 'list' | 'lista' )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1269,7 +1245,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt14) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:759:4: 'list'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:627:4: 'list'
                     {
                     match("list"); 
 
@@ -1278,7 +1254,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:759:13: 'lista'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:627:13: 'lista'
                     {
                     match("lista"); 
 
@@ -1302,7 +1278,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = FUNCTION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:762:3: ( 'function' | 'funcion' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:630:3: ( 'function' | 'funcion' )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1365,7 +1341,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:763:3: 'function'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:631:3: 'function'
                     {
                     match("function"); 
 
@@ -1374,7 +1350,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:763:16: 'funcion'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:631:16: 'funcion'
                     {
                     match("funcion"); 
 
@@ -1398,7 +1374,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = ELSEIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:767:3: ( 'else if' | 'si_no si' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:635:3: ( 'else if' | 'si_no si' )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1417,7 +1393,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt16) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:768:3: 'else if'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:636:3: 'else if'
                     {
                     match("else if"); 
 
@@ -1426,7 +1402,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:768:15: 'si_no si'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:636:15: 'si_no si'
                     {
                     match("si_no si"); 
 
@@ -1450,13 +1426,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = DOBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:772:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:773:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:640:3: ( ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:773:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:773:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:3: ( ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:5: ( '0' .. '9' )+ ( '.' ) ( '0' .. '9' )+
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:773:5: ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:5: ( '0' .. '9' )+
             int cnt17=0;
             loop17:
             do {
@@ -1470,7 +1446,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1495,15 +1471,15 @@ public class LenguajeLexer extends Lexer {
             } while (true);
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:773:16: ( '.' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:773:17: '.'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:16: ( '.' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:17: '.'
             {
             match('.'); 
 
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:773:22: ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:641:22: ( '0' .. '9' )+
             int cnt18=0;
             loop18:
             do {
@@ -1517,7 +1493,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt18) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1561,13 +1537,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NUMERO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:779:3: ( ( ( '0' .. '9' )+ ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:780:3: ( ( '0' .. '9' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:647:3: ( ( ( '0' .. '9' )+ ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:648:3: ( ( '0' .. '9' )+ )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:780:3: ( ( '0' .. '9' )+ )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:780:5: ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:648:3: ( ( '0' .. '9' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:648:5: ( '0' .. '9' )+
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:780:5: ( '0' .. '9' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:648:5: ( '0' .. '9' )+
             int cnt19=0;
             loop19:
             do {
@@ -1581,7 +1557,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt19) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1625,7 +1601,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:784:3: ( 'true' | 'false' | 'FALSE' | 'TRUE' | 'True' | 'False' | 'verdadero' | 'falso' | 'FALSO' | 'VERDADERO' | 'Verdadero' | 'Falso' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:652:3: ( 'true' | 'false' | 'FALSE' | 'TRUE' | 'True' | 'False' | 'verdadero' | 'falso' | 'FALSO' | 'VERDADERO' | 'Verdadero' | 'Falso' )
             int alt20=12;
             switch ( input.LA(1) ) {
             case 't':
@@ -1829,7 +1805,7 @@ public class LenguajeLexer extends Lexer {
 
             switch (alt20) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:785:4: 'true'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:4: 'true'
                     {
                     match("true"); 
 
@@ -1838,7 +1814,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:785:13: 'false'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:13: 'false'
                     {
                     match("false"); 
 
@@ -1847,7 +1823,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:785:23: 'FALSE'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:23: 'FALSE'
                     {
                     match("FALSE"); 
 
@@ -1856,7 +1832,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:785:33: 'TRUE'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:33: 'TRUE'
                     {
                     match("TRUE"); 
 
@@ -1865,7 +1841,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:785:42: 'True'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:42: 'True'
                     {
                     match("True"); 
 
@@ -1874,7 +1850,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:785:51: 'False'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:653:51: 'False'
                     {
                     match("False"); 
 
@@ -1883,7 +1859,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:786:4: 'verdadero'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:4: 'verdadero'
                     {
                     match("verdadero"); 
 
@@ -1892,7 +1868,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:786:18: 'falso'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:18: 'falso'
                     {
                     match("falso"); 
 
@@ -1901,7 +1877,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:786:28: 'FALSO'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:28: 'FALSO'
                     {
                     match("FALSO"); 
 
@@ -1910,7 +1886,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:786:38: 'VERDADERO'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:38: 'VERDADERO'
                     {
                     match("VERDADERO"); 
 
@@ -1919,7 +1895,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:786:52: 'Verdadero'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:52: 'Verdadero'
                     {
                     match("Verdadero"); 
 
@@ -1928,7 +1904,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:786:66: 'Falso'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:654:66: 'Falso'
                     {
                     match("Falso"); 
 
@@ -1952,8 +1928,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:795:3: ( ')' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:796:3: ')'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:663:3: ( ')' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:664:3: ')'
             {
             match(')'); 
 
@@ -1973,8 +1949,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PARENTESIS_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:805:3: ( '(' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:806:3: '('
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:673:3: ( '(' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:674:3: '('
             {
             match('('); 
 
@@ -1994,8 +1970,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:815:3: ( '}' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:816:3: '}'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:683:3: ( '}' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:684:3: '}'
             {
             match('}'); 
 
@@ -2015,8 +1991,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = LLAVE_I;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:820:3: ( '{' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:821:3: '{'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:688:3: ( '{' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:689:3: '{'
             {
             match('{'); 
 
@@ -2036,8 +2012,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:825:3: ( '\\\"' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:826:3: '\\\"'
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:693:3: ( '\\\"' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:694:3: '\\\"'
             {
             match('\"'); 
 
@@ -2057,8 +2033,8 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = COMILLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:830:3: ( '\\'' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:831:3: '\\''
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:698:3: ( '\\'' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:699:3: '\\''
             {
             match('\''); 
 
@@ -2078,10 +2054,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PRINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:835:3: ( ( 'print' | 'imprimir' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:836:3: ( 'print' | 'imprimir' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:703:3: ( ( 'print' | 'imprimir' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:704:3: ( 'print' | 'imprimir' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:836:3: ( 'print' | 'imprimir' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:704:3: ( 'print' | 'imprimir' )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -2100,7 +2076,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt21) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:836:4: 'print'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:704:4: 'print'
                     {
                     match("print"); 
 
@@ -2109,7 +2085,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:836:14: 'imprimir'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:704:14: 'imprimir'
                     {
                     match("imprimir"); 
 
@@ -2137,10 +2113,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PRINTLN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:840:3: ( ( 'println' | 'imprimirln' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:841:3: ( 'println' | 'imprimirln' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:708:3: ( ( 'println' | 'imprimirln' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:709:3: ( 'println' | 'imprimirln' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:841:3: ( 'println' | 'imprimirln' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:709:3: ( 'println' | 'imprimirln' )
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -2159,7 +2135,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt22) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:841:4: 'println'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:709:4: 'println'
                     {
                     match("println"); 
 
@@ -2168,7 +2144,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:841:16: 'imprimirln'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:709:16: 'imprimirln'
                     {
                     match("imprimirln"); 
 
@@ -2196,10 +2172,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:845:3: ( ( 'read' | 'leer' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:846:3: ( 'read' | 'leer' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:713:3: ( ( 'read' | 'leer' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:714:3: ( 'read' | 'leer' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:846:3: ( 'read' | 'leer' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:714:3: ( 'read' | 'leer' )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2218,7 +2194,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt23) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:846:4: 'read'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:714:4: 'read'
                     {
                     match("read"); 
 
@@ -2227,7 +2203,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:846:13: 'leer'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:714:13: 'leer'
                     {
                     match("leer"); 
 
@@ -2255,10 +2231,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = PUSH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:848:5: ( ( 'push' | 'insertar' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:849:3: ( 'push' | 'insertar' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:716:5: ( ( 'push' | 'insertar' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:717:3: ( 'push' | 'insertar' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:849:3: ( 'push' | 'insertar' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:717:3: ( 'push' | 'insertar' )
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -2277,7 +2253,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt24) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:849:4: 'push'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:717:4: 'push'
                     {
                     match("push"); 
 
@@ -2286,7 +2262,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:849:13: 'insertar'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:717:13: 'insertar'
                     {
                     match("insertar"); 
 
@@ -2314,10 +2290,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = SET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:855:4: ( ( '.set' | '.fijar' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:856:3: ( '.set' | '.fijar' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:723:4: ( ( '.set' | '.fijar' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:724:3: ( '.set' | '.fijar' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:856:3: ( '.set' | '.fijar' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:724:3: ( '.set' | '.fijar' )
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -2347,7 +2323,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt25) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:856:4: '.set'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:724:4: '.set'
                     {
                     match(".set"); 
 
@@ -2356,7 +2332,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:856:13: '.fijar'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:724:13: '.fijar'
                     {
                     match(".fijar"); 
 
@@ -2384,10 +2360,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:858:7: ( ( 'return' | 'devolver' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:859:3: ( 'return' | 'devolver' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:726:7: ( ( 'return' | 'devolver' ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:727:3: ( 'return' | 'devolver' )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:859:3: ( 'return' | 'devolver' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:727:3: ( 'return' | 'devolver' )
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -2406,7 +2382,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt26) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:859:4: 'return'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:727:4: 'return'
                     {
                     match("return"); 
 
@@ -2415,7 +2391,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:859:15: 'devolver'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:727:15: 'devolver'
                     {
                     match("devolver"); 
 
@@ -2443,7 +2419,7 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:861:3: ( 'if' | 'si' )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:729:3: ( 'if' | 'si' )
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -2462,7 +2438,7 @@ public class LenguajeLexer extends Lexer {
             }
             switch (alt27) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:862:3: 'if'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:730:3: 'if'
                     {
                     match("if"); 
 
@@ -2471,7 +2447,7 @@ public class LenguajeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:862:10: 'si'
+                    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:730:10: 'si'
                     {
                     match("si"); 
 
@@ -2495,11 +2471,11 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = NOMBRE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:866:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:867:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:734:3: ( ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* ) )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:735:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* )
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:867:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:868:5: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:735:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:736:5: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -2511,7 +2487,7 @@ public class LenguajeLexer extends Lexer {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:872:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:740:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) | ( '1' .. '9' ) )*
             loop28:
             do {
                 int alt28=2;
@@ -2524,7 +2500,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt28) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( (input.LA(1) >= '1' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -2564,13 +2540,13 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = TEXTO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:884:3: ( COMILLASD ( . )* COMILLASD )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:885:3: COMILLASD ( . )* COMILLASD
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:752:3: ( COMILLASD ( . )* COMILLASD )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:753:3: COMILLASD ( . )* COMILLASD
             {
             mCOMILLASD(); 
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:885:13: ( . )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:753:13: ( . )*
             loop29:
             do {
                 int alt29=2;
@@ -2586,7 +2562,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt29) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:885:14: .
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:753:14: .
             	    {
             	    matchAny(); 
 
@@ -2618,10 +2594,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:897:4: ( ( ' ' | '\\t' )+ )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:897:6: ( ' ' | '\\t' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:765:4: ( ( ' ' | '\\t' )+ )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:765:6: ( ' ' | '\\t' )+
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:897:6: ( ' ' | '\\t' )+
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:765:6: ( ' ' | '\\t' )+
             int cnt30=0;
             loop30:
             do {
@@ -2635,7 +2611,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt30) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:
             	    {
             	    if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -2678,10 +2654,10 @@ public class LenguajeLexer extends Lexer {
         try {
             int _type = WSOPT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:898:9: ( ( ' ' )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:898:17: ( ' ' )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:766:9: ( ( ' ' )* )
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:766:17: ( ' ' )*
             {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:898:17: ( ' ' )*
+            // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:766:17: ( ' ' )*
             loop31:
             do {
                 int alt31=2;
@@ -2694,7 +2670,7 @@ public class LenguajeLexer extends Lexer {
 
                 switch (alt31) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:898:18: ' '
+            	    // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:766:18: ' '
             	    {
             	    match(' '); 
 
@@ -2721,452 +2697,444 @@ public class LenguajeLexer extends Lexer {
     // $ANTLR end "WSOPT"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:8: ( T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | TOKEN | PC | COMENTARIO | ASIGNACION | WHILE | FOR | ELSE | VARIABLE | LIST | FUNCTION | ELSEIF | DOBLE | NUMERO | BOOLEAN | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | PUSH | SET | RETURN | IF | NOMBRE | TEXTO | WS | WSOPT )
-        int alt32=56;
+        // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:8: ( T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | PC | COMENTARIO | ASIGNACION | WHILE | FOR | ELSE | VARIABLE | LIST | FUNCTION | ELSEIF | DOBLE | NUMERO | BOOLEAN | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | PUSH | SET | RETURN | IF | NOMBRE | TEXTO | WS | WSOPT )
+        int alt32=55;
         alt32 = dfa32.predict(input);
         switch (alt32) {
             case 1 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:10: T__35
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:10: T__34
+                {
+                mT__34(); 
+
+
+                }
+                break;
+            case 2 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:16: T__35
                 {
                 mT__35(); 
 
 
                 }
                 break;
-            case 2 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:16: T__36
+            case 3 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:22: T__36
                 {
                 mT__36(); 
 
 
                 }
                 break;
-            case 3 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:22: T__37
+            case 4 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:28: T__37
                 {
                 mT__37(); 
 
 
                 }
                 break;
-            case 4 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:28: T__38
+            case 5 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:34: T__38
                 {
                 mT__38(); 
 
 
                 }
                 break;
-            case 5 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:34: T__39
+            case 6 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:40: T__39
                 {
                 mT__39(); 
 
 
                 }
                 break;
-            case 6 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:40: T__40
+            case 7 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:46: T__40
                 {
                 mT__40(); 
 
 
                 }
                 break;
-            case 7 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:46: T__41
+            case 8 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:52: T__41
                 {
                 mT__41(); 
 
 
                 }
                 break;
-            case 8 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:52: T__42
+            case 9 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:58: T__42
                 {
                 mT__42(); 
 
 
                 }
                 break;
-            case 9 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:58: T__43
+            case 10 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:64: T__43
                 {
                 mT__43(); 
 
 
                 }
                 break;
-            case 10 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:64: T__44
+            case 11 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:70: T__44
                 {
                 mT__44(); 
 
 
                 }
                 break;
-            case 11 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:70: T__45
+            case 12 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:76: T__45
                 {
                 mT__45(); 
 
 
                 }
                 break;
-            case 12 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:76: T__46
+            case 13 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:82: T__46
                 {
                 mT__46(); 
 
 
                 }
                 break;
-            case 13 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:82: T__47
+            case 14 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:88: T__47
                 {
                 mT__47(); 
 
 
                 }
                 break;
-            case 14 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:88: T__48
+            case 15 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:94: T__48
                 {
                 mT__48(); 
 
 
                 }
                 break;
-            case 15 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:94: T__49
+            case 16 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:100: T__49
                 {
                 mT__49(); 
 
 
                 }
                 break;
-            case 16 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:100: T__50
+            case 17 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:106: T__50
                 {
                 mT__50(); 
 
 
                 }
                 break;
-            case 17 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:106: T__51
+            case 18 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:112: T__51
                 {
                 mT__51(); 
 
 
                 }
                 break;
-            case 18 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:112: T__52
+            case 19 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:118: T__52
                 {
                 mT__52(); 
 
 
                 }
                 break;
-            case 19 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:118: T__53
+            case 20 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:124: T__53
                 {
                 mT__53(); 
 
 
                 }
                 break;
-            case 20 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:124: T__54
+            case 21 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:130: T__54
                 {
                 mT__54(); 
 
 
                 }
                 break;
-            case 21 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:130: T__55
+            case 22 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:136: T__55
                 {
                 mT__55(); 
 
 
                 }
                 break;
-            case 22 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:136: T__56
+            case 23 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:142: T__56
                 {
                 mT__56(); 
 
 
                 }
                 break;
-            case 23 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:142: T__57
+            case 24 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:148: T__57
                 {
                 mT__57(); 
 
 
                 }
                 break;
-            case 24 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:148: T__58
+            case 25 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:154: T__58
                 {
                 mT__58(); 
 
 
                 }
                 break;
-            case 25 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:154: T__59
-                {
-                mT__59(); 
-
-
-                }
-                break;
             case 26 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:160: TOKEN
-                {
-                mTOKEN(); 
-
-
-                }
-                break;
-            case 27 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:166: PC
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:160: PC
                 {
                 mPC(); 
 
 
                 }
                 break;
-            case 28 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:169: COMENTARIO
+            case 27 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:163: COMENTARIO
                 {
                 mCOMENTARIO(); 
 
 
                 }
                 break;
-            case 29 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:180: ASIGNACION
+            case 28 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:174: ASIGNACION
                 {
                 mASIGNACION(); 
 
 
                 }
                 break;
-            case 30 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:191: WHILE
+            case 29 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:185: WHILE
                 {
                 mWHILE(); 
 
 
                 }
                 break;
-            case 31 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:197: FOR
+            case 30 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:191: FOR
                 {
                 mFOR(); 
 
 
                 }
                 break;
-            case 32 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:201: ELSE
+            case 31 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:195: ELSE
                 {
                 mELSE(); 
 
 
                 }
                 break;
-            case 33 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:206: VARIABLE
+            case 32 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:200: VARIABLE
                 {
                 mVARIABLE(); 
 
 
                 }
                 break;
-            case 34 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:215: LIST
+            case 33 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:209: LIST
                 {
                 mLIST(); 
 
 
                 }
                 break;
-            case 35 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:220: FUNCTION
+            case 34 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:214: FUNCTION
                 {
                 mFUNCTION(); 
 
 
                 }
                 break;
-            case 36 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:229: ELSEIF
+            case 35 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:223: ELSEIF
                 {
                 mELSEIF(); 
 
 
                 }
                 break;
-            case 37 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:236: DOBLE
+            case 36 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:230: DOBLE
                 {
                 mDOBLE(); 
 
 
                 }
                 break;
-            case 38 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:242: NUMERO
+            case 37 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:236: NUMERO
                 {
                 mNUMERO(); 
 
 
                 }
                 break;
-            case 39 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:249: BOOLEAN
+            case 38 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:243: BOOLEAN
                 {
                 mBOOLEAN(); 
 
 
                 }
                 break;
-            case 40 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:257: PARENTESIS_D
+            case 39 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:251: PARENTESIS_D
                 {
                 mPARENTESIS_D(); 
 
 
                 }
                 break;
-            case 41 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:270: PARENTESIS_I
+            case 40 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:264: PARENTESIS_I
                 {
                 mPARENTESIS_I(); 
 
 
                 }
                 break;
-            case 42 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:283: LLAVE_D
+            case 41 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:277: LLAVE_D
                 {
                 mLLAVE_D(); 
 
 
                 }
                 break;
-            case 43 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:291: LLAVE_I
+            case 42 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:285: LLAVE_I
                 {
                 mLLAVE_I(); 
 
 
                 }
                 break;
-            case 44 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:299: COMILLASD
+            case 43 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:293: COMILLASD
                 {
                 mCOMILLASD(); 
 
 
                 }
                 break;
-            case 45 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:309: COMILLASS
+            case 44 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:303: COMILLASS
                 {
                 mCOMILLASS(); 
 
 
                 }
                 break;
-            case 46 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:319: PRINT
+            case 45 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:313: PRINT
                 {
                 mPRINT(); 
 
 
                 }
                 break;
-            case 47 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:325: PRINTLN
+            case 46 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:319: PRINTLN
                 {
                 mPRINTLN(); 
 
 
                 }
                 break;
-            case 48 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:333: READ
+            case 47 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:327: READ
                 {
                 mREAD(); 
 
 
                 }
                 break;
-            case 49 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:338: PUSH
+            case 48 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:332: PUSH
                 {
                 mPUSH(); 
 
 
                 }
                 break;
-            case 50 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:343: SET
+            case 49 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:337: SET
                 {
                 mSET(); 
 
 
                 }
                 break;
-            case 51 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:347: RETURN
+            case 50 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:341: RETURN
                 {
                 mRETURN(); 
 
 
                 }
                 break;
-            case 52 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:354: IF
+            case 51 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:348: IF
                 {
                 mIF(); 
 
 
                 }
                 break;
-            case 53 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:357: NOMBRE
+            case 52 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:351: NOMBRE
                 {
                 mNOMBRE(); 
 
 
                 }
                 break;
-            case 54 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:364: TEXTO
+            case 53 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:358: TEXTO
                 {
                 mTEXTO(); 
 
 
                 }
                 break;
-            case 55 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:370: WS
+            case 54 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:364: WS
                 {
                 mWS(); 
 
 
                 }
                 break;
-            case 56 :
-                // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:1:373: WSOPT
+            case 55 :
+                // C:\\Users\\alfredo\\Documents\\GitHub\\spanish_programming_language\\target\\classes\\Lenguaje.g:1:367: WSOPT
                 {
                 mWSOPT(); 
 
@@ -3231,138 +3199,135 @@ public class LenguajeLexer extends Lexer {
             this.transition = DFA6_transition;
         }
         public String getDescription() {
-            return "709:1: PC : ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* );";
+            return "592:1: PC : ( ( ( ';' )? ( ' ' )* ( '\\r' )? ( '\\n' )+ ) | ';' ( ' ' )* );";
         }
     }
     static final String DFA32_eotS =
-        "\1\53\3\uffff\1\55\1\uffff\1\60\1\uffff\1\63\1\70\1\72\1\74\1\76"+
-        "\1\100\3\uffff\1\51\1\uffff\1\52\10\51\1\121\4\51\3\uffff\1\131"+
-        "\1\uffff\3\51\30\uffff\12\51\1\154\4\51\2\uffff\7\51\2\uffff\2\51"+
-        "\1\154\2\51\1\uffff\3\51\1\u0080\7\51\1\uffff\1\u0088\17\51\1\u0098"+
-        "\2\51\1\uffff\2\51\1\u0080\1\51\1\u00a0\1\u00a2\1\51\1\uffff\1\51"+
-        "\1\u00a6\1\u00a7\1\u00a8\2\51\2\u00a8\4\51\1\u00a7\2\51\1\uffff"+
-        "\1\u00b3\3\51\2\u00a8\1\u00b8\3\uffff\1\u00a2\1\51\1\u00a6\3\uffff"+
-        "\4\u00a8\6\51\1\uffff\4\51\1\uffff\5\51\1\u00c9\3\51\1\u00cd\1\u00ce"+
-        "\5\51\1\uffff\1\51\1\u00b3\1\u00cd\2\uffff\3\51\1\u00b8\1\u00a0"+
-        "\1\u00c9\3\u00a8\1\51\1\u00ce";
+        "\1\52\3\uffff\1\54\1\uffff\1\57\1\uffff\1\62\1\67\1\71\1\73\1\75"+
+        "\1\77\4\uffff\1\51\10\50\1\117\4\50\3\uffff\1\127\1\uffff\3\50\30"+
+        "\uffff\11\50\1\151\4\50\2\uffff\7\50\2\uffff\2\50\1\151\2\50\1\uffff"+
+        "\2\50\1\174\7\50\1\uffff\1\u0084\21\50\1\uffff\2\50\1\174\1\50\1"+
+        "\u009b\1\u009d\1\50\1\uffff\1\50\1\u00a1\1\u00a2\1\u00a3\2\50\2"+
+        "\u00a3\4\50\1\u00a2\2\50\1\u00ae\3\50\2\u00a3\1\u00b3\3\uffff\1"+
+        "\u009d\1\50\1\u00a1\3\uffff\4\u00a3\6\50\1\uffff\4\50\1\uffff\5"+
+        "\50\1\u00c4\3\50\1\u00c8\1\u00c9\5\50\1\uffff\1\50\1\u00ae\1\u00c8"+
+        "\2\uffff\3\50\1\u00b3\1\u009b\1\u00c4\3\u00a3\1\50\1\u00c9";
     static final String DFA32_eofS =
-        "\u00da\uffff";
+        "\u00d5\uffff";
     static final String DFA32_minS =
-        "\1\11\3\uffff\1\51\1\uffff\1\53\1\uffff\1\55\1\146\1\52\3\75\3\uffff"+
-        "\1\157\1\uffff\1\12\1\150\1\151\2\141\1\154\1\151\1\141\1\145\1"+
-        "\56\1\162\1\101\1\122\1\105\3\uffff\1\0\1\uffff\1\146\2\145\14\uffff"+
-        "\1\145\13\uffff\1\154\1\151\1\145\1\162\1\156\1\154\1\162\1\151"+
-        "\2\163\1\61\2\162\1\163\1\145\2\uffff\1\165\1\114\1\154\1\125\1"+
-        "\165\1\122\1\162\2\uffff\1\160\1\163\1\61\1\141\1\166\1\uffff\1"+
-        "\141\1\154\1\156\1\61\1\143\1\163\1\141\1\156\1\150\1\145\1\156"+
-        "\1\uffff\1\61\1\144\1\164\1\162\1\145\1\123\1\163\1\105\1\145\1"+
-        "\104\1\144\1\162\1\145\1\144\1\165\1\157\1\61\1\145\1\164\1\uffff"+
-        "\1\151\1\145\1\61\1\164\1\61\1\40\1\157\1\uffff\1\141\3\61\1\105"+
-        "\1\145\2\61\1\101\1\141\1\151\1\162\1\61\1\162\1\154\1\uffff\1\61"+
-        "\1\162\1\151\1\157\3\61\3\uffff\1\40\1\144\1\61\3\uffff\4\61\1\104"+
-        "\1\144\1\155\1\164\1\156\1\166\1\uffff\1\141\1\157\2\156\1\uffff"+
-        "\1\145\1\105\1\145\1\151\1\141\1\61\1\145\1\163\1\156\2\61\1\162"+
-        "\1\122\3\162\1\uffff\1\162\2\61\2\uffff\1\157\1\117\1\157\6\61\1"+
-        "\156\1\61";
+        "\1\11\3\uffff\1\51\1\uffff\1\53\1\uffff\1\55\1\146\1\52\3\75\4\uffff"+
+        "\1\12\1\150\1\151\2\141\1\154\1\151\1\141\1\145\1\56\1\162\1\101"+
+        "\1\122\1\105\3\uffff\1\0\1\uffff\1\146\2\145\14\uffff\1\145\13\uffff"+
+        "\1\151\1\145\1\162\1\156\1\154\1\162\1\151\2\163\1\61\2\162\1\163"+
+        "\1\145\2\uffff\1\165\1\114\1\154\1\125\1\165\1\122\1\162\2\uffff"+
+        "\1\160\1\163\1\61\1\141\1\166\1\uffff\1\154\1\156\1\61\1\143\1\163"+
+        "\1\141\1\156\1\150\1\145\1\156\1\uffff\1\61\1\144\1\164\1\162\1"+
+        "\145\1\123\1\163\1\105\1\145\1\104\1\144\1\162\1\145\1\144\1\165"+
+        "\1\157\1\145\1\164\1\uffff\1\151\1\145\1\61\1\164\1\61\1\40\1\157"+
+        "\1\uffff\1\141\3\61\1\105\1\145\2\61\1\101\1\141\1\151\1\162\1\61"+
+        "\1\162\1\154\1\61\1\162\1\151\1\157\3\61\3\uffff\1\40\1\144\1\61"+
+        "\3\uffff\4\61\1\104\1\144\1\155\1\164\1\156\1\166\1\uffff\1\141"+
+        "\1\157\2\156\1\uffff\1\145\1\105\1\145\1\151\1\141\1\61\1\145\1"+
+        "\163\1\156\2\61\1\162\1\122\3\162\1\uffff\1\162\2\61\2\uffff\1\157"+
+        "\1\117\1\157\6\61\1\156\1\61";
     static final String DFA32_maxS =
-        "\1\175\3\uffff\1\51\1\uffff\1\75\1\uffff\1\75\1\164\1\57\3\75\3"+
-        "\uffff\1\157\1\uffff\1\40\1\150\1\151\2\165\1\154\1\151\1\145\1"+
-        "\151\1\71\1\162\1\141\1\162\1\145\3\uffff\1\uffff\1\uffff\1\156"+
-        "\2\145\14\uffff\1\151\13\uffff\1\154\1\151\1\145\1\162\1\156\1\154"+
-        "\1\162\1\151\2\163\1\172\2\162\1\163\1\145\2\uffff\1\165\1\114\1"+
-        "\154\1\125\1\165\1\122\1\162\2\uffff\1\160\1\163\1\172\1\164\1\166"+
-        "\1\uffff\1\141\1\154\1\156\1\172\1\143\1\163\1\141\1\156\1\150\1"+
-        "\145\1\156\1\uffff\1\172\1\144\1\164\1\162\1\145\1\123\1\163\1\105"+
-        "\1\145\1\104\1\144\1\162\1\145\1\144\1\165\1\157\1\172\1\145\1\164"+
-        "\1\uffff\1\164\1\157\1\172\1\164\2\172\1\157\1\uffff\1\141\3\172"+
-        "\1\117\1\157\2\172\1\101\1\141\1\151\1\162\1\172\1\162\1\154\1\uffff"+
-        "\1\172\1\162\1\151\1\157\3\172\3\uffff\1\172\1\144\1\172\3\uffff"+
-        "\4\172\1\104\1\144\1\155\1\164\1\156\1\166\1\uffff\1\141\1\157\2"+
-        "\156\1\uffff\1\145\1\105\1\145\1\151\1\141\1\172\1\145\1\163\1\156"+
-        "\2\172\1\162\1\122\3\162\1\uffff\1\162\2\172\2\uffff\1\157\1\117"+
-        "\1\157\6\172\1\156\1\172";
+        "\1\175\3\uffff\1\51\1\uffff\1\75\1\uffff\1\75\1\164\1\57\3\75\4"+
+        "\uffff\1\40\1\150\1\151\2\165\1\154\1\151\1\145\1\151\1\71\1\162"+
+        "\1\141\1\162\1\145\3\uffff\1\uffff\1\uffff\1\156\2\145\14\uffff"+
+        "\1\151\13\uffff\1\151\1\145\1\162\1\156\1\154\1\162\1\151\2\163"+
+        "\1\172\2\162\1\163\1\145\2\uffff\1\165\1\114\1\154\1\125\1\165\1"+
+        "\122\1\162\2\uffff\1\160\1\163\1\172\1\164\1\166\1\uffff\1\154\1"+
+        "\156\1\172\1\143\1\163\1\141\1\156\1\150\1\145\1\156\1\uffff\1\172"+
+        "\1\144\1\164\1\162\1\145\1\123\1\163\1\105\1\145\1\104\1\144\1\162"+
+        "\1\145\1\144\1\165\1\157\1\145\1\164\1\uffff\1\164\1\157\1\172\1"+
+        "\164\2\172\1\157\1\uffff\1\141\3\172\1\117\1\157\2\172\1\101\1\141"+
+        "\1\151\1\162\1\172\1\162\1\154\1\172\1\162\1\151\1\157\3\172\3\uffff"+
+        "\1\172\1\144\1\172\3\uffff\4\172\1\104\1\144\1\155\1\164\1\156\1"+
+        "\166\1\uffff\1\141\1\157\2\156\1\uffff\1\145\1\105\1\145\1\151\1"+
+        "\141\1\172\1\145\1\163\1\156\2\172\1\162\1\122\3\162\1\uffff\1\162"+
+        "\2\172\2\uffff\1\157\1\117\1\157\6\172\1\156\1\172";
     static final String DFA32_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\uffff\1\11\6\uffff\1\27\1\30"+
-        "\1\31\1\uffff\1\33\16\uffff\1\50\1\52\1\53\1\uffff\1\55\3\uffff"+
-        "\1\65\1\67\1\70\1\4\1\51\1\7\1\10\1\6\1\13\1\14\1\12\1\16\1\uffff"+
-        "\1\20\1\62\1\15\1\34\1\21\1\23\1\22\1\24\1\35\1\26\1\25\17\uffff"+
-        "\1\45\1\46\7\uffff\1\54\1\66\5\uffff\1\17\13\uffff\1\64\23\uffff"+
-        "\1\37\7\uffff\1\41\17\uffff\1\32\7\uffff\1\61\1\44\1\40\3\uffff"+
-        "\1\42\1\60\1\47\12\uffff\1\36\4\uffff\1\56\20\uffff\1\63\3\uffff"+
-        "\1\43\1\57\13\uffff";
+        "\1\31\1\32\16\uffff\1\47\1\51\1\52\1\uffff\1\54\3\uffff\1\64\1\66"+
+        "\1\67\1\4\1\50\1\7\1\10\1\6\1\13\1\14\1\12\1\16\1\uffff\1\20\1\61"+
+        "\1\15\1\33\1\21\1\23\1\22\1\24\1\34\1\26\1\25\16\uffff\1\44\1\45"+
+        "\7\uffff\1\53\1\65\5\uffff\1\17\12\uffff\1\63\22\uffff\1\36\7\uffff"+
+        "\1\40\26\uffff\1\60\1\43\1\37\3\uffff\1\41\1\57\1\46\12\uffff\1"+
+        "\35\4\uffff\1\55\20\uffff\1\62\3\uffff\1\42\1\56\13\uffff";
     static final String DFA32_specialS =
-        "\44\uffff\1\0\u00b5\uffff}>";
+        "\43\uffff\1\0\u00b1\uffff}>";
     static final String[] DFA32_transitionS = {
-            "\1\52\1\22\2\uffff\1\22\22\uffff\1\23\1\1\1\44\2\uffff\1\2\1"+
-            "\3\1\45\1\4\1\41\1\5\1\6\1\7\1\10\1\11\1\12\12\34\1\uffff\1"+
-            "\22\1\13\1\14\1\15\2\uffff\5\51\1\36\15\51\1\37\1\51\1\40\4"+
-            "\51\1\16\1\uffff\1\17\1\uffff\1\51\1\uffff\3\51\1\50\1\30\1"+
-            "\26\1\51\1\21\1\46\2\51\1\33\1\25\2\51\1\27\1\51\1\47\1\31\1"+
-            "\35\1\51\1\32\1\24\3\51\1\43\1\20\1\42",
+            "\1\51\1\21\2\uffff\1\21\22\uffff\1\22\1\1\1\43\2\uffff\1\2\1"+
+            "\3\1\44\1\4\1\40\1\5\1\6\1\7\1\10\1\11\1\12\12\33\1\uffff\1"+
+            "\21\1\13\1\14\1\15\2\uffff\5\50\1\35\15\50\1\36\1\50\1\37\4"+
+            "\50\1\16\1\uffff\1\17\1\uffff\1\50\1\uffff\3\50\1\47\1\27\1"+
+            "\25\2\50\1\45\2\50\1\32\1\24\2\50\1\26\1\50\1\46\1\30\1\34\1"+
+            "\50\1\31\1\23\3\50\1\42\1\20\1\41",
             "",
             "",
             "",
-            "\1\54",
+            "\1\53",
             "",
-            "\1\56\21\uffff\1\57",
+            "\1\55\21\uffff\1\56",
             "",
-            "\1\61\17\uffff\1\62",
-            "\1\67\1\64\13\uffff\1\65\1\66",
-            "\1\71\4\uffff\1\71",
-            "\1\73",
-            "\1\75",
-            "\1\77",
+            "\1\60\17\uffff\1\61",
+            "\1\66\1\63\13\uffff\1\64\1\65",
+            "\1\70\4\uffff\1\70",
+            "\1\72",
+            "\1\74",
+            "\1\76",
             "",
             "",
             "",
+            "",
+            "\1\21\2\uffff\1\21\22\uffff\1\22",
+            "\1\100",
             "\1\101",
-            "",
-            "\1\22\2\uffff\1\22\22\uffff\1\23",
-            "\1\102",
-            "\1\103",
-            "\1\106\15\uffff\1\104\5\uffff\1\105",
-            "\1\107\20\uffff\1\110\2\uffff\1\111",
-            "\1\112",
-            "\1\113",
-            "\1\114\3\uffff\1\115",
-            "\1\117\3\uffff\1\116",
-            "\1\120\1\uffff\12\34",
-            "\1\122",
+            "\1\104\15\uffff\1\102\5\uffff\1\103",
+            "\1\105\20\uffff\1\106\2\uffff\1\107",
+            "\1\110",
+            "\1\111",
+            "\1\112\3\uffff\1\113",
+            "\1\115\3\uffff\1\114",
+            "\1\116\1\uffff\12\33",
+            "\1\120",
+            "\1\121\37\uffff\1\122",
             "\1\123\37\uffff\1\124",
             "\1\125\37\uffff\1\126",
-            "\1\127\37\uffff\1\130",
             "",
             "",
             "",
-            "\0\132",
+            "\0\130",
             "",
-            "\1\135\6\uffff\1\133\1\134",
-            "\1\136",
+            "\1\133\6\uffff\1\131\1\132",
+            "\1\134",
+            "\1\135",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\66\3\uffff\1\136",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\137",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\67\3\uffff\1\140",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\140",
             "\1\141",
             "\1\142",
             "\1\143",
@@ -3370,44 +3335,44 @@ public class LenguajeLexer extends Lexer {
             "\1\145",
             "\1\146",
             "\1\147",
-            "\1\150",
-            "\1\151",
+            "\11\50\7\uffff\32\50\4\uffff\1\150\1\uffff\32\50",
             "\1\152",
-            "\11\51\7\uffff\32\51\4\uffff\1\153\1\uffff\32\51",
+            "\1\153",
+            "\1\154",
             "\1\155",
+            "",
+            "",
             "\1\156",
             "\1\157",
             "\1\160",
-            "",
-            "",
             "\1\161",
             "\1\162",
             "\1\163",
             "\1\164",
+            "",
+            "",
             "\1\165",
             "\1\166",
-            "\1\167",
-            "",
-            "",
-            "\1\170",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\167\22\uffff\1\170",
             "\1\171",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\172\22\uffff\1\173",
-            "\1\174",
             "",
+            "\1\172",
+            "\1\173",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\175",
             "\1\176",
             "\1\177",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u0080",
             "\1\u0081",
             "\1\u0082",
             "\1\u0083",
-            "\1\u0084",
+            "",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u0085",
             "\1\u0086",
             "\1\u0087",
-            "",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u0088",
             "\1\u0089",
             "\1\u008a",
             "\1\u008b",
@@ -3421,105 +3386,99 @@ public class LenguajeLexer extends Lexer {
             "\1\u0093",
             "\1\u0094",
             "\1\u0095",
-            "\1\u0096",
-            "\1\u0097",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u0099",
+            "",
+            "\1\u0097\12\uffff\1\u0096",
+            "\1\u0098\11\uffff\1\u0099",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u009a",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u009c\20\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff"+
+            "\32\50",
+            "\1\u009e",
             "",
-            "\1\u009c\12\uffff\1\u009b",
-            "\1\u009d\11\uffff\1\u009e",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u009f",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u00a1\20\uffff\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff"+
-            "\32\51",
-            "\1\u00a3",
-            "",
-            "\1\u00a4",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\1\u00a5\31\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u00a9\11\uffff\1\u00aa",
-            "\1\u00ab\11\uffff\1\u00ac",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\1\u00a0\31\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00a4\11\uffff\1\u00a5",
+            "\1\u00a6\11\uffff\1\u00a7",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00a8",
+            "\1\u00a9",
+            "\1\u00aa",
+            "\1\u00ab",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\1\u00ac",
             "\1\u00ad",
-            "\1\u00ae",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u00af",
             "\1\u00b0",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00b1",
-            "\1\u00b2",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\13\50\1\u00b2\16"+
+            "\50",
             "",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "",
+            "",
+            "\1\u009c\20\uffff\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff"+
+            "\32\50",
             "\1\u00b4",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "",
+            "",
+            "",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u00b5",
             "\1\u00b6",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\13\51\1\u00b7\16"+
-            "\51",
-            "",
-            "",
-            "",
-            "\1\u00a1\20\uffff\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff"+
-            "\32\51",
+            "\1\u00b7",
+            "\1\u00b8",
             "\1\u00b9",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
-            "",
-            "",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00ba",
+            "",
             "\1\u00bb",
             "\1\u00bc",
             "\1\u00bd",
             "\1\u00be",
-            "\1\u00bf",
             "",
+            "\1\u00bf",
             "\1\u00c0",
             "\1\u00c1",
             "\1\u00c2",
             "\1\u00c3",
-            "",
-            "\1\u00c4",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u00c5",
             "\1\u00c6",
             "\1\u00c7",
-            "\1\u00c8",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u00ca",
             "\1\u00cb",
             "\1\u00cc",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00cd",
+            "\1\u00ce",
+            "",
             "\1\u00cf",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "",
+            "",
             "\1\u00d0",
             "\1\u00d1",
             "\1\u00d2",
-            "\1\u00d3",
-            "",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\13\50\1\u00d3\16"+
+            "\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "\1\u00d4",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
-            "",
-            "\1\u00d5",
-            "\1\u00d6",
-            "\1\u00d7",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\13\51\1\u00d8\16"+
-            "\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u00d9",
-            "\11\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51"
+            "\11\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50"
     };
 
     static final short[] DFA32_eot = DFA.unpackEncodedString(DFA32_eotS);
@@ -3552,19 +3511,19 @@ public class LenguajeLexer extends Lexer {
             this.transition = DFA32_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | TOKEN | PC | COMENTARIO | ASIGNACION | WHILE | FOR | ELSE | VARIABLE | LIST | FUNCTION | ELSEIF | DOBLE | NUMERO | BOOLEAN | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | PUSH | SET | RETURN | IF | NOMBRE | TEXTO | WS | WSOPT );";
+            return "1:1: Tokens : ( T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | PC | COMENTARIO | ASIGNACION | WHILE | FOR | ELSE | VARIABLE | LIST | FUNCTION | ELSEIF | DOBLE | NUMERO | BOOLEAN | PARENTESIS_D | PARENTESIS_I | LLAVE_D | LLAVE_I | COMILLASD | COMILLASS | PRINT | PRINTLN | READ | PUSH | SET | RETURN | IF | NOMBRE | TEXTO | WS | WSOPT );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA32_36 = input.LA(1);
+                        int LA32_35 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA32_36 >= '\u0000' && LA32_36 <= '\uFFFF')) ) {s = 90;}
+                        if ( ((LA32_35 >= '\u0000' && LA32_35 <= '\uFFFF')) ) {s = 88;}
 
-                        else s = 89;
+                        else s = 87;
 
                         if ( s>=0 ) return s;
                         break;
