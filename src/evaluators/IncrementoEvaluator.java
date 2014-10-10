@@ -28,6 +28,7 @@ public class IncrementoEvaluator implements Evaluator {
 
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
+		System.out.println("estoy evaluando");
 		if (e.evaluate(pila) instanceof Double) {
 			valor = (Double) e.evaluate(pila);
 		} else {
@@ -41,11 +42,13 @@ public class IncrementoEvaluator implements Evaluator {
 				Object asd = e.evaluate(pila);
 				if (asd instanceof Double) {
 					double antiguo = (Double)pila.get(i).get(nombre).evaluate(pila);
+					System.out.println("incremento " + antiguo);
 					if(decremento) valor *= -1;
 					Evaluator nuevo = new DoubleEvaluator(antiguo
 							+ valor);
 
 					pila.get(i).put(nombre, nuevo);
+					return nuevo.evaluate(pila);
 				} else
 					System.out.println("In the increment the object is not double");
 				return null;
@@ -53,9 +56,9 @@ public class IncrementoEvaluator implements Evaluator {
 		}
 		try {
 			pila.get(pila.size() - 1).put(nombre, new DoubleEvaluator(valor));
+			return pila.get(pila.size() - 1).get(nombre).evaluate(pila);
 		} catch (Exception e) {
 			throw new Exception("There was a problem declaring the variable");
 		}
-		return null;
 	}
 }

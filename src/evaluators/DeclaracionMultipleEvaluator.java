@@ -18,6 +18,7 @@ public class DeclaracionMultipleEvaluator implements Evaluator {
 	public void addDeclaracion(String nombre, Evaluator e){
 		DeclaracionEvaluator nuevo = new DeclaracionEvaluator(nombre, e);
 		declaraciones.add(nuevo);
+		System.out.println("agregue");
 	}
 
 	public void addAsigancion(Evaluator e){

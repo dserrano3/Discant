@@ -1,6 +1,15 @@
-var a, b, c=8;
-print c;
-for(var i = 0; i < 20; 2){
-	print i;
-}
+if(false)
+
+
+   {
+
+
+   	   print "hola";
+   }
+      else 
+       
+        
+         {
+      			print "no hola";
+      }
 ;

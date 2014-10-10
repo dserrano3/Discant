@@ -20,8 +20,17 @@ public class PlusEvaluator implements Evaluator {
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
 		// TODO Make it work with strings too, to concatenate them.
 		try {
-			return (double) ((Double) op1.evaluate(pila))
-					+ (double) ((Double) op2.evaluate(pila));
+			Object ob1 =  op1.evaluate(pila);
+			Object ob2 =  op2.evaluate(pila);
+			
+			if(ob1 instanceof Double && ob2 instanceof Double){
+				return (double) ((Double) ob1)
+					+ (double) ((Double) ob2);
+			}
+			if(ob1 instanceof String && ob2 instanceof String){
+				return ((String)ob1).concat((String)ob2);
+			}
+			throw new Exception("There was a problem with the plus operation, probably the types ");
 		} catch (Exception e) {
 			throw new Exception("There was a problem with the plus operation "
 					+ e.getMessage());

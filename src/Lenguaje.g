@@ -50,8 +50,8 @@ programa returns [StringBuilder output] throws Exception
    pila.add(new Context1()); 
    output = new StringBuilder();
   }
-  PC*
-  ( 
+  //PC*
+  (  
      
       print1           {$output.append((String)$print1.e.evaluate(pila));}
     | println          {$output.append((String)$println.e.evaluate(pila));}
@@ -73,6 +73,7 @@ programa returns [StringBuilder output] throws Exception
     | menosunincremento      {$menosunincremento.e.evaluate(pila);}
     | incremento      {$incremento.e.evaluate(pila);}
     | decremento      {$decremento.e.evaluate(pila);}
+    | PC
     
   )+ 
   ;
@@ -116,7 +117,7 @@ programa returns [StringBuilder output] throws Exception
      ((FuncionEvaluator) $e).add($wh.e);   
      } 
     )*
-	'}' PC?
+	'}' 
 	{funciones.put($nom.text, $e);}    
 ;
  
@@ -199,7 +200,6 @@ unincremento returns [Evaluator e] throws Exception
 
   declaracion_lista returns [Evaluator e] throws Exception
   :
-  //TODO:(danielserrano) change the list constant for a regex variable.
   { $e = new DeclaracionMultipleEvaluator(); }
       LIST nom=NOMBRE
                                  {
@@ -362,6 +362,7 @@ term returns [Evaluator e] throws Exception
         {
           $e = new RetornoFuncionEvaluator($lla.e);
         }
+   
   | BOOLEAN 
           {
            System.out.println("entiendo que es un boolean");
@@ -403,6 +404,16 @@ term returns [Evaluator e] throws Exception
             {
                   $e = new SizeEvaluator($nom.text);
             }
+  | nom=NOMBRE '++'
+      { 
+        $e = new IncrementoEvaluator($nom.text,new DoubleEvaluator(1));
+      } 
+  | nom=NOMBRE '--'
+      { 
+        $e = new IncrementoEvaluator($nom.text,new DoubleEvaluator(-1));
+      } 
+  
+  
   ;
 
 unary returns [Evaluator e] throws Exception
@@ -527,36 +538,39 @@ ifstatement returns [Evaluator e] throws Exception
 			  $e = new IfEvaluator ();   
 			  ((IfEvaluator) $e).agregarCondicion($rel.e);
 			}
-	PARENTESIS_D PC? LLAVE_I PC? //El PC es para admitir espacios, si ponen ; lo admitiria.
+	PARENTESIS_D PC* LLAVE_I PC* //El PC es para admitir espacios, si ponen ; lo admitiria.
   (ifs = statements  
 		 {
 		   ((IfEvaluator) $e).agregarCoso($ifs.e);   
 		  
 		 }
+		 PC* 
   )*
-    LLAVE_D PC?
+   LLAVE_D 
  //--------------empieza el elseif----------------------------------
  
-  (ELSEIF PARENTESIS_I rel1=logico
+  (PC* ELSE IF PARENTESIS_I rel1=logico
 			{
 			 ((IfEvaluator) $e).nuevoSegmento();
 			 ((IfEvaluator) $e).agregarCondicion($rel1.e); 
 			}
-	PARENTESIS_D PC? LLAVE_I PC?
+	PARENTESIS_D PC* LLAVE_I PC*
   (
     ifs= statements  
 		 {
 		   ((IfEvaluator) $e).agregarCoso($ifs.e);   
 		 }
+		 PC*
   )*
-  LLAVE_D PC? )* 
+  LLAVE_D )* 
 //-----------------Empieza el else----------------------------------------------- 
-  ( ELSE PC?
-  LLAVE_I PC?(
+  (PC* ELSE PC*
+  LLAVE_I PC*(
     elses = statements
 			 { ((IfEvaluator)$e).agregarCosoElse($elses.e); }
+		PC*
 	)*
-  LLAVE_D PC? )*  
+  LLAVE_D  )*  
   ;
        
 
@@ -564,12 +578,13 @@ whilestatemet returns [Evaluator e] throws Exception
    :
    WHILE PARENTESIS_I rel=logico
       { $e = new WhileEvaluator($rel.e); }
-	 PARENTESIS_D PC? LLAVE_I PC?
+	 PARENTESIS_D PC* LLAVE_I PC*
 	 (wh = statements
 	    { ((WhileEvaluator) $e).add($wh.e); }
+	    PC*
 	 )*
 	 
-	 LLAVE_D PC?
+	 LLAVE_D 
 	 ;
 
 
@@ -577,11 +592,12 @@ forstatemet returns [Evaluator e] throws Exception
   :
   FOR PARENTESIS_I decl=declaracion logi=logico PC aumento=add  
       { $e = new ForEvaluator($decl.e, $logi.e, $aumento.e); }
-  PARENTESIS_D PC? LLAVE_I PC? 
+  PARENTESIS_D PC* LLAVE_I PC*
   (wh = statements
       { ((ForEvaluator) $e).add($wh.e); }
+      PC*
   )*
-  LLAVE_D PC?
+  LLAVE_D  
   ;
 
 
@@ -591,7 +607,7 @@ forstatemet returns [Evaluator e] throws Exception
 //NEWLINE: '\r'? '\n' ;  
 PC
   :
-  (';'? ' '* '\r'? ('\n')+) | ';' ' '*
+  ((';'* ' '* '\r'? ('\n')+)) | ';'+ ' '* 
   ;
 //COMPARACION: ('==' | '>'|'<'|'!='|'<='|'>='); 
 
@@ -631,10 +647,7 @@ FUNCTION
   'function' | 'funcion'
   ;
 
-ELSEIF
-  :
-  'else if' | 'si_no si'
-  ;
+
 
 DOBLE
   :
@@ -762,7 +775,7 @@ TEXTO
 // Este token sirve para omitir todos los espacios y tabulaciones en el texto
 
 // Este token sirve para omitir todos los espacios y tabulaciones en el texto
-WS : (' '|'\t')+ {$channel = HIDDEN;};
+WS : (' '|'\t')+ {$channel = HIDDEN;}; 
 WSOPT   :       (' ')* {skip();};
 
 // Este token sirve para omitir todos los saltos de linea en el texto

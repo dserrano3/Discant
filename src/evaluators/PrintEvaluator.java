@@ -23,14 +23,16 @@ public class PrintEvaluator implements Evaluator {
 
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
-
+		System.out.println("entre a evaluar el en print");
 		StringBuilder s = new StringBuilder();
 		for (int i = 0; i < evaluators.size(); i++)
 		{
-			String aux  = evaluators.get(i).evaluate(pila).toString();
-			if(evaluators.get(i).evaluate(pila) instanceof Double )
+			System.out.println("evaluadno en print");
+			Object objeto = evaluators.get(i).evaluate(pila);
+			String aux  = objeto.toString();
+			if(objeto instanceof Double )
 			{
-				double num = (Double) evaluators.get(i).evaluate(pila);
+				double num = (Double) objeto;
 				if(num - (int)(num) == 0)
 				{
 					aux = String.valueOf((int)num);

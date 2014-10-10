@@ -18,6 +18,7 @@ public class SizeEvaluator implements Evaluator {
 
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
+		System.out.println("dvaluando");
 		int i;
 		for (i = pila.size() - 1; i >= 0; i--) {
 			if (pila.get(i).get(nombre) != null) {
