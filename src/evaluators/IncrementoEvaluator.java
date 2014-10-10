@@ -46,6 +46,7 @@ public class IncrementoEvaluator implements Evaluator {
 							+ valor);
 
 					pila.get(i).put(nombre, nuevo);
+					return nuevo.evaluate(pila);
 				} else
 					System.out.println("In the increment the object is not double");
 				return null;
@@ -53,9 +54,9 @@ public class IncrementoEvaluator implements Evaluator {
 		}
 		try {
 			pila.get(pila.size() - 1).put(nombre, new DoubleEvaluator(valor));
+			return pila.get(pila.size() - 1).get(nombre).evaluate(pila);
 		} catch (Exception e) {
 			throw new Exception("There was a problem declaring the variable");
 		}
-		return null;
 	}
 }

@@ -1,6 +1,7 @@
 package evaluators;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import conte.Context1;
 
@@ -22,9 +23,22 @@ public class DeclaracionEvaluator implements Evaluator {
 		this.e = e;
 	}
 	@Override
-	public Object evaluate(ArrayList<Context1> pila) {
-
-		pila.get(pila.size() - 1).put(nombre, e);
+	public Object evaluate(ArrayList<Context1> pila) throws Exception {
+		Object temp = e.evaluate(pila);
+		Evaluator nuevo = null;
+		if(temp instanceof Double){
+			nuevo = new DoubleEvaluator((Double)temp);
+		}
+		if(temp instanceof String){
+			nuevo = new StringEvaluator((String)temp);
+		}
+		if(temp instanceof Boolean){
+			nuevo = new BooleanEvaluator(String.valueOf(temp));
+		}
+		if(temp instanceof List){
+			nuevo = new ListEvaluator();
+		}
+		pila.get(pila.size() - 1).put(nombre, nuevo);
 		return null;
 	}
 
