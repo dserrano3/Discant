@@ -41,7 +41,7 @@ public class PrintEvaluator implements Evaluator {
 			}
 			s.append(aux);
 		}
-		System.out.println(s);
+		System.out.print(s);
 		return s.toString();
 	}
 

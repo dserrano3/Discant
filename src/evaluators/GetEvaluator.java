@@ -18,17 +18,20 @@ public class GetEvaluator implements Evaluator {
 		this.exp = exp;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Object evaluate(ArrayList<Context1> pila) throws Exception {
 		int i;
 		for (i = pila.size() - 1; i >= 0; i--) {
 			if (pila.get(i).get(nombre) != null) {
-				@SuppressWarnings("unchecked")
-				List<Evaluator> lis = (List<Evaluator>) pila.get(i).get(nombre)
+				Object lis =  pila.get(i).get(nombre)
 						.evaluate(pila);
 
 				double index = (Double) exp.evaluate(pila);
-				return lis.get((int) index);
+				if(lis instanceof List)
+					return ((List<Evaluator>) (lis)).get((int) index);
+				else if(lis instanceof String)
+					return ((String) (lis)).charAt((int) index);
 			}
 		}
 

@@ -68,12 +68,18 @@ public class ReadEvaluator implements Evaluator {
 					String[] datos = line.split(" ");
 
 					for (String s : datos) {
-						String pattern = "([a-z0-9])+";
-						if ((s.matches(pattern)))
-							e = new StringEvaluator(s);
-						pattern = "(([0-9])+)";
-						if ((line.matches(pattern)))
+						String pattern = "((\\-)?([0-9])+)";
+
+						if ((s.matches(pattern))) {
+							// System.out.println("Se esta asignando el valor "+
+							// Integer.parseInt(line));
 							e = new DoubleEvaluator(Double.parseDouble(s));
+
+						} else if (s.equals("true") || s.equals("false")) {
+							e = new BooleanEvaluator(s);
+						} else if (s.matches("(.)*")) {
+							e = new StringEvaluator(s);
+						}
 
 						@SuppressWarnings("unchecked")
 						List<Object> lis = (List<Object>) pila.get(i)
@@ -82,7 +88,7 @@ public class ReadEvaluator implements Evaluator {
 					}
 				} else {
 
-					String pattern = "(([0-9])+)";
+					String pattern = "((\\-)?([0-9])+)";
 
 					if ((line.matches(pattern))) {
 						// System.out.println("Se esta asignando el valor "+

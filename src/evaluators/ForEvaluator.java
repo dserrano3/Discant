@@ -67,10 +67,14 @@ public class ForEvaluator implements Evaluator {
 				}
 			}
 			pila.remove(pila.size() - 1);
-			AsignacionEvaluator asignacion = new AsignacionEvaluator(variable,
-					new DoubleEvaluator((Double) termino.evaluate(pila)
-							+ (Double) incremento.evaluate(pila)));
-			asignacion.evaluate(pila);
+			if(incremento instanceof DoubleEvaluator){
+				AsignacionEvaluator asignacion = new AsignacionEvaluator(variable,
+						new DoubleEvaluator((Double) termino.evaluate(pila)
+								+ (Double) incremento.evaluate(pila)));
+				asignacion.evaluate(pila);
+			}else{
+				incremento.evaluate(pila);
+			}
 		}
 		pila.remove(pila.size() - 1);
 		return output.toString();
