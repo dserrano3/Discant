@@ -1,4 +1,3 @@
-var a, b;
-leer a;
-leer b;
-println a + b;;
+var j;
+leer j;
+print j + 5;;
