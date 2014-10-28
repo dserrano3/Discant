@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g 2014-10-09 21:08:15
+// $ANTLR 3.4 C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g 2014-10-27 23:10:37
 
 package interpreter.antlr; 
 import interpreter.*;
@@ -98,7 +98,7 @@ public class LenguajeParser extends Parser {
     }
 
     public String[] getTokenNames() { return LenguajeParser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g"; }
 
 
     Context1 contexto = new Context1(); 
@@ -110,7 +110,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "programa"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:46:1: programa returns [StringBuilder output] : ( print1 | println | asignacion | lectura | comentario | ifstatement | whilestatemet | funcion | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento | PC )+ ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:46:1: programa returns [StringBuilder output] : ( print1 | println | asignacion | lectura | comentario | ifstatement | whilestatemet | funcion | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento | PC )+ ;
     public final StringBuilder programa() throws Exception, RecognitionException {
         StringBuilder output = null;
 
@@ -153,15 +153,15 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:47:3: ( ( print1 | println | asignacion | lectura | comentario | ifstatement | whilestatemet | funcion | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento | PC )+ )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:49:3: ( print1 | println | asignacion | lectura | comentario | ifstatement | whilestatemet | funcion | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento | PC )+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:47:3: ( ( print1 | println | asignacion | lectura | comentario | ifstatement | whilestatemet | funcion | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento | PC )+ )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:49:3: ( print1 | println | asignacion | lectura | comentario | ifstatement | whilestatemet | funcion | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento | PC )+
             {
              
                pila.add(new Context1()); 
                output = new StringBuilder();
               
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:54:3: ( print1 | println | asignacion | lectura | comentario | ifstatement | whilestatemet | funcion | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento | PC )+
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:54:3: ( print1 | println | asignacion | lectura | comentario | ifstatement | whilestatemet | funcion | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento | PC )+
             int cnt1=0;
             loop1:
             do {
@@ -297,7 +297,7 @@ public class LenguajeParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:56:7: print1
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:56:7: print1
             	    {
             	    pushFollow(FOLLOW_print1_in_programa94);
             	    print11=print1();
@@ -310,7 +310,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:57:7: println
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:57:7: println
             	    {
             	    pushFollow(FOLLOW_println_in_programa114);
             	    println2=println();
@@ -323,7 +323,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:58:7: asignacion
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:58:7: asignacion
             	    {
             	    pushFollow(FOLLOW_asignacion_in_programa133);
             	    asignacion3=asignacion();
@@ -336,7 +336,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:59:7: lectura
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:59:7: lectura
             	    {
             	    pushFollow(FOLLOW_lectura_in_programa149);
             	    lectura4=lectura();
@@ -349,7 +349,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 5 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:60:7: comentario
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:60:7: comentario
             	    {
             	    pushFollow(FOLLOW_comentario_in_programa168);
             	    comentario();
@@ -360,7 +360,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 6 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:61:7: ifstatement
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:61:7: ifstatement
             	    {
             	    pushFollow(FOLLOW_ifstatement_in_programa176);
             	    ifstatement5=ifstatement();
@@ -373,7 +373,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 7 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:62:7: whilestatemet
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:62:7: whilestatemet
             	    {
             	    pushFollow(FOLLOW_whilestatemet_in_programa191);
             	    whilestatemet6=whilestatemet();
@@ -386,7 +386,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 8 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:63:7: funcion
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:63:7: funcion
             	    {
             	    pushFollow(FOLLOW_funcion_in_programa204);
             	    funcion();
@@ -397,7 +397,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 9 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:64:7: llamadofuncion
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:64:7: llamadofuncion
             	    {
             	    pushFollow(FOLLOW_llamadofuncion_in_programa212);
             	    llamadofuncion7=llamadofuncion();
@@ -410,7 +410,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 10 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:65:7: declaracion_mult
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:65:7: declaracion_mult
             	    {
             	    pushFollow(FOLLOW_declaracion_mult_in_programa225);
             	    declaracion_mult8=declaracion_mult();
@@ -423,7 +423,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 11 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:66:7: declaracion_lista
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:66:7: declaracion_lista
             	    {
             	    pushFollow(FOLLOW_declaracion_lista_in_programa235);
             	    declaracion_lista9=declaracion_lista();
@@ -436,7 +436,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 12 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:67:7: push
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:67:7: push
             	    {
             	    pushFollow(FOLLOW_push_in_programa244);
             	    push10=push();
@@ -449,7 +449,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 13 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:68:7: forstatemet
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:68:7: forstatemet
             	    {
             	    pushFollow(FOLLOW_forstatemet_in_programa266);
             	    forstatemet11=forstatemet();
@@ -462,7 +462,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 14 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:69:7: asignacion_lista
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:69:7: asignacion_lista
             	    {
             	    pushFollow(FOLLOW_asignacion_lista_in_programa281);
             	    asignacion_lista12=asignacion_lista();
@@ -475,7 +475,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 15 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:70:7: lista_texto
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:70:7: lista_texto
             	    {
             	    pushFollow(FOLLOW_lista_texto_in_programa291);
             	    lista_texto13=lista_texto();
@@ -488,7 +488,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 16 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:71:7: size
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:71:7: size
             	    {
             	    pushFollow(FOLLOW_size_in_programa306);
             	    size14=size();
@@ -501,7 +501,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 17 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:72:7: unincremento
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:72:7: unincremento
             	    {
             	    pushFollow(FOLLOW_unincremento_in_programa328);
             	    unincremento15=unincremento();
@@ -514,7 +514,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 18 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:73:7: menosunincremento
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:73:7: menosunincremento
             	    {
             	    pushFollow(FOLLOW_menosunincremento_in_programa343);
             	    menosunincremento16=menosunincremento();
@@ -527,7 +527,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 19 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:74:7: incremento
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:74:7: incremento
             	    {
             	    pushFollow(FOLLOW_incremento_in_programa358);
             	    incremento17=incremento();
@@ -540,7 +540,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 20 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:75:7: decremento
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:75:7: decremento
             	    {
             	    pushFollow(FOLLOW_decremento_in_programa373);
             	    decremento18=decremento();
@@ -553,7 +553,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 21 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:76:7: PC
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:76:7: PC
             	    {
             	    match(input,PC,FOLLOW_PC_in_programa388); 
 
@@ -590,7 +590,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "return1"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:84:3: return1 returns [Evaluator e] : RETURN te= evaluator PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:84:3: return1 returns [Evaluator e] : RETURN te= evaluator PC ;
     public final Evaluator return1() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -599,8 +599,8 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:85:3: ( RETURN te= evaluator PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:86:5: RETURN te= evaluator PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:85:3: ( RETURN te= evaluator PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:86:5: RETURN te= evaluator PC
             {
             match(input,RETURN,FOLLOW_RETURN_in_return1434); 
 
@@ -636,7 +636,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "funcion"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:94:3: funcion returns [Evaluator e] : FUNCTION nom= NOMBRE parentesis_i ( ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )* )? parentesis_d ( PC )? '{' ( PC )? (wh= statements )* '}' ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:94:3: funcion returns [Evaluator e] : FUNCTION nom= NOMBRE parentesis_i ( ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )* )? parentesis_d ( PC )? '{' ( PC )? (wh= statements )* '}' ;
     public final Evaluator funcion() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -647,10 +647,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:95:3: ( FUNCTION nom= NOMBRE parentesis_i ( ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )* )? parentesis_d ( PC )? '{' ( PC )? (wh= statements )* '}' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:96:3: FUNCTION nom= NOMBRE parentesis_i ( ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )* )? parentesis_d ( PC )? '{' ( PC )? (wh= statements )* '}'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:95:3: ( FUNCTION nom= NOMBRE parentesis_i ( ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )* )? parentesis_d ( PC )? '{' ( PC )? (wh= statements )* '}' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:96:3: FUNCTION nom= NOMBRE parentesis_i ( ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )* )? parentesis_d ( PC )? '{' ( PC )? (wh= statements )* '}'
             {
-            e = new FuncionEvaluator();
+            e = new FuncionEvaluator(pila);
 
             match(input,FUNCTION,FOLLOW_FUNCTION_in_funcion485); 
 
@@ -662,7 +662,7 @@ public class LenguajeParser extends Parser {
             state._fsp--;
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:99:2: ( ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )* )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:99:2: ( ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )* )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -671,10 +671,10 @@ public class LenguajeParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:99:4: ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )*
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:99:4: ( VARIABLE nom1= NOMBRE ) ( ',' VARIABLE nom1= NOMBRE )*
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:99:4: ( VARIABLE nom1= NOMBRE )
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:100:4: VARIABLE nom1= NOMBRE
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:99:4: ( VARIABLE nom1= NOMBRE )
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:100:4: VARIABLE nom1= NOMBRE
                     {
                     match(input,VARIABLE,FOLLOW_VARIABLE_in_funcion506); 
 
@@ -687,7 +687,7 @@ public class LenguajeParser extends Parser {
                     }
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:105:2: ( ',' VARIABLE nom1= NOMBRE )*
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:105:2: ( ',' VARIABLE nom1= NOMBRE )*
                     loop2:
                     do {
                         int alt2=2;
@@ -700,7 +700,7 @@ public class LenguajeParser extends Parser {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:106:5: ',' VARIABLE nom1= NOMBRE
+                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:106:5: ',' VARIABLE nom1= NOMBRE
                     	    {
                     	    match(input,41,FOLLOW_41_in_funcion529); 
 
@@ -733,7 +733,7 @@ public class LenguajeParser extends Parser {
             state._fsp--;
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:112:15: ( PC )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:112:15: ( PC )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -742,7 +742,7 @@ public class LenguajeParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:112:15: PC
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:112:15: PC
                     {
                     match(input,PC,FOLLOW_PC_in_funcion558); 
 
@@ -754,7 +754,7 @@ public class LenguajeParser extends Parser {
 
             match(input,LLAVE_I,FOLLOW_LLAVE_I_in_funcion562); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:113:6: ( PC )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:113:6: ( PC )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -763,7 +763,7 @@ public class LenguajeParser extends Parser {
             }
             switch (alt5) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:113:6: PC
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:113:6: PC
                     {
                     match(input,PC,FOLLOW_PC_in_funcion564); 
 
@@ -773,7 +773,7 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:115:4: (wh= statements )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:115:4: (wh= statements )*
             loop6:
             do {
                 int alt6=2;
@@ -786,7 +786,7 @@ public class LenguajeParser extends Parser {
 
                 switch (alt6) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:115:5: wh= statements
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:115:5: wh= statements
             	    {
             	    pushFollow(FOLLOW_statements_in_funcion579);
             	    wh=statements();
@@ -832,7 +832,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "declaracion_mult"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:125:1: declaracion_mult returns [Evaluator e] : VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? ( ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )? )* PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:125:1: declaracion_mult returns [Evaluator e] : VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? ( ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )? )* PC ;
     public final Evaluator declaracion_mult() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -845,8 +845,8 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:126:3: ( VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? ( ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )? )* PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:127:3: VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? ( ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )? )* PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:126:3: ( VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? ( ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )? )* PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:127:3: VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? ( ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )? )* PC
             {
              e = new DeclaracionMultipleEvaluator(); 
 
@@ -857,7 +857,7 @@ public class LenguajeParser extends Parser {
               if(bandera)
             			      ((DeclaracionMultipleEvaluator)e).addDeclaracion((nom!=null?nom.getText():null), new DoubleEvaluator(0)); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:131:3: ( ASIGNACION ev= evaluator )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:131:3: ( ASIGNACION ev= evaluator )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -866,7 +866,7 @@ public class LenguajeParser extends Parser {
             }
             switch (alt7) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:131:7: ASIGNACION ev= evaluator
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:131:7: ASIGNACION ev= evaluator
                     {
                     match(input,ASIGNACION,FOLLOW_ASIGNACION_in_declaracion_mult649); 
 
@@ -885,7 +885,7 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:135:3: ( ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )? )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:135:3: ( ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )? )*
             loop9:
             do {
                 int alt9=2;
@@ -898,7 +898,7 @@ public class LenguajeParser extends Parser {
 
                 switch (alt9) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:135:7: ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )?
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:135:7: ',' nom2= NOMBRE ( ASIGNACION ev2= evaluator )?
             	    {
             	    match(input,41,FOLLOW_41_in_declaracion_mult683); 
 
@@ -907,7 +907,7 @@ public class LenguajeParser extends Parser {
             	      if(bandera)
             	              ((DeclaracionMultipleEvaluator)e).addDeclaracion((nom2!=null?nom2.getText():null), new DoubleEvaluator(0)); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:139:4: ( ASIGNACION ev2= evaluator )?
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:139:4: ( ASIGNACION ev2= evaluator )?
             	    int alt8=2;
             	    int LA8_0 = input.LA(1);
 
@@ -916,7 +916,7 @@ public class LenguajeParser extends Parser {
             	    }
             	    switch (alt8) {
             	        case 1 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:139:8: ASIGNACION ev2= evaluator
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:139:8: ASIGNACION ev2= evaluator
             	            {
             	            match(input,ASIGNACION,FOLLOW_ASIGNACION_in_declaracion_mult713); 
 
@@ -966,7 +966,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "declaracion"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:147:1: declaracion returns [Evaluator e] : VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:147:1: declaracion returns [Evaluator e] : VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? PC ;
     public final Evaluator declaracion() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -976,8 +976,8 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:148:3: ( VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:149:3: VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:148:3: ( VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:149:3: VARIABLE nom= NOMBRE ( ASIGNACION ev= evaluator )? PC
             {
             match(input,VARIABLE,FOLLOW_VARIABLE_in_declaracion774); 
 
@@ -986,7 +986,7 @@ public class LenguajeParser extends Parser {
               if(bandera)
                         e = new DeclaracionEvaluator((nom!=null?nom.getText():null), new DoubleEvaluator(0)); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:152:3: ( ASIGNACION ev= evaluator )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:152:3: ( ASIGNACION ev= evaluator )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -995,7 +995,7 @@ public class LenguajeParser extends Parser {
             }
             switch (alt10) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:152:7: ASIGNACION ev= evaluator
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:152:7: ASIGNACION ev= evaluator
                     {
                     match(input,ASIGNACION,FOLLOW_ASIGNACION_in_declaracion799); 
 
@@ -1036,7 +1036,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "unincremento"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:159:1: unincremento returns [Evaluator e] : nom= NOMBRE '++' PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:159:1: unincremento returns [Evaluator e] : nom= NOMBRE '++' PC ;
     public final Evaluator unincremento() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1044,8 +1044,8 @@ public class LenguajeParser extends Parser {
         Token nom=null;
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:160:3: (nom= NOMBRE '++' PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:161:3: nom= NOMBRE '++' PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:160:3: (nom= NOMBRE '++' PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:161:3: nom= NOMBRE '++' PC
             {
             nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_unincremento857); 
 
@@ -1079,7 +1079,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "menosunincremento"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:169:4: menosunincremento returns [Evaluator e] : nom= NOMBRE '--' PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:169:4: menosunincremento returns [Evaluator e] : nom= NOMBRE '--' PC ;
     public final Evaluator menosunincremento() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1087,8 +1087,8 @@ public class LenguajeParser extends Parser {
         Token nom=null;
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:170:3: (nom= NOMBRE '--' PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:171:3: nom= NOMBRE '--' PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:170:3: (nom= NOMBRE '--' PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:171:3: nom= NOMBRE '--' PC
             {
             nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_menosunincremento896); 
 
@@ -1121,7 +1121,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "incremento"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:179:3: incremento returns [Evaluator e] : nom= NOMBRE '+=' ev= evaluator PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:179:3: incremento returns [Evaluator e] : nom= NOMBRE '+=' ev= evaluator PC ;
     public final Evaluator incremento() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1131,8 +1131,8 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:180:3: (nom= NOMBRE '+=' ev= evaluator PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:181:3: nom= NOMBRE '+=' ev= evaluator PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:180:3: (nom= NOMBRE '+=' ev= evaluator PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:181:3: nom= NOMBRE '+=' ev= evaluator PC
             {
             nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_incremento938); 
 
@@ -1171,7 +1171,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "decremento"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:189:3: decremento returns [Evaluator e] : nom= NOMBRE '-=' ev= evaluator PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:189:3: decremento returns [Evaluator e] : nom= NOMBRE '-=' ev= evaluator PC ;
     public final Evaluator decremento() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1181,8 +1181,8 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:190:3: (nom= NOMBRE '-=' ev= evaluator PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:191:3: nom= NOMBRE '-=' ev= evaluator PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:190:3: (nom= NOMBRE '-=' ev= evaluator PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:191:3: nom= NOMBRE '-=' ev= evaluator PC
             {
             nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_decremento986); 
 
@@ -1221,7 +1221,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "declaracion_lista"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:201:3: declaracion_lista returns [Evaluator e] : LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:201:3: declaracion_lista returns [Evaluator e] : LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC ;
     public final Evaluator declaracion_lista() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1230,8 +1230,8 @@ public class LenguajeParser extends Parser {
         Token nom2=null;
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:202:3: ( LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:203:3: LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:202:3: ( LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:203:3: LIST nom= NOMBRE ( ',' nom2= NOMBRE )* PC
             {
              e = new DeclaracionMultipleEvaluator(); 
 
@@ -1246,7 +1246,7 @@ public class LenguajeParser extends Parser {
                                                 }
                                              
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:211:3: ( ',' nom2= NOMBRE )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:211:3: ( ',' nom2= NOMBRE )*
             loop11:
             do {
                 int alt11=2;
@@ -1259,7 +1259,7 @@ public class LenguajeParser extends Parser {
 
                 switch (alt11) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:211:7: ',' nom2= NOMBRE
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:211:7: ',' nom2= NOMBRE
             	    {
             	    match(input,41,FOLLOW_41_in_declaracion_lista1090); 
 
@@ -1303,7 +1303,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "lista_texto"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:224:1: lista_texto returns [Evaluator e] : LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:224:1: lista_texto returns [Evaluator e] : LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC ;
     public final Evaluator lista_texto() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1312,8 +1312,8 @@ public class LenguajeParser extends Parser {
         Token tex=null;
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:225:3: ( LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:226:3: LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:225:3: ( LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:226:3: LIST nom= NOMBRE ASIGNACION READ '(' tex= TEXTO ')' PC
             {
             match(input,LIST,FOLLOW_LIST_in_lista_texto1205); 
 
@@ -1358,7 +1358,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "push"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:237:1: push returns [Evaluator e] : nom= NOMBRE '.' PUSH '(' exp= expression ')' PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:237:1: push returns [Evaluator e] : nom= NOMBRE '.' PUSH '(' exp= expression ')' PC ;
     public final Evaluator push() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1368,8 +1368,8 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:238:3: (nom= NOMBRE '.' PUSH '(' exp= expression ')' PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:239:3: nom= NOMBRE '.' PUSH '(' exp= expression ')' PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:238:3: (nom= NOMBRE '.' PUSH '(' exp= expression ')' PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:239:3: nom= NOMBRE '.' PUSH '(' exp= expression ')' PC
             {
             nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_push1322); 
 
@@ -1416,7 +1416,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "size"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:249:1: size returns [Evaluator e] : nom= NOMBRE size1 ( '()' )* PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:249:1: size returns [Evaluator e] : nom= NOMBRE size1 ( '()' )* PC ;
     public final Evaluator size() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1424,8 +1424,8 @@ public class LenguajeParser extends Parser {
         Token nom=null;
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:250:3: (nom= NOMBRE size1 ( '()' )* PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:251:3: nom= NOMBRE size1 ( '()' )* PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:250:3: (nom= NOMBRE size1 ( '()' )* PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:251:3: nom= NOMBRE size1 ( '()' )* PC
             {
             nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_size1434); 
 
@@ -1435,7 +1435,7 @@ public class LenguajeParser extends Parser {
             state._fsp--;
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:251:21: ( '()' )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:251:21: ( '()' )*
             loop12:
             do {
                 int alt12=2;
@@ -1448,7 +1448,7 @@ public class LenguajeParser extends Parser {
 
                 switch (alt12) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:251:22: '()'
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:251:22: '()'
             	    {
             	    match(input,36,FOLLOW_36_in_size1440); 
 
@@ -1490,7 +1490,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "asignacion"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:263:1: asignacion returns [Evaluator e] : nom= NOMBRE ASIGNACION ev= evaluator PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:263:1: asignacion returns [Evaluator e] : nom= NOMBRE ASIGNACION ev= evaluator PC ;
     public final Evaluator asignacion() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1500,8 +1500,8 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:264:3: (nom= NOMBRE ASIGNACION ev= evaluator PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:265:4: nom= NOMBRE ASIGNACION ev= evaluator PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:264:3: (nom= NOMBRE ASIGNACION ev= evaluator PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:265:4: nom= NOMBRE ASIGNACION ev= evaluator PC
             {
             nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_asignacion1547); 
 
@@ -1543,23 +1543,24 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "asignacion_lista"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:277:1: asignacion_lista returns [Evaluator e] : nom= NOMBRE ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' ) PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:277:1: asignacion_lista returns [Evaluator e] : nom= NOMBRE ( '[' ev1= evaluator ']' ASIGNACION ev= evaluator | SET '(' ev1= evaluator ',' ev= evaluator ')' ) PC ;
     public final Evaluator asignacion_lista() throws Exception, RecognitionException {
         Evaluator e = null;
 
 
         Token nom=null;
-        Token num=null;
+        Evaluator ev1 =null;
+
         Evaluator ev =null;
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:278:3: (nom= NOMBRE ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' ) PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:279:4: nom= NOMBRE ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' ) PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:278:3: (nom= NOMBRE ( '[' ev1= evaluator ']' ASIGNACION ev= evaluator | SET '(' ev1= evaluator ',' ev= evaluator ')' ) PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:279:4: nom= NOMBRE ( '[' ev1= evaluator ']' ASIGNACION ev= evaluator | SET '(' ev1= evaluator ',' ev= evaluator ')' ) PC
             {
             nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_asignacion_lista1623); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:280:4: ( '[' num= NUMERO ']' ASIGNACION ev= evaluator | SET '(' num= NUMERO ',' ev= evaluator ')' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:280:4: ( '[' ev1= evaluator ']' ASIGNACION ev= evaluator | SET '(' ev1= evaluator ',' ev= evaluator ')' )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1578,17 +1579,21 @@ public class LenguajeParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:280:7: '[' num= NUMERO ']' ASIGNACION ev= evaluator
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:280:7: '[' ev1= evaluator ']' ASIGNACION ev= evaluator
                     {
                     match(input,55,FOLLOW_55_in_asignacion_lista1632); 
 
-                    num=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_asignacion_lista1636); 
+                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1636);
+                    ev1=evaluator();
 
-                    match(input,56,FOLLOW_56_in_asignacion_lista1638); 
+                    state._fsp--;
 
-                    match(input,ASIGNACION,FOLLOW_ASIGNACION_in_asignacion_lista1640); 
 
-                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1646);
+                    match(input,56,FOLLOW_56_in_asignacion_lista1639); 
+
+                    match(input,ASIGNACION,FOLLOW_ASIGNACION_in_asignacion_lista1641); 
+
+                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1647);
                     ev=evaluator();
 
                     state._fsp--;
@@ -1597,23 +1602,27 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:281:7: SET '(' num= NUMERO ',' ev= evaluator ')'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:281:7: SET '(' ev1= evaluator ',' ev= evaluator ')'
                     {
-                    match(input,SET,FOLLOW_SET_in_asignacion_lista1654); 
+                    match(input,SET,FOLLOW_SET_in_asignacion_lista1655); 
 
-                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_asignacion_lista1656); 
+                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_asignacion_lista1657); 
 
-                    num=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_asignacion_lista1660); 
+                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1661);
+                    ev1=evaluator();
 
-                    match(input,41,FOLLOW_41_in_asignacion_lista1662); 
+                    state._fsp--;
 
-                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1668);
+
+                    match(input,41,FOLLOW_41_in_asignacion_lista1663); 
+
+                    pushFollow(FOLLOW_evaluator_in_asignacion_lista1669);
                     ev=evaluator();
 
                     state._fsp--;
 
 
-                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_asignacion_lista1670); 
+                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_asignacion_lista1671); 
 
                     }
                     break;
@@ -1625,11 +1634,11 @@ public class LenguajeParser extends Parser {
                                               if(bandera)
                                                 {
                                                     //System.out.println("intento salvar erradamente");
-                                                    e = new AsignacionListaEvaluator((nom!=null?nom.getText():null),ev, (num!=null?num.getText():null));
+                                                    e = new AsignacionListaEvaluator((nom!=null?nom.getText():null),ev, ev1);
                                                 }
                                              
 
-            match(input,PC,FOLLOW_PC_in_asignacion_lista1716); 
+            match(input,PC,FOLLOW_PC_in_asignacion_lista1717); 
 
             }
 
@@ -1651,13 +1660,13 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "comentario"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:295:1: comentario : COMENTARIO ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:295:1: comentario : COMENTARIO ;
     public final void comentario() throws RecognitionException {
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:296:3: ( COMENTARIO )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:297:3: COMENTARIO
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:296:3: ( COMENTARIO )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:297:3: COMENTARIO
             {
-            match(input,COMENTARIO,FOLLOW_COMENTARIO_in_comentario1734); 
+            match(input,COMENTARIO,FOLLOW_COMENTARIO_in_comentario1735); 
 
             }
 
@@ -1679,7 +1688,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "lectura"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:300:1: lectura returns [Evaluator e] : r= READ n= NOMBRE ( ',' exp= expression )? PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:300:1: lectura returns [Evaluator e] : r= READ n= NOMBRE ( ',' exp= expression )? PC ;
     public final Evaluator lectura() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1690,12 +1699,12 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:301:3: (r= READ n= NOMBRE ( ',' exp= expression )? PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:302:3: r= READ n= NOMBRE ( ',' exp= expression )? PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:301:3: (r= READ n= NOMBRE ( ',' exp= expression )? PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:302:3: r= READ n= NOMBRE ( ',' exp= expression )? PC
             {
-            r=(Token)match(input,READ,FOLLOW_READ_in_lectura1760); 
+            r=(Token)match(input,READ,FOLLOW_READ_in_lectura1761); 
 
-            n=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_lectura1764); 
+            n=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_lectura1765); 
 
 
                               if(bandera)
@@ -1705,7 +1714,7 @@ public class LenguajeParser extends Parser {
                                 }
                               
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:310:3: ( ',' exp= expression )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:310:3: ( ',' exp= expression )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1714,11 +1723,11 @@ public class LenguajeParser extends Parser {
             }
             switch (alt14) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:311:7: ',' exp= expression
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:311:7: ',' exp= expression
                     {
-                    match(input,41,FOLLOW_41_in_lectura1796); 
+                    match(input,41,FOLLOW_41_in_lectura1797); 
 
-                    pushFollow(FOLLOW_expression_in_lectura1802);
+                    pushFollow(FOLLOW_expression_in_lectura1803);
                     exp=expression();
 
                     state._fsp--;
@@ -1738,7 +1747,7 @@ public class LenguajeParser extends Parser {
             }
 
 
-            match(input,PC,FOLLOW_PC_in_lectura1836); 
+            match(input,PC,FOLLOW_PC_in_lectura1837); 
 
             }
 
@@ -1760,7 +1769,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "print1"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:323:1: print1 returns [Evaluator e] : PRINT (exp= expression ) ( ',' exp= expression )* PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:323:1: print1 returns [Evaluator e] : PRINT (exp= expression ) ( ',' exp= expression )* PC ;
     public final Evaluator print1() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1769,17 +1778,17 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:324:3: ( PRINT (exp= expression ) ( ',' exp= expression )* PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:325:3: PRINT (exp= expression ) ( ',' exp= expression )* PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:324:3: ( PRINT (exp= expression ) ( ',' exp= expression )* PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:325:3: PRINT (exp= expression ) ( ',' exp= expression )* PC
             {
              e = new PrintEvaluator(); 
 
-            match(input,PRINT,FOLLOW_PRINT_in_print11865); 
+            match(input,PRINT,FOLLOW_PRINT_in_print11866); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:327:3: (exp= expression )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:327:5: exp= expression
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:327:3: (exp= expression )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:327:5: exp= expression
             {
-            pushFollow(FOLLOW_expression_in_print11876);
+            pushFollow(FOLLOW_expression_in_print11877);
             exp=expression();
 
             state._fsp--;
@@ -1790,7 +1799,7 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:329:3: ( ',' exp= expression )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:329:3: ( ',' exp= expression )*
             loop15:
             do {
                 int alt15=2;
@@ -1803,11 +1812,11 @@ public class LenguajeParser extends Parser {
 
                 switch (alt15) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:329:5: ',' exp= expression
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:329:5: ',' exp= expression
             	    {
-            	    match(input,41,FOLLOW_41_in_print11888); 
+            	    match(input,41,FOLLOW_41_in_print11889); 
 
-            	    pushFollow(FOLLOW_expression_in_print11898);
+            	    pushFollow(FOLLOW_expression_in_print11899);
             	    exp=expression();
 
             	    state._fsp--;
@@ -1824,7 +1833,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,PC,FOLLOW_PC_in_print11909); 
+            match(input,PC,FOLLOW_PC_in_print11910); 
 
             }
 
@@ -1846,7 +1855,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "println"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:335:1: println returns [Evaluator e] : PRINTLN (exp= expression ) ( ',' exp= expression )* PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:335:1: println returns [Evaluator e] : PRINTLN (exp= expression ) ( ',' exp= expression )* PC ;
     public final Evaluator println() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1855,17 +1864,17 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:336:3: ( PRINTLN (exp= expression ) ( ',' exp= expression )* PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:337:3: PRINTLN (exp= expression ) ( ',' exp= expression )* PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:336:3: ( PRINTLN (exp= expression ) ( ',' exp= expression )* PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:337:3: PRINTLN (exp= expression ) ( ',' exp= expression )* PC
             {
              e = new PrintlnEvaluator(); 
 
-            match(input,PRINTLN,FOLLOW_PRINTLN_in_println1938); 
+            match(input,PRINTLN,FOLLOW_PRINTLN_in_println1939); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:339:3: (exp= expression )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:339:5: exp= expression
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:339:3: (exp= expression )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:339:5: exp= expression
             {
-            pushFollow(FOLLOW_expression_in_println1948);
+            pushFollow(FOLLOW_expression_in_println1949);
             exp=expression();
 
             state._fsp--;
@@ -1876,7 +1885,7 @@ public class LenguajeParser extends Parser {
             }
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:341:3: ( ',' exp= expression )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:341:3: ( ',' exp= expression )*
             loop16:
             do {
                 int alt16=2;
@@ -1889,11 +1898,11 @@ public class LenguajeParser extends Parser {
 
                 switch (alt16) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:341:5: ',' exp= expression
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:341:5: ',' exp= expression
             	    {
-            	    match(input,41,FOLLOW_41_in_println1960); 
+            	    match(input,41,FOLLOW_41_in_println1961); 
 
-            	    pushFollow(FOLLOW_expression_in_println1970);
+            	    pushFollow(FOLLOW_expression_in_println1971);
             	    exp=expression();
 
             	    state._fsp--;
@@ -1910,7 +1919,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,PC,FOLLOW_PC_in_println1981); 
+            match(input,PC,FOLLOW_PC_in_println1982); 
 
             }
 
@@ -1932,7 +1941,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "evaluator"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:347:1: evaluator returns [Evaluator e] : logico ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:347:1: evaluator returns [Evaluator e] : logico ;
     public final Evaluator evaluator() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1941,10 +1950,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:348:3: ( logico )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:349:3: logico
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:348:3: ( logico )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:349:3: logico
             {
-            pushFollow(FOLLOW_logico_in_evaluator2006);
+            pushFollow(FOLLOW_logico_in_evaluator2007);
             logico19=logico();
 
             state._fsp--;
@@ -1974,7 +1983,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "term"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:355:1: term returns [Evaluator e] : (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE size1 ( '()' )* |nom= NOMBRE '++' |nom= NOMBRE '--' );
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:355:1: term returns [Evaluator e] : (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE size1 ( '()' )* |nom= NOMBRE '++' |nom= NOMBRE '--' );
     public final Evaluator term() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -1993,7 +2002,7 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:356:3: (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE size1 ( '()' )* |nom= NOMBRE '++' |nom= NOMBRE '--' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:356:3: (lla= llamadofuncion | BOOLEAN | NOMBRE | NUMERO | DOBLE | TEXTO | '(' add ')' |nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' ) |nom= NOMBRE size1 ( '()' )* |nom= NOMBRE '++' |nom= NOMBRE '--' )
             int alt19=11;
             switch ( input.LA(1) ) {
             case NOMBRE:
@@ -2092,13 +2101,13 @@ public class LenguajeParser extends Parser {
 
             switch (alt19) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:358:3: lla= llamadofuncion
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:358:3: lla= llamadofuncion
                     {
 
                        e = new IntEvaluator(0);
                       
 
-                    pushFollow(FOLLOW_llamadofuncion_in_term2052);
+                    pushFollow(FOLLOW_llamadofuncion_in_term2053);
                     lla=llamadofuncion();
 
                     state._fsp--;
@@ -2111,9 +2120,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:366:5: BOOLEAN
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:366:5: BOOLEAN
                     {
-                    BOOLEAN20=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_term2072); 
+                    BOOLEAN20=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_term2073); 
 
 
                                e = new BooleanEvaluator(((BOOLEAN20!=null?BOOLEAN20.getText():null))); 
@@ -2122,9 +2131,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:370:5: NOMBRE
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:370:5: NOMBRE
                     {
-                    NOMBRE21=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2091); 
+                    NOMBRE21=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2092); 
 
                        
                              if(bandera){  
@@ -2135,9 +2144,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:376:5: NUMERO
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:376:5: NUMERO
                     {
-                    NUMERO22=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_term2109); 
+                    NUMERO22=(Token)match(input,NUMERO,FOLLOW_NUMERO_in_term2110); 
 
 
                                e = new DoubleEvaluator(Double.parseDouble((NUMERO22!=null?NUMERO22.getText():null)));
@@ -2146,9 +2155,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:380:5: DOBLE
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:380:5: DOBLE
                     {
-                    DOBLE23=(Token)match(input,DOBLE,FOLLOW_DOBLE_in_term2128); 
+                    DOBLE23=(Token)match(input,DOBLE,FOLLOW_DOBLE_in_term2129); 
 
 
                                e = new DoubleEvaluator(Double.parseDouble((DOBLE23!=null?DOBLE23.getText():null)));
@@ -2157,9 +2166,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:385:5: TEXTO
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:385:5: TEXTO
                     {
-                    TEXTO24=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_term2162); 
+                    TEXTO24=(Token)match(input,TEXTO,FOLLOW_TEXTO_in_term2163); 
 
 
                               e = new StringEvaluator(((TEXTO24!=null?TEXTO24.getText():null)));
@@ -2168,17 +2177,17 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:390:5: '(' add ')'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:390:5: '(' add ')'
                     {
-                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_term2183); 
+                    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_term2184); 
 
-                    pushFollow(FOLLOW_add_in_term2185);
+                    pushFollow(FOLLOW_add_in_term2186);
                     add25=add();
 
                     state._fsp--;
 
 
-                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term2187); 
+                    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term2188); 
 
 
                                            e = add25;
@@ -2187,11 +2196,11 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:394:5: nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' )
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:394:5: nom= NOMBRE ( '.get(' num= add ')' | '[' num= add ']' )
                     {
-                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2220); 
+                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2221); 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:395:5: ( '.get(' num= add ')' | '[' num= add ']' )
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:395:5: ( '.get(' num= add ')' | '[' num= add ']' )
                     int alt17=2;
                     int LA17_0 = input.LA(1);
 
@@ -2210,32 +2219,32 @@ public class LenguajeParser extends Parser {
                     }
                     switch (alt17) {
                         case 1 :
-                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:395:7: '.get(' num= add ')'
+                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:395:7: '.get(' num= add ')'
                             {
-                            match(input,46,FOLLOW_46_in_term2229); 
+                            match(input,46,FOLLOW_46_in_term2230); 
 
-                            pushFollow(FOLLOW_add_in_term2235);
+                            pushFollow(FOLLOW_add_in_term2236);
                             num=add();
 
                             state._fsp--;
 
 
-                            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term2237); 
+                            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_term2238); 
 
                             }
                             break;
                         case 2 :
-                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:396:7: '[' num= add ']'
+                            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:396:7: '[' num= add ']'
                             {
-                            match(input,55,FOLLOW_55_in_term2245); 
+                            match(input,55,FOLLOW_55_in_term2246); 
 
-                            pushFollow(FOLLOW_add_in_term2255);
+                            pushFollow(FOLLOW_add_in_term2256);
                             num=add();
 
                             state._fsp--;
 
 
-                            match(input,56,FOLLOW_56_in_term2257); 
+                            match(input,56,FOLLOW_56_in_term2258); 
 
                             }
                             break;
@@ -2250,17 +2259,17 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:401:5: nom= NOMBRE size1 ( '()' )*
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:401:5: nom= NOMBRE size1 ( '()' )*
                     {
-                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2282); 
+                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2283); 
 
-                    pushFollow(FOLLOW_size1_in_term2285);
+                    pushFollow(FOLLOW_size1_in_term2286);
                     size1();
 
                     state._fsp--;
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:401:23: ( '()' )*
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:401:23: ( '()' )*
                     loop18:
                     do {
                         int alt18=2;
@@ -2273,9 +2282,9 @@ public class LenguajeParser extends Parser {
 
                         switch (alt18) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:401:24: '()'
+                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:401:24: '()'
                     	    {
-                    	    match(input,36,FOLLOW_36_in_term2288); 
+                    	    match(input,36,FOLLOW_36_in_term2289); 
 
                     	    }
                     	    break;
@@ -2293,11 +2302,11 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:405:5: nom= NOMBRE '++'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:405:5: nom= NOMBRE '++'
                     {
-                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2312); 
+                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2313); 
 
-                    match(input,39,FOLLOW_39_in_term2314); 
+                    match(input,39,FOLLOW_39_in_term2315); 
 
                      
                             e = new IncrementoEvaluator((nom!=null?nom.getText():null),new DoubleEvaluator(1));
@@ -2306,11 +2315,11 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:409:5: nom= NOMBRE '--'
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:409:5: nom= NOMBRE '--'
                     {
-                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2331); 
+                    nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_term2332); 
 
-                    match(input,43,FOLLOW_43_in_term2333); 
+                    match(input,43,FOLLOW_43_in_term2334); 
 
                      
                             e = new IncrementoEvaluator((nom!=null?nom.getText():null),new DoubleEvaluator(-1));
@@ -2338,7 +2347,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "unary"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:417:1: unary returns [Evaluator e] : ( '+' | '-' )* term ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:417:1: unary returns [Evaluator e] : ( '+' | '-' )* term ;
     public final Evaluator unary() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2347,14 +2356,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:418:3: ( ( '+' | '-' )* term )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:420:3: ( '+' | '-' )* term
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:418:3: ( ( '+' | '-' )* term )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:420:3: ( '+' | '-' )* term
             {
 
                boolean positive = true;
               
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:423:3: ( '+' | '-' )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:423:3: ( '+' | '-' )*
             loop20:
             do {
                 int alt20=3;
@@ -2370,16 +2379,16 @@ public class LenguajeParser extends Parser {
 
                 switch (alt20) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:424:7: '+'
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:424:7: '+'
             	    {
-            	    match(input,38,FOLLOW_38_in_unary2386); 
+            	    match(input,38,FOLLOW_38_in_unary2387); 
 
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:425:7: '-'
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:425:7: '-'
             	    {
-            	    match(input,42,FOLLOW_42_in_unary2394); 
+            	    match(input,42,FOLLOW_42_in_unary2395); 
 
 
             	              positive = !positive;
@@ -2394,7 +2403,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            pushFollow(FOLLOW_term_in_unary2415);
+            pushFollow(FOLLOW_term_in_unary2416);
             term26=term();
 
             state._fsp--;
@@ -2426,7 +2435,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "mult"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:438:1: mult returns [Evaluator e] : op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:438:1: mult returns [Evaluator e] : op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* ;
     public final Evaluator mult() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2437,10 +2446,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:439:3: (op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:440:6: op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:439:3: (op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:440:6: op1= unary ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
             {
-            pushFollow(FOLLOW_unary_in_mult2452);
+            pushFollow(FOLLOW_unary_in_mult2453);
             op1=unary();
 
             state._fsp--;
@@ -2448,7 +2457,7 @@ public class LenguajeParser extends Parser {
 
             e = op1;
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:441:3: ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:441:3: ( '*' op2= unary | '/' op2= unary | '%' op2= unary )*
             loop21:
             do {
                 int alt21=4;
@@ -2473,11 +2482,11 @@ public class LenguajeParser extends Parser {
 
                 switch (alt21) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:441:6: '*' op2= unary
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:441:6: '*' op2= unary
             	    {
-            	    match(input,37,FOLLOW_37_in_mult2461); 
+            	    match(input,37,FOLLOW_37_in_mult2462); 
 
-            	    pushFollow(FOLLOW_unary_in_mult2465);
+            	    pushFollow(FOLLOW_unary_in_mult2466);
             	    op2=unary();
 
             	    state._fsp--;
@@ -2488,11 +2497,11 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:442:6: '/' op2= unary
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:442:6: '/' op2= unary
             	    {
-            	    match(input,49,FOLLOW_49_in_mult2473); 
+            	    match(input,49,FOLLOW_49_in_mult2474); 
 
-            	    pushFollow(FOLLOW_unary_in_mult2477);
+            	    pushFollow(FOLLOW_unary_in_mult2478);
             	    op2=unary();
 
             	    state._fsp--;
@@ -2503,11 +2512,11 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:443:6: '%' op2= unary
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:443:6: '%' op2= unary
             	    {
-            	    match(input,34,FOLLOW_34_in_mult2486); 
+            	    match(input,34,FOLLOW_34_in_mult2487); 
 
-            	    pushFollow(FOLLOW_unary_in_mult2490);
+            	    pushFollow(FOLLOW_unary_in_mult2491);
             	    op2=unary();
 
             	    state._fsp--;
@@ -2544,7 +2553,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "add"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:447:1: add returns [Evaluator e] : op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )* ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:447:1: add returns [Evaluator e] : op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )* ;
     public final Evaluator add() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2555,10 +2564,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:448:3: (op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:449:5: op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:448:3: (op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:449:5: op1= mult ( ( '+' op2= mult ) | ( minus op2= mult ) )*
             {
-            pushFollow(FOLLOW_mult_in_add2524);
+            pushFollow(FOLLOW_mult_in_add2525);
             op1=mult();
 
             state._fsp--;
@@ -2566,7 +2575,7 @@ public class LenguajeParser extends Parser {
 
             e = op1;
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:450:3: ( ( '+' op2= mult ) | ( minus op2= mult ) )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:450:3: ( ( '+' op2= mult ) | ( minus op2= mult ) )*
             loop22:
             do {
                 int alt22=3;
@@ -2582,14 +2591,14 @@ public class LenguajeParser extends Parser {
 
                 switch (alt22) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:451:3: ( '+' op2= mult )
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:451:3: ( '+' op2= mult )
             	    {
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:451:3: ( '+' op2= mult )
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:451:5: '+' op2= mult
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:451:3: ( '+' op2= mult )
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:451:5: '+' op2= mult
             	    {
-            	    match(input,38,FOLLOW_38_in_add2536); 
+            	    match(input,38,FOLLOW_38_in_add2537); 
 
-            	    pushFollow(FOLLOW_mult_in_add2540);
+            	    pushFollow(FOLLOW_mult_in_add2541);
             	    op2=mult();
 
             	    state._fsp--;
@@ -2603,18 +2612,18 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:453:5: ( minus op2= mult )
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:453:5: ( minus op2= mult )
             	    {
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:453:5: ( minus op2= mult )
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:453:6: minus op2= mult
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:453:5: ( minus op2= mult )
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:453:6: minus op2= mult
             	    {
-            	    pushFollow(FOLLOW_minus_in_add2553);
+            	    pushFollow(FOLLOW_minus_in_add2554);
             	    minus();
 
             	    state._fsp--;
 
 
-            	    pushFollow(FOLLOW_mult_in_add2557);
+            	    pushFollow(FOLLOW_mult_in_add2558);
             	    op2=mult();
 
             	    state._fsp--;
@@ -2654,7 +2663,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "relation"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:458:1: relation returns [Evaluator e] : ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:458:1: relation returns [Evaluator e] : ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* ;
     public final Evaluator relation() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2665,10 +2674,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:459:3: (ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:460:5: ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:459:3: (ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:460:5: ex1= add ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
             {
-            pushFollow(FOLLOW_add_in_relation2595);
+            pushFollow(FOLLOW_add_in_relation2596);
             ex1=add();
 
             state._fsp--;
@@ -2676,7 +2685,7 @@ public class LenguajeParser extends Parser {
 
             e = ex1;
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:461:3: ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:461:3: ( ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add ) )*
             loop24:
             do {
                 int alt24=2;
@@ -2689,9 +2698,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt24) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:462:3: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:462:3: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
             	    {
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:462:3: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:462:3: ( '==' ex2= add | '>' ex2= add | '<' ex2= add | '!=' ex2= add | '<=' ex2= add | '>=' ex2= add )
             	    int alt23=6;
             	    switch ( input.LA(1) ) {
             	    case 52:
@@ -2734,11 +2743,11 @@ public class LenguajeParser extends Parser {
 
             	    switch (alt23) {
             	        case 1 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:463:5: '==' ex2= add
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:463:5: '==' ex2= add
             	            {
-            	            match(input,52,FOLLOW_52_in_relation2611); 
+            	            match(input,52,FOLLOW_52_in_relation2612); 
 
-            	            pushFollow(FOLLOW_add_in_relation2615);
+            	            pushFollow(FOLLOW_add_in_relation2616);
             	            ex2=add();
 
             	            state._fsp--;
@@ -2749,11 +2758,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:464:5: '>' ex2= add
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:464:5: '>' ex2= add
             	            {
-            	            match(input,53,FOLLOW_53_in_relation2623); 
+            	            match(input,53,FOLLOW_53_in_relation2624); 
 
-            	            pushFollow(FOLLOW_add_in_relation2627);
+            	            pushFollow(FOLLOW_add_in_relation2628);
             	            ex2=add();
 
             	            state._fsp--;
@@ -2764,11 +2773,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:465:5: '<' ex2= add
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:465:5: '<' ex2= add
             	            {
-            	            match(input,50,FOLLOW_50_in_relation2638); 
+            	            match(input,50,FOLLOW_50_in_relation2639); 
 
-            	            pushFollow(FOLLOW_add_in_relation2642);
+            	            pushFollow(FOLLOW_add_in_relation2643);
             	            ex2=add();
 
             	            state._fsp--;
@@ -2779,11 +2788,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 4 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:466:5: '!=' ex2= add
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:466:5: '!=' ex2= add
             	            {
-            	            match(input,33,FOLLOW_33_in_relation2653); 
+            	            match(input,33,FOLLOW_33_in_relation2654); 
 
-            	            pushFollow(FOLLOW_add_in_relation2657);
+            	            pushFollow(FOLLOW_add_in_relation2658);
             	            ex2=add();
 
             	            state._fsp--;
@@ -2794,11 +2803,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 5 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:467:5: '<=' ex2= add
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:467:5: '<=' ex2= add
             	            {
-            	            match(input,51,FOLLOW_51_in_relation2667); 
+            	            match(input,51,FOLLOW_51_in_relation2668); 
 
-            	            pushFollow(FOLLOW_add_in_relation2671);
+            	            pushFollow(FOLLOW_add_in_relation2672);
             	            ex2=add();
 
             	            state._fsp--;
@@ -2809,11 +2818,11 @@ public class LenguajeParser extends Parser {
             	            }
             	            break;
             	        case 6 :
-            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:468:5: '>=' ex2= add
+            	            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:468:5: '>=' ex2= add
             	            {
-            	            match(input,54,FOLLOW_54_in_relation2681); 
+            	            match(input,54,FOLLOW_54_in_relation2682); 
 
-            	            pushFollow(FOLLOW_add_in_relation2685);
+            	            pushFollow(FOLLOW_add_in_relation2686);
             	            ex2=add();
 
             	            state._fsp--;
@@ -2856,7 +2865,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "logico"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:473:1: logico returns [Evaluator e] : rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:473:1: logico returns [Evaluator e] : rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* ;
     public final Evaluator logico() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2867,10 +2876,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:474:3: (rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:475:5: rel1= relation ( '&&' rel2= relation | '||' rel2= relation )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:474:3: (rel1= relation ( '&&' rel2= relation | '||' rel2= relation )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:475:5: rel1= relation ( '&&' rel2= relation | '||' rel2= relation )*
             {
-            pushFollow(FOLLOW_relation_in_logico2725);
+            pushFollow(FOLLOW_relation_in_logico2726);
             rel1=relation();
 
             state._fsp--;
@@ -2880,7 +2889,7 @@ public class LenguajeParser extends Parser {
                             e = rel1;
                            
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:479:3: ( '&&' rel2= relation | '||' rel2= relation )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:479:3: ( '&&' rel2= relation | '||' rel2= relation )*
             loop25:
             do {
                 int alt25=3;
@@ -2896,11 +2905,11 @@ public class LenguajeParser extends Parser {
 
                 switch (alt25) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:480:5: '&&' rel2= relation
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:480:5: '&&' rel2= relation
             	    {
-            	    match(input,35,FOLLOW_35_in_logico2753); 
+            	    match(input,35,FOLLOW_35_in_logico2754); 
 
-            	    pushFollow(FOLLOW_relation_in_logico2757);
+            	    pushFollow(FOLLOW_relation_in_logico2758);
             	    rel2=relation();
 
             	    state._fsp--;
@@ -2913,11 +2922,11 @@ public class LenguajeParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:484:6: '||' rel2= relation
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:484:6: '||' rel2= relation
             	    {
-            	    match(input,57,FOLLOW_57_in_logico2789); 
+            	    match(input,57,FOLLOW_57_in_logico2790); 
 
-            	    pushFollow(FOLLOW_relation_in_logico2793);
+            	    pushFollow(FOLLOW_relation_in_logico2794);
             	    rel2=relation();
 
             	    state._fsp--;
@@ -2956,7 +2965,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "expression"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:491:3: expression returns [Evaluator e] : logico ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:491:3: expression returns [Evaluator e] : logico ;
     public final Evaluator expression() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -2965,10 +2974,10 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:492:2: ( logico )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:492:6: logico
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:492:2: ( logico )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:492:6: logico
             {
-            pushFollow(FOLLOW_logico_in_expression2849);
+            pushFollow(FOLLOW_logico_in_expression2850);
             logico27=logico();
 
             state._fsp--;
@@ -2996,7 +3005,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "llamadofuncion"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:496:1: llamadofuncion returns [Evaluator e] : nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:496:1: llamadofuncion returns [Evaluator e] : nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC ;
     public final Evaluator llamadofuncion() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -3006,16 +3015,16 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:497:4: (nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:498:9: nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:497:4: (nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:498:9: nom= NOMBRE '(' ( (ev= term ) ( ',' ev= term )* )? ')' PC
             {
-            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_llamadofuncion2884); 
+            nom=(Token)match(input,NOMBRE,FOLLOW_NOMBRE_in_llamadofuncion2885); 
 
             e = funciones.get((nom!=null?nom.getText():null));
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_llamadofuncion2889); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_llamadofuncion2890); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:500:4: ( (ev= term ) ( ',' ev= term )* )?
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:500:4: ( (ev= term ) ( ',' ev= term )* )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -3024,12 +3033,12 @@ public class LenguajeParser extends Parser {
             }
             switch (alt27) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:500:9: (ev= term ) ( ',' ev= term )*
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:500:9: (ev= term ) ( ',' ev= term )*
                     {
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:500:9: (ev= term )
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:500:10: ev= term
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:500:9: (ev= term )
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:500:10: ev= term
                     {
-                    pushFollow(FOLLOW_term_in_llamadofuncion2904);
+                    pushFollow(FOLLOW_term_in_llamadofuncion2905);
                     ev=term();
 
                     state._fsp--;
@@ -3040,7 +3049,7 @@ public class LenguajeParser extends Parser {
                     }
 
 
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:502:4: ( ',' ev= term )*
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:502:4: ( ',' ev= term )*
                     loop26:
                     do {
                         int alt26=2;
@@ -3053,11 +3062,11 @@ public class LenguajeParser extends Parser {
 
                         switch (alt26) {
                     	case 1 :
-                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:502:5: ',' ev= term
+                    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:502:5: ',' ev= term
                     	    {
-                    	    match(input,41,FOLLOW_41_in_llamadofuncion2916); 
+                    	    match(input,41,FOLLOW_41_in_llamadofuncion2917); 
 
-                    	    pushFollow(FOLLOW_term_in_llamadofuncion2923);
+                    	    pushFollow(FOLLOW_term_in_llamadofuncion2924);
                     	    ev=term();
 
                     	    state._fsp--;
@@ -3080,9 +3089,9 @@ public class LenguajeParser extends Parser {
             }
 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_llamadofuncion2936); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_llamadofuncion2937); 
 
-            match(input,PC,FOLLOW_PC_in_llamadofuncion2947); 
+            match(input,PC,FOLLOW_PC_in_llamadofuncion2948); 
 
             }
 
@@ -3104,7 +3113,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "statements"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:508:1: statements returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | ifstatement | whilestatemet | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:508:1: statements returns [Evaluator e] : ( print1 | println | asignacion | lectura | comentario | return1 | ifstatement | whilestatemet | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento );
     public final Evaluator statements() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -3149,7 +3158,7 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:509:3: ( print1 | println | asignacion | lectura | comentario | return1 | ifstatement | whilestatemet | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:509:3: ( print1 | println | asignacion | lectura | comentario | return1 | ifstatement | whilestatemet | llamadofuncion | declaracion_mult | declaracion_lista | push | forstatemet | asignacion_lista | lista_texto | size | unincremento | menosunincremento | incremento | decremento )
             int alt28=20;
             switch ( input.LA(1) ) {
             case PRINT:
@@ -3297,9 +3306,9 @@ public class LenguajeParser extends Parser {
 
             switch (alt28) {
                 case 1 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:510:5: print1
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:510:5: print1
                     {
-                    pushFollow(FOLLOW_print1_in_statements2981);
+                    pushFollow(FOLLOW_print1_in_statements2982);
                     print128=print1();
 
                     state._fsp--;
@@ -3310,9 +3319,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:511:5: println
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:511:5: println
                     {
-                    pushFollow(FOLLOW_println_in_statements3001);
+                    pushFollow(FOLLOW_println_in_statements3002);
                     println29=println();
 
                     state._fsp--;
@@ -3323,9 +3332,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:512:5: asignacion
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:512:5: asignacion
                     {
-                    pushFollow(FOLLOW_asignacion_in_statements3020);
+                    pushFollow(FOLLOW_asignacion_in_statements3021);
                     asignacion30=asignacion();
 
                     state._fsp--;
@@ -3336,9 +3345,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:513:5: lectura
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:513:5: lectura
                     {
-                    pushFollow(FOLLOW_lectura_in_statements3035);
+                    pushFollow(FOLLOW_lectura_in_statements3036);
                     lectura31=lectura();
 
                     state._fsp--;
@@ -3349,9 +3358,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:514:5: comentario
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:514:5: comentario
                     {
-                    pushFollow(FOLLOW_comentario_in_statements3054);
+                    pushFollow(FOLLOW_comentario_in_statements3055);
                     comentario();
 
                     state._fsp--;
@@ -3362,9 +3371,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:515:5: return1
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:515:5: return1
                     {
-                    pushFollow(FOLLOW_return1_in_statements3069);
+                    pushFollow(FOLLOW_return1_in_statements3070);
                     return132=return1();
 
                     state._fsp--;
@@ -3375,9 +3384,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:516:5: ifstatement
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:516:5: ifstatement
                     {
-                    pushFollow(FOLLOW_ifstatement_in_statements3087);
+                    pushFollow(FOLLOW_ifstatement_in_statements3088);
                     ifstatement33=ifstatement();
 
                     state._fsp--;
@@ -3388,9 +3397,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:517:5: whilestatemet
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:517:5: whilestatemet
                     {
-                    pushFollow(FOLLOW_whilestatemet_in_statements3102);
+                    pushFollow(FOLLOW_whilestatemet_in_statements3103);
                     whilestatemet34=whilestatemet();
 
                     state._fsp--;
@@ -3401,9 +3410,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:518:5: llamadofuncion
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:518:5: llamadofuncion
                     {
-                    pushFollow(FOLLOW_llamadofuncion_in_statements3114);
+                    pushFollow(FOLLOW_llamadofuncion_in_statements3115);
                     llamadofuncion35=llamadofuncion();
 
                     state._fsp--;
@@ -3414,9 +3423,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:519:5: declaracion_mult
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:519:5: declaracion_mult
                     {
-                    pushFollow(FOLLOW_declaracion_mult_in_statements3126);
+                    pushFollow(FOLLOW_declaracion_mult_in_statements3127);
                     declaracion_mult36=declaracion_mult();
 
                     state._fsp--;
@@ -3427,9 +3436,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:520:5: declaracion_lista
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:520:5: declaracion_lista
                     {
-                    pushFollow(FOLLOW_declaracion_lista_in_statements3135);
+                    pushFollow(FOLLOW_declaracion_lista_in_statements3136);
                     declaracion_lista37=declaracion_lista();
 
                     state._fsp--;
@@ -3440,9 +3449,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:521:5: push
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:521:5: push
                     {
-                    pushFollow(FOLLOW_push_in_statements3143);
+                    pushFollow(FOLLOW_push_in_statements3144);
                     push38=push();
 
                     state._fsp--;
@@ -3453,9 +3462,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:522:5: forstatemet
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:522:5: forstatemet
                     {
-                    pushFollow(FOLLOW_forstatemet_in_statements3164);
+                    pushFollow(FOLLOW_forstatemet_in_statements3165);
                     forstatemet39=forstatemet();
 
                     state._fsp--;
@@ -3466,9 +3475,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:523:5: asignacion_lista
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:523:5: asignacion_lista
                     {
-                    pushFollow(FOLLOW_asignacion_lista_in_statements3178);
+                    pushFollow(FOLLOW_asignacion_lista_in_statements3179);
                     asignacion_lista40=asignacion_lista();
 
                     state._fsp--;
@@ -3479,9 +3488,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:524:5: lista_texto
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:524:5: lista_texto
                     {
-                    pushFollow(FOLLOW_lista_texto_in_statements3187);
+                    pushFollow(FOLLOW_lista_texto_in_statements3188);
                     lista_texto41=lista_texto();
 
                     state._fsp--;
@@ -3492,9 +3501,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:525:5: size
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:525:5: size
                     {
-                    pushFollow(FOLLOW_size_in_statements3201);
+                    pushFollow(FOLLOW_size_in_statements3202);
                     size42=size();
 
                     state._fsp--;
@@ -3505,9 +3514,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 17 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:526:5: unincremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:526:5: unincremento
                     {
-                    pushFollow(FOLLOW_unincremento_in_statements3222);
+                    pushFollow(FOLLOW_unincremento_in_statements3223);
                     unincremento43=unincremento();
 
                     state._fsp--;
@@ -3518,9 +3527,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 18 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:527:5: menosunincremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:527:5: menosunincremento
                     {
-                    pushFollow(FOLLOW_menosunincremento_in_statements3235);
+                    pushFollow(FOLLOW_menosunincremento_in_statements3236);
                     menosunincremento44=menosunincremento();
 
                     state._fsp--;
@@ -3531,9 +3540,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 19 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:528:5: incremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:528:5: incremento
                     {
-                    pushFollow(FOLLOW_incremento_in_statements3243);
+                    pushFollow(FOLLOW_incremento_in_statements3244);
                     incremento45=incremento();
 
                     state._fsp--;
@@ -3544,9 +3553,9 @@ public class LenguajeParser extends Parser {
                     }
                     break;
                 case 20 :
-                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:529:5: decremento
+                    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:529:5: decremento
                     {
-                    pushFollow(FOLLOW_decremento_in_statements3258);
+                    pushFollow(FOLLOW_decremento_in_statements3259);
                     decremento46=decremento();
 
                     state._fsp--;
@@ -3576,7 +3585,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "ifstatement"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:532:1: ifstatement returns [Evaluator e] : IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D ( ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D )* ( ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D )* ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:532:1: ifstatement returns [Evaluator e] : IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D ( ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D )* ( ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D )* ;
     public final Evaluator ifstatement() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -3591,14 +3600,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:533:3: ( IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D ( ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D )* ( ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D )* )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:534:3: IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D ( ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D )* ( ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:533:3: ( IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D ( ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D )* ( ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D )* )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:534:3: IF PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D ( ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D )* ( ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D )*
             {
-            match(input,IF,FOLLOW_IF_in_ifstatement3290); 
+            match(input,IF,FOLLOW_IF_in_ifstatement3291); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3292); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3293); 
 
-            pushFollow(FOLLOW_logico_in_ifstatement3298);
+            pushFollow(FOLLOW_logico_in_ifstatement3299);
             rel=logico();
 
             state._fsp--;
@@ -3609,9 +3618,9 @@ public class LenguajeParser extends Parser {
             			  ((IfEvaluator) e).agregarCondicion(rel);
             			
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3306); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3307); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:539:15: ( PC )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:539:15: ( PC )*
             loop29:
             do {
                 int alt29=2;
@@ -3624,9 +3633,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt29) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:539:15: PC
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:539:15: PC
             	    {
-            	    match(input,PC,FOLLOW_PC_in_ifstatement3308); 
+            	    match(input,PC,FOLLOW_PC_in_ifstatement3309); 
 
             	    }
             	    break;
@@ -3637,9 +3646,9 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3311); 
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3312); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:539:27: ( PC )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:539:27: ( PC )*
             loop30:
             do {
                 int alt30=2;
@@ -3652,9 +3661,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt30) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:539:27: PC
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:539:27: PC
             	    {
-            	    match(input,PC,FOLLOW_PC_in_ifstatement3313); 
+            	    match(input,PC,FOLLOW_PC_in_ifstatement3314); 
 
             	    }
             	    break;
@@ -3665,7 +3674,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:540:3: (ifs= statements ( PC )* )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:540:3: (ifs= statements ( PC )* )*
             loop32:
             do {
                 int alt32=2;
@@ -3678,9 +3687,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt32) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:540:4: ifs= statements ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:540:4: ifs= statements ( PC )*
             	    {
-            	    pushFollow(FOLLOW_statements_in_ifstatement3324);
+            	    pushFollow(FOLLOW_statements_in_ifstatement3325);
             	    ifs=statements();
 
             	    state._fsp--;
@@ -3691,7 +3700,7 @@ public class LenguajeParser extends Parser {
             	    		  
             	    		 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:545:4: ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:545:4: ( PC )*
             	    loop31:
             	    do {
             	        int alt31=2;
@@ -3704,9 +3713,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt31) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:545:4: PC
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:545:4: PC
             	    	    {
-            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3336); 
+            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3337); 
 
             	    	    }
             	    	    break;
@@ -3726,18 +3735,18 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3348); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3349); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:550:3: ( ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:550:3: ( ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D )*
             loop38:
             do {
                 int alt38=2;
                 alt38 = dfa38.predict(input);
                 switch (alt38) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:550:4: ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:550:4: ( PC )* ELSE IF PARENTESIS_I rel1= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (ifs= statements ( PC )* )* LLAVE_D
             	    {
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:550:4: ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:550:4: ( PC )*
             	    loop33:
             	    do {
             	        int alt33=2;
@@ -3750,9 +3759,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt33) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:550:4: PC
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:550:4: PC
             	    	    {
-            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3358); 
+            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3359); 
 
             	    	    }
             	    	    break;
@@ -3763,13 +3772,13 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement3361); 
+            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement3362); 
 
-            	    match(input,IF,FOLLOW_IF_in_ifstatement3363); 
+            	    match(input,IF,FOLLOW_IF_in_ifstatement3364); 
 
-            	    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3365); 
+            	    match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_ifstatement3366); 
 
-            	    pushFollow(FOLLOW_logico_in_ifstatement3369);
+            	    pushFollow(FOLLOW_logico_in_ifstatement3370);
             	    rel1=logico();
 
             	    state._fsp--;
@@ -3780,9 +3789,9 @@ public class LenguajeParser extends Parser {
             	    			 ((IfEvaluator) e).agregarCondicion(rel1); 
             	    			
 
-            	    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3377); 
+            	    match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_ifstatement3378); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:555:15: ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:555:15: ( PC )*
             	    loop34:
             	    do {
             	        int alt34=2;
@@ -3795,9 +3804,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt34) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:555:15: PC
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:555:15: PC
             	    	    {
-            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3379); 
+            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3380); 
 
             	    	    }
             	    	    break;
@@ -3808,9 +3817,9 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3382); 
+            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3383); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:555:27: ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:555:27: ( PC )*
             	    loop35:
             	    do {
             	        int alt35=2;
@@ -3823,9 +3832,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt35) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:555:27: PC
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:555:27: PC
             	    	    {
-            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3384); 
+            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3385); 
 
             	    	    }
             	    	    break;
@@ -3836,7 +3845,7 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:556:3: (ifs= statements ( PC )* )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:556:3: (ifs= statements ( PC )* )*
             	    loop37:
             	    do {
             	        int alt37=2;
@@ -3849,9 +3858,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt37) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:557:5: ifs= statements ( PC )*
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:557:5: ifs= statements ( PC )*
             	    	    {
-            	    	    pushFollow(FOLLOW_statements_in_ifstatement3398);
+            	    	    pushFollow(FOLLOW_statements_in_ifstatement3399);
             	    	    ifs=statements();
 
             	    	    state._fsp--;
@@ -3861,7 +3870,7 @@ public class LenguajeParser extends Parser {
             	    	    		   ((IfEvaluator) e).agregarCoso(ifs);   
             	    	    		 
 
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:561:4: ( PC )*
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:561:4: ( PC )*
             	    	    loop36:
             	    	    do {
             	    	        int alt36=2;
@@ -3874,9 +3883,9 @@ public class LenguajeParser extends Parser {
 
             	    	        switch (alt36) {
             	    	    	case 1 :
-            	    	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:561:4: PC
+            	    	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:561:4: PC
             	    	    	    {
-            	    	    	    match(input,PC,FOLLOW_PC_in_ifstatement3410); 
+            	    	    	    match(input,PC,FOLLOW_PC_in_ifstatement3411); 
 
             	    	    	    }
             	    	    	    break;
@@ -3896,7 +3905,7 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3420); 
+            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3421); 
 
             	    }
             	    break;
@@ -3907,16 +3916,16 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:565:3: ( ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:565:3: ( ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D )*
             loop44:
             do {
                 int alt44=2;
                 alt44 = dfa44.predict(input);
                 switch (alt44) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:565:4: ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:565:4: ( PC )* ELSE ( PC )* LLAVE_I ( PC )* (elses= statements ( PC )* )* LLAVE_D
             	    {
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:565:4: ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:565:4: ( PC )*
             	    loop39:
             	    do {
             	        int alt39=2;
@@ -3929,9 +3938,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt39) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:565:4: PC
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:565:4: PC
             	    	    {
-            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3430); 
+            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3431); 
 
             	    	    }
             	    	    break;
@@ -3942,9 +3951,9 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement3433); 
+            	    match(input,ELSE,FOLLOW_ELSE_in_ifstatement3434); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:565:13: ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:565:13: ( PC )*
             	    loop40:
             	    do {
             	        int alt40=2;
@@ -3957,9 +3966,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt40) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:565:13: PC
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:565:13: PC
             	    	    {
-            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3435); 
+            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3436); 
 
             	    	    }
             	    	    break;
@@ -3970,9 +3979,9 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3440); 
+            	    match(input,LLAVE_I,FOLLOW_LLAVE_I_in_ifstatement3441); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:566:11: ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:566:11: ( PC )*
             	    loop41:
             	    do {
             	        int alt41=2;
@@ -3985,9 +3994,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt41) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:566:11: PC
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:566:11: PC
             	    	    {
-            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3442); 
+            	    	    match(input,PC,FOLLOW_PC_in_ifstatement3443); 
 
             	    	    }
             	    	    break;
@@ -3998,7 +4007,7 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:566:14: (elses= statements ( PC )* )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:566:14: (elses= statements ( PC )* )*
             	    loop43:
             	    do {
             	        int alt43=2;
@@ -4011,9 +4020,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt43) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:567:5: elses= statements ( PC )*
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:567:5: elses= statements ( PC )*
             	    	    {
-            	    	    pushFollow(FOLLOW_statements_in_ifstatement3454);
+            	    	    pushFollow(FOLLOW_statements_in_ifstatement3455);
             	    	    elses=statements();
 
             	    	    state._fsp--;
@@ -4021,7 +4030,7 @@ public class LenguajeParser extends Parser {
 
             	    	     ((IfEvaluator)e).agregarCosoElse(elses); 
 
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:569:3: ( PC )*
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:569:3: ( PC )*
             	    	    loop42:
             	    	    do {
             	    	        int alt42=2;
@@ -4034,9 +4043,9 @@ public class LenguajeParser extends Parser {
 
             	    	        switch (alt42) {
             	    	    	case 1 :
-            	    	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:569:3: PC
+            	    	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:569:3: PC
             	    	    	    {
-            	    	    	    match(input,PC,FOLLOW_PC_in_ifstatement3464); 
+            	    	    	    match(input,PC,FOLLOW_PC_in_ifstatement3465); 
 
             	    	    	    }
             	    	    	    break;
@@ -4056,7 +4065,7 @@ public class LenguajeParser extends Parser {
             	    } while (true);
 
 
-            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3473); 
+            	    match(input,LLAVE_D,FOLLOW_LLAVE_D_in_ifstatement3474); 
 
             	    }
             	    break;
@@ -4087,7 +4096,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "whilestatemet"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:575:1: whilestatemet returns [Evaluator e] : WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:575:1: whilestatemet returns [Evaluator e] : WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D ;
     public final Evaluator whilestatemet() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -4098,14 +4107,14 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:576:4: ( WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:577:4: WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:576:4: ( WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:577:4: WHILE PARENTESIS_I rel= logico PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D
             {
-            match(input,WHILE,FOLLOW_WHILE_in_whilestatemet3512); 
+            match(input,WHILE,FOLLOW_WHILE_in_whilestatemet3513); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_whilestatemet3514); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_whilestatemet3515); 
 
-            pushFollow(FOLLOW_logico_in_whilestatemet3518);
+            pushFollow(FOLLOW_logico_in_whilestatemet3519);
             rel=logico();
 
             state._fsp--;
@@ -4113,9 +4122,9 @@ public class LenguajeParser extends Parser {
 
              e = new WhileEvaluator(rel); 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_whilestatemet3530); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_whilestatemet3531); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:579:16: ( PC )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:579:16: ( PC )*
             loop45:
             do {
                 int alt45=2;
@@ -4128,9 +4137,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt45) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:579:16: PC
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:579:16: PC
             	    {
-            	    match(input,PC,FOLLOW_PC_in_whilestatemet3532); 
+            	    match(input,PC,FOLLOW_PC_in_whilestatemet3533); 
 
             	    }
             	    break;
@@ -4141,9 +4150,9 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_whilestatemet3535); 
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_whilestatemet3536); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:579:28: ( PC )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:579:28: ( PC )*
             loop46:
             do {
                 int alt46=2;
@@ -4156,9 +4165,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt46) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:579:28: PC
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:579:28: PC
             	    {
-            	    match(input,PC,FOLLOW_PC_in_whilestatemet3537); 
+            	    match(input,PC,FOLLOW_PC_in_whilestatemet3538); 
 
             	    }
             	    break;
@@ -4169,7 +4178,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:580:3: (wh= statements ( PC )* )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:580:3: (wh= statements ( PC )* )*
             loop48:
             do {
                 int alt48=2;
@@ -4182,9 +4191,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt48) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:580:4: wh= statements ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:580:4: wh= statements ( PC )*
             	    {
-            	    pushFollow(FOLLOW_statements_in_whilestatemet3547);
+            	    pushFollow(FOLLOW_statements_in_whilestatemet3548);
             	    wh=statements();
 
             	    state._fsp--;
@@ -4192,7 +4201,7 @@ public class LenguajeParser extends Parser {
 
             	     ((WhileEvaluator) e).add(wh); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:582:6: ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:582:6: ( PC )*
             	    loop47:
             	    do {
             	        int alt47=2;
@@ -4205,9 +4214,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt47) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:582:6: PC
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:582:6: PC
             	    	    {
-            	    	    match(input,PC,FOLLOW_PC_in_whilestatemet3561); 
+            	    	    match(input,PC,FOLLOW_PC_in_whilestatemet3562); 
 
             	    	    }
             	    	    break;
@@ -4227,7 +4236,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_whilestatemet3574); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_whilestatemet3575); 
 
             }
 
@@ -4249,7 +4258,7 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "forstatemet"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:589:1: forstatemet returns [Evaluator e] : FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:589:1: forstatemet returns [Evaluator e] : FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D ;
     public final Evaluator forstatemet() throws Exception, RecognitionException {
         Evaluator e = null;
 
@@ -4264,28 +4273,28 @@ public class LenguajeParser extends Parser {
 
 
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:590:3: ( FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:591:3: FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:590:3: ( FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:591:3: FOR PARENTESIS_I decl= declaracion logi= logico PC aumento= add PARENTESIS_D ( PC )* LLAVE_I ( PC )* (wh= statements ( PC )* )* LLAVE_D
             {
-            match(input,FOR,FOLLOW_FOR_in_forstatemet3599); 
+            match(input,FOR,FOLLOW_FOR_in_forstatemet3600); 
 
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_forstatemet3601); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_forstatemet3602); 
 
-            pushFollow(FOLLOW_declaracion_in_forstatemet3605);
+            pushFollow(FOLLOW_declaracion_in_forstatemet3606);
             decl=declaracion();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_logico_in_forstatemet3609);
+            pushFollow(FOLLOW_logico_in_forstatemet3610);
             logi=logico();
 
             state._fsp--;
 
 
-            match(input,PC,FOLLOW_PC_in_forstatemet3611); 
+            match(input,PC,FOLLOW_PC_in_forstatemet3612); 
 
-            pushFollow(FOLLOW_add_in_forstatemet3615);
+            pushFollow(FOLLOW_add_in_forstatemet3616);
             aumento=add();
 
             state._fsp--;
@@ -4293,9 +4302,9 @@ public class LenguajeParser extends Parser {
 
              e = new ForEvaluator(decl, logi, aumento); 
 
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_forstatemet3629); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_forstatemet3630); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:593:16: ( PC )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:593:16: ( PC )*
             loop49:
             do {
                 int alt49=2;
@@ -4308,9 +4317,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt49) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:593:16: PC
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:593:16: PC
             	    {
-            	    match(input,PC,FOLLOW_PC_in_forstatemet3631); 
+            	    match(input,PC,FOLLOW_PC_in_forstatemet3632); 
 
             	    }
             	    break;
@@ -4321,9 +4330,9 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_forstatemet3634); 
+            match(input,LLAVE_I,FOLLOW_LLAVE_I_in_forstatemet3635); 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:593:28: ( PC )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:593:28: ( PC )*
             loop50:
             do {
                 int alt50=2;
@@ -4336,9 +4345,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt50) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:593:28: PC
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:593:28: PC
             	    {
-            	    match(input,PC,FOLLOW_PC_in_forstatemet3636); 
+            	    match(input,PC,FOLLOW_PC_in_forstatemet3637); 
 
             	    }
             	    break;
@@ -4349,7 +4358,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:594:3: (wh= statements ( PC )* )*
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:594:3: (wh= statements ( PC )* )*
             loop52:
             do {
                 int alt52=2;
@@ -4362,9 +4371,9 @@ public class LenguajeParser extends Parser {
 
                 switch (alt52) {
             	case 1 :
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:594:4: wh= statements ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:594:4: wh= statements ( PC )*
             	    {
-            	    pushFollow(FOLLOW_statements_in_forstatemet3646);
+            	    pushFollow(FOLLOW_statements_in_forstatemet3647);
             	    wh=statements();
 
             	    state._fsp--;
@@ -4372,7 +4381,7 @@ public class LenguajeParser extends Parser {
 
             	     ((ForEvaluator) e).add(wh); 
 
-            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:596:7: ( PC )*
+            	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:596:7: ( PC )*
             	    loop51:
             	    do {
             	        int alt51=2;
@@ -4385,9 +4394,9 @@ public class LenguajeParser extends Parser {
 
             	        switch (alt51) {
             	    	case 1 :
-            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:596:7: PC
+            	    	    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:596:7: PC
             	    	    {
-            	    	    match(input,PC,FOLLOW_PC_in_forstatemet3662); 
+            	    	    match(input,PC,FOLLOW_PC_in_forstatemet3663); 
 
             	    	    }
             	    	    break;
@@ -4407,7 +4416,7 @@ public class LenguajeParser extends Parser {
             } while (true);
 
 
-            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_forstatemet3672); 
+            match(input,LLAVE_D,FOLLOW_LLAVE_D_in_forstatemet3673); 
 
             }
 
@@ -4429,13 +4438,13 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "minus"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:668:1: minus : '-' ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:668:1: minus : '-' ;
     public final void minus() throws RecognitionException {
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:669:4: ( '-' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:670:4: '-'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:669:4: ( '-' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:670:4: '-'
             {
-            match(input,42,FOLLOW_42_in_minus4035); 
+            match(input,42,FOLLOW_42_in_minus4036); 
 
             }
 
@@ -4457,13 +4466,13 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "parentesis_d"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:678:3: parentesis_d : ')' ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:678:3: parentesis_d : ')' ;
     public final void parentesis_d() throws RecognitionException {
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:679:3: ( ')' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:680:3: ')'
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:679:3: ( ')' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:680:3: ')'
             {
-            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_parentesis_d4070); 
+            match(input,PARENTESIS_D,FOLLOW_PARENTESIS_D_in_parentesis_d4071); 
 
             }
 
@@ -4485,13 +4494,13 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "parentesis_i"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:688:3: parentesis_i : '(' ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:688:3: parentesis_i : '(' ;
     public final void parentesis_i() throws RecognitionException {
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:689:3: ( '(' )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:690:3: '('
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:689:3: ( '(' )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:690:3: '('
             {
-            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_parentesis_i4104); 
+            match(input,PARENTESIS_I,FOLLOW_PARENTESIS_I_in_parentesis_i4105); 
 
             }
 
@@ -4513,11 +4522,11 @@ public class LenguajeParser extends Parser {
 
 
     // $ANTLR start "size1"
-    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:731:1: size1 : ( '.tamano' | '.size' ) ;
+    // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:731:1: size1 : ( '.tamano' | '.size' ) ;
     public final void size1() throws RecognitionException {
         try {
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:731:6: ( ( '.tamano' | '.size' ) )
-            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\target\\classes\\Lenguaje.g:
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:731:6: ( ( '.tamano' | '.size' ) )
+            // C:\\Users\\Daniel\\Google Drive\\lenguaje\\virtual_judge\\Discant\\src\\Lenguaje.g:
             {
             if ( (input.LA(1) >= 47 && input.LA(1) <= 48) ) {
                 input.consume();
@@ -4757,174 +4766,174 @@ public class LenguajeParser extends Parser {
     public static final BitSet FOLLOW_evaluator_in_asignacion1555 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_PC_in_asignacion1595 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_NOMBRE_in_asignacion_lista1623 = new BitSet(new long[]{0x0080000008000000L});
-    public static final BitSet FOLLOW_55_in_asignacion_lista1632 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_NUMERO_in_asignacion_lista1636 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_asignacion_lista1638 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ASIGNACION_in_asignacion_lista1640 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1646 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_SET_in_asignacion_lista1654 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_asignacion_lista1656 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_NUMERO_in_asignacion_lista1660 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_asignacion_lista1662 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1668 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_asignacion_lista1670 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_asignacion_lista1716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMENTARIO_in_comentario1734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_READ_in_lectura1760 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_NOMBRE_in_lectura1764 = new BitSet(new long[]{0x0000020000200000L});
-    public static final BitSet FOLLOW_41_in_lectura1796 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_expression_in_lectura1802 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_lectura1836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PRINT_in_print11865 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_expression_in_print11876 = new BitSet(new long[]{0x0000020000200000L});
-    public static final BitSet FOLLOW_41_in_print11888 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_expression_in_print11898 = new BitSet(new long[]{0x0000020000200000L});
-    public static final BitSet FOLLOW_PC_in_print11909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PRINTLN_in_println1938 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_expression_in_println1948 = new BitSet(new long[]{0x0000020000200000L});
-    public static final BitSet FOLLOW_41_in_println1960 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_expression_in_println1970 = new BitSet(new long[]{0x0000020000200000L});
-    public static final BitSet FOLLOW_PC_in_println1981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logico_in_evaluator2006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_llamadofuncion_in_term2052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BOOLEAN_in_term2072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term2091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NUMERO_in_term2109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DOBLE_in_term2128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TEXTO_in_term2162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_term2183 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_term2185 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_term2187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term2220 = new BitSet(new long[]{0x0080400000000000L});
-    public static final BitSet FOLLOW_46_in_term2229 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_term2235 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_term2237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_term2245 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_term2255 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_term2257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term2282 = new BitSet(new long[]{0x0001800000000000L});
-    public static final BitSet FOLLOW_size1_in_term2285 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_36_in_term2288 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term2312 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_term2314 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_term2331 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_43_in_term2333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_unary2386 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_42_in_unary2394 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_term_in_unary2415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_in_mult2452 = new BitSet(new long[]{0x0002002400000002L});
-    public static final BitSet FOLLOW_37_in_mult2461 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_unary_in_mult2465 = new BitSet(new long[]{0x0002002400000002L});
-    public static final BitSet FOLLOW_49_in_mult2473 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_unary_in_mult2477 = new BitSet(new long[]{0x0002002400000002L});
-    public static final BitSet FOLLOW_34_in_mult2486 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_unary_in_mult2490 = new BitSet(new long[]{0x0002002400000002L});
-    public static final BitSet FOLLOW_mult_in_add2524 = new BitSet(new long[]{0x0000044000000002L});
-    public static final BitSet FOLLOW_38_in_add2536 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_mult_in_add2540 = new BitSet(new long[]{0x0000044000000002L});
-    public static final BitSet FOLLOW_minus_in_add2553 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_mult_in_add2557 = new BitSet(new long[]{0x0000044000000002L});
-    public static final BitSet FOLLOW_add_in_relation2595 = new BitSet(new long[]{0x007C000200000002L});
-    public static final BitSet FOLLOW_52_in_relation2611 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_relation2615 = new BitSet(new long[]{0x007C000200000002L});
-    public static final BitSet FOLLOW_53_in_relation2623 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_relation2627 = new BitSet(new long[]{0x007C000200000002L});
-    public static final BitSet FOLLOW_50_in_relation2638 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_relation2642 = new BitSet(new long[]{0x007C000200000002L});
-    public static final BitSet FOLLOW_33_in_relation2653 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_relation2657 = new BitSet(new long[]{0x007C000200000002L});
-    public static final BitSet FOLLOW_51_in_relation2667 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_relation2671 = new BitSet(new long[]{0x007C000200000002L});
-    public static final BitSet FOLLOW_54_in_relation2681 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_relation2685 = new BitSet(new long[]{0x007C000200000002L});
-    public static final BitSet FOLLOW_relation_in_logico2725 = new BitSet(new long[]{0x0200000800000002L});
-    public static final BitSet FOLLOW_35_in_logico2753 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_relation_in_logico2757 = new BitSet(new long[]{0x0200000800000002L});
-    public static final BitSet FOLLOW_57_in_logico2789 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_relation_in_logico2793 = new BitSet(new long[]{0x0200000800000002L});
-    public static final BitSet FOLLOW_logico_in_expression2849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOMBRE_in_llamadofuncion2884 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_llamadofuncion2889 = new BitSet(new long[]{0x00000000101E0220L});
-    public static final BitSet FOLLOW_term_in_llamadofuncion2904 = new BitSet(new long[]{0x0000020000080000L});
-    public static final BitSet FOLLOW_41_in_llamadofuncion2916 = new BitSet(new long[]{0x0000000010160220L});
-    public static final BitSet FOLLOW_term_in_llamadofuncion2923 = new BitSet(new long[]{0x0000020000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_llamadofuncion2936 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_llamadofuncion2947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_print1_in_statements2981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_println_in_statements3001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_in_statements3020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lectura_in_statements3035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_comentario_in_statements3054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_return1_in_statements3069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifstatement_in_statements3087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_whilestatemet_in_statements3102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_llamadofuncion_in_statements3114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_mult_in_statements3126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaracion_lista_in_statements3135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_push_in_statements3143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forstatemet_in_statements3164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_asignacion_lista_in_statements3178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lista_texto_in_statements3187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_size_in_statements3201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unincremento_in_statements3222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_menosunincremento_in_statements3235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_incremento_in_statements3243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_decremento_in_statements3258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_ifstatement3290 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3292 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_logico_in_ifstatement3298 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3306 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3308 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3311 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3313 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_statements_in_ifstatement3324 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3336 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3348 = new BitSet(new long[]{0x0000000000200402L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3358 = new BitSet(new long[]{0x0000000000200400L});
-    public static final BitSet FOLLOW_ELSE_in_ifstatement3361 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_IF_in_ifstatement3363 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3365 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_logico_in_ifstatement3369 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3377 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3379 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3382 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3384 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_statements_in_ifstatement3398 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3410 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3420 = new BitSet(new long[]{0x0000000000200402L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3430 = new BitSet(new long[]{0x0000000000200400L});
-    public static final BitSet FOLLOW_ELSE_in_ifstatement3433 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3435 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3440 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3442 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_statements_in_ifstatement3454 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_ifstatement3464 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3473 = new BitSet(new long[]{0x0000000000200402L});
-    public static final BitSet FOLLOW_WHILE_in_whilestatemet3512 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_whilestatemet3514 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_logico_in_whilestatemet3518 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_whilestatemet3530 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_PC_in_whilestatemet3532 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_whilestatemet3535 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_whilestatemet3537 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_statements_in_whilestatemet3547 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_whilestatemet3561 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_LLAVE_D_in_whilestatemet3574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FOR_in_forstatemet3599 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_forstatemet3601 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_declaracion_in_forstatemet3605 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_logico_in_forstatemet3609 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3611 = new BitSet(new long[]{0x0000044010160220L});
-    public static final BitSet FOLLOW_add_in_forstatemet3615 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_forstatemet3629 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3631 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_LLAVE_I_in_forstatemet3634 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3636 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_statements_in_forstatemet3646 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_PC_in_forstatemet3662 = new BitSet(new long[]{0x0000000066E2E840L});
-    public static final BitSet FOLLOW_LLAVE_D_in_forstatemet3672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_minus4035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARENTESIS_D_in_parentesis_d4070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARENTESIS_I_in_parentesis_i4104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_asignacion_lista1632 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1636 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_asignacion_lista1639 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ASIGNACION_in_asignacion_lista1641 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1647 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_SET_in_asignacion_lista1655 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_asignacion_lista1657 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1661 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_asignacion_lista1663 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_evaluator_in_asignacion_lista1669 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_asignacion_lista1671 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_asignacion_lista1717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMENTARIO_in_comentario1735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_READ_in_lectura1761 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_NOMBRE_in_lectura1765 = new BitSet(new long[]{0x0000020000200000L});
+    public static final BitSet FOLLOW_41_in_lectura1797 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_expression_in_lectura1803 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_lectura1837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRINT_in_print11866 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_expression_in_print11877 = new BitSet(new long[]{0x0000020000200000L});
+    public static final BitSet FOLLOW_41_in_print11889 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_expression_in_print11899 = new BitSet(new long[]{0x0000020000200000L});
+    public static final BitSet FOLLOW_PC_in_print11910 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRINTLN_in_println1939 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_expression_in_println1949 = new BitSet(new long[]{0x0000020000200000L});
+    public static final BitSet FOLLOW_41_in_println1961 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_expression_in_println1971 = new BitSet(new long[]{0x0000020000200000L});
+    public static final BitSet FOLLOW_PC_in_println1982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logico_in_evaluator2007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_llamadofuncion_in_term2053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BOOLEAN_in_term2073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term2092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NUMERO_in_term2110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOBLE_in_term2129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TEXTO_in_term2163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_term2184 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_term2186 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_term2188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term2221 = new BitSet(new long[]{0x0080400000000000L});
+    public static final BitSet FOLLOW_46_in_term2230 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_term2236 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_term2238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_term2246 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_term2256 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_term2258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term2283 = new BitSet(new long[]{0x0001800000000000L});
+    public static final BitSet FOLLOW_size1_in_term2286 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_36_in_term2289 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term2313 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_term2315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_term2332 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_term2334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_unary2387 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_42_in_unary2395 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_term_in_unary2416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_in_mult2453 = new BitSet(new long[]{0x0002002400000002L});
+    public static final BitSet FOLLOW_37_in_mult2462 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_unary_in_mult2466 = new BitSet(new long[]{0x0002002400000002L});
+    public static final BitSet FOLLOW_49_in_mult2474 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_unary_in_mult2478 = new BitSet(new long[]{0x0002002400000002L});
+    public static final BitSet FOLLOW_34_in_mult2487 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_unary_in_mult2491 = new BitSet(new long[]{0x0002002400000002L});
+    public static final BitSet FOLLOW_mult_in_add2525 = new BitSet(new long[]{0x0000044000000002L});
+    public static final BitSet FOLLOW_38_in_add2537 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_mult_in_add2541 = new BitSet(new long[]{0x0000044000000002L});
+    public static final BitSet FOLLOW_minus_in_add2554 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_mult_in_add2558 = new BitSet(new long[]{0x0000044000000002L});
+    public static final BitSet FOLLOW_add_in_relation2596 = new BitSet(new long[]{0x007C000200000002L});
+    public static final BitSet FOLLOW_52_in_relation2612 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_relation2616 = new BitSet(new long[]{0x007C000200000002L});
+    public static final BitSet FOLLOW_53_in_relation2624 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_relation2628 = new BitSet(new long[]{0x007C000200000002L});
+    public static final BitSet FOLLOW_50_in_relation2639 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_relation2643 = new BitSet(new long[]{0x007C000200000002L});
+    public static final BitSet FOLLOW_33_in_relation2654 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_relation2658 = new BitSet(new long[]{0x007C000200000002L});
+    public static final BitSet FOLLOW_51_in_relation2668 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_relation2672 = new BitSet(new long[]{0x007C000200000002L});
+    public static final BitSet FOLLOW_54_in_relation2682 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_relation2686 = new BitSet(new long[]{0x007C000200000002L});
+    public static final BitSet FOLLOW_relation_in_logico2726 = new BitSet(new long[]{0x0200000800000002L});
+    public static final BitSet FOLLOW_35_in_logico2754 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_relation_in_logico2758 = new BitSet(new long[]{0x0200000800000002L});
+    public static final BitSet FOLLOW_57_in_logico2790 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_relation_in_logico2794 = new BitSet(new long[]{0x0200000800000002L});
+    public static final BitSet FOLLOW_logico_in_expression2850 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOMBRE_in_llamadofuncion2885 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_llamadofuncion2890 = new BitSet(new long[]{0x00000000101E0220L});
+    public static final BitSet FOLLOW_term_in_llamadofuncion2905 = new BitSet(new long[]{0x0000020000080000L});
+    public static final BitSet FOLLOW_41_in_llamadofuncion2917 = new BitSet(new long[]{0x0000000010160220L});
+    public static final BitSet FOLLOW_term_in_llamadofuncion2924 = new BitSet(new long[]{0x0000020000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_llamadofuncion2937 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_llamadofuncion2948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_print1_in_statements2982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_println_in_statements3002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_in_statements3021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lectura_in_statements3036 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comentario_in_statements3055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_return1_in_statements3070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifstatement_in_statements3088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whilestatemet_in_statements3103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_llamadofuncion_in_statements3115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_mult_in_statements3127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaracion_lista_in_statements3136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_push_in_statements3144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forstatemet_in_statements3165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_asignacion_lista_in_statements3179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lista_texto_in_statements3188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_size_in_statements3202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unincremento_in_statements3223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_menosunincremento_in_statements3236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_incremento_in_statements3244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_decremento_in_statements3259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_ifstatement3291 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3293 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_logico_in_ifstatement3299 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3307 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3309 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3312 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3314 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_statements_in_ifstatement3325 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3337 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3349 = new BitSet(new long[]{0x0000000000200402L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3359 = new BitSet(new long[]{0x0000000000200400L});
+    public static final BitSet FOLLOW_ELSE_in_ifstatement3362 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_IF_in_ifstatement3364 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_ifstatement3366 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_logico_in_ifstatement3370 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_ifstatement3378 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3380 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3383 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3385 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_statements_in_ifstatement3399 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3411 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3421 = new BitSet(new long[]{0x0000000000200402L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3431 = new BitSet(new long[]{0x0000000000200400L});
+    public static final BitSet FOLLOW_ELSE_in_ifstatement3434 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3436 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_ifstatement3441 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3443 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_statements_in_ifstatement3455 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_ifstatement3465 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_LLAVE_D_in_ifstatement3474 = new BitSet(new long[]{0x0000000000200402L});
+    public static final BitSet FOLLOW_WHILE_in_whilestatemet3513 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_whilestatemet3515 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_logico_in_whilestatemet3519 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_whilestatemet3531 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_PC_in_whilestatemet3533 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_whilestatemet3536 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_whilestatemet3538 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_statements_in_whilestatemet3548 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_whilestatemet3562 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_LLAVE_D_in_whilestatemet3575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FOR_in_forstatemet3600 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_forstatemet3602 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_declaracion_in_forstatemet3606 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_logico_in_forstatemet3610 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3612 = new BitSet(new long[]{0x0000044010160220L});
+    public static final BitSet FOLLOW_add_in_forstatemet3616 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_forstatemet3630 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3632 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_LLAVE_I_in_forstatemet3635 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3637 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_statements_in_forstatemet3647 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_PC_in_forstatemet3663 = new BitSet(new long[]{0x0000000066E2E840L});
+    public static final BitSet FOLLOW_LLAVE_D_in_forstatemet3673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_minus4036 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARENTESIS_D_in_parentesis_d4071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARENTESIS_I_in_parentesis_i4105 = new BitSet(new long[]{0x0000000000000002L});
 
 }

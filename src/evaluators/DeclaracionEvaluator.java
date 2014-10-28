@@ -36,7 +36,9 @@ public class DeclaracionEvaluator implements Evaluator {
 			nuevo = new BooleanEvaluator(String.valueOf(temp));
 		}
 		if(temp instanceof List){
-			nuevo = new ListEvaluator();
+			ListEvaluator a = new ListEvaluator();
+			a.setLista((List)temp);
+			nuevo = a;
 		}
 		pila.get(pila.size() - 1).put(nombre, nuevo);
 		return null;

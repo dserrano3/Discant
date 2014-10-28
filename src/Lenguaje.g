@@ -93,7 +93,7 @@ programa returns [StringBuilder output] throws Exception
   
   funcion returns[Evaluator e] throws Exception
   :
-  {$e = new FuncionEvaluator();}  
+  {$e = new FuncionEvaluator(pila);}  
   FUNCTION nom = NOMBRE parentesis_i 
 	
 	( (
@@ -277,14 +277,14 @@ asignacion returns [Evaluator e] throws Exception
 asignacion_lista returns [Evaluator e] throws Exception
   :
    nom=NOMBRE 
-   (  '[' num=NUMERO ']' ASIGNACION ev = evaluator
-   |  SET '(' num=NUMERO ',' ev = evaluator ')'
+   (  '[' ev1=evaluator  ']' ASIGNACION ev = evaluator
+   |  SET '(' ev1=evaluator ',' ev = evaluator ')'
    )  
                                  {
                                   if(bandera)
                                     {
                                         //System.out.println("intento salvar erradamente");
-                                        $e = new AsignacionListaEvaluator($nom.text,$ev.e, $num.text);
+                                        $e = new AsignacionListaEvaluator($nom.text,$ev.e, $ev1.e);
                                     }
                                  }
   PC
