@@ -1,3 +1,12 @@
-var a, b = 8, d ,c;
-
-print b;;
+list lis;
+read lis;
+for(var j = 0; j < lis.size(); j++) {
+for(var i = 0; i < lis.size()-1; i++){
+if(lis[i] > lis[i+1]){
+var a= lis[i+1];
+lis.set(i+1, lis[i]);
+lis.set(i, a);
+}
+}
+}
+println lis;;
