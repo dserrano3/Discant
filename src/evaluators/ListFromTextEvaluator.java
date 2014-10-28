@@ -56,6 +56,7 @@ public class ListFromTextEvaluator implements Evaluator {
 		}
 		le = new ListEvaluator();
 		((ListEvaluator) le).setLista(lista);
+		System.out.println(le);
 		return le;
 	}
 
